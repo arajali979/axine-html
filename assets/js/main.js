@@ -20,4 +20,16 @@ Mobile Menu Js
 	if ($("select").length > 0) {
 		$("select").niceSelect();
 	}
+
+	// Accordion Js
+	if ($(".accordion-item").length > 0) {
+		$(".accordion-item .faq-title").on("click", function () {
+			if ($(this).parent().hasClass("active")) {
+				$(this).parent().removeClass("active");
+			} else {
+				$(this).parent().siblings().removeClass("active");
+				$(this).parent().addClass("active");
+			}
+		});
+	}
 })(jQuery);

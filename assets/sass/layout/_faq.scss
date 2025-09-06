@@ -4,6 +4,83 @@
 START: Theme FAQ CSS
 ----------------------------------------*/
 .fa-faq-section {
+	padding-top: 150px;
 	padding-bottom: 120px;
+}
+
+.faq-main-wrapper {
+	display: flex;
+	align-items: center;
+}
+
+.accordion-item {
+	position: relative;
+	border: none;
+	box-shadow: none;
+	z-index: 2;
+	border-radius: 0;
+	background: transparent;
+	margin-bottom: 20px;
+	border-bottom: 1px solid var(--tj-color-border-1);
+	&:last-child {
+		margin-bottom: 0;
+		border-bottom: none;
+	}
+	.faq-title {
+		font-size: 28px;
+		font-family: var(--tj-ff-heading);
+		padding: 0px 55px 15px 0px;
+		position: relative;
+		color: var(--tj-color-heading-primary);
+		width: 100%;
+		text-align: left;
+		&.collapsed {
+			color: var(--tj-color-heading-primary);
+		}
+		&:before {
+			display: inline-flex;
+			align-items: center;
+			justify-content: center;
+			width: 25px;
+			height: 25px;
+			border: 1px solid var(--tj-color-heading-primary);
+			background: transparent;
+			position: absolute;
+			content: "\2b";
+			top: 6px;
+			right: 0px;
+			font-family: "Font Awesome 6 Sharp";
+			font-size: 14px;
+			font-weight: var(--tj-fw-ebold);
+			color: var(--tj-color-heading-primary);
+			border-radius: 50%;
+			line-height: 1;
+			@include transition(all 0.3s ease-in-out 0s);
+		}
+		&:not(.collapsed) {
+			box-shadow: none;
+			&:before {
+				content: "\f068";
+				color: var(--tj-color-heading-primary);
+				background-color: var(--tj-color-theme-primary);
+				border-color: var(--tj-color-theme-primary);
+			}
+		}
+		&:focus {
+			box-shadow: none;
+		}
+		&:after {
+			display: none;
+		}
+	}
+	.faq-text {
+		padding: 15px 10px 25px 0px;
+		p {
+			color: var(--tj-color-text-body);
+			&:last-child {
+				margin-bottom: 0;
+			}
+		}
+	}
 }
 /* !END: Theme FAQ CSS */
