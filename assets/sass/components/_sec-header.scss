@@ -1,0 +1,36 @@
+@use "../utilities" as *;
+
+/**----------------------------------------
+START: Theme Sec Header CSS
+----------------------------------------*/
+.heading-area {
+	.sub-title {
+		display: block;
+		font-size: 100px;
+		font-family: var(--fa-ff-heading);
+		font-weight: var(--fa-fw-black);
+		-webkit-text-stroke-width: 3px;
+		-webkit-text-stroke-color: var(--fa-color-theme-primary);
+		-webkit-text-fill-color: var(--fa-color-common-white);
+		margin-bottom: 10px;
+		line-height: 1;
+	}
+	.sec-title {
+		font-size: 300px;
+		background: linear-gradient(
+			90deg,
+			var(--fa-color-theme-bg) 0%,
+			var(--fa-color-common-white) 100%
+		);
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+		background-clip: text;
+		font-weight: var(--fa-fw-black);
+		letter-spacing: -0.02em;
+		margin-top: -40px;
+		margin-bottom: 0;
+		line-height: 1;
+	}
+}
+
+/* !END: Theme Sec Header CSS */

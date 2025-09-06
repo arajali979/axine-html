@@ -1,0 +1,83 @@
+@use "../utilities" as *;
+
+/**----------------------------------------
+START: Theme Hero CSS
+----------------------------------------*/
+.fa-hero-section {
+	position: relative;
+	padding-top: 237px;
+	padding-bottom: 360px;
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+	background-color: var(--fa-color-theme-bg);
+	&::before {
+		content: "";
+		position: absolute;
+		top: 0;
+		right: 65px;
+		width: 380px;
+		height: 380px;
+		border-radius: 50%;
+		background: var(--fa-color-theme-secondary);
+		background: radial-gradient(
+			75% 75% at 75% 75%,
+			var(--fa-color-theme-secondary) 0%,
+			rgba(0, 0, 0, 0) 100%
+		);
+		filter: blur(50px);
+	}
+	&::after {
+		content: "";
+		position: absolute;
+		bottom: 165px;
+		right: 65px;
+		width: 475px;
+		height: 475px;
+		border-radius: 50%;
+		background: var(--fa-color-theme-primary);
+		background: radial-gradient(
+			50% 50% at 50% 50%,
+			rgba(255, 98, 28, 0.7) 0%,
+			rgba(24, 16, 52, 0) 100%
+		);
+		-webkit-filter: blur(65px);
+		filter: blur(65px);
+	}
+	.hero-shapes {
+		position: absolute;
+		top: 0;
+		right: 0;
+		max-width: 820px;
+		width: 100%;
+	}
+}
+
+.hero-main-wrapper {
+	position: relative;
+	max-width: 950px;
+	width: 100%;
+	margin-left: auto;
+	padding-right: 50px;
+	z-index: 2;
+	.hero-subtitle {
+		display: block;
+		font-size: 50px;
+		color: var(--fa-color-theme-primary);
+		font-weight: var(--fa-fw-black);
+		font-family: var(--fa-ff-heading);
+		margin-bottom: 20px;
+		line-height: 1;
+	}
+	.hero-title {
+		color: var(--fa-color-common-white);
+		line-height: 160px;
+		margin-bottom: 0;
+		.active-color {
+			-webkit-text-stroke-width: 3px;
+			-webkit-text-stroke-color: var(--fa-color-common-white);
+			-webkit-text-fill-color: var(--fa-color-theme-secondary);
+		}
+	}
+}
+/* !END: Theme Hero CSS */

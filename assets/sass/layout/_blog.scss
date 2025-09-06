@@ -1,0 +1,72 @@
+@use "../utilities" as *;
+
+/**----------------------------------------
+START: Theme Blog CSS
+----------------------------------------*/
+.fa-blog-section {
+	padding-top: 135px;
+	padding-bottom: 86px;
+	.heading-area {
+		display: flex;
+		flex-wrap: wrap;
+		align-items: center;
+		justify-content: space-between;
+		margin-bottom: 40px;
+	}
+}
+
+.blog-main-wrapper {
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	column-gap: 24px;
+}
+
+.blog-item {
+	display: flex;
+	align-items: center;
+	column-gap: 35px;
+	border-top: 1px solid var(--fa-color-border-2);
+	padding-top: 24px;
+	margin-bottom: 24px;
+	.blog-content {
+		text-align: end;
+		.sub-title {
+			display: inline-flex;
+			align-items: center;
+			column-gap: 10px;
+			font-size: 18px;
+			font-weight: var(--fa-fw-sbold);
+			color: var(--fa-color-common-white);
+			background: var(--fa-color-theme-secondary);
+			border-radius: 100px;
+			padding: 12px 20px;
+			margin-bottom: 30px;
+			&.btn-1 {
+				background: var(--fa-color-theme-primary);
+			}
+		}
+		.blog-title {
+			font-weight: var(--fa-fw-bold);
+			margin-bottom: 0;
+			line-height: 1.3;
+		}
+		.read-more-btn {
+			margin-top: 30px;
+		}
+	}
+	.blog-images {
+		position: relative;
+		max-width: 330px;
+		width: 100%;
+		overflow: hidden;
+		border-radius: 24px;
+		a {
+			display: inline-block;
+			img {
+				width: 100%;
+				border-radius: 24px;
+			}
+		}
+	}
+}
+/* !END: Theme Blog CSS */

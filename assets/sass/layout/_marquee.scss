@@ -1,0 +1,54 @@
+@use "../utilities" as *;
+
+/**----------------------------------------
+START: Theme Marquee CSS
+----------------------------------------*/
+.fa-marquee-section {
+	position: relative;
+}
+
+.fa-marquee-area {
+	display: flex;
+	align-items: center;
+	position: relative;
+	width: 110%;
+	left: -20px;
+	background-color: var(--fa-color-theme-primary);
+	transform: rotate(1deg);
+	padding: 33px 0;
+	&.v-2 {
+		position: absolute;
+		top: 50%;
+		left: 0;
+		transform: translateY(-50%);
+		background-color: var(--fa-color-theme-secondary);
+		z-index: -1;
+		.marquee-main-wrapper {
+			&.style-2 {
+				animation: marquee-slide2 175s linear infinite;
+			}
+		}
+	}
+}
+
+.marquee-main-wrapper {
+	&.style-2 {
+		column-gap: 10px;
+		animation: 175s marquee-slide infinite linear;
+		.marquee-item {
+			position: relative;
+			column-gap: 0px;
+			font-size: 70px;
+			color: rgba(255, 255, 255, 0.3);
+			font-weight: var(--fa-fw-black);
+			text-transform: uppercase;
+			letter-spacing: 0px;
+			margin-bottom: 0px;
+			z-index: 1;
+			&.white {
+				color: var(--fa-color-common-white);
+			}
+		}
+	}
+}
+/* !END: Theme Marquee CSS */

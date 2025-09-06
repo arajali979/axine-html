@@ -1,0 +1,86 @@
+@use "../utilities" as *;
+
+/**----------------------------------------
+START: Theme Header CSS
+----------------------------------------*/
+.header-area {
+	position: relative;
+	width: 100%;
+	top: 0;
+	left: 0;
+	z-index: 98;
+	background: var(--fa-color-theme-secondary);
+	@include transition(all 0.3s ease-in-out 0s);
+	&.header-absolute {
+		position: absolute;
+		width: 100%;
+		top: 0;
+		left: 0;
+		z-index: 99;
+		background-color: transparent;
+	}
+}
+
+.maimmenu-main-wrapper {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.footer-logo,
+.site-logo {
+	max-width: 188px;
+	width: 100%;
+	a {
+		display: inline-block;
+		img {
+			width: 100%;
+		}
+	}
+}
+
+.mainmenu {
+	ul {
+		display: flex;
+		flex-wrap: wrap;
+		align-items: center;
+		column-gap: 50px;
+		> li {
+			position: relative;
+			z-index: 1;
+			> a {
+				display: block;
+				position: relative;
+				font-size: 18px;
+				color: var(--fa-color-common-white);
+				font-family: var(--fa-ff-heading);
+				font-weight: var(--fa-fw-bold);
+				padding: 46px 0;
+				z-index: 2;
+			}
+		}
+	}
+}
+
+.mainmenu-right-infos {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	column-gap: 35px;
+	.header-button {
+		transform: translate3d(calc(1 * 55px), 0, 0);
+	}
+}
+
+.header-search {
+	.search {
+		display: flex;
+		align-items: center;
+		column-gap: 15px;
+		font-size: 18px;
+		color: var(--fa-color-common-white);
+		font-family: var(--fa-ff-heading);
+		font-weight: var(--fa-fw-bold);
+	}
+}
+/* !END: Theme Header CSS */
