@@ -6,11 +6,28 @@ START: Theme FAQ CSS
 .fa-faq-section {
 	padding-top: 150px;
 	padding-bottom: 120px;
+	.heading-area {
+		display: flex;
+		align-items: end;
+		.sub-title {
+			writing-mode: vertical-lr;
+			text-orientation: mixed;
+			transform: rotate(-180deg);
+			margin-bottom: 0;
+		}
+		.sec-title {
+			writing-mode: vertical-lr;
+			text-orientation: mixed;
+			transform: rotate(-180deg);
+			margin-top: 0;
+		}
+	}
 }
 
 .faq-main-wrapper {
 	display: flex;
 	align-items: center;
+	column-gap: 105px;
 }
 
 .accordion-item {

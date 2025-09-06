@@ -1056,6 +1056,7 @@ START: Theme Sec Header CSS
   line-height: 1;
 }
 .heading-area .sec-title {
+  display: block;
   font-size: 300px;
   background: -webkit-gradient(linear, left top, right top, from(var(--fa-color-theme-bg)), to(var(--fa-color-common-white)));
   background: linear-gradient(90deg, var(--fa-color-theme-bg) 0%, var(--fa-color-common-white) 100%);
@@ -1174,6 +1175,34 @@ START: Theme FAQ CSS
   padding-top: 150px;
   padding-bottom: 120px;
 }
+.fa-faq-section .heading-area {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: end;
+}
+.fa-faq-section .heading-area .sub-title {
+  -webkit-writing-mode: vertical-lr;
+      -ms-writing-mode: tb-lr;
+          writing-mode: vertical-lr;
+  text-orientation: mixed;
+  -webkit-transform: rotate(-180deg);
+      -ms-transform: rotate(-180deg);
+          transform: rotate(-180deg);
+  margin-bottom: 0;
+}
+.fa-faq-section .heading-area .sec-title {
+  -webkit-writing-mode: vertical-lr;
+      -ms-writing-mode: tb-lr;
+          writing-mode: vertical-lr;
+  text-orientation: mixed;
+  -webkit-transform: rotate(-180deg);
+      -ms-transform: rotate(-180deg);
+          transform: rotate(-180deg);
+  margin-top: 0;
+}
 
 .faq-main-wrapper {
   display: -webkit-box;
@@ -1182,6 +1211,9 @@ START: Theme FAQ CSS
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-column-gap: 105px;
+     -moz-column-gap: 105px;
+          column-gap: 105px;
 }
 
 .accordion-item {
