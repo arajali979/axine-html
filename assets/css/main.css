@@ -1215,6 +1215,9 @@ START: Theme FAQ CSS
      -moz-column-gap: 105px;
           column-gap: 105px;
 }
+.faq-main-wrapper .fa-faq-wrap {
+  width: 100%;
+}
 
 .accordion-item {
   position: relative;
@@ -1225,47 +1228,40 @@ START: Theme FAQ CSS
   border-radius: 0;
   background: transparent;
   margin-bottom: 20px;
-  border-bottom: 1px solid var(--tj-color-border-1);
+  border-bottom: 1px solid var(--fa-color-border-1);
 }
 .accordion-item:last-child {
   margin-bottom: 0;
   border-bottom: none;
 }
 .accordion-item .faq-title {
-  font-size: 28px;
-  font-family: var(--tj-ff-heading);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 30px;
+  font-family: var(--fa-ff-heading);
+  font-weight: var(--fa-fw-sbold);
   padding: 0px 55px 15px 0px;
   position: relative;
-  color: var(--tj-color-heading-primary);
+  color: var(--fa-color-heading-primary);
   width: 100%;
   text-align: left;
 }
 .accordion-item .faq-title.collapsed {
-  color: var(--tj-color-heading-primary);
+  color: var(--fa-color-heading-primary);
 }
 .accordion-item .faq-title:before {
-  display: -webkit-inline-box;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  width: 25px;
-  height: 25px;
-  border: 1px solid var(--tj-color-heading-primary);
-  background: transparent;
   position: absolute;
   content: "+";
   top: 6px;
   right: 0px;
   font-family: "Font Awesome 6 Sharp";
   font-size: 14px;
-  font-weight: var(--tj-fw-ebold);
-  color: var(--tj-color-heading-primary);
-  border-radius: 50%;
+  font-weight: var(--fa-fw-ebold);
+  color: var(--fa-color-heading-primary);
   line-height: 1;
   -webkit-transition: all 0.3s ease-in-out 0s;
   transition: all 0.3s ease-in-out 0s;
@@ -1276,9 +1272,7 @@ START: Theme FAQ CSS
 }
 .accordion-item .faq-title:not(.collapsed):before {
   content: "\f068";
-  color: var(--tj-color-heading-primary);
-  background-color: var(--tj-color-theme-primary);
-  border-color: var(--tj-color-theme-primary);
+  color: var(--fa-color-heading-primary);
 }
 .accordion-item .faq-title:focus {
   -webkit-box-shadow: none;
@@ -1287,14 +1281,38 @@ START: Theme FAQ CSS
 .accordion-item .faq-title:after {
   display: none;
 }
+.accordion-item .faq-title .number {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 72px;
+  height: 72px;
+  color: var(--fa-color-common-white);
+  font-size: 24px;
+  font-family: var(--fa-ff-heading);
+  background: var(--fa-color-theme-secondary);
+  border-radius: 50%;
+}
 .accordion-item .faq-text {
   padding: 15px 10px 25px 0px;
 }
 .accordion-item .faq-text p {
-  color: var(--tj-color-text-body);
+  font-size: 18px;
+  color: var(--fa-color-text-body);
+  font-weight: var(--fa-fw-medium);
+  font-family: var(--fa-ff-heading);
 }
 .accordion-item .faq-text p:last-child {
   margin-bottom: 0;
+}
+.accordion-item.active .faq-title .number {
+  background-color: var(--fa-color-theme-primary);
 }
 
 /* !END: Theme FAQ CSS */
