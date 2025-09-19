@@ -65,6 +65,7 @@ START: Theme Default CSS
   --fa-color-grey-2: #c4c8ca;
   --fa-color-grey-3: #a9adb1;
   --fa-color-grey-4: #090127;
+  --fa-color-grey-5: #e5ecf1;
   --fa-color-border-1: #4e4e4e;
   --fa-color-border-2: rgba(24, 16, 52, 0.4);
 }
@@ -1044,6 +1045,9 @@ START: Theme Footer CSS
 /**----------------------------------------
 START: Theme Sec Header CSS
 ----------------------------------------*/
+.heading-area {
+  margin-bottom: 70px;
+}
 .heading-area .sub-title {
   display: block;
   font-size: 100px;
@@ -1056,7 +1060,7 @@ START: Theme Sec Header CSS
   line-height: 1;
 }
 .heading-area .sec-title {
-  display: block;
+  display: inline-block;
   font-size: 300px;
   background: -webkit-gradient(linear, left top, right top, from(var(--fa-color-theme-bg)), to(var(--fa-color-common-white)));
   background: linear-gradient(90deg, var(--fa-color-theme-bg) 0%, var(--fa-color-common-white) 100%);
@@ -1072,6 +1076,20 @@ START: Theme Sec Header CSS
 
 /* !END: Theme Sec Header CSS */
 /**----------------------------------------
+START: Theme Item List CSS
+----------------------------------------*/
+.item-list-one ul {
+  -webkit-columns: 2;
+     -moz-columns: 2;
+          columns: 2;
+}
+.item-list-one ul li {
+  font-size: 18px;
+  color: var(--fa-color-theme-heading);
+}
+
+/* !END: Theme Item List CSS */
+/**----------------------------------------
 START: Theme Hero CSS
 ----------------------------------------*/
 .fa-hero-section {
@@ -1081,7 +1099,6 @@ START: Theme Hero CSS
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-  background-color: var(--fa-color-theme-bg);
 }
 .fa-hero-section::before {
   content: "";
@@ -1147,6 +1164,314 @@ START: Theme Hero CSS
 
 /* !END: Theme Hero CSS */
 /**----------------------------------------
+START: Theme About CSS
+----------------------------------------*/
+.fa-about-section {
+  padding-top: 150px;
+  padding-bottom: 150px;
+}
+
+.about-feature-wrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  position: relative;
+}
+.about-feature-wrap .feature-brand {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-column-gap: 70px;
+     -moz-column-gap: 70px;
+          column-gap: 70px;
+}
+.about-feature-wrap .feature-brand .brand-title {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-column-gap: 20px;
+     -moz-column-gap: 20px;
+          column-gap: 20px;
+  font-weight: var(--fa-fw-bold);
+  margin-bottom: 0;
+}
+
+.mission-vision-item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-column-gap: 65px;
+     -moz-column-gap: 65px;
+          column-gap: 65px;
+  background: var(--fa-color-theme-secondary);
+  padding: 37px 60px 36px;
+  border-radius: 50px;
+  position: absolute;
+  max-width: 820px;
+  left: 0;
+  bottom: 55px;
+  width: 100%;
+  z-index: 2;
+}
+.mission-vision-item .mission-vision-list .mission-vision-title {
+  color: var(--fa-color-common-white);
+  font-weight: var(--fa-fw-bold);
+  margin-bottom: 0;
+}
+.mission-vision-item .mission-vision-list .mission-vision-desc {
+  font-size: 18px;
+  color: var(--fa-color-grey-5);
+  font-family: var(--fa-ff-heading);
+  font-weight: var(--fa-fw-medium);
+  margin-top: 20px;
+  margin-bottom: 0;
+  line-height: 1.9;
+}
+
+.about-video-wrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+.about-video-wrap .about-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-column-gap: 50px;
+     -moz-column-gap: 50px;
+          column-gap: 50px;
+}
+.about-video-wrap .about-content .about-images {
+  max-width: 600px;
+  width: 100%;
+}
+.about-video-wrap .about-content .about-images img {
+  width: 100%;
+  border-radius: 50px;
+}
+.about-video-wrap .about-content .about-text {
+  max-width: 656px;
+  width: 100%;
+}
+.about-video-wrap .about-content .about-text .about-desc {
+  font-size: 18px;
+  font-family: var(--fa-ff-heading);
+  font-weight: var(--fa-fw-medium);
+  margin-bottom: 0;
+  line-height: 1.9;
+}
+.about-video-wrap .about-content .about-text .about-button {
+  margin-top: 40px;
+}
+.about-video-wrap .about-video-btn {
+  max-width: 210px;
+  width: 100%;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+.about-video-wrap .about-video-btn .video-btn {
+  display: inline-block;
+  position: relative;
+}
+.about-video-wrap .about-video-btn .video-btn::before {
+  position: absolute;
+  content: "";
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  width: 150px;
+  height: 150px;
+  background: url(../images/shapes/video-circle.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+.about-video-wrap .about-video-btn .video-btn::after {
+  position: absolute;
+  content: "";
+  top: 50%;
+  left: 50%;
+  width: 210px;
+  height: 210px;
+  background: url(../images/shapes/video-mask.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  z-index: -1;
+}
+
+.about-images-group {
+  max-width: 870px;
+  width: 100%;
+  -webkit-mask-image: url(../images/shapes/about-mask-images.svg);
+          mask-image: url(../images/shapes/about-mask-images.svg);
+  -webkit-mask-repeat: no-repeat;
+          mask-repeat: no-repeat;
+  -webkit-mask-position: center;
+          mask-position: center;
+  -webkit-mask-size: cover;
+          mask-size: cover;
+  border-radius: 50px;
+}
+.about-images-group img {
+  border-radius: 50px;
+}
+
+.feature-list-one li {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-column-gap: 15px;
+     -moz-column-gap: 15px;
+          column-gap: 15px;
+  font-size: 24px;
+  font-family: var(--fa-ff-heading);
+  font-weight: var(--fa-fw-sbold);
+  color: var(--fa-color-heading-primary);
+}
+
+/* !END: Theme About CSS */
+/**----------------------------------------
+START: Theme Service CSS
+----------------------------------------*/
+.fa-service-section {
+  padding-top: 150px;
+  padding-bottom: 120px;
+  background: var(--fa-color-theme-bg);
+}
+.fa-service-section .heading-area .sub-title {
+  -webkit-text-fill-color: var(--fa-color-theme-bg);
+}
+.fa-service-section .heading-area .sec-title {
+  background: -webkit-gradient(linear, left top, right top, from(var(--fa-color-common-white)), to(var(--fa-color-theme-bg)));
+  background: linear-gradient(90deg, var(--fa-color-common-white) 0%, var(--fa-color-theme-bg) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.service-item-wrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-column-gap: 74px;
+     -moz-column-gap: 74px;
+          column-gap: 74px;
+}
+.service-item-wrap .effect-title {
+  max-width: 425px;
+  width: 100%;
+}
+.service-item-wrap .effect-title .service-title {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-column-gap: 10px;
+     -moz-column-gap: 10px;
+          column-gap: 10px;
+  color: var(--fa-color-grey-3);
+  font-weight: var(--fa-fw-bold);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.4);
+  padding-bottom: 30px;
+  margin-bottom: 30px;
+  line-height: 1.4;
+}
+
+.service-item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: relative;
+  width: 100%;
+}
+.service-item .service-images {
+  position: relative;
+  overflow: hidden;
+  max-width: 570px;
+  width: 100%;
+  border-radius: 50px;
+}
+.service-item .service-images img {
+  border-radius: 50px;
+}
+.service-item .service-content {
+  position: absolute;
+  right: 0;
+  bottom: 55px;
+  background: var(--fa-color-common-white);
+  padding: 38px;
+  border-radius: 50px;
+}
+.service-item .service-content .service-title {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-column-gap: 30px;
+     -moz-column-gap: 30px;
+          column-gap: 30px;
+  font-weight: var(--fa-fw-bold);
+  margin-bottom: 0;
+}
+.service-item .service-content .service-desc {
+  font-weight: var(--fa-fw-medium);
+  font-family: var(--fa-ff-heading);
+  margin-top: 30px;
+  margin-bottom: 0;
+  max-width: 450px;
+  width: 100%;
+  line-height: 1.8;
+}
+
+/* !END: Theme Service CSS */
+/**----------------------------------------
 START: Theme Brand CSS
 ----------------------------------------*/
 .fa-brand-section {
@@ -1201,6 +1526,11 @@ START: Theme FAQ CSS
   -webkit-transform: rotate(-180deg);
       -ms-transform: rotate(-180deg);
           transform: rotate(-180deg);
+  background: -webkit-gradient(linear, left top, left bottom, from(var(--fa-color-theme-bg)), to(var(--fa-color-common-white)));
+  background: linear-gradient(180deg, var(--fa-color-theme-bg) 0%, var(--fa-color-common-white) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
   margin-top: 0;
 }
 
@@ -1208,9 +1538,9 @@ START: Theme FAQ CSS
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: start;
   -webkit-column-gap: 105px;
      -moz-column-gap: 105px;
           column-gap: 105px;
@@ -1224,15 +1554,27 @@ START: Theme FAQ CSS
   border: none;
   -webkit-box-shadow: none;
           box-shadow: none;
-  z-index: 2;
-  border-radius: 0;
   background: transparent;
   margin-bottom: 20px;
-  border-bottom: 1px solid var(--fa-color-border-1);
+  border: 1px solid rgba(40, 38, 36, 0.3);
+  -webkit-box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.05);
+          box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.05);
+  border-radius: 50px;
+  z-index: 2;
+}
+.accordion-item:not(:first-of-type) {
+  border-top: 1px solid rgba(40, 38, 36, 0.3);
+}
+.accordion-item:first-of-type {
+  border-top-left-radius: 50px;
+  border-top-right-radius: 50px;
 }
 .accordion-item:last-child {
   margin-bottom: 0;
-  border-bottom: none;
+}
+.accordion-item:last-of-type {
+  border-bottom-right-radius: 50px;
+  border-bottom-left-radius: 50px;
 }
 .accordion-item .faq-title {
   display: -webkit-box;
@@ -1244,7 +1586,7 @@ START: Theme FAQ CSS
   font-size: 30px;
   font-family: var(--fa-ff-heading);
   font-weight: var(--fa-fw-sbold);
-  padding: 0px 55px 15px 0px;
+  padding: 25px 75px 25px 112px;
   position: relative;
   color: var(--fa-color-heading-primary);
   width: 100%;
@@ -1255,31 +1597,30 @@ START: Theme FAQ CSS
 }
 .accordion-item .faq-title:before {
   position: absolute;
-  content: "+";
-  top: 6px;
-  right: 0px;
-  font-family: "Font Awesome 6 Sharp";
-  font-size: 14px;
-  font-weight: var(--fa-fw-ebold);
-  color: var(--fa-color-heading-primary);
-  line-height: 1;
+  content: "";
+  top: 25px;
+  right: 25px;
+  background: url(../images/icons/faq.svg);
   -webkit-transition: all 0.3s ease-in-out 0s;
   transition: all 0.3s ease-in-out 0s;
+  width: 50px;
+  height: 50px;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
 }
 .accordion-item .faq-title:not(.collapsed) {
   -webkit-box-shadow: none;
           box-shadow: none;
 }
-.accordion-item .faq-title:not(.collapsed):before {
-  content: "\f068";
-  color: var(--fa-color-heading-primary);
+.accordion-item .faq-title:not(.collapsed)::before {
+  -webkit-transform: rotate(90deg);
+      -ms-transform: rotate(90deg);
+          transform: rotate(90deg);
 }
 .accordion-item .faq-title:focus {
   -webkit-box-shadow: none;
           box-shadow: none;
-}
-.accordion-item .faq-title:after {
-  display: none;
 }
 .accordion-item .faq-title .number {
   display: -webkit-inline-box;
@@ -1298,15 +1639,21 @@ START: Theme FAQ CSS
   font-family: var(--fa-ff-heading);
   background: var(--fa-color-theme-secondary);
   border-radius: 50%;
+  position: absolute;
+  left: 0;
+  top: 14px;
 }
 .accordion-item .faq-text {
-  padding: 15px 10px 25px 0px;
+  padding: 0px 115px 25px 112px;
 }
 .accordion-item .faq-text p {
   font-size: 18px;
   color: var(--fa-color-text-body);
   font-weight: var(--fa-fw-medium);
   font-family: var(--fa-ff-heading);
+  border-top: 1px solid rgba(40, 38, 36, 0.3);
+  padding-top: 20px;
+  line-height: 1.9;
 }
 .accordion-item .faq-text p:last-child {
   margin-bottom: 0;
@@ -1379,6 +1726,116 @@ START: Theme Marquee CSS
 }
 
 /* !END: Theme Marquee CSS */
+/**----------------------------------------
+START: Theme Counter CSS
+----------------------------------------*/
+.fa-counter-section {
+  position: relative;
+  border-bottom: 1px solid var(--fa-color-theme-bg);
+  margin-top: -125px;
+}
+.fa-counter-section::before {
+  position: absolute;
+  content: "";
+  top: -60px;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  -webkit-mask-image: url(../images/shapes/counter-shapes.svg);
+          mask-image: url(../images/shapes/counter-shapes.svg);
+  background: var(--fa-color-theme-bg);
+  -webkit-mask-repeat: no-repeat;
+          mask-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+
+.counter-main-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: start;
+}
+.counter-main-wrapper .counter-item {
+  position: relative;
+  padding: 118px 106px 118px 0;
+  margin-right: 106px;
+}
+.counter-main-wrapper .counter-item::before {
+  position: absolute;
+  content: "";
+  width: 1px;
+  height: 418px;
+  right: 0;
+  bottom: 0;
+  background: var(--fa-color-theme-bg);
+}
+.counter-main-wrapper .counter-item:nth-child(2)::before {
+  height: 475px;
+}
+.counter-main-wrapper .counter-item:nth-child(3)::before {
+  height: 434px;
+}
+.counter-main-wrapper .counter-item:last-child {
+  padding-right: 0px;
+  margin-right: 0px;
+  border-right: none;
+}
+.counter-main-wrapper .counter-item:last-child::before {
+  display: none;
+}
+.counter-main-wrapper .counter-item .number-count {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: end;
+  -webkit-column-gap: 10px;
+     -moz-column-gap: 10px;
+          column-gap: 10px;
+  position: relative;
+}
+.counter-main-wrapper .counter-item .number-count .number {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-family: var(--fa-ff-heading);
+  font-weight: var(--fa-fw-black);
+  font-size: 150px;
+  color: var(--fa-color-heading-primary);
+  margin-bottom: 0;
+  line-height: 1;
+}
+.counter-main-wrapper .counter-item .number-count .number span {
+  font-family: var(--fa-ff-heading);
+}
+.counter-main-wrapper .counter-item .number-count .subtitle {
+  font-size: 24px;
+  color: var(--fa-color-theme-primary);
+  font-family: var(--fa-ff-heading);
+  font-weight: var(--fa-fw-sbold);
+  position: relative;
+  top: -20px;
+  line-height: 1;
+}
+.counter-main-wrapper .counter-item .count-subtitle {
+  display: block;
+  font-size: 24px;
+  font-family: var(--fa-ff-heading);
+  font-weight: var(--fa-fw-sbold);
+  margin-top: 5px;
+  line-height: 1;
+}
+
+/* !END: Theme Counter CSS */
 /**----------------------------------------
 START: Theme Blog CSS
 ----------------------------------------*/

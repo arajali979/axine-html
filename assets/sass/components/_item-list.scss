@@ -1,0 +1,15 @@
+@use "../utilities" as *;
+
+/**----------------------------------------
+START: Theme Item List CSS
+----------------------------------------*/
+.item-list-one {
+	ul {
+		columns: 2;
+		li {
+			font-size: 18px;
+			color: var(--fa-color-theme-heading);
+		}
+	}
+}
+/* !END: Theme Item List CSS */

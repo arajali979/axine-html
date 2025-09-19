@@ -19,6 +19,14 @@ START: Theme FAQ CSS
 			writing-mode: vertical-lr;
 			text-orientation: mixed;
 			transform: rotate(-180deg);
+			background: linear-gradient(
+				180deg,
+				var(--fa-color-theme-bg) 0%,
+				var(--fa-color-common-white) 100%
+			);
+			-webkit-background-clip: text;
+			-webkit-text-fill-color: transparent;
+			background-clip: text;
 			margin-top: 0;
 		}
 	}
@@ -26,7 +34,7 @@ START: Theme FAQ CSS
 
 .faq-main-wrapper {
 	display: flex;
-	align-items: center;
+	align-items: start;
 	column-gap: 105px;
 	.fa-faq-wrap {
 		width: 100%;
@@ -37,14 +45,25 @@ START: Theme FAQ CSS
 	position: relative;
 	border: none;
 	box-shadow: none;
-	z-index: 2;
-	border-radius: 0;
 	background: transparent;
 	margin-bottom: 20px;
-	border-bottom: 1px solid var(--fa-color-border-1);
+	border: 1px solid rgba(40, 38, 36, 0.3);
+	box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.05);
+	border-radius: 50px;
+	z-index: 2;
+	&:not(:first-of-type) {
+		border-top: 1px solid rgba(40, 38, 36, 0.3);
+	}
+	&:first-of-type {
+		border-top-left-radius: 50px;
+		border-top-right-radius: 50px;
+	}
 	&:last-child {
 		margin-bottom: 0;
-		border-bottom: none;
+	}
+	&:last-of-type {
+		border-bottom-right-radius: 50px;
+		border-bottom-left-radius: 50px;
 	}
 	.faq-title {
 		display: flex;
@@ -52,7 +71,7 @@ START: Theme FAQ CSS
 		font-size: 30px;
 		font-family: var(--fa-ff-heading);
 		font-weight: var(--fa-fw-sbold);
-		padding: 0px 55px 15px 0px;
+		padding: 25px 75px 25px 112px;
 		position: relative;
 		color: var(--fa-color-heading-primary);
 		width: 100%;
@@ -62,28 +81,25 @@ START: Theme FAQ CSS
 		}
 		&:before {
 			position: absolute;
-			content: "\2b";
-			top: 6px;
-			right: 0px;
-			font-family: "Font Awesome 6 Sharp";
-			font-size: 14px;
-			font-weight: var(--fa-fw-ebold);
-			color: var(--fa-color-heading-primary);
-			line-height: 1;
-			@include transition(all 0.3s ease-in-out 0s);
+			content: "";
+			top: 25px;
+			right: 25px;
+			background: url(../images/icons/faq.svg);
+			transition: all 0.3s ease-in-out 0s;
+			width: 50px;
+			height: 50px;
+			background-repeat: no-repeat;
+			background-size: contain;
+			background-position: center;
 		}
 		&:not(.collapsed) {
 			box-shadow: none;
-			&:before {
-				content: "\f068";
-				color: var(--fa-color-heading-primary);
+			&::before {
+				transform: rotate(90deg);
 			}
 		}
 		&:focus {
 			box-shadow: none;
-		}
-		&:after {
-			display: none;
 		}
 		.number {
 			display: inline-flex;
@@ -96,15 +112,21 @@ START: Theme FAQ CSS
 			font-family: var(--fa-ff-heading);
 			background: var(--fa-color-theme-secondary);
 			border-radius: 50%;
+			position: absolute;
+			left: 0;
+			top: 14px;
 		}
 	}
 	.faq-text {
-		padding: 15px 10px 25px 0px;
+		padding: 0px 115px 25px 112px;
 		p {
 			font-size: 18px;
 			color: var(--fa-color-text-body);
 			font-weight: var(--fa-fw-medium);
 			font-family: var(--fa-ff-heading);
+			border-top: 1px solid rgba(40, 38, 36, 0.3);
+			padding-top: 20px;
+			line-height: 1.9;
 			&:last-child {
 				margin-bottom: 0;
 			}
@@ -118,4 +140,5 @@ START: Theme FAQ CSS
 		}
 	}
 }
+
 /* !END: Theme FAQ CSS */

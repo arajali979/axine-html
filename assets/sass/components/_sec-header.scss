@@ -4,6 +4,7 @@
 START: Theme Sec Header CSS
 ----------------------------------------*/
 .heading-area {
+	margin-bottom: 70px;
 	.sub-title {
 		display: block;
 		font-size: 100px;
@@ -16,7 +17,7 @@ START: Theme Sec Header CSS
 		line-height: 1;
 	}
 	.sec-title {
-		display: block;
+		display: inline-block;
 		font-size: 300px;
 		background: linear-gradient(
 			90deg,

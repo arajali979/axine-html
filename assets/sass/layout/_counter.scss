@@ -1,0 +1,99 @@
+@use "../utilities" as *;
+
+/**----------------------------------------
+START: Theme Counter CSS
+----------------------------------------*/
+.fa-counter-section {
+	position: relative;
+	border-bottom: 1px solid var(--fa-color-theme-bg);
+	margin-top: -125px;
+	&::before {
+		position: absolute;
+		content: "";
+		top: -60px;
+		left: 0;
+		height: 100%;
+		width: 100%;
+		mask-image: url(../images/shapes/counter-shapes.svg);
+		background: var(--fa-color-theme-bg);
+		mask-repeat: no-repeat;
+		background-position: center;
+		background-size: contain;
+	}
+}
+
+.counter-main-wrapper {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: start;
+	.counter-item {
+		position: relative;
+		padding: 118px 106px 118px 0;
+		margin-right: 106px;
+		&::before {
+			position: absolute;
+			content: "";
+			width: 1px;
+			height: 418px;
+			right: 0;
+			bottom: 0;
+			background: var(--fa-color-theme-bg);
+		}
+		&:nth-child(2) {
+			&::before {
+				height: 475px;
+			}
+		}
+		&:nth-child(3) {
+			&::before {
+				height: 434px;
+			}
+		}
+		&:last-child {
+			padding-right: 0px;
+			margin-right: 0px;
+			border-right: none;
+			&::before {
+				display: none;
+			}
+		}
+		.number-count {
+			display: flex;
+			align-items: end;
+			column-gap: 10px;
+			position: relative;
+			.number {
+				display: flex;
+				align-items: center;
+				font-family: var(--fa-ff-heading);
+				font-weight: var(--fa-fw-black);
+				font-size: 150px;
+				color: var(--fa-color-heading-primary);
+				margin-bottom: 0;
+				line-height: 1;
+				span {
+					font-family: var(--fa-ff-heading);
+				}
+			}
+			.subtitle {
+				font-size: 24px;
+				color: var(--fa-color-theme-primary);
+				font-family: var(--fa-ff-heading);
+				font-weight: var(--fa-fw-sbold);
+				position: relative;
+				top: -20px;
+				line-height: 1;
+			}
+		}
+		.count-subtitle {
+			display: block;
+			font-size: 24px;
+			font-family: var(--fa-ff-heading);
+			font-weight: var(--fa-fw-sbold);
+			margin-top: 5px;
+			line-height: 1;
+		}
+	}
+}
+
+/* !END: Theme Counter CSS */
