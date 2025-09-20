@@ -56,4 +56,41 @@ Mobile Menu Js
 			}
 		});
 	}
+
+	// Project Swiper Js
+	var project = new Swiper(".fa-project-slider", {
+		effect: "coverflow",
+		grabCursor: true,
+		centeredSlides: true,
+		slidesPerView: 2,
+		coverflowEffect: {
+			rotate: -12,
+			stretch: 0,
+			depth: 200,
+			modifier: 1,
+			slideShadows: false,
+		},
+		loop: true,
+		speed: 800,
+		autoplay: {
+			delay: 2500,
+			disableOnInteraction: false,
+		},
+		on: {
+			slideChangeTransitionStart: function () {
+				document.querySelectorAll(".slide-text").forEach(function (el) {
+					el.style.opacity = "0";
+					el.style.transition = "opacity 0.5s ease";
+				});
+			},
+			slideChangeTransitionEnd: function () {
+				var activeSlide = document.querySelector(
+					".swiper-slide-active .slide-text"
+				);
+				if (activeSlide) {
+					activeSlide.style.opacity = "1";
+				}
+			},
+		},
+	});
 })(jQuery);

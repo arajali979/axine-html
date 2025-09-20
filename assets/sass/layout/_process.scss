@@ -1,0 +1,22 @@
+@use "../utilities" as *;
+
+/**----------------------------------------
+START: Theme Process CSS
+----------------------------------------*/
+.fa-process-section {
+	padding-top: 150px;
+	padding-bottom: 150px;
+	.heading-area {
+		.process-desc {
+			font-size: 18px;
+			font-weight: var(--fa-fw-medium);
+			font-family: var(--fa-ff-heading);
+			max-width: 650px;
+			width: 100%;
+			margin-top: 45px;
+			margin-bottom: 0;
+			line-height: 1.8;
+		}
+	}
+}
+/* !END: Theme Process CSS */

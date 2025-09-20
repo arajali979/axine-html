@@ -6,7 +6,7 @@ START: Theme Service CSS
 .fa-service-section {
 	padding-top: 150px;
 	padding-bottom: 120px;
-	background: var(--fa-color-theme-bg);
+	background-color: var(--fa-color-theme-bg);
 	.heading-area {
 		.sub-title {
 			-webkit-text-fill-color: var(--fa-color-theme-bg);
@@ -72,7 +72,7 @@ START: Theme Service CSS
 		right: 0;
 		bottom: 55px;
 		background: var(--fa-color-common-white);
-		padding: 38px;
+		padding: 50px 38px;
 		border-radius: 50px;
 		.service-title {
 			display: flex;
@@ -86,9 +86,14 @@ START: Theme Service CSS
 			font-family: var(--fa-ff-heading);
 			margin-top: 30px;
 			margin-bottom: 0;
-			max-width: 450px;
+			max-width: 530px;
 			width: 100%;
 			line-height: 1.8;
+		}
+		.item-list-one {
+			max-width: 670px;
+			width: 100%;
+			margin-top: 30px;
 		}
 	}
 }
