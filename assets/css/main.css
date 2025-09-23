@@ -68,6 +68,8 @@ START: Theme Default CSS
   --fa-color-grey-5: #e5ecf1;
   --fa-color-grey-6: #e5e3eb;
   --fa-color-grey-7: #fff5f0;
+  --fa-color-grey-8: #ffefe8;
+  --fa-color-grey-9: #efeaff;
   --fa-color-border-1: #4e4e4e;
   --fa-color-border-2: rgba(24, 16, 52, 0.4);
 }
@@ -1580,6 +1582,9 @@ START: Theme Process CSS
   padding-top: 150px;
   padding-bottom: 150px;
 }
+.fa-process-section .heading-area {
+  margin-bottom: 250px;
+}
 .fa-process-section .heading-area .process-desc {
   font-size: 18px;
   font-weight: var(--fa-fw-medium);
@@ -1591,14 +1596,105 @@ START: Theme Process CSS
   line-height: 1.8;
 }
 
+.process-main-wrapper {
+  position: relative;
+}
+.process-main-wrapper .process-item-wrap {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  -webkit-column-gap: 110px;
+     -moz-column-gap: 110px;
+          column-gap: 110px;
+  max-width: 1500px;
+  width: 100%;
+  margin-left: auto;
+}
+.process-main-wrapper .process-shapes {
+  position: absolute;
+  top: -555px;
+  left: 0;
+}
+
+.process-item {
+  position: relative;
+  max-width: 320px;
+  width: 100%;
+  text-align: center;
+}
+.process-item::before {
+  position: absolute;
+  content: "";
+  width: 25px;
+  height: 25px;
+  top: -55px;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+      -ms-transform: translateX(-50%);
+          transform: translateX(-50%);
+  background: var(--fa-color-theme-primary);
+  border-radius: 50%;
+}
+.process-item:nth-child(2) {
+  margin-top: -185px;
+}
+.process-item:nth-child(3) {
+  margin-top: -365px;
+}
+.process-item:nth-child(3)::before {
+  top: -135px;
+}
+.process-item .process-title {
+  font-weight: var(--fa-fw-bold);
+  margin-bottom: 0;
+  line-height: 1.3;
+}
+.process-item .process-desc {
+  margin-top: 26px;
+  margin-bottom: 0;
+  line-height: 1.7;
+}
+.process-item .process-images {
+  margin-top: 30px;
+}
+.process-item .process-images img {
+  border-radius: 50%;
+}
+.process-item .number {
+  font-size: 300px;
+  color: rgba(24, 16, 52, 0.04);
+  font-family: var(--fa-ff-heading);
+  font-weight: var(--fa-fw-black);
+  position: absolute;
+  top: -85px;
+  right: -120px;
+  line-height: 1;
+}
+
 /* !END: Theme Process CSS */
 /**----------------------------------------
 START: Theme Testimonial CSS
 ----------------------------------------*/
 .fa-testimonial-section {
-  padding-top: 150px;
+  padding-top: 415px;
   padding-bottom: 150px;
   background-color: var(--fa-color-theme-bg);
+}
+.fa-testimonial-section .heading-area {
+  margin-bottom: 0;
+  text-align: center;
+}
+.fa-testimonial-section .heading-area .sub-title {
+  -webkit-text-stroke-width: 3px;
+  -webkit-text-stroke-color: var(--fa-color-theme-primary);
+  -webkit-text-fill-color: var(--fa-color-theme-bg);
+  margin-bottom: 35px;
+}
+.fa-testimonial-section .heading-area .sec-title {
+  color: rgba(255, 255, 255, 0.12);
+  background: transparent;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: initial;
+  background-clip: initial;
 }
 
 /* !END: Theme Testimonial CSS */
@@ -1624,6 +1720,83 @@ START: Theme Brand CSS
 }
 
 /* !END: Theme Brand CSS */
+/**----------------------------------------
+START: Theme Award CSS
+----------------------------------------*/
+.fa-award-section {
+  padding-top: 150px;
+  padding-bottom: 150px;
+}
+.fa-award-section .heading-area .sub-title {
+  margin-bottom: 35px;
+}
+.fa-award-section .award-left {
+  position: relative;
+  max-width: 560px;
+  width: 100%;
+}
+.fa-award-section .award-main-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-column-gap: 127px;
+     -moz-column-gap: 127px;
+          column-gap: 127px;
+}
+
+.award-item {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 304px;
+  height: 304px;
+  border: 1px solid var(--fa-color-theme-primary);
+  background: var(--fa-color-grey-8);
+  border-radius: 50%;
+}
+.award-item:nth-child(2) {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  -webkit-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+          transform: translateY(-50%);
+  background: var(--fa-color-theme-bg);
+  border-color: var(--fa-color-theme-secondary);
+  z-index: -1;
+}
+.award-item:nth-child(2) .number {
+  color: var(--fa-color-common-white);
+}
+.award-item:nth-child(3) {
+  background: var(--fa-color-grey-9);
+  border-color: var(--fa-color-theme-secondary);
+  margin-top: -40px;
+}
+.award-item .number {
+  color: var(--fa-color-common-black);
+  font-size: 24px;
+  font-family: var(--fa-ff-heading);
+  font-weight: var(--fa-fw-bold);
+}
+.award-item .award-images {
+  margin-top: 80px;
+}
+
+/* !END: Theme Award CSS */
 /**----------------------------------------
 START: Theme FAQ CSS
 ----------------------------------------*/
@@ -1791,6 +1964,9 @@ START: Theme FAQ CSS
 }
 .accordion-item.active .faq-title .number {
   background-color: var(--fa-color-theme-primary);
+}
+.accordion-item.style-2 {
+  border: none;
 }
 
 /* !END: Theme FAQ CSS */

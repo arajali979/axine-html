@@ -4,8 +4,26 @@
 START: Theme Testimonial CSS
 ----------------------------------------*/
 .fa-testimonial-section {
-	padding-top: 150px;
+	padding-top: 415px;
 	padding-bottom: 150px;
 	background-color: var(--fa-color-theme-bg);
+	.heading-area {
+		margin-bottom: 0;
+		text-align: center;
+		.sub-title {
+			-webkit-text-stroke-width: 3px;
+			-webkit-text-stroke-color: var(--fa-color-theme-primary);
+			-webkit-text-fill-color: var(--fa-color-theme-bg);
+			margin-bottom: 35px;
+		}
+		.sec-title {
+			color: rgba(255, 255, 255, 0.12);
+			background: transparent;
+			-webkit-background-clip: text;
+			-webkit-text-fill-color: initial;
+			background-clip: initial;
+		}
+	}
 }
+
 /* !END: Theme Testimonial CSS */

@@ -1,0 +1,63 @@
+@use "../utilities" as *;
+
+/**----------------------------------------
+START: Theme Award CSS
+----------------------------------------*/
+.fa-award-section {
+	padding-top: 150px;
+	padding-bottom: 150px;
+	.heading-area {
+		.sub-title {
+			margin-bottom: 35px;
+		}
+	}
+	.award-left {
+		position: relative;
+		max-width: 560px;
+		width: 100%;
+	}
+	.award-main-wrapper {
+		display: flex;
+		align-items: center;
+		column-gap: 127px;
+	}
+}
+
+.award-item {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+	width: 304px;
+	height: 304px;
+	border: 1px solid var(--fa-color-theme-primary);
+	background: var(--fa-color-grey-8);
+	border-radius: 50%;
+	&:nth-child(2) {
+		position: absolute;
+		top: 50%;
+		right: 0;
+		transform: translateY(-50%);
+		background: var(--fa-color-theme-bg);
+		border-color: var(--fa-color-theme-secondary);
+		z-index: -1;
+		.number {
+			color: var(--fa-color-common-white);
+		}
+	}
+	&:nth-child(3) {
+		background: var(--fa-color-grey-9);
+		border-color: var(--fa-color-theme-secondary);
+		margin-top: -40px;
+	}
+	.number {
+		color: var(--fa-color-common-black);
+		font-size: 24px;
+		font-family: var(--fa-ff-heading);
+		font-weight: var(--fa-fw-bold);
+	}
+	.award-images {
+		margin-top: 80px;
+	}
+}
+/* !END: Theme Award CSS */
