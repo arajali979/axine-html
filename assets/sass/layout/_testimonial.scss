@@ -26,4 +26,36 @@ START: Theme Testimonial CSS
 	}
 }
 
+.swiper-pagination {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 15px;
+	position: relative;
+	margin-top: 30px;
+}
+
+.swiper-pagination-bullet {
+	font-size: 16px;
+	font-weight: 500;
+	color: #999;
+	opacity: 1;
+	background: none;
+}
+
+.swiper-pagination-bullet-active {
+	color: #ff4a00; /* active number color */
+}
+
+.swiper-pagination::after {
+	content: "";
+	position: absolute;
+	top: 50%;
+	left: 50px;
+	right: 50px;
+	height: 2px;
+	background: linear-gradient(to right, #ff4a00, #444);
+	z-index: -1;
+}
+
 /* !END: Theme Testimonial CSS */

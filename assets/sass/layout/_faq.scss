@@ -141,6 +141,45 @@ START: Theme FAQ CSS
 	}
 	&.style-2 {
 		border: none;
+		border-radius: 0px;
+		box-shadow: none;
+		margin-bottom: 0;
+		&:first-child {
+			.faq-title {
+				border-top: none;
+			}
+		}
+		&:last-child {
+			.faq-title {
+				border-bottom: 1px solid rgba(77, 53, 172, 0.4);
+			}
+		}
+		.faq-title {
+			border-top: 1px solid rgba(77, 53, 172, 0.4);
+			&::before {
+				right: 0;
+			}
+			.number {
+				display: inline-block;
+				width: auto;
+				height: auto;
+				font-size: 18px;
+				font-family: var(--fa-ff-heading);
+				font-weight: var(--fa-fw-sbold);
+				border-radius: 50px;
+				color: var(--fa-color-heading-primary);
+				border: 1px solid rgba(0, 0, 0, 0.2);
+				background: transparent;
+				padding: 6px 22px;
+				top: 35px;
+				line-height: 1;
+			}
+		}
+		.faq-text {
+			p {
+				border-top: none;
+			}
+		}
 	}
 }
 

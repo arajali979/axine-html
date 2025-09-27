@@ -21,20 +21,16 @@ Mobile Menu Js
 		$("select").niceSelect();
 	}
 
-	// Project Hover active change
+	// Project Hover Js
 	if ($(".project-wrapper-three").length) {
 		$(".project_item").hover(function () {
-			// Remove active class from all siblings
 			$(this).siblings(".project_item").removeClass("active");
 
-			// Add active class to hovered item
 			$(this).addClass("active");
 
-			// Update image dynamically
 			const newSrc = $(this).data("src");
 			const $image = $(".project_list_img img");
 
-			// Animate zoom out, change image, then zoom back in
 			$image
 				.fadeOut(300)
 				.css("transform", "scale(0.9)")
@@ -90,6 +86,18 @@ Mobile Menu Js
 				if (activeSlide) {
 					activeSlide.style.opacity = "1";
 				}
+			},
+		},
+	});
+
+	var swiper = new Swiper(".mySwiper", {
+		loop: false,
+		pagination: {
+			el: ".swiper-pagination",
+			clickable: true,
+			renderBullet: function (index, className) {
+				let number = (index + 1).toString().padStart(2, "0"); // 01, 02 format
+				return '<span class="' + className + '">' + number + "</span>";
 			},
 		},
 	});

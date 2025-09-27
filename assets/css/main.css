@@ -1697,6 +1697,45 @@ START: Theme Testimonial CSS
   background-clip: initial;
 }
 
+.swiper-pagination {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 15px;
+  position: relative;
+  margin-top: 30px;
+}
+
+.swiper-pagination-bullet {
+  font-size: 16px;
+  font-weight: 500;
+  color: #999;
+  opacity: 1;
+  background: none;
+}
+
+.swiper-pagination-bullet-active {
+  color: #ff4a00; /* active number color */
+}
+
+.swiper-pagination::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50px;
+  right: 50px;
+  height: 2px;
+  background: -webkit-gradient(linear, left top, right top, from(#ff4a00), to(#444));
+  background: linear-gradient(to right, #ff4a00, #444);
+  z-index: -1;
+}
+
 /* !END: Theme Testimonial CSS */
 /**----------------------------------------
 START: Theme Brand CSS
@@ -1761,8 +1800,8 @@ START: Theme Award CSS
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  width: 304px;
-  height: 304px;
+  width: 306px;
+  height: 306px;
   border: 1px solid var(--fa-color-theme-primary);
   background: var(--fa-color-grey-8);
   border-radius: 50%;
@@ -1967,6 +2006,40 @@ START: Theme FAQ CSS
 }
 .accordion-item.style-2 {
   border: none;
+  border-radius: 0px;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  margin-bottom: 0;
+}
+.accordion-item.style-2:first-child .faq-title {
+  border-top: none;
+}
+.accordion-item.style-2:last-child .faq-title {
+  border-bottom: 1px solid rgba(77, 53, 172, 0.4);
+}
+.accordion-item.style-2 .faq-title {
+  border-top: 1px solid rgba(77, 53, 172, 0.4);
+}
+.accordion-item.style-2 .faq-title::before {
+  right: 0;
+}
+.accordion-item.style-2 .faq-title .number {
+  display: inline-block;
+  width: auto;
+  height: auto;
+  font-size: 18px;
+  font-family: var(--fa-ff-heading);
+  font-weight: var(--fa-fw-sbold);
+  border-radius: 50px;
+  color: var(--fa-color-heading-primary);
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  background: transparent;
+  padding: 6px 22px;
+  top: 35px;
+  line-height: 1;
+}
+.accordion-item.style-2 .faq-text p {
+  border-top: none;
 }
 
 /* !END: Theme FAQ CSS */
