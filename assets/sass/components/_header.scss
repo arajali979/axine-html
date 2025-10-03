@@ -19,6 +19,9 @@ START: Theme Header CSS
 		z-index: 99;
 		background-color: transparent;
 	}
+	&.v-2 {
+		background: var(--fa-color-theme-secondary);
+	}
 }
 
 .maimmenu-main-wrapper {
