@@ -1,0 +1,80 @@
+@use "../utilities" as *;
+
+/**----------------------------------------
+START: Theme Cta CSS
+----------------------------------------*/
+.fa-cta-section {
+	position: relative;
+	background-color: var(--fa-color-theme-secondary);
+	padding-top: 95px;
+	padding-bottom: 95px;
+	.cta-images {
+		position: absolute;
+		bottom: 0;
+		left: 76px;
+		max-width: 340px;
+		width: 100%;
+		img {
+			width: 100%;
+		}
+	}
+}
+
+.cta-main-wrapper {
+	.cta-title {
+		font-size: 300px;
+		margin-bottom: 0;
+		text-align: center;
+		color: rgba(255, 255, 255, 0.06);
+		letter-spacing: -0.02em;
+		line-height: 1;
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		width: 100%;
+	}
+	.cta-subscribe-form {
+		max-width: 845px;
+		width: 100%;
+		margin-left: auto;
+		margin-right: auto;
+		position: relative;
+		text-align: center;
+		z-index: 1;
+		.form-input {
+			display: flex;
+			align-items: center;
+			input[type="email"] {
+				color: var(--fa-color-common-white);
+				font-family: var(--fa-ff-heading);
+				font-weight: var(--fa-fw-sbold);
+				width: 100%;
+				border-radius: 80px;
+				padding: 20px 30px;
+				border: none;
+				line-height: 1;
+				&::-ms-input-placeholder {
+					color: var(--fa-color-text-body);
+					font-family: var(--fa-ff-heading);
+					font-weight: var(--fa-fw-sbold);
+				}
+				&::placeholder {
+					color: var(--fa-color-text-body);
+					font-family: var(--fa-ff-heading);
+					font-weight: var(--fa-fw-sbold);
+				}
+			}
+		}
+		.desc {
+			font-size: 16px;
+			color: var(--fa-color-common-white);
+			font-family: var(--fa-ff-heading);
+			font-weight: var(--fa-fw-sbold);
+			margin-top: 35px;
+			margin-bottom: 0;
+		}
+	}
+}
+
+/* !END: Theme Cta CSS */

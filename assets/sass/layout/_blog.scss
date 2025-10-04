@@ -85,6 +85,35 @@ START: Theme Blog CSS
 			.read-more-btn {
 				justify-content: center;
 			}
+			.blog-author-wrap {
+				display: flex;
+				align-items: center;
+				column-gap: 30px;
+				margin-bottom: 40px;
+				.author-item {
+					display: flex;
+					align-items: center;
+					column-gap: 15px;
+					.author-images {
+						max-width: 70px;
+						width: 100%;
+						img {
+							background: var(--fa-color-theme-secondary);
+							mask-image: url(../images/shapes/h2-blog-shapes.svg);
+							mask-position: center;
+							mask-size: cover;
+							mask-repeat: no-repeat;
+						}
+					}
+					.author-name {
+						font-weight: var(--fa-fw-bold);
+						margin-bottom: 0;
+					}
+				}
+				.sub-title {
+					margin-bottom: 0;
+				}
+			}
 		}
 		.blog-images {
 			max-width: 580px;
