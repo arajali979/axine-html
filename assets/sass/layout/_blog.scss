@@ -19,6 +19,11 @@ START: Theme Blog CSS
 		}
 	}
 	&.v-3 {
+		background: linear-gradient(
+			360deg,
+			var(--fa-color-grey-6) 0%,
+			var(--fa-color-grey-7) 78.85%
+		);
 		.blog-main-wrapper {
 			grid-template-columns: repeat(3, 1fr);
 		}
@@ -247,6 +252,12 @@ START: Theme Blog CSS
 			}
 			.sub-title {
 				margin-bottom: 0;
+			}
+			.read-more-btn {
+				justify-content: center;
+				border: 1px solid rgba(0, 0, 0, 0.2);
+				padding: 21px 25px;
+				border-radius: 50px;
 			}
 		}
 	}

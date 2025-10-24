@@ -3185,6 +3185,10 @@ START: Theme Blog CSS
 .fa-blog-section.v-2 .blog-main-wrapper {
   grid-template-columns: repeat(1, 1fr);
 }
+.fa-blog-section.v-3 {
+  background: -webkit-gradient(linear, left bottom, left top, from(var(--fa-color-grey-6)), color-stop(78.85%, var(--fa-color-grey-7)));
+  background: linear-gradient(360deg, var(--fa-color-grey-6) 0%, var(--fa-color-grey-7) 78.85%);
+}
 .fa-blog-section.v-3 .blog-main-wrapper {
   grid-template-columns: repeat(3, 1fr);
 }
@@ -3489,6 +3493,14 @@ START: Theme Blog CSS
 }
 .blog-item.style-3 .blog-content .sub-title {
   margin-bottom: 0;
+}
+.blog-item.style-3 .blog-content .read-more-btn {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  padding: 21px 25px;
+  border-radius: 50px;
 }
 
 /* !END: Theme Blog CSS *//*# sourceMappingURL=main.css.map */
