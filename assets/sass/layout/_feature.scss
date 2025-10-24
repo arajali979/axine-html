@@ -1,0 +1,87 @@
+@use "../utilities" as *;
+
+/**----------------------------------------
+START: Theme Feature CSS
+----------------------------------------*/
+.fa-feature-section {
+	padding-top: 120px;
+	padding-bottom: 120px;
+	.heading-area {
+		.sub-title {
+			margin-bottom: 40px;
+		}
+	}
+}
+
+.feature-main-wrapper {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	column-gap: 24px;
+}
+
+.item-wrap {
+	position: relative;
+	background: var(--fa-color-grey-9);
+	border-radius: 50px;
+	margin-bottom: 30px;
+	border: 1px solid var(--fa-color-theme-secondary);
+	&:nth-child(2) {
+		background: var(--fa-color-theme-bg);
+		border: 1px solid var(--fa-color-theme-bg);
+		.feature-item {
+			.feature-content {
+				.feature-title {
+					color: var(--fa-color-common-white);
+				}
+			}
+		}
+	}
+	&:nth-child(3) {
+		background: var(--fa-color-grey-8);
+		border: 1px solid var(--fa-color-theme-primary);
+	}
+	.show-icons {
+		display: inline-flex;
+		align-items: center;
+		justify-content: center;
+		width: 90px;
+		height: 90px;
+		background: var(--fa-color-common-white);
+		border-radius: 50%;
+		position: absolute;
+		top: -1px;
+		right: -1px;
+		z-index: 1;
+	}
+	.feature-item {
+		position: relative;
+		overflow: hidden;
+		padding: 60px 45px 60px 45px;
+		.feature-content {
+			position: relative;
+			z-index: 1;
+			.feature-icons {
+				display: block;
+				margin-bottom: 50px;
+			}
+			.feature-title {
+				font-weight: var(--fa-fw-bold);
+				margin-bottom: 0;
+			}
+			.feature-desc {
+				font-size: 18px;
+				font-family: var(--fa-ff-heading);
+				font-weight: var(--fa-fw-medium);
+				margin-top: 30px;
+				margin-bottom: 0;
+			}
+		}
+		.item-shapes {
+			position: absolute;
+			left: 0;
+			bottom: -40px;
+		}
+	}
+}
+
+/* !END: Theme Feature CSS */

@@ -1,0 +1,199 @@
+@use "../utilities" as *;
+
+/**----------------------------------------
+START: Theme Team CSS
+----------------------------------------*/
+.fa-team-section {
+	position: relative;
+	padding-top: 150px;
+	background: var(--fa-color-theme-bg);
+	overflow: hidden;
+	&::before {
+		content: "";
+		position: absolute;
+		bottom: -30%;
+		left: 0;
+		width: 1050px;
+		height: 1050px;
+		border-radius: 50%;
+		background: var(--fa-color-theme-secondary);
+		background: radial-gradient(
+			50% 50% at 50% 50%,
+			var(--fa-color-theme-secondary) 0%,
+			rgba(77, 53, 172, 0) 100%
+		);
+		-webkit-filter: blur(150px);
+		filter: blur(150px);
+	}
+	&::after {
+		content: "";
+		position: absolute;
+		bottom: -30%;
+		right: 0;
+		width: 1050px;
+		height: 1050px;
+		border-radius: 50%;
+		background: var(--fa-color-theme-primary);
+		background: radial-gradient(
+			50% 50% at 50% 50%,
+			rgba(255, 98, 28, 0.7) 0%,
+			rgba(24, 16, 52, 0) 100%
+		);
+		-webkit-filter: blur(150px);
+		filter: blur(150px);
+	}
+	.heading-area {
+		position: relative;
+		max-width: 1130px;
+		width: 100%;
+		margin-left: auto;
+		z-index: 2;
+		.sub-title {
+			-webkit-text-stroke-width: 3px;
+			-webkit-text-stroke-color: var(--fa-color-theme-primary);
+			-webkit-text-fill-color: var(--fa-color-theme-bg);
+		}
+		.sec-title {
+			background: linear-gradient(
+				-90deg,
+				var(--fa-color-theme-bg) 0%,
+				var(--fa-color-common-white) 100%
+			);
+			-webkit-background-clip: text;
+			-webkit-text-fill-color: transparent;
+			background-clip: text;
+		}
+	}
+	.shapes-one {
+		position: absolute;
+		top: 0;
+		left: 0;
+	}
+	.shapes-two {
+		position: absolute;
+		top: 0;
+		left: 0;
+	}
+	&.v-2 {
+		background: transparent;
+		padding-bottom: 120px;
+		&::before {
+			display: none;
+		}
+		&::after {
+			display: none;
+		}
+		.team-bg-shapes {
+			position: absolute;
+			top: 0;
+			left: 0;
+		}
+		.heading-area {
+			max-width: 100%;
+			width: auto;
+			float: right;
+			.sub-title {
+				-webkit-text-fill-color: var(--fa-color-common-white);
+			}
+		}
+		.team-main-wrapper {
+			column-gap: 24px;
+		}
+	}
+}
+
+.team-main-wrapper {
+	display: flex;
+	align-items: end;
+	column-gap: 30px;
+	position: relative;
+	z-index: 2;
+}
+
+.team-item {
+	.team-content {
+		position: relative;
+		max-width: 210px;
+		width: 100%;
+		text-align: center;
+		.sub-title {
+			display: block;
+			color: var(--fa-color-grey-11);
+			font-family: var(--fa-ff-heading);
+			font-weight: var(--fa-fw-sbold);
+			margin-bottom: 10px;
+			text-align: center;
+		}
+		.team-title {
+			color: var(--fa-color-common-white);
+			font-weight: var(--fa-fw-bold);
+			margin-bottom: 0;
+		}
+		.item-arrow {
+			display: block;
+			text-align: center;
+			margin-top: 20px;
+		}
+	}
+	&:nth-child(2) {
+		.team-content {
+			max-width: 310px;
+		}
+	}
+	&:nth-child(3) {
+		.team-content {
+			top: 10px;
+			max-width: 300px;
+			margin-left: auto;
+			margin-bottom: 50px;
+		}
+	}
+	&:nth-child(4) {
+		.team-content {
+			top: 40px;
+			max-width: 220px;
+			margin-left: auto;
+		}
+	}
+}
+
+.team-style-2 {
+	position: relative;
+	margin-bottom: 30px;
+	border-radius: 50px;
+	overflow: hidden;
+	&::before {
+		position: absolute;
+		content: "";
+		width: 100%;
+		height: 100%;
+		right: 0;
+		top: 0;
+		background: linear-gradient(
+			90deg,
+			rgba(255, 255, 255, 0) 23.56%,
+			var(--fa-color-theme-secondary) 95%
+		);
+		border-radius: 50px;
+	}
+	.sub-title {
+		display: inline-block;
+		font-size: 18px;
+		color: var(--fa-color-common-white);
+		background: var(--fa-color-theme-primary);
+		font-family: var(--fa-ff-heading);
+		font-weight: var(--fa-fw-bold);
+		position: absolute;
+		bottom: 20px;
+		left: 20px;
+		padding: 18px 25px;
+		border-radius: 50px;
+		line-height: 1;
+	}
+	&:nth-child(even) {
+		.sub-title {
+			background: var(--fa-color-theme-secondary);
+		}
+	}
+}
+/* !END: Theme Team CSS */

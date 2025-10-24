@@ -6,6 +6,13 @@ START: Theme About CSS
 .fa-about-section {
 	padding-top: 150px;
 	padding-bottom: 150px;
+	&.v-2 {
+		background: linear-gradient(
+			360deg,
+			var(--fa-color-grey-6) 0%,
+			var(--fa-color-grey-7) 100%
+		);
+	}
 }
 
 .about-feature-wrap {

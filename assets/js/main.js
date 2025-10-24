@@ -53,6 +53,12 @@ Mobile Menu Js
 		});
 	}
 
+	// Rating Js
+	if ($(".fill-ratings span").length > 0) {
+		var star_rating_width = $(".fill-ratings span").width();
+		$(".star-ratings").width(star_rating_width);
+	}
+
 	// Project Swiper Js
 	var project = new Swiper(".fa-project-slider", {
 		effect: "coverflow",
