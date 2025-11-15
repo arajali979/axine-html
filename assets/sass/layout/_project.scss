@@ -14,8 +14,14 @@ START: Theme Project CSS
 		display: flex;
 		align-items: center;
 		justify-content: space-between;
+		margin-bottom: 80px;
+		.sec-title {
+			margin-top: -25px;
+		}
 		.view-blog-btn {
 			&::before {
+				width: 245px;
+				height: 245px;
 				background: var(--fa-color-theme-secondary);
 			}
 		}
@@ -24,10 +30,13 @@ START: Theme Project CSS
 		.swiper-slide {
 			border-radius: 50px 50px 0 0;
 			&.swiper-slide-active {
-				.project-content {
+				.project-item {
 					opacity: 1;
-					visibility: visible;
-					transform: translateY(0);
+					.project-content {
+						opacity: 1;
+						visibility: visible;
+						transform: translateY(0);
+					}
 				}
 			}
 		}
@@ -39,6 +48,7 @@ START: Theme Project CSS
 
 .project-item {
 	position: relative;
+	opacity: 0.5;
 	&::before {
 		position: absolute;
 		content: "";

@@ -95,13 +95,16 @@ Mobile Menu Js
 		},
 	});
 
-	var swiper = new Swiper(".mySwiper", {
+	// Testimonial Swiper Js
+	var testimonial = new Swiper(".testimonial-slider", {
 		loop: false,
+		slidesPerView: 3,
+		spaceBetween: 40,
 		pagination: {
 			el: ".swiper-pagination",
 			clickable: true,
 			renderBullet: function (index, className) {
-				let number = (index + 1).toString().padStart(2, "0"); // 01, 02 format
+				let number = (index + 1).toString().padStart(2, "0");
 				return '<span class="' + className + '">' + number + "</span>";
 			},
 		},

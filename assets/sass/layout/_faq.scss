@@ -51,6 +51,14 @@ START: Theme FAQ CSS
 	box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.05);
 	border-radius: 50px;
 	z-index: 2;
+	&.style-2 {
+		.faq-title {
+			padding: 25px 75px 25px 130px;
+		}
+		.faq-text {
+			padding: 0px 115px 25px 130px;
+		}
+	}
 	&:not(:first-of-type) {
 		border-top: 1px solid rgba(40, 38, 36, 0.3);
 	}
@@ -70,7 +78,7 @@ START: Theme FAQ CSS
 		align-items: center;
 		font-size: 30px;
 		font-family: var(--fa-ff-heading);
-		font-weight: var(--fa-fw-sbold);
+		font-weight: var(--fa-fw-bold);
 		padding: 25px 75px 25px 112px;
 		position: relative;
 		color: var(--fa-color-heading-primary);

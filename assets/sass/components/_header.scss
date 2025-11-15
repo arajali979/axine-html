@@ -21,6 +21,29 @@ START: Theme Header CSS
 	}
 	&.v-2 {
 		background: var(--fa-color-theme-secondary);
+		padding: 18px 0;
+		.maimmenu-main-wrapper {
+			.mainmenu {
+				background: rgba(255, 255, 255, 0.1);
+				padding: 0 45px;
+				border-radius: 50px;
+				ul > {
+					li > {
+						a {
+							padding: 18px 0;
+						}
+					}
+				}
+			}
+			.mainmenu-right-infos {
+				column-gap: 90px;
+				.header-media-wrap {
+					display: flex;
+					align-items: center;
+					column-gap: 30px;
+				}
+			}
+		}
 	}
 }
 
@@ -85,5 +108,23 @@ START: Theme Header CSS
 		font-family: var(--fa-ff-heading);
 		font-weight: var(--fa-fw-bold);
 	}
+}
+
+.header-social-media {
+	ul {
+		display: flex;
+		align-items: center;
+		column-gap: 20px;
+	}
+}
+
+.menu-bar {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	width: 55px;
+	height: 55px;
+	background: var(--fa-color-theme-primary);
+	border-radius: 50%;
 }
 /* !END: Theme Header CSS */

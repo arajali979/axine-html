@@ -6,12 +6,42 @@ START: Theme About CSS
 .fa-about-section {
 	padding-top: 150px;
 	padding-bottom: 150px;
+	.heading-area {
+		.sec-title {
+			margin-top: -80px;
+		}
+	}
 	&.v-2 {
 		background: linear-gradient(
 			360deg,
 			var(--fa-color-grey-6) 0%,
 			var(--fa-color-grey-7) 100%
 		);
+		.heading-area {
+			display: flex;
+			align-items: end;
+			justify-content: space-between;
+			column-gap: 140px;
+			max-width: 1770px;
+			width: 100%;
+			margin-left: auto;
+			.sub-title {
+				-webkit-text-stroke-width: 3px;
+				-webkit-text-stroke-color: var(--fa-color-theme-primary);
+				-webkit-text-fill-color: var(--fa-color-grey-7);
+			}
+			.header-desc {
+				max-width: 375px;
+				width: 100%;
+				.desc {
+					font-size: 18px;
+					color: var(--fa-color-heading-primary);
+					font-family: var(--fa-ff-heading);
+					font-weight: var(--fa-fw-medium);
+					margin-bottom: 75px;
+				}
+			}
+		}
 	}
 }
 
@@ -157,6 +187,85 @@ START: Theme About CSS
 		font-family: var(--fa-ff-heading);
 		font-weight: var(--fa-fw-sbold);
 		color: var(--fa-color-heading-primary);
+	}
+}
+
+.about-content-wrap {
+	display: flex;
+	column-gap: 25px;
+	justify-content: space-between;
+}
+
+.about-count-item {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+	position: relative;
+	max-width: 488px;
+	height: 490px;
+	width: 100%;
+	background: var(--fa-color-common-white);
+	text-align: center;
+	mask-image: url(../images/shapes/ab-mask.svg);
+	mask-position: center;
+	mask-repeat: no-repeat;
+	mask-size: cover;
+	.ab-count {
+		display: flex;
+		align-items: end;
+		position: relative;
+		left: -70px;
+		top: 50px;
+		font-size: 150px;
+		color: var(--fa-color-heading-primary);
+		font-family: var(--fa-ff-heading);
+		font-weight: var(--fa-fw-black);
+		line-height: 1;
+		.ab-icons {
+			position: absolute;
+			right: -10px;
+			bottom: -30px;
+		}
+	}
+	.sub-title {
+		display: block;
+		left: -65px;
+		top: 50px;
+		position: relative;
+		font-size: 24px;
+		font-family: var(--fa-ff-heading);
+		font-weight: var(--fa-fw-sbold);
+	}
+}
+
+.mission-vision-wrap {
+	display: flex;
+	align-items: start;
+	.mission-vision-list {
+		max-width: 410px;
+		width: 100%;
+		border-right: 1px solid rgba(24, 16, 52, 0.3);
+		padding-right: 70px;
+		margin-right: 70px;
+		&:last-child {
+			border-right: none;
+			padding-right: 0px;
+			margin-right: 0px;
+			max-width: 325px;
+		}
+		.mission-vision-title {
+			font-weight: var(--fa-fw-bold);
+			margin-bottom: 0;
+		}
+		.mission-vision-desc {
+			font-size: 18px;
+			font-family: var(--fa-ff-heading);
+			font-family: var(--fa-fw-medium);
+			margin-top: 20px;
+			margin-bottom: 0;
+			line-height: 1.8;
+		}
 	}
 }
 /* !END: Theme About CSS */

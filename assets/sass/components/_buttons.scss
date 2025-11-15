@@ -52,6 +52,14 @@
 			}
 		}
 	}
+	&.btn-1 {
+		.fa-btn-text {
+			background: var(--fa-color-theme-secondary);
+		}
+		.fa-icon {
+			background: var(--fa-color-theme-secondary);
+		}
+	}
 }
 
 .read-more-btn {

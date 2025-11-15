@@ -7,7 +7,7 @@ START: Theme Item List CSS
 	ul {
 		display: grid;
 		grid-template-columns: repeat(2, 1fr);
-		column-gap: 40px;
+		column-gap: 25px;
 		row-gap: 20px;
 		li {
 			display: flex;
