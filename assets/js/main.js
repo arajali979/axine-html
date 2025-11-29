@@ -21,15 +21,12 @@ Mobile Menu Js
 	}
 
 	// Project Hover Js
-	if ($(".project-wrapper-three").length) {
-		$(".project_item").hover(function () {
-			$(this).siblings(".project_item").removeClass("active");
-
+	if ($(".project-main-wrapper").length) {
+		$(".project-title").hover(function () {
+			$(this).siblings(".project-title").removeClass("active");
 			$(this).addClass("active");
-
 			const newSrc = $(this).data("src");
-			const $image = $(".project_list_img img");
-
+			const $image = $(".project-active-thumb img");
 			$image
 				.fadeOut(300)
 				.css("transform", "scale(0.9)")

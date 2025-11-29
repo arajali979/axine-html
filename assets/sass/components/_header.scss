@@ -45,6 +45,16 @@ START: Theme Header CSS
 			}
 		}
 	}
+	&.v-3 {
+		.mainmenu-right-infos {
+			column-gap: 115px;
+			.header-media-wrap {
+				display: flex;
+				align-items: center;
+				column-gap: 30px;
+			}
+		}
+	}
 }
 
 .maimmenu-main-wrapper {

@@ -1,0 +1,158 @@
+@use "../utilities" as *;
+
+/**----------------------------------------
+START: Theme Client CSS
+----------------------------------------*/
+.fa-client-section {
+	padding-bottom: 120px;
+	.heading-area {
+		margin-bottom: 0;
+		.blog-content {
+			margin-top: 40px;
+			.blog-desc {
+				font-size: 18px;
+				font-family: var(--fa-ff-heading);
+				font-weight: var(--fa-fw-medium);
+				max-width: 540px;
+				width: 100%;
+				margin-bottom: 0;
+			}
+			.blog-button {
+				margin-top: 50px;
+			}
+		}
+	}
+	&.v-2 {
+		padding-top: 100px;
+		padding-bottom: 100px;
+	}
+}
+
+.client-main-wrapper {
+	display: flex;
+	justify-content: space-between;
+}
+
+.client-2-wrapper {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	.client-item {
+		display: inline-flex;
+		align-items: center;
+		justify-content: center;
+		width: 180px;
+		height: 120px;
+	}
+}
+
+.client-thumb-wrap {
+	margin-top: 250px;
+	ul {
+		li {
+			ul {
+				display: flex;
+				flex-wrap: wrap;
+				position: relative;
+				li {
+					display: inline-flex;
+					align-items: center;
+					justify-content: center;
+					width: 320px;
+					height: 200px;
+					border: 1px solid rgba(0, 0, 0, 0.3);
+					padding: 25px 25px;
+					&:first-child {
+						border-right: none;
+					}
+					span {
+						max-width: 180px;
+						width: 100%;
+						margin-left: auto;
+						margin-right: auto;
+					}
+				}
+			}
+			&:nth-child(2) {
+				ul {
+					li {
+						&:nth-child(1) {
+							position: absolute;
+							left: -320px;
+							height: 201px;
+							top: -1px;
+							border-right: none;
+						}
+						&:nth-child(2) {
+							border-top: none;
+							width: 321px;
+						}
+						&:nth-child(3) {
+							border: none;
+							width: 319px;
+						}
+						.client-thumb {
+							display: flex;
+							span {
+								display: inline-flex;
+								align-items: center;
+								justify-content: center;
+								width: 75px;
+								height: 75px;
+								margin-left: -25px;
+								border-radius: 50%;
+								&:first-child {
+									margin-left: 0;
+								}
+								&:last-child {
+									background: var(--fa-color-theme-secondary);
+								}
+								img {
+									border: 1px solid var(--fa-color-heading-primary);
+									border-radius: 50%;
+								}
+							}
+						}
+					}
+				}
+			}
+			&:nth-child(3) {
+				ul {
+					margin-left: -320px;
+					li {
+						&:nth-child(1) {
+							border-top: none;
+							border-right: 1px solid rgba(0, 0, 0, 0.3);
+							width: 321px;
+						}
+						&:nth-child(2) {
+							border: none;
+						}
+					}
+				}
+				.client-count {
+					text-align: center;
+					.client-number {
+						font-size: 150px;
+						-webkit-text-stroke-width: 2px;
+						-webkit-text-stroke-color: var(--fa-color-heading-primary);
+						-webkit-text-fill-color: var(--fa-color-common-white);
+						font-family: var(--fa-ff-heading);
+						font-weight: var(--fa-fw-black);
+						line-height: 1;
+						span {
+							font-size: 70px;
+						}
+					}
+					.sub-title {
+						display: block;
+						font-size: 24px;
+						font-family: var(--fa-ff-heading);
+						font-weight: var(--fa-fw-sbold);
+					}
+				}
+			}
+		}
+	}
+}
+/* !END: Theme Client CSS */

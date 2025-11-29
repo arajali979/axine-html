@@ -41,8 +41,74 @@ START: Theme Project CSS
 			}
 		}
 	}
+	&.v-2 {
+		position: relative;
+		background: var(--fa-color-common-white);
+		padding-bottom: 175px;
+		overflow: hidden;
+		&::before {
+			content: "";
+			position: absolute;
+			top: -14%;
+			left: -12%;
+			width: 785px;
+			height: 785px;
+			border-radius: 50%;
+			background: var(--fa-color-theme-primary);
+			background: radial-gradient(
+				50% 50% at 50% 50%,
+				rgba(255, 98, 28, 0.25) 0%,
+				rgba(255, 255, 255, 0) 100%
+			);
+			transform: matrix(-1, 0, 0, 1, 0, 0);
+			filter: blur(150px);
+		}
+		&::after {
+			content: "";
+			position: absolute;
+			bottom: -15%;
+			right: -25%;
+			width: 1685px;
+			height: 1685px;
+			border-radius: 50%;
+			background: var(--fa-color-theme-secondary);
+			background: radial-gradient(
+				50% 50% at 50% 50%,
+				rgba(77, 53, 172, 0.2) 0%,
+				rgba(255, 255, 255, 0.2) 100%
+			);
+			transform: matrix(-1, 0, 0, 1, 0, 0);
+			filter: blur(150px);
+		}
+		.heading-area {
+			max-width: 1770px;
+			width: 100%;
+			margin-left: auto;
+			margin-bottom: 100px;
+		}
+	}
 	&.v-3 {
 		padding-bottom: 150px;
+	}
+}
+
+.project-main-wrapper {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	position: relative;
+	.project-active-thumb {
+		position: absolute;
+		right: 60px;
+		top: 50%;
+		max-width: 600px;
+		transform: translateY(-50%) rotate(10.77deg);
+		overflow: hidden;
+		border-radius: 50px;
+		z-index: 2;
+		img {
+			border-radius: 50px;
+		}
 	}
 }
 
@@ -94,4 +160,47 @@ START: Theme Project CSS
 	}
 }
 
+.project-two-item {
+	.project-title {
+		color: var(--fa-color-grey-12);
+		font-weight: var(--fa-fw-bold);
+		margin-bottom: 0;
+		transform: rotate(-12.84deg);
+		margin-bottom: 75px;
+		max-width: 1085px;
+		width: 100%;
+		&:nth-child(2) {
+			transform: rotate(-7.35deg);
+			margin-bottom: 110px;
+		}
+		&:nth-child(3) {
+			margin-bottom: 85px;
+			transform: rotate(0deg);
+		}
+		&:nth-child(4) {
+			margin-bottom: 95px;
+			transform: rotate(5.97deg);
+		}
+		&:nth-child(5) {
+			margin-bottom: 0px;
+			transform: rotate(13.47deg);
+		}
+		a {
+			display: flex;
+			align-items: center;
+			column-gap: 50px;
+			.project-icons {
+				opacity: 0;
+				visibility: hidden;
+			}
+			&:hover {
+				color: var(--fa-color-heading-primary);
+				.project-icons {
+					opacity: 1;
+					visibility: visible;
+				}
+			}
+		}
+	}
+}
 /* !END: Theme Project CSS */
