@@ -75,18 +75,37 @@ START: Theme Process CSS
 			top: -510px;
 		}
 	}
+	@media #{$xl} {
+		.process-shapes {
+			top: -475px;
+		}
+	}
+	@media #{$lg} {
+		.process-shapes {
+			top: -380px;
+		}
+	}
 	@media #{$md} {
+		.process-shapes {
+			display: none;
+		}
 		.process-item-wrap {
 			grid-template-columns: repeat(2, 1fr);
 		}
 	}
 	@media #{$sm} {
+		.process-shapes {
+			display: none;
+		}
 		.process-item-wrap {
 			grid-template-columns: repeat(2, 1fr);
 			column-gap: 30px;
 		}
 	}
 	@media #{$xs} {
+		.process-shapes {
+			display: none;
+		}
 		.process-item-wrap {
 			grid-template-columns: repeat(1, 1fr);
 			row-gap: 35px;
@@ -99,25 +118,11 @@ START: Theme Process CSS
 	max-width: 320px;
 	width: 100%;
 	text-align: center;
-	&::before {
-		position: absolute;
-		content: "";
-		width: 25px;
-		height: 25px;
-		top: -55px;
-		left: 50%;
-		transform: translateX(-50%);
-		background: var(--fa-color-theme-primary);
-		border-radius: 50%;
-	}
 	&:nth-child(2) {
 		margin-top: -185px;
 	}
 	&:nth-child(3) {
 		margin-top: -365px;
-		&::before {
-			top: -135px;
-		}
 	}
 	.process-title {
 		font-weight: var(--fa-fw-bold);
@@ -146,19 +151,6 @@ START: Theme Process CSS
 		line-height: 1;
 	}
 	@media #{$xxl} {
-		&::before {
-			top: -110px;
-		}
-		&:nth-child(2) {
-			&::before {
-				top: -63px;
-			}
-		}
-		&:nth-child(3) {
-			&::before {
-				top: -104px;
-			}
-		}
 		.number {
 			font-size: 210px;
 			top: -65px;
@@ -186,9 +178,6 @@ START: Theme Process CSS
 		}
 	}
 	@media #{$md, $sm} {
-		&::before {
-			display: none;
-		}
 		&:nth-child(2) {
 			margin-top: 0px;
 		}
@@ -203,9 +192,6 @@ START: Theme Process CSS
 	}
 	@media #{$xs} {
 		max-width: 100%;
-		&::before {
-			display: none;
-		}
 		&:nth-child(2) {
 			margin-top: 0px;
 		}

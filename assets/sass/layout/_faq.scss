@@ -344,6 +344,15 @@ START: Theme FAQ CSS
 		}
 	}
 	@media #{$xs} {
+		border-radius: 15px;
+		&:first-of-type {
+			border-top-left-radius: 15px;
+			border-top-right-radius: 15px;
+		}
+		&:last-of-type {
+			border-bottom-right-radius: 15px;
+			border-bottom-left-radius: 15px;
+		}
 		.faq-title {
 			font-size: 20px;
 			padding: 25px 65px 25px 65px;

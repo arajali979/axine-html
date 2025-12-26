@@ -362,6 +362,14 @@ START: Theme Blog CSS
 	}
 	@media #{$xs} {
 		flex-direction: column;
+		.blog-images {
+			border-radius: 15px;
+			a {
+				img {
+					border-radius: 15px;
+				}
+			}
+		}
 		.blog-content {
 			.sub-title {
 				margin-bottom: 15px;

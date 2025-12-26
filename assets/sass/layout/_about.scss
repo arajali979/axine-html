@@ -46,6 +46,37 @@ START: Theme About CSS
 	&.v-3 {
 		padding-top: 0;
 	}
+	@media #{$xl} {
+		padding-top: 120px;
+		padding-bottom: 120px;
+	}
+	@media #{$lg} {
+		padding-top: 120px;
+		padding-bottom: 120px;
+		.heading-area {
+			.sec-title {
+				margin-top: -50px;
+			}
+		}
+	}
+	@media #{$md, $sm} {
+		padding-top: 80px;
+		padding-bottom: 80px;
+		.heading-area {
+			.sec-title {
+				margin-top: -40px;
+			}
+		}
+	}
+	@media #{$xs} {
+		padding-top: 80px;
+		padding-bottom: 80px;
+		.heading-area {
+			.sec-title {
+				margin-top: -10px;
+			}
+		}
+	}
 }
 
 .about-feature-wrap {
@@ -56,6 +87,7 @@ START: Theme About CSS
 		display: flex;
 		align-items: center;
 		column-gap: 70px;
+		row-gap: 15px;
 		.brand-title {
 			display: flex;
 			align-items: center;
@@ -64,20 +96,55 @@ START: Theme About CSS
 			margin-bottom: 0;
 		}
 	}
+	@media #{$xxl} {
+		.feature-brand {
+			column-gap: 40px;
+		}
+	}
+	@media #{$xl} {
+		.feature-brand {
+			column-gap: 40px;
+		}
+	}
+	@media #{$lg} {
+		flex-wrap: wrap;
+		justify-content: center;
+		row-gap: 30px;
+		.feature-brand {
+			justify-content: center;
+		}
+	}
+	@media #{$md, $sm} {
+		flex-wrap: wrap;
+		justify-content: center;
+		row-gap: 30px;
+		.feature-brand {
+			justify-content: center;
+		}
+	}
+	@media #{$xs} {
+		flex-wrap: wrap;
+		justify-content: center;
+		row-gap: 30px;
+		.feature-brand {
+			flex-direction: column;
+			align-items: start;
+		}
+	}
 }
 
 .mission-vision-item {
 	display: flex;
 	align-items: center;
 	column-gap: 65px;
+	row-gap: 40px;
 	background: var(--fa-color-theme-secondary);
 	padding: 37px 60px 36px;
 	border-radius: 50px;
 	position: absolute;
-	max-width: 820px;
 	left: 0;
 	bottom: 55px;
-	width: 100%;
+	width: calc(100% - 800px);
 	z-index: 2;
 	.mission-vision-list {
 		.mission-vision-title {
@@ -95,16 +162,58 @@ START: Theme About CSS
 			line-height: 1.9;
 		}
 	}
+	@media #{$xxl} {
+		column-gap: 18px;
+		padding: 37px 20px 36px;
+		bottom: 30px;
+		width: calc(100% - 735px);
+	}
+	@media #{$xl} {
+		column-gap: 20px;
+		padding: 15px 20px 15px;
+		bottom: -40px;
+		width: calc(100% - 520px);
+	}
+	@media #{$lg} {
+		position: initial;
+		justify-content: center;
+		margin: 30px auto 0;
+		width: calc(100% - 95px);
+	}
+	@media #{$lg} {
+		position: initial;
+		justify-content: center;
+		margin: 30px auto 0;
+		width: 100%;
+	}
+	@media #{$md, $sm} {
+		position: initial;
+		justify-content: center;
+		margin: 30px auto 0;
+		width: 100%;
+	}
+	@media #{$xs} {
+		position: initial;
+		flex-direction: column;
+		justify-content: center;
+		padding: 30px 15px 30px;
+		border-radius: 15px;
+		margin: 30px auto 0;
+		width: 100%;
+	}
 }
 
 .about-video-wrap {
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
+	column-gap: 40px;
+	row-gap: 30px;
 	.about-content {
 		display: flex;
 		align-items: center;
 		column-gap: 50px;
+		row-gap: 20px;
 		.about-images {
 			max-width: 600px;
 			width: 100%;
@@ -129,13 +238,12 @@ START: Theme About CSS
 		}
 	}
 	.about-video-btn {
-		max-width: 210px;
-		width: 100%;
-		display: inline-flex;
-		align-items: center;
-		justify-content: center;
 		.video-btn {
-			display: inline-block;
+			display: inline-flex;
+			align-items: center;
+			justify-content: center;
+			width: 210px;
+			height: 210px;
 			position: relative;
 			&::before {
 				position: absolute;
@@ -166,6 +274,42 @@ START: Theme About CSS
 			}
 		}
 	}
+	@media #{$xl} {
+		margin-top: 50px;
+	}
+	@media #{$lg} {
+		margin-top: 30px;
+	}
+	@media #{$md} {
+		flex-direction: column;
+		margin-top: 30px;
+		.about-content {
+			column-gap: 30px;
+		}
+	}
+	@media #{$sm} {
+		flex-direction: column;
+		margin-top: 30px;
+		.about-content {
+			flex-direction: column;
+			.about-images {
+				max-width: 100%;
+			}
+		}
+	}
+	@media #{$xs} {
+		flex-direction: column;
+		margin-top: 30px;
+		.about-content {
+			flex-direction: column;
+			.about-images {
+				max-width: 100%;
+				img {
+					border-radius: 15px;
+				}
+			}
+		}
+	}
 }
 
 .about-images-group {
@@ -178,6 +322,21 @@ START: Theme About CSS
 	border-radius: 50px;
 	img {
 		border-radius: 50px;
+	}
+	@media #{$xxl} {
+		max-width: 795px;
+	}
+	@media #{$xl} {
+		max-width: 550px;
+	}
+	@media #{$lg, $md, $sm} {
+		max-width: 100%;
+	}
+	@media #{$xs} {
+		border-radius: 15px;
+		img {
+			border-radius: 15px;
+		}
 	}
 }
 

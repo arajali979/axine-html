@@ -9,6 +9,10 @@ START: Theme Testimonial CSS
 	padding-bottom: 120px;
 	background-color: var(--fa-color-theme-bg);
 	overflow: hidden;
+	@media #{$md, $sm, $xs} {
+		padding-top: 80px;
+		padding-bottom: 80px;
+	}
 	.heading-area {
 		margin-bottom: 40px;
 		text-align: center;
@@ -25,6 +29,9 @@ START: Theme Testimonial CSS
 			-webkit-text-fill-color: initial;
 			background-clip: initial;
 		}
+		@media #{$xs} {
+			margin-bottom: 0px;
+		}
 	}
 	.testimonial-slider {
 		padding: 60px 10px;
@@ -37,7 +44,7 @@ START: Theme Testimonial CSS
 			position: relative;
 			bottom: -50px;
 		}
-		@media #{$xl} {
+		@media #{$xl, $lg, $md, $sm, $xs} {
 			padding: 60px 20px;
 		}
 	}
@@ -356,18 +363,47 @@ START: Theme Testimonial CSS
 			left: -18px;
 		}
 	}
-	@media #{$lg} {
+	@media #{$lg, $md, $sm} {
 		.testimonial-images {
-			right: -10px;
+			right: -20px;
 			top: -30px;
 			max-width: 95px;
 			border-radius: 25px;
 		}
 		.testimonial-content {
-			width: 365px;
-			height: 265px;
+			width: 350px;
+			height: 260px;
 			.testimonial-desc {
 				font-size: 16px;
+				padding-left: 85px;
+			}
+			.testimonial-author {
+				margin-bottom: 20px;
+			}
+			.testimonial-rating {
+				left: -10px;
+			}
+		}
+		.testimonial-icons {
+			width: 70px;
+			height: 70px;
+			left: -18px;
+		}
+	}
+	@media #{$xs} {
+		.testimonial-images {
+			right: -50px;
+			top: -15px;
+			max-width: 80px;
+			border-radius: 15px;
+		}
+		.testimonial-content {
+			width: 350px;
+			height: 260px;
+			border-radius: 15px;
+			.testimonial-desc {
+				font-size: 16px;
+				padding-left: 85px;
 			}
 			.testimonial-author {
 				margin-bottom: 20px;

@@ -2225,6 +2225,39 @@ START: Theme About CSS
 .fa-about-section.v-3 {
   padding-top: 0;
 }
+@media only screen and (min-width: 1200px) and (max-width: 1399px) {
+  .fa-about-section {
+    padding-top: 120px;
+    padding-bottom: 120px;
+  }
+}
+@media only screen and (min-width: 992px) and (max-width: 1199px) {
+  .fa-about-section {
+    padding-top: 120px;
+    padding-bottom: 120px;
+  }
+  .fa-about-section .heading-area .sec-title {
+    margin-top: -50px;
+  }
+}
+@media only screen and (min-width: 768px) and (max-width: 991px), only screen and (min-width: 576px) and (max-width: 767px) {
+  .fa-about-section {
+    padding-top: 80px;
+    padding-bottom: 80px;
+  }
+  .fa-about-section .heading-area .sec-title {
+    margin-top: -40px;
+  }
+}
+@media (max-width: 575px) {
+  .fa-about-section {
+    padding-top: 80px;
+    padding-bottom: 80px;
+  }
+  .fa-about-section .heading-area .sec-title {
+    margin-top: -10px;
+  }
+}
 
 .about-feature-wrap {
   display: -webkit-box;
@@ -2245,6 +2278,7 @@ START: Theme About CSS
   -webkit-column-gap: 70px;
      -moz-column-gap: 70px;
           column-gap: 70px;
+  row-gap: 15px;
 }
 .about-feature-wrap .feature-brand .brand-title {
   display: -webkit-box;
@@ -2259,6 +2293,69 @@ START: Theme About CSS
   font-weight: var(--fa-fw-bold);
   margin-bottom: 0;
 }
+@media only screen and (min-width: 1400px) and (max-width: 1600px) {
+  .about-feature-wrap .feature-brand {
+    -webkit-column-gap: 40px;
+       -moz-column-gap: 40px;
+            column-gap: 40px;
+  }
+}
+@media only screen and (min-width: 1200px) and (max-width: 1399px) {
+  .about-feature-wrap .feature-brand {
+    -webkit-column-gap: 40px;
+       -moz-column-gap: 40px;
+            column-gap: 40px;
+  }
+}
+@media only screen and (min-width: 992px) and (max-width: 1199px) {
+  .about-feature-wrap {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    row-gap: 30px;
+  }
+  .about-feature-wrap .feature-brand {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+}
+@media only screen and (min-width: 768px) and (max-width: 991px), only screen and (min-width: 576px) and (max-width: 767px) {
+  .about-feature-wrap {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    row-gap: 30px;
+  }
+  .about-feature-wrap .feature-brand {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+}
+@media (max-width: 575px) {
+  .about-feature-wrap {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    row-gap: 30px;
+  }
+  .about-feature-wrap .feature-brand {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: start;
+  }
+}
 
 .mission-vision-item {
   display: -webkit-box;
@@ -2270,14 +2367,14 @@ START: Theme About CSS
   -webkit-column-gap: 65px;
      -moz-column-gap: 65px;
           column-gap: 65px;
+  row-gap: 40px;
   background: var(--fa-color-theme-secondary);
   padding: 37px 60px 36px;
   border-radius: 50px;
   position: absolute;
-  max-width: 820px;
   left: 0;
   bottom: 55px;
-  width: 100%;
+  width: calc(100% - 800px);
   z-index: 2;
 }
 .mission-vision-item .mission-vision-list .mission-vision-title {
@@ -2294,6 +2391,72 @@ START: Theme About CSS
   margin-bottom: 0;
   line-height: 1.9;
 }
+@media only screen and (min-width: 1400px) and (max-width: 1600px) {
+  .mission-vision-item {
+    -webkit-column-gap: 18px;
+       -moz-column-gap: 18px;
+            column-gap: 18px;
+    padding: 37px 20px 36px;
+    bottom: 30px;
+    width: calc(100% - 735px);
+  }
+}
+@media only screen and (min-width: 1200px) and (max-width: 1399px) {
+  .mission-vision-item {
+    -webkit-column-gap: 20px;
+       -moz-column-gap: 20px;
+            column-gap: 20px;
+    padding: 15px 20px 15px;
+    bottom: -40px;
+    width: calc(100% - 520px);
+  }
+}
+@media only screen and (min-width: 992px) and (max-width: 1199px) {
+  .mission-vision-item {
+    position: initial;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    margin: 30px auto 0;
+    width: calc(100% - 95px);
+  }
+}
+@media only screen and (min-width: 992px) and (max-width: 1199px) {
+  .mission-vision-item {
+    position: initial;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    margin: 30px auto 0;
+    width: 100%;
+  }
+}
+@media only screen and (min-width: 768px) and (max-width: 991px), only screen and (min-width: 576px) and (max-width: 767px) {
+  .mission-vision-item {
+    position: initial;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    margin: 30px auto 0;
+    width: 100%;
+  }
+}
+@media (max-width: 575px) {
+  .mission-vision-item {
+    position: initial;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    padding: 30px 15px 30px;
+    border-radius: 15px;
+    margin: 30px auto 0;
+    width: 100%;
+  }
+}
 
 .about-video-wrap {
   display: -webkit-box;
@@ -2305,6 +2468,10 @@ START: Theme About CSS
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  -webkit-column-gap: 40px;
+     -moz-column-gap: 40px;
+          column-gap: 40px;
+  row-gap: 30px;
 }
 .about-video-wrap .about-content {
   display: -webkit-box;
@@ -2316,6 +2483,7 @@ START: Theme About CSS
   -webkit-column-gap: 50px;
      -moz-column-gap: 50px;
           column-gap: 50px;
+  row-gap: 20px;
 }
 .about-video-wrap .about-content .about-images {
   max-width: 600px;
@@ -2339,9 +2507,7 @@ START: Theme About CSS
 .about-video-wrap .about-content .about-text .about-button {
   margin-top: 40px;
 }
-.about-video-wrap .about-video-btn {
-  max-width: 210px;
-  width: 100%;
+.about-video-wrap .about-video-btn .video-btn {
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
   display: inline-flex;
@@ -2351,9 +2517,8 @@ START: Theme About CSS
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-}
-.about-video-wrap .about-video-btn .video-btn {
-  display: inline-block;
+  width: 210px;
+  height: 210px;
   position: relative;
 }
 .about-video-wrap .about-video-btn .video-btn::before {
@@ -2387,6 +2552,69 @@ START: Theme About CSS
           transform: translate(-50%, -50%);
   z-index: -1;
 }
+@media only screen and (min-width: 1200px) and (max-width: 1399px) {
+  .about-video-wrap {
+    margin-top: 50px;
+  }
+}
+@media only screen and (min-width: 992px) and (max-width: 1199px) {
+  .about-video-wrap {
+    margin-top: 30px;
+  }
+}
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+  .about-video-wrap {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    margin-top: 30px;
+  }
+  .about-video-wrap .about-content {
+    -webkit-column-gap: 30px;
+       -moz-column-gap: 30px;
+            column-gap: 30px;
+  }
+}
+@media only screen and (min-width: 576px) and (max-width: 767px) {
+  .about-video-wrap {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    margin-top: 30px;
+  }
+  .about-video-wrap .about-content {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .about-video-wrap .about-content .about-images {
+    max-width: 100%;
+  }
+}
+@media (max-width: 575px) {
+  .about-video-wrap {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    margin-top: 30px;
+  }
+  .about-video-wrap .about-content {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .about-video-wrap .about-content .about-images {
+    max-width: 100%;
+  }
+  .about-video-wrap .about-content .about-images img {
+    border-radius: 15px;
+  }
+}
 
 .about-images-group {
   max-width: 870px;
@@ -2403,6 +2631,29 @@ START: Theme About CSS
 }
 .about-images-group img {
   border-radius: 50px;
+}
+@media only screen and (min-width: 1400px) and (max-width: 1600px) {
+  .about-images-group {
+    max-width: 795px;
+  }
+}
+@media only screen and (min-width: 1200px) and (max-width: 1399px) {
+  .about-images-group {
+    max-width: 550px;
+  }
+}
+@media only screen and (min-width: 992px) and (max-width: 1199px), only screen and (min-width: 768px) and (max-width: 991px), only screen and (min-width: 576px) and (max-width: 767px) {
+  .about-images-group {
+    max-width: 100%;
+  }
+}
+@media (max-width: 575px) {
+  .about-images-group {
+    border-radius: 15px;
+  }
+  .about-images-group img {
+    border-radius: 15px;
+  }
 }
 
 .feature-list-one li {
@@ -3052,7 +3303,7 @@ START: Theme Service CSS
   .service-item .service-content {
     position: initial;
     padding: 35px 15px;
-    border-radius: 30px;
+    border-radius: 15px;
   }
 }
 
@@ -3551,12 +3802,28 @@ START: Theme Process CSS
     top: -510px;
   }
 }
+@media only screen and (min-width: 1200px) and (max-width: 1399px) {
+  .process-main-wrapper .process-shapes {
+    top: -475px;
+  }
+}
+@media only screen and (min-width: 992px) and (max-width: 1199px) {
+  .process-main-wrapper .process-shapes {
+    top: -380px;
+  }
+}
 @media only screen and (min-width: 768px) and (max-width: 991px) {
+  .process-main-wrapper .process-shapes {
+    display: none;
+  }
   .process-main-wrapper .process-item-wrap {
     grid-template-columns: repeat(2, 1fr);
   }
 }
 @media only screen and (min-width: 576px) and (max-width: 767px) {
+  .process-main-wrapper .process-shapes {
+    display: none;
+  }
   .process-main-wrapper .process-item-wrap {
     grid-template-columns: repeat(2, 1fr);
     -webkit-column-gap: 30px;
@@ -3565,6 +3832,9 @@ START: Theme Process CSS
   }
 }
 @media (max-width: 575px) {
+  .process-main-wrapper .process-shapes {
+    display: none;
+  }
   .process-main-wrapper .process-item-wrap {
     grid-template-columns: repeat(1, 1fr);
     row-gap: 35px;
@@ -3577,27 +3847,11 @@ START: Theme Process CSS
   width: 100%;
   text-align: center;
 }
-.process-item::before {
-  position: absolute;
-  content: "";
-  width: 25px;
-  height: 25px;
-  top: -55px;
-  left: 50%;
-  -webkit-transform: translateX(-50%);
-      -ms-transform: translateX(-50%);
-          transform: translateX(-50%);
-  background: var(--fa-color-theme-primary);
-  border-radius: 50%;
-}
 .process-item:nth-child(2) {
   margin-top: -185px;
 }
 .process-item:nth-child(3) {
   margin-top: -365px;
-}
-.process-item:nth-child(3)::before {
-  top: -135px;
 }
 .process-item .process-title {
   font-weight: var(--fa-fw-bold);
@@ -3626,15 +3880,6 @@ START: Theme Process CSS
   line-height: 1;
 }
 @media only screen and (min-width: 1400px) and (max-width: 1600px) {
-  .process-item::before {
-    top: -110px;
-  }
-  .process-item:nth-child(2)::before {
-    top: -63px;
-  }
-  .process-item:nth-child(3)::before {
-    top: -104px;
-  }
   .process-item .number {
     font-size: 210px;
     top: -65px;
@@ -3662,9 +3907,6 @@ START: Theme Process CSS
   }
 }
 @media only screen and (min-width: 768px) and (max-width: 991px), only screen and (min-width: 576px) and (max-width: 767px) {
-  .process-item::before {
-    display: none;
-  }
   .process-item:nth-child(2) {
     margin-top: 0px;
   }
@@ -3680,9 +3922,6 @@ START: Theme Process CSS
 @media (max-width: 575px) {
   .process-item {
     max-width: 100%;
-  }
-  .process-item::before {
-    display: none;
   }
   .process-item:nth-child(2) {
     margin-top: 0px;
@@ -3708,6 +3947,12 @@ START: Theme Testimonial CSS
   background-color: var(--fa-color-theme-bg);
   overflow: hidden;
 }
+@media only screen and (min-width: 768px) and (max-width: 991px), only screen and (min-width: 576px) and (max-width: 767px), (max-width: 575px) {
+  .fa-testimonial-section {
+    padding-top: 80px;
+    padding-bottom: 80px;
+  }
+}
 .fa-testimonial-section .heading-area {
   margin-bottom: 40px;
   text-align: center;
@@ -3724,6 +3969,11 @@ START: Theme Testimonial CSS
   -webkit-background-clip: text;
   -webkit-text-fill-color: initial;
   background-clip: initial;
+}
+@media (max-width: 575px) {
+  .fa-testimonial-section .heading-area {
+    margin-bottom: 0px;
+  }
 }
 .fa-testimonial-section .testimonial-slider {
   padding: 60px 10px;
@@ -3743,7 +3993,7 @@ START: Theme Testimonial CSS
   position: relative;
   bottom: -50px;
 }
-@media only screen and (min-width: 1200px) and (max-width: 1399px) {
+@media only screen and (min-width: 1200px) and (max-width: 1399px), only screen and (min-width: 992px) and (max-width: 1199px), only screen and (min-width: 768px) and (max-width: 991px), only screen and (min-width: 576px) and (max-width: 767px), (max-width: 575px) {
   .fa-testimonial-section .testimonial-slider {
     padding: 60px 20px;
   }
@@ -4053,19 +4303,48 @@ START: Theme Testimonial CSS
     left: -18px;
   }
 }
-@media only screen and (min-width: 992px) and (max-width: 1199px) {
+@media only screen and (min-width: 992px) and (max-width: 1199px), only screen and (min-width: 768px) and (max-width: 991px), only screen and (min-width: 576px) and (max-width: 767px) {
   .testimonial-item .testimonial-images {
-    right: -10px;
+    right: -20px;
     top: -30px;
     max-width: 95px;
     border-radius: 25px;
   }
   .testimonial-item .testimonial-content {
-    width: 365px;
-    height: 265px;
+    width: 350px;
+    height: 260px;
   }
   .testimonial-item .testimonial-content .testimonial-desc {
     font-size: 16px;
+    padding-left: 85px;
+  }
+  .testimonial-item .testimonial-content .testimonial-author {
+    margin-bottom: 20px;
+  }
+  .testimonial-item .testimonial-content .testimonial-rating {
+    left: -10px;
+  }
+  .testimonial-item .testimonial-icons {
+    width: 70px;
+    height: 70px;
+    left: -18px;
+  }
+}
+@media (max-width: 575px) {
+  .testimonial-item .testimonial-images {
+    right: -50px;
+    top: -15px;
+    max-width: 80px;
+    border-radius: 15px;
+  }
+  .testimonial-item .testimonial-content {
+    width: 350px;
+    height: 260px;
+    border-radius: 15px;
+  }
+  .testimonial-item .testimonial-content .testimonial-desc {
+    font-size: 16px;
+    padding-left: 85px;
   }
   .testimonial-item .testimonial-content .testimonial-author {
     margin-bottom: 20px;
@@ -4310,8 +4589,8 @@ START: Theme Award CSS
 }
 @media only screen and (min-width: 992px) and (max-width: 1199px) {
   .award-item {
-    width: 250px;
-    height: 250px;
+    width: 280px;
+    height: 280px;
   }
 }
 @media only screen and (min-width: 576px) and (max-width: 767px) {
@@ -5087,6 +5366,17 @@ START: Theme FAQ CSS
   }
 }
 @media (max-width: 575px) {
+  .accordion-item {
+    border-radius: 15px;
+  }
+  .accordion-item:first-of-type {
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+  }
+  .accordion-item:last-of-type {
+    border-bottom-right-radius: 15px;
+    border-bottom-left-radius: 15px;
+  }
   .accordion-item .faq-title {
     font-size: 20px;
     padding: 25px 65px 25px 65px;
@@ -6141,6 +6431,12 @@ START: Theme Blog CSS
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
+  }
+  .blog-item .blog-images {
+    border-radius: 15px;
+  }
+  .blog-item .blog-images a img {
+    border-radius: 15px;
   }
   .blog-item .blog-content .sub-title {
     margin-bottom: 15px;

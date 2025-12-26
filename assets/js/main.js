@@ -122,17 +122,24 @@ Mobile Menu Js
 		breakpoints: {
 			320: {
 				slidesPerView: 1,
+				spaceBetween: 60,
 			},
 			576: {
-				slidesPerView: 1,
+				slidesPerView: 1.5,
 			},
 			768: {
 				slidesPerView: 2,
 			},
 			992: {
-				slidesPerView: 2,
+				slidesPerView: 2.6,
 			},
-			1024: {
+			1140: {
+				slidesPerView: 3,
+			},
+			1200: {
+				slidesPerView: 3,
+			},
+			1400: {
 				slidesPerView: 3,
 			},
 		},
