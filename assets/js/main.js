@@ -90,6 +90,20 @@ Mobile Menu Js
 				}
 			},
 		},
+		breakpoints: {
+			320: {
+				slidesPerView: 1.1,
+			},
+			576: {
+				slidesPerView: 1.2,
+			},
+			768: {
+				slidesPerView: 1.3,
+			},
+			992: {
+				slidesPerView: 1.5,
+			},
+		},
 	});
 
 	// Testimonial Swiper Js
@@ -105,5 +119,52 @@ Mobile Menu Js
 				return '<span class="' + className + '">' + number + "</span>";
 			},
 		},
+		breakpoints: {
+			320: {
+				slidesPerView: 1,
+			},
+			576: {
+				slidesPerView: 1,
+			},
+			768: {
+				slidesPerView: 2,
+			},
+			992: {
+				slidesPerView: 2,
+			},
+			1024: {
+				slidesPerView: 3,
+			},
+		},
 	});
+
+	// Brand Slider Js
+	if ($(".fa-brand-slider").length > 0) {
+		var brand = new Swiper(".fa-brand-slider", {
+			slidesPerView: 4,
+			spaceBetween: 140,
+			loop: false,
+			breakpoints: {
+				320: {
+					slidesPerView: 3,
+					spaceBetween: 30,
+				},
+				576: {
+					slidesPerView: 4,
+					spaceBetween: 30,
+				},
+				768: {
+					slidesPerView: 4,
+					spaceBetween: 60,
+				},
+				992: {
+					slidesPerView: 4,
+					spaceBetween: 80,
+				},
+				1024: {
+					slidesPerView: 5,
+				},
+			},
+		});
+	}
 })(jQuery);

@@ -95,6 +95,22 @@ START: Theme Hero CSS
 			max-width: 1800px;
 		}
 	}
+	@media #{$lg} {
+		padding-top: 185px;
+		padding-bottom: 350px;
+	}
+	@media #{$md} {
+		padding-top: 150px;
+		padding-bottom: 310px;
+	}
+	@media #{$sm} {
+		padding-top: 140px;
+		padding-bottom: 275px;
+	}
+	@media #{$xs} {
+		padding-top: 135px;
+		padding-bottom: 215px;
+	}
 }
 
 .hero-main-wrapper {
@@ -121,6 +137,16 @@ START: Theme Hero CSS
 			-webkit-text-stroke-width: 3px;
 			-webkit-text-stroke-color: var(--fa-color-common-white);
 			-webkit-text-fill-color: var(--fa-color-theme-secondary);
+		}
+	}
+	@media #{$sm} {
+		.hero-subtitle {
+			font-size: 40px;
+		}
+	}
+	@media #{$xs} {
+		.hero-subtitle {
+			font-size: 30px;
 		}
 	}
 }

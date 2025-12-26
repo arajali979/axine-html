@@ -29,6 +29,12 @@ START: Theme Marquee CSS
 			}
 		}
 	}
+	@media #{$lg, $md} {
+		padding: 22px 0;
+	}
+	@media #{$sm, $xs} {
+		padding: 20px 0;
+	}
 }
 
 .marquee-main-wrapper {
@@ -47,6 +53,18 @@ START: Theme Marquee CSS
 			z-index: 1;
 			&.white {
 				color: var(--fa-color-common-white);
+			}
+			@media #{$lg} {
+				font-size: 60px;
+			}
+			@media #{$md} {
+				font-size: 55px;
+			}
+			@media #{$sm} {
+				font-size: 50px;
+			}
+			@media #{$xs} {
+				font-size: 45px;
 			}
 		}
 	}

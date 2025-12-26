@@ -80,6 +80,19 @@ START: Theme Footer CSS
 			}
 		}
 	}
+	&.v-3 {
+		.footer-main-wrapper {
+			padding-top: 120px;
+		}
+		.footer-shapes {
+			position: absolute;
+			top: 0;
+			left: 0;
+		}
+		.footer-copyright-area {
+			background: transparent;
+		}
+	}
 }
 
 .footer-contact-area {
@@ -113,10 +126,22 @@ START: Theme Footer CSS
 		opacity: 0.2;
 		overflow: hidden;
 	}
+	@media #{$xl, $lg} {
+		padding-top: 120px;
+	}
+	@media #{$md, $sm, $xs} {
+		padding-top: 80px;
+	}
 }
 
 .footer-marquee-area {
 	padding-top: 50px;
+	@media #{$lg} {
+		padding-top: 30px;
+	}
+	@media #{$md, $sm, $xs} {
+		padding-top: 0px;
+	}
 }
 
 .footer-menu-area {
@@ -124,6 +149,10 @@ START: Theme Footer CSS
 	padding-top: 100px;
 	padding-bottom: 100px;
 	z-index: 2;
+	@media #{$md, $sm, $xs} {
+		padding-top: 50px;
+		padding-bottom: 80px;
+	}
 }
 
 .footer-copyright-area {
@@ -131,12 +160,18 @@ START: Theme Footer CSS
 	padding: 26px 0;
 	background: rgba(255, 255, 255, 0.1);
 	z-index: 2;
+	@media #{$sm, $xs} {
+		padding: 18px 0;
+	}
 }
 
 .footer-main-wrapper {
 	display: flex;
+	flex-wrap: wrap;
 	align-items: start;
 	justify-content: space-between;
+	column-gap: 25px;
+	row-gap: 45px;
 	position: relative;
 	z-index: 2;
 }
@@ -172,6 +207,9 @@ START: Theme Footer CSS
 				left: auto;
 				right: -6px;
 			}
+		}
+		@media #{$sm} {
+			margin-bottom: 15px;
 		}
 	}
 	&.widget-infos {
@@ -215,6 +253,12 @@ START: Theme Footer CSS
 					top: 0;
 				}
 			}
+		}
+		@media #{$md} {
+			max-width: 275px;
+		}
+		@media #{$sm} {
+			max-width: 100%;
 		}
 	}
 	&.widget-nav-menu {
@@ -277,6 +321,39 @@ START: Theme Footer CSS
 		margin-bottom: 0;
 		z-index: 2;
 	}
+	@media #{$xl} {
+		column-gap: 50px;
+		.marquee-item {
+			font-size: 150px;
+		}
+	}
+	@media #{$lg} {
+		column-gap: 40px;
+		.marquee-item {
+			font-size: 130px;
+		}
+	}
+	@media #{$md} {
+		column-gap: 30px;
+		.marquee-item {
+			font-size: 110px;
+			column-gap: 30px;
+		}
+	}
+	@media #{$sm} {
+		column-gap: 30px;
+		.marquee-item {
+			font-size: 110px;
+			column-gap: 30px;
+		}
+	}
+	@media #{$xs} {
+		column-gap: 30px;
+		.marquee-item {
+			font-size: 110px;
+			column-gap: 30px;
+		}
+	}
 }
 
 .copyright-wrapper {
@@ -338,6 +415,29 @@ START: Theme Footer CSS
 			}
 		}
 	}
+	@media #{$xl} {
+		max-width: 750px;
+	}
+	@media #{$lg} {
+		form {
+			.form-input {
+				width: 32%;
+				textarea {
+					width: 68%;
+				}
+			}
+		}
+	}
+	@media #{$md, $sm, $xs} {
+		form {
+			.form-input {
+				width: 100%;
+				textarea {
+					width: 100%;
+				}
+			}
+		}
+	}
 }
 
 .contact-images-group {
@@ -345,11 +445,22 @@ START: Theme Footer CSS
 	right: 0;
 	bottom: 50px;
 	background: var(--fa-color-theme-secondary);
+	max-width: 550px;
+	width: 100%;
 	padding-top: 35px;
 	border-radius: 50px;
 	z-index: 2;
 	img {
 		border-radius: 50px;
+	}
+	@media #{$xl} {
+		max-width: 410px;
+	}
+	@media #{$lg} {
+		max-width: 360px;
+	}
+	@media #{$md, $sm, $xs} {
+		display: none;
 	}
 }
 

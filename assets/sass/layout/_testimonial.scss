@@ -32,10 +32,13 @@ START: Theme Testimonial CSS
 		.swiper-pagination {
 			display: flex;
 			align-items: center;
-			justify-content: end;
+			justify-content: center;
 			gap: 15px;
 			position: relative;
 			bottom: -50px;
+		}
+		@media #{$xl} {
+			padding: 60px 20px;
 		}
 	}
 	&.v-2 {
@@ -142,11 +145,13 @@ START: Theme Testimonial CSS
 		overflow: hidden;
 	}
 	.testimonial-content {
+		width: 495px;
+		height: 370px;
 		background: var(--fa-color-common-white);
 		border-radius: 50px;
 		mask-image: url(../images/shapes/h1-testimonial-item.svg);
 		mask-repeat: no-repeat;
-		mask-size: cover;
+		mask-size: contain;
 		mask-position: center;
 		padding: 15px 28px 25px 0;
 		.testimonial-author {
@@ -301,6 +306,80 @@ START: Theme Testimonial CSS
 				height: 100%;
 				object-fit: cover;
 			}
+		}
+	}
+	@media #{$xxl} {
+		.testimonial-images {
+			max-width: 110px;
+			border-radius: 30px;
+		}
+		.testimonial-content {
+			width: 430px;
+			height: 290px;
+			padding: 15px 35px 25px 0;
+			.testimonial-author {
+				margin-bottom: 10px;
+			}
+			.testimonial-desc {
+				font-size: 20px;
+				padding-left: 100px;
+			}
+		}
+		.testimonial-icons {
+			width: 65px;
+			height: 65px;
+		}
+	}
+	@media #{$xl} {
+		.testimonial-images {
+			right: -10px;
+			top: -30px;
+			max-width: 95px;
+			border-radius: 25px;
+		}
+		.testimonial-content {
+			width: 365px;
+			height: 265px;
+			.testimonial-desc {
+				font-size: 16px;
+			}
+			.testimonial-author {
+				margin-bottom: 20px;
+			}
+			.testimonial-rating {
+				left: -10px;
+			}
+		}
+		.testimonial-icons {
+			width: 70px;
+			height: 70px;
+			left: -18px;
+		}
+	}
+	@media #{$lg} {
+		.testimonial-images {
+			right: -10px;
+			top: -30px;
+			max-width: 95px;
+			border-radius: 25px;
+		}
+		.testimonial-content {
+			width: 365px;
+			height: 265px;
+			.testimonial-desc {
+				font-size: 16px;
+			}
+			.testimonial-author {
+				margin-bottom: 20px;
+			}
+			.testimonial-rating {
+				left: -10px;
+			}
+		}
+		.testimonial-icons {
+			width: 70px;
+			height: 70px;
+			left: -18px;
 		}
 	}
 }

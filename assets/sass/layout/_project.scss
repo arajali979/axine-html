@@ -14,6 +14,8 @@ START: Theme Project CSS
 		display: flex;
 		align-items: center;
 		justify-content: space-between;
+		column-gap: 35px;
+		row-gap: 25px;
 		margin-bottom: 80px;
 		.sec-title {
 			margin-top: -25px;
@@ -23,6 +25,18 @@ START: Theme Project CSS
 				width: 245px;
 				height: 245px;
 				background: var(--fa-color-theme-secondary);
+			}
+			@media #{$sm} {
+				&::before {
+					width: 200px;
+					height: 200px;
+				}
+			}
+			@media #{$xs} {
+				&::before {
+					width: 195px;
+					height: 195px;
+				}
 			}
 		}
 	}
@@ -90,6 +104,19 @@ START: Theme Project CSS
 	&.v-3 {
 		padding-bottom: 150px;
 	}
+	@media #{$lg} {
+		padding-top: 120px;
+	}
+	@media #{$md, $sm, $xs} {
+		padding-top: 80px;
+		.heading-area {
+			flex-direction: column-reverse;
+			text-align: center;
+			.sec-title {
+				margin-top: -10px;
+			}
+		}
+	}
 }
 
 .project-main-wrapper {
@@ -156,6 +183,38 @@ START: Theme Project CSS
 			color: var(--fa-color-common-white);
 			font-weight: var(--fa-fw-bold);
 			margin-bottom: 0;
+		}
+	}
+	@media #{$lg} {
+		img {
+			height: 615px;
+		}
+	}
+	@media #{$lg} {
+		img {
+			height: 615px;
+		}
+	}
+	@media #{$md} {
+		img {
+			height: 565px;
+		}
+	}
+	@media #{$sm} {
+		img {
+			height: 495px;
+		}
+	}
+	@media #{$xs} {
+		.project-content {
+			padding: 35px 20px;
+			.sub-title {
+				margin-bottom: 20px;
+			}
+		}
+		img {
+			height: 395px;
+			border-radius: 15px 15px 0 0;
 		}
 	}
 }

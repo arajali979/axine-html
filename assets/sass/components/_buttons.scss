@@ -60,6 +60,11 @@
 			background: var(--fa-color-theme-secondary);
 		}
 	}
+	@media #{$lg} {
+		.fa-btn-text {
+			padding: 20px 20px;
+		}
+	}
 }
 
 .read-more-btn {
@@ -120,6 +125,11 @@
 	}
 	&:hover {
 		color: var(--fa-color-grey-4);
+	}
+	@media #{$sm, $xs} {
+		width: 165px;
+		height: 165px;
+		font-size: 20px;
 	}
 }
 

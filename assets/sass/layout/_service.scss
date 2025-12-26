@@ -59,23 +59,62 @@ START: Theme Service CSS
 			background-clip: text;
 			margin-top: -60px;
 		}
+		@media #{$lg, $md} {
+			.sec-title {
+				margin-top: -25px;
+			}
+		}
+		@media #{$sm} {
+			.sec-title {
+				margin-top: -20px;
+			}
+		}
+		@media #{$xs} {
+			.sec-title {
+				margin-top: -10px;
+			}
+		}
 	}
 	.service-main-wrapper {
 		display: flex;
 		align-items: center;
 		column-gap: 74px;
+		row-gap: 60px;
+		position: relative;
+		z-index: 2;
 		.tab-content {
 			width: 100%;
 		}
 		.nav {
 			flex-direction: column;
-			max-width: 425px;
+			max-width: 420px;
 			width: 100%;
 			.nav-link {
 				background-color: transparent;
 				position: relative;
 				padding: 0;
 				text-align: start;
+			}
+		}
+		@media #{$lg} {
+			.nav {
+				max-width: 345px;
+			}
+		}
+		@media #{$md} {
+			.nav {
+				max-width: 615px;
+			}
+		}
+		@media #{$sm} {
+			.nav {
+				max-width: 565px;
+			}
+		}
+		@media #{$xs} {
+			row-gap: 50px;
+			.nav {
+				max-width: 100%;
 			}
 		}
 	}
@@ -138,6 +177,20 @@ START: Theme Service CSS
 			column-gap: 24px;
 		}
 	}
+	@media #{$xl, $lg} {
+		padding-top: 120px;
+		padding-bottom: 120px;
+		.service-main-wrapper {
+			column-gap: 30px;
+		}
+	}
+	@media #{$md, $sm, $xs} {
+		padding-top: 80px;
+		padding-bottom: 80px;
+		.service-main-wrapper {
+			flex-direction: column;
+		}
+	}
 }
 
 .service-nav-item {
@@ -159,6 +212,18 @@ START: Theme Service CSS
 			padding-bottom: 0px;
 			margin-bottom: 0px;
 			border-bottom: none;
+		}
+	}
+	@media #{$md} {
+		max-width: 595px;
+	}
+	@media #{$sm} {
+		max-width: 550px;
+	}
+	@media #{$xs} {
+		.service-title {
+			padding-bottom: 20px;
+			margin-bottom: 20px;
 		}
 	}
 }
@@ -208,6 +273,26 @@ START: Theme Service CSS
 			max-width: 670px;
 			width: 100%;
 			margin-top: 30px;
+		}
+	}
+	@media #{$lg} {
+		.service-content {
+			max-width: 560px;
+		}
+	}
+	@media #{$sm} {
+		.service-content {
+			bottom: 40px;
+		}
+	}
+	@media #{$xs} {
+		.service-images {
+			display: none;
+		}
+		.service-content {
+			position: initial;
+			padding: 35px 15px;
+			border-radius: 30px;
 		}
 	}
 }

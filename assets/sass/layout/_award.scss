@@ -56,8 +56,39 @@ START: Theme Award CSS
 		display: flex;
 		align-items: center;
 		column-gap: 127px;
+		row-gap: 40px;
 		.fa-faq-wrap {
 			width: 100%;
+		}
+	}
+	@media #{$xl} {
+		.award-main-wrapper {
+			column-gap: 50px;
+		}
+	}
+	@media #{$lg} {
+		padding-top: 120px;
+		padding-bottom: 120px;
+		.award-main-wrapper {
+			column-gap: 50px;
+		}
+	}
+	@media #{$md, $sm} {
+		padding-top: 80px;
+		padding-bottom: 80px;
+		.award-main-wrapper {
+			flex-direction: column;
+		}
+	}
+	@media #{$xs} {
+		padding-top: 80px;
+		padding-bottom: 80px;
+		.heading-area {
+			margin-bottom: 30px;
+		}
+		.award-main-wrapper {
+			flex-direction: column;
+			row-gap: 25px;
 		}
 	}
 }
@@ -97,6 +128,24 @@ START: Theme Award CSS
 	}
 	.award-images {
 		margin-top: 80px;
+	}
+	@media #{$lg} {
+		width: 250px;
+		height: 250px;
+	}
+	@media #{$sm} {
+		width: 280px;
+		height: 280px;
+		.award-images {
+			margin-top: 30px;
+		}
+	}
+	@media #{$xs} {
+		width: 200px;
+		height: 200px;
+		.award-images {
+			margin-top: 20px;
+		}
 	}
 }
 /* !END: Theme Award CSS */

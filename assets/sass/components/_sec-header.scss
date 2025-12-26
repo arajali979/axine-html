@@ -32,6 +32,44 @@ START: Theme Sec Header CSS
 		margin-bottom: 0;
 		line-height: 1;
 	}
+	@media #{$xl} {
+		.sec-title {
+			font-size: 240px;
+		}
+	}
+	@media #{$lg} {
+		.sec-title {
+			font-size: 185px;
+		}
+	}
+	@media #{$md} {
+		margin-bottom: 30px;
+		.sub-title {
+			font-size: 80px;
+		}
+		.sec-title {
+			font-size: 150px;
+		}
+	}
+	@media #{$sm} {
+		margin-bottom: 30px;
+		.sub-title {
+			font-size: 60px;
+		}
+		.sec-title {
+			font-size: 120px;
+		}
+	}
+	@media #{$xs} {
+		margin-bottom: 30px;
+		.sub-title {
+			font-size: 45px;
+			-webkit-text-stroke-width: 2px;
+		}
+		.sec-title {
+			font-size: 65px;
+		}
+	}
 }
 
 /* !END: Theme Sec Header CSS */

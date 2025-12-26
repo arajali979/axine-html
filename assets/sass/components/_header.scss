@@ -55,6 +55,9 @@ START: Theme Header CSS
 			}
 		}
 	}
+	@media #{$md, $sm, $xs} {
+		padding: 20px 0;
+	}
 }
 
 .maimmenu-main-wrapper {
@@ -72,6 +75,9 @@ START: Theme Header CSS
 		img {
 			width: 100%;
 		}
+	}
+	@media #{$lg} {
+		max-width: 135px;
 	}
 }
 
@@ -96,6 +102,22 @@ START: Theme Header CSS
 			}
 		}
 	}
+	@media #{$xl} {
+		ul {
+			column-gap: 30px;
+		}
+	}
+	@media #{$lg} {
+		ul {
+			column-gap: 20px;
+			> li {
+				> a {
+					font-size: 16px;
+					padding: 40px 0;
+				}
+			}
+		}
+	}
 }
 
 .mainmenu-right-infos {
@@ -105,6 +127,12 @@ START: Theme Header CSS
 	column-gap: 35px;
 	.header-button {
 		transform: translate3d(calc(1 * 55px), 0, 0);
+	}
+	@media #{$xl} {
+		column-gap: 20px;
+	}
+	@media #{$lg} {
+		column-gap: 10px;
 	}
 }
 
@@ -136,5 +164,12 @@ START: Theme Header CSS
 	height: 55px;
 	background: var(--fa-color-theme-primary);
 	border-radius: 50%;
+}
+
+.mobile-menu-bar {
+	.canvas-btn {
+		font-size: 30px;
+		color: var(--fa-color-common-white);
+	}
 }
 /* !END: Theme Header CSS */

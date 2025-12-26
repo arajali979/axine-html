@@ -26,6 +26,7 @@ START: Theme Counter CSS
 	display: flex;
 	flex-wrap: wrap;
 	align-items: start;
+	justify-content: center;
 	.counter-item {
 		position: relative;
 		padding: 118px 106px 118px 0;
@@ -92,6 +93,51 @@ START: Theme Counter CSS
 			font-weight: var(--fa-fw-sbold);
 			margin-top: 5px;
 			line-height: 1;
+		}
+	}
+	@media #{$xxl} {
+		.counter-item {
+			padding: 118px 65px 118px 0;
+			margin-right: 65px;
+		}
+	}
+	@media #{$xl} {
+		.counter-item {
+			padding: 65px 55px 65px 0;
+			margin-right: 55px;
+			.number-count {
+				.number {
+					font-size: 115px;
+				}
+			}
+		}
+	}
+	@media #{$lg} {
+		.counter-item {
+			padding: 65px 30px 65px 0;
+			margin-right: 30px;
+			.number-count {
+				.number {
+					font-size: 100px;
+				}
+			}
+			.count-subtitle {
+				font-size: 20px;
+			}
+		}
+	}
+	@media #{$md} {
+		.counter-item {
+			padding: 65px 30px 65px 0;
+			margin-right: 30px;
+			.number-count {
+				.number {
+					font-size: 100px;
+				}
+			}
+			.count-subtitle {
+				font-size: 20px;
+			}
 		}
 	}
 }

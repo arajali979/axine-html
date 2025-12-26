@@ -69,6 +69,18 @@ h6 {
 
 h1 {
 	font-size: var(--fa-fs-h1);
+	@media #{$lg} {
+		font-size: 130px;
+	}
+	@media #{$md} {
+		font-size: 100px;
+	}
+	@media #{$sm} {
+		font-size: 75px;
+	}
+	@media #{$xs} {
+		font-size: 45px;
+	}
 }
 
 h2 {
@@ -77,6 +89,12 @@ h2 {
 
 h3 {
 	font-size: var(--fa-fs-h3);
+	@media #{$lg, $md} {
+		font-size: 24px;
+	}
+	@media #{$sm, $xs} {
+		font-size: 20px;
+	}
 }
 
 h4 {

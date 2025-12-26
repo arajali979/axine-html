@@ -4,13 +4,10 @@
 START: Theme Brand CSS
 ----------------------------------------*/
 .fa-brand-section {
-	padding-bottom: 110px;
+	padding-bottom: 120px;
+	@media #{$md, $sm, $xs} {
+		padding-bottom: 80px;
+	}
 }
 
-.brand-main-wrapper {
-	display: flex;
-	flex-wrap: wrap;
-	align-items: center;
-	justify-content: space-between;
-}
 /* !END: Theme Brand CSS */

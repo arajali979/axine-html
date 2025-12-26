@@ -10,6 +10,7 @@ START: Theme Blog CSS
 		display: flex;
 		flex-wrap: wrap;
 		align-items: center;
+		row-gap: 25px;
 		justify-content: space-between;
 		margin-bottom: 40px;
 	}
@@ -28,18 +29,38 @@ START: Theme Blog CSS
 			grid-template-columns: repeat(3, 1fr);
 		}
 	}
+	@media #{$lg} {
+		padding-top: 120px;
+	}
+	@media #{$md} {
+		padding-top: 80px;
+		padding-bottom: 56px;
+	}
+	@media #{$sm, $xs} {
+		padding-top: 80px;
+		padding-bottom: 56px;
+		.heading-area {
+			flex-direction: column-reverse;
+			justify-content: center;
+			text-align: center;
+		}
+	}
 }
 
 .blog-main-wrapper {
 	display: grid;
 	grid-template-columns: repeat(2, 1fr);
 	column-gap: 24px;
+	@media #{$md, $sm, $xs} {
+		grid-template-columns: repeat(1, 1fr);
+	}
 }
 
 .blog-item {
 	display: flex;
 	align-items: center;
 	column-gap: 35px;
+	row-gap: 25px;
 	border-top: 1px solid var(--fa-color-border-2);
 	padding-top: 24px;
 	margin-bottom: 24px;
@@ -316,6 +337,37 @@ START: Theme Blog CSS
 				border-radius: 50px;
 				background: var(--fa-color-common-white);
 				z-index: 2;
+			}
+		}
+	}
+	@media #{$xl, $lg, $md} {
+		.blog-content {
+			.sub-title {
+				margin-bottom: 20px;
+			}
+			.read-more-btn {
+				margin-top: 20px;
+			}
+		}
+	}
+	@media #{$sm} {
+		.blog-content {
+			.sub-title {
+				margin-bottom: 15px;
+			}
+			.read-more-btn {
+				margin-top: 15px;
+			}
+		}
+	}
+	@media #{$xs} {
+		flex-direction: column;
+		.blog-content {
+			.sub-title {
+				margin-bottom: 15px;
+			}
+			.read-more-btn {
+				margin-top: 15px;
 			}
 		}
 	}
