@@ -22,6 +22,9 @@ START: Theme Header CSS
 	&.v-2 {
 		background: var(--fa-color-theme-secondary);
 		padding: 18px 0;
+		@media #{$xs} {
+			padding: 10px 0;
+		}
 		.maimmenu-main-wrapper {
 			.mainmenu {
 				background: rgba(255, 255, 255, 0.1);
@@ -41,6 +44,19 @@ START: Theme Header CSS
 					display: flex;
 					align-items: center;
 					column-gap: 30px;
+				}
+			}
+			@media #{$xl} {
+				.mainmenu-right-infos {
+					column-gap: 30px;
+				}
+			}
+			@media #{$lg} {
+				.mainmenu-right-infos {
+					column-gap: 30px;
+				}
+				.mainmenu {
+					padding: 0 25px;
 				}
 			}
 		}
@@ -76,7 +92,7 @@ START: Theme Header CSS
 			width: 100%;
 		}
 	}
-	@media #{$lg} {
+	@media #{$lg, $xs} {
 		max-width: 135px;
 	}
 }

@@ -350,6 +350,11 @@ START: Theme About CSS
 		font-weight: var(--fa-fw-sbold);
 		color: var(--fa-color-heading-primary);
 	}
+	@media #{$xs} {
+		li {
+			font-size: 20px;
+		}
+	}
 }
 
 .about-content-wrap {

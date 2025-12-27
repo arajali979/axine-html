@@ -7,18 +7,34 @@ START: Theme Counter CSS
 	position: relative;
 	border-bottom: 1px solid var(--fa-color-theme-bg);
 	margin-top: -125px;
-	&::before {
+	.h1-counter-shapes {
 		position: absolute;
-		content: "";
 		top: -60px;
 		left: 0;
-		height: 100%;
-		width: 100%;
-		mask-image: url(../images/shapes/counter-shapes.svg);
-		background: var(--fa-color-theme-bg);
-		mask-repeat: no-repeat;
-		background-position: center;
-		background-size: contain;
+	}
+	@media #{$xxl} {
+		.h1-counter-shapes {
+			top: -56px;
+		}
+	}
+	@media #{$lg} {
+		.h1-counter-shapes {
+			top: -38px;
+		}
+	}
+	@media #{$md, $sm} {
+		border-bottom: none;
+		margin-top: -80px;
+		.h1-counter-shapes {
+			display: none;
+		}
+	}
+	@media #{$xs} {
+		border-bottom: none;
+		margin-top: -40px;
+		.h1-counter-shapes {
+			display: none;
+		}
 	}
 }
 
@@ -27,27 +43,28 @@ START: Theme Counter CSS
 	flex-wrap: wrap;
 	align-items: start;
 	justify-content: center;
+	row-gap: 30px;
 	.counter-item {
 		position: relative;
-		padding: 118px 106px 118px 0;
+		padding: 118px 90px 118px 0;
 		margin-right: 106px;
 		&::before {
 			position: absolute;
 			content: "";
 			width: 1px;
-			height: 418px;
+			height: 101.5%;
 			right: 0;
 			bottom: 0;
 			background: var(--fa-color-theme-bg);
 		}
 		&:nth-child(2) {
 			&::before {
-				height: 475px;
+				height: 114.5%;
 			}
 		}
 		&:nth-child(3) {
 			&::before {
-				height: 434px;
+				height: 105.5%;
 			}
 		}
 		&:last-child {
@@ -99,12 +116,38 @@ START: Theme Counter CSS
 		.counter-item {
 			padding: 118px 65px 118px 0;
 			margin-right: 65px;
+			&::before {
+				height: 101%;
+			}
+			&:nth-child(2) {
+				&::before {
+					height: 113.5%;
+				}
+			}
+			&:nth-child(3) {
+				&::before {
+					height: 104.5%;
+				}
+			}
 		}
 	}
 	@media #{$xl} {
 		.counter-item {
 			padding: 65px 55px 65px 0;
 			margin-right: 55px;
+			&::before {
+				height: 108.5%;
+			}
+			&:nth-child(2) {
+				&::before {
+					height: 121.5%;
+				}
+			}
+			&:nth-child(3) {
+				&::before {
+					height: 109.5%;
+				}
+			}
 			.number-count {
 				.number {
 					font-size: 115px;
@@ -116,6 +159,9 @@ START: Theme Counter CSS
 		.counter-item {
 			padding: 65px 30px 65px 0;
 			margin-right: 30px;
+			&::before {
+				height: 103.5%;
+			}
 			.number-count {
 				.number {
 					font-size: 100px;
@@ -127,16 +173,60 @@ START: Theme Counter CSS
 		}
 	}
 	@media #{$md} {
+		column-gap: 25px;
 		.counter-item {
-			padding: 65px 30px 65px 0;
-			margin-right: 30px;
+			padding: 0px 0px 0px 0;
+			margin-right: 0px;
+			&::before {
+				display: none;
+			}
 			.number-count {
 				.number {
-					font-size: 100px;
+					font-size: 85px;
 				}
 			}
 			.count-subtitle {
-				font-size: 20px;
+				font-size: 18px;
+			}
+		}
+	}
+	@media #{$sm} {
+		column-gap: 25px;
+		.counter-item {
+			padding: 0px 0px 0px 0;
+			margin-right: 0px;
+			&::before {
+				display: none;
+			}
+			.number-count {
+				.number {
+					font-size: 85px;
+				}
+			}
+			.count-subtitle {
+				font-size: 18px;
+			}
+		}
+	}
+	@media #{$xs} {
+		column-gap: 25px;
+		.counter-item {
+			padding: 0px 0px 0px 0;
+			margin-right: 0px;
+			&::before {
+				display: none;
+			}
+			.number-count {
+				.number {
+					font-size: 65px;
+				}
+				.subtitle {
+					font-size: 20px;
+					top: -10px;
+				}
+			}
+			.count-subtitle {
+				font-size: 16px;
 			}
 		}
 	}
