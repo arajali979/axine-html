@@ -59,12 +59,21 @@ START: Theme Footer CSS
 		.footer-main-wrapper {
 			padding-top: 120px;
 			padding-bottom: 120px;
+			@media #{$md, $sm, $xs} {
+				padding-top: 80px;
+				padding-bottom: 80px;
+			}
 		}
 		.footer-copyright-area {
 			.copyright-wrapper {
 				display: flex;
 				align-items: center;
 				justify-content: space-between;
+				column-gap: 35px;
+				row-gap: 25px;
+				@media #{$md, $sm, $xs} {
+					flex-direction: column;
+				}
 			}
 		}
 		.footer-shapes {
@@ -365,6 +374,18 @@ START: Theme Footer CSS
 		font-weight: var(--fa-fw-sbold);
 		margin-bottom: 0;
 	}
+	@media #{$xs} {
+		p {
+			font-size: 18px;
+			color: var(--fa-color-common-white);
+			font-family: var(--fa-ff-heading);
+			font-weight: var(--fa-fw-sbold);
+			margin-bottom: 0;
+		}
+		p {
+			font-size: 16px;
+		}
+	}
 }
 
 .contact-item {
@@ -505,6 +526,9 @@ START: Theme Footer CSS
 				color: var(--fa-color-common-white);
 				font-family: var(--fa-ff-heading);
 				font-weight: var(--fa-fw-sbold);
+				@media #{$xs} {
+					font-size: 16px;
+				}
 			}
 		}
 	}

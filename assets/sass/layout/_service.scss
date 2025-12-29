@@ -123,6 +123,12 @@ START: Theme Service CSS
 		background-color: var(--fa-color-common-white);
 		padding-bottom: 150px;
 		overflow: hidden;
+		@media #{$xl, $lg} {
+			padding-bottom: 120px;
+		}
+		@media #{$md, $sm, $xs} {
+			padding-bottom: 80px;
+		}
 		&::before {
 			position: absolute;
 			content: "";
@@ -175,6 +181,14 @@ START: Theme Service CSS
 			display: grid;
 			grid-template-columns: repeat(3, 1fr);
 			column-gap: 24px;
+			@media #{$md} {
+				grid-template-columns: repeat(2, 1fr);
+				row-gap: 24px;
+			}
+			@media #{$sm, $xs} {
+				grid-template-columns: repeat(1, 1fr);
+				row-gap: 24px;
+			}
 		}
 	}
 	@media #{$xl, $lg} {
@@ -368,6 +382,19 @@ START: Theme Service CSS
 			}
 		}
 	}
+	@media #{$lg, $md, $sm} {
+		padding: 30px 15px 0px 15px;
+		&::before {
+			top: -35%;
+		}
+	}
+	@media #{$xs} {
+		padding: 30px 15px 0px 15px;
+		border-radius: 15px;
+		&::before {
+			top: -35%;
+		}
+	}
 }
 
 .service-list-one {
@@ -379,6 +406,7 @@ START: Theme Service CSS
 			align-items: center;
 			justify-content: center;
 			column-gap: 12px;
+			flex-shrink: 0;
 			width: 150px;
 			height: 150px;
 			border: 1px solid rgba(0, 0, 0, 0.2);
@@ -386,12 +414,35 @@ START: Theme Service CSS
 			font-family: var(--fa-ff-heading);
 			font-weight: var(--fa-fw-sbold);
 			border-radius: 50%;
+			font-size: 16px;
 			text-align: start;
 			padding: 20px 12px;
 			line-height: 1.7;
 			span {
 				max-width: 18px;
 				width: 100%;
+			}
+		}
+	}
+	@media #{$xl} {
+		ul {
+			li {
+				column-gap: 5px;
+				width: 130px;
+				height: 130px;
+				padding: 10px 8px;
+				font-size: 15px;
+			}
+		}
+	}
+	@media #{$lg, $md, $sm, $xs} {
+		ul {
+			li {
+				column-gap: 5px;
+				width: 115px;
+				height: 115px;
+				padding: 10px 6px;
+				font-size: 13px;
 			}
 		}
 	}

@@ -11,19 +11,32 @@ START: Theme Feature CSS
 			margin-bottom: 20px;
 		}
 	}
+	@media #{$md, $sm, $xs} {
+		padding-top: 80px;
+		padding-bottom: 80px;
+	}
 }
 
 .feature-main-wrapper {
 	display: grid;
 	grid-template-columns: repeat(3, 1fr);
 	column-gap: 24px;
+	row-gap: 24px;
+	@media #{$md} {
+		grid-template-columns: repeat(2, 1fr);
+	}
+	@media #{$sm} {
+		grid-template-columns: repeat(2, 1fr);
+	}
+	@media #{$xs} {
+		grid-template-columns: repeat(1, 1fr);
+	}
 }
 
 .item-wrap {
 	position: relative;
 	background: var(--fa-color-grey-9);
 	border-radius: 50px;
-	margin-bottom: 30px;
 	border: 1px solid var(--fa-color-theme-secondary);
 	&:nth-child(2) {
 		background: var(--fa-color-theme-bg);
@@ -56,7 +69,7 @@ START: Theme Feature CSS
 	.feature-item {
 		position: relative;
 		overflow: hidden;
-		padding: 60px 45px 60px 45px;
+		padding: 60px 45px;
 		.feature-content {
 			position: relative;
 			z-index: 1;
@@ -80,6 +93,31 @@ START: Theme Feature CSS
 			position: absolute;
 			left: 0;
 			bottom: -40px;
+			display: none;
+		}
+	}
+	@media #{$lg, $md} {
+		.feature-item {
+			padding: 30px 15px;
+		}
+	}
+	@media #{$sm} {
+		.feature-item {
+			padding: 30px 15px;
+		}
+		.show-icons {
+			width: 70px;
+			height: 70px;
+		}
+	}
+	@media #{$xs} {
+		border-radius: 15px;
+		.feature-item {
+			padding: 30px 15px;
+		}
+		.show-icons {
+			width: 70px;
+			height: 70px;
 		}
 	}
 }

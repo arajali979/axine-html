@@ -76,6 +76,21 @@ START: Theme Hero CSS
 			right: 0;
 			z-index: 1;
 		}
+		@media #{$md} {
+			&::before {
+				height: 575px;
+			}
+		}
+		@media #{$sm} {
+			&::before {
+				height: 550px;
+			}
+		}
+		@media #{$xs} {
+			&::before {
+				height: 450px;
+			}
+		}
 	}
 	&.v-3 {
 		padding-top: 125px;
@@ -215,6 +230,7 @@ START: Theme Hero CSS
 		display: flex;
 		align-items: center;
 		column-gap: 60px;
+		row-gap: 20px;
 		margin-top: 90px;
 		.hero-desc {
 			max-width: 395px;
@@ -291,8 +307,17 @@ START: Theme Hero CSS
 				display: none;
 			}
 		}
+		.hero-content {
+			column-gap: 30px;
+			margin-top: 80px;
+			.hero-desc {
+				.desc {
+					font-size: 20px;
+				}
+			}
+		}
 	}
-	@media #{$sm} {
+	@media #{$xs} {
 		.title-wrap {
 			.hero-title {
 				font-size: 45px;
@@ -308,6 +333,18 @@ START: Theme Hero CSS
 			}
 			.hero-line {
 				display: none;
+			}
+		}
+		.hero-content {
+			column-gap: 30px;
+			margin-top: 80px;
+			.hero-thumb-wrap {
+				width: 100%;
+			}
+			.hero-desc {
+				.desc {
+					font-size: 18px;
+				}
 			}
 		}
 	}
@@ -328,6 +365,10 @@ START: Theme Hero CSS
 			.hero-line {
 				display: none;
 			}
+		}
+		.hero-content {
+			flex-direction: column;
+			margin-top: 30px;
 		}
 	}
 }
@@ -505,6 +546,7 @@ START: Theme Hero CSS
 		position: relative;
 		max-width: 948px;
 		width: 100%;
+		z-index: 2;
 		&:nth-child(1) {
 			margin-left: auto;
 			margin-top: -75px;
@@ -574,6 +616,114 @@ START: Theme Hero CSS
 			}
 		}
 	}
+	@media #{$xxl} {
+		.thumb-images {
+			max-width: 740px;
+			&:nth-child(1) {
+				margin-top: -25px;
+			}
+		}
+	}
+	@media #{$xl} {
+		margin-top: 50px;
+		.thumb-images {
+			max-width: 685px;
+			&:nth-child(1) {
+				margin-top: -25px;
+			}
+		}
+	}
+	@media #{$lg} {
+		margin-top: 50px;
+		.thumb-images {
+			max-width: 685px;
+			&:nth-child(1) {
+				margin-top: -25px;
+			}
+		}
+	}
+	@media #{$md} {
+		margin-top: 120px;
+		.thumb-images {
+			max-width: 630px;
+			.hero-video {
+				top: -120px;
+				a {
+					&::before {
+						width: 120px;
+						height: 120px;
+					}
+					&::after {
+						width: 165px;
+						height: 165px;
+					}
+				}
+			}
+			&:nth-child(1) {
+				margin-top: -25px;
+			}
+		}
+	}
+	@media #{$sm} {
+		margin-top: 180px;
+		.thumb-images {
+			max-width: 510px;
+			.hero-video {
+				top: -120px;
+				a {
+					&::before {
+						width: 120px;
+						height: 120px;
+					}
+					&::after {
+						width: 165px;
+						height: 165px;
+					}
+				}
+			}
+			&:nth-child(1) {
+				margin-top: -25px;
+			}
+		}
+	}
+	@media #{$xs} {
+		margin-top: 300px;
+		.thumb-images {
+			max-width: 510px;
+			img {
+				border-radius: 15px;
+			}
+			.hero-video {
+				top: -120px;
+				a {
+					&::before {
+						width: 120px;
+						height: 120px;
+					}
+					&::after {
+						width: 165px;
+						height: 165px;
+					}
+				}
+			}
+			&:nth-child(1) {
+				margin-top: -25px;
+				img {
+					transform: rotate(2.39deg);
+				}
+			}
+			&:nth-child(2) {
+				img {
+					transform: rotate(-2.64deg);
+				}
+			}
+			&:nth-child(3) {
+				img {
+					transform: rotate(2.59deg);
+				}
+			}
+		}
+	}
 }
 
 .hero-marquee-wrap {
@@ -586,6 +736,9 @@ START: Theme Hero CSS
 		&.style-2 {
 			animation: marquee-slide2 75s linear infinite;
 		}
+	}
+	@media #{$md} {
+		margin-top: 120px;
 	}
 }
 /* !END: Theme Hero CSS */

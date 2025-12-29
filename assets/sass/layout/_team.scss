@@ -100,14 +100,37 @@ START: Theme Team CSS
 			column-gap: 24px;
 		}
 	}
+	@media #{$xl} {
+		padding-top: 120px;
+	}
+	@media #{$lg} {
+		padding-top: 120px;
+		.heading-area {
+			padding-left: 15px;
+		}
+	}
+	@media #{$md, $sm, $xs} {
+		padding-top: 80px;
+		.heading-area {
+			padding-left: 15px;
+			.sub-title {
+				-webkit-text-stroke-width: 2px;
+			}
+		}
+	}
 }
 
 .team-main-wrapper {
-	display: flex;
+	display: grid;
 	align-items: end;
+	grid-template-columns: repeat(4, 1fr);
 	column-gap: 30px;
+	row-gap: 30px;
 	position: relative;
 	z-index: 2;
+	@media #{$md, $sm, $xs} {
+		grid-template-columns: repeat(2, 1fr);
+	}
 }
 
 .team-item {
@@ -130,9 +153,14 @@ START: Theme Team CSS
 			margin-bottom: 0;
 		}
 		.item-arrow {
-			display: block;
+			display: inline-block;
 			text-align: center;
 			margin-top: 20px;
+			max-width: 37px;
+			width: 100%;
+			img {
+				width: 100%;
+			}
 		}
 	}
 	&:nth-child(2) {
@@ -153,6 +181,13 @@ START: Theme Team CSS
 			top: 40px;
 			max-width: 220px;
 			margin-left: auto;
+		}
+	}
+	@media #{$sm, $xs} {
+		&:nth-child(4) {
+			.team-content {
+				top: 00px;
+			}
 		}
 	}
 }
