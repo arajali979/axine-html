@@ -19,9 +19,10 @@ START: Theme About CSS
 		);
 		.heading-area {
 			display: flex;
-			align-items: end;
+			align-items: start;
 			justify-content: space-between;
 			column-gap: 140px;
+			row-gap: 25px;
 			max-width: 1770px;
 			width: 100%;
 			margin-left: auto;
@@ -39,6 +40,72 @@ START: Theme About CSS
 					font-family: var(--fa-ff-heading);
 					font-weight: var(--fa-fw-medium);
 					margin-bottom: 75px;
+				}
+			}
+		}
+		@media #{$xxl} {
+			.heading-area {
+				column-gap: 30px;
+			}
+		}
+		@media #{$xl} {
+			.heading-area {
+				column-gap: 30px;
+				.sec-title {
+					margin-top: -55px;
+				}
+			}
+		}
+		@media #{$lg} {
+			.heading-area {
+				column-gap: 30px;
+				.sec-title {
+					margin-top: -55px;
+				}
+			}
+		}
+		@media #{$md} {
+			.heading-area {
+				flex-direction: column-reverse;
+				.sec-title {
+					margin-top: -45px;
+				}
+				.header-desc {
+					max-width: 100%;
+					.desc {
+						margin-bottom: 35px;
+					}
+				}
+			}
+		}
+		@media #{$sm} {
+			.heading-area {
+				flex-direction: column-reverse;
+				.sec-title {
+					margin-top: -35px;
+				}
+				.header-desc {
+					max-width: 100%;
+					.desc {
+						margin-bottom: 35px;
+					}
+				}
+			}
+		}
+		@media #{$xs} {
+			.heading-area {
+				flex-direction: column-reverse;
+				.sub-title {
+					-webkit-text-stroke-width: 2px;
+				}
+				.sec-title {
+					margin-top: -20px;
+				}
+				.header-desc {
+					max-width: 100%;
+					.desc {
+						margin-bottom: 25px;
+					}
 				}
 			}
 		}
@@ -359,8 +426,11 @@ START: Theme About CSS
 
 .about-content-wrap {
 	display: flex;
-	column-gap: 25px;
+	column-gap: 50px;
 	justify-content: space-between;
+	@media #{$md, $sm, $xs} {
+		flex-direction: column-reverse;
+	}
 }
 
 .about-count-item {
@@ -406,11 +476,68 @@ START: Theme About CSS
 		font-family: var(--fa-ff-heading);
 		font-weight: var(--fa-fw-sbold);
 	}
+	@media #{$xxl} {
+		left: 25px;
+	}
+	@media #{$xl} {
+		max-width: 440px;
+		height: 440px;
+		left: 25px;
+	}
+	@media #{$lg} {
+		max-width: 440px;
+		height: 440px;
+		left: 25px;
+	}
+	@media #{$md} {
+		max-width: 325px;
+		height: 325px;
+		left: 0px;
+	}
+	@media #{$sm} {
+		max-width: 215px;
+		height: 215px;
+		left: 10px;
+		.ab-count {
+			font-size: 65px;
+			left: -35px;
+			top: 30px;
+			.ab-icons {
+				right: -15px;
+				bottom: -10px;
+			}
+		}
+		.sub-title {
+			left: -30px;
+			top: 25px;
+			font-size: 20px;
+		}
+	}
+	@media #{$xs} {
+		max-width: 115px;
+		height: 115px;
+		left: 10px;
+		.ab-count {
+			font-size: 35px;
+			left: -20px;
+			top: 18px;
+			.ab-icons {
+				right: -15px;
+				bottom: 0px;
+			}
+		}
+		.sub-title {
+			left: -15px;
+			top: 18px;
+			font-size: 15px;
+		}
+	}
 }
 
 .mission-vision-wrap {
 	display: flex;
 	align-items: start;
+	row-gap: 25px;
 	.mission-vision-list {
 		max-width: 410px;
 		width: 100%;
@@ -434,6 +561,35 @@ START: Theme About CSS
 			margin-top: 20px;
 			margin-bottom: 0;
 			line-height: 1.8;
+		}
+	}
+	@media #{$lg, $md} {
+		.mission-vision-list {
+			padding-right: 25px;
+			margin-right: 25px;
+		}
+	}
+	@media #{$lg, $md} {
+		.mission-vision-list {
+			padding-right: 25px;
+			margin-right: 25px;
+		}
+	}
+	@media #{$sm} {
+		.mission-vision-list {
+			padding-right: 20px;
+			margin-right: 20px;
+		}
+	}
+	@media #{$xs} {
+		flex-direction: column;
+		.mission-vision-list {
+			padding-right: 0px;
+			margin-right: 0px;
+			border-right: none;
+			.mission-vision-desc {
+				margin-top: 10px;
+			}
 		}
 	}
 }
@@ -481,6 +637,51 @@ START: Theme About CSS
 			position: relative;
 			border-radius: 0px;
 			z-index: 1;
+		}
+	}
+	@media #{$lg} {
+		margin-top: -185px;
+	}
+	@media #{$sm} {
+		margin-top: -160px;
+		.ab-video-button {
+			&::before {
+				width: 100px;
+				height: 100px;
+			}
+			&::after {
+				width: 140px;
+				height: 140px;
+			}
+		}
+	}
+	@media #{$sm} {
+		margin-top: -160px;
+		.ab-video-button {
+			&::before {
+				width: 100px;
+				height: 100px;
+			}
+			&::after {
+				width: 140px;
+				height: 140px;
+			}
+		}
+	}
+	@media #{$xs} {
+		margin-top: -85px;
+		img {
+			border-radius: 15px;
+		}
+		.ab-video-button {
+			&::before {
+				width: 65px;
+				height: 65px;
+			}
+			&::after {
+				width: 95px;
+				height: 95px;
+			}
 		}
 	}
 }

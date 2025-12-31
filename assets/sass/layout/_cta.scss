@@ -18,11 +18,46 @@ START: Theme Cta CSS
 			width: 100%;
 		}
 	}
+	@media #{$xxl} {
+		.cta-images {
+			max-width: 285px;
+			left: 30px;
+		}
+	}
+	@media #{$xl} {
+		.cta-images {
+			max-width: 215px;
+			left: 20px;
+		}
+	}
+	@media #{$lg} {
+		padding-top: 80px;
+		padding-bottom: 80px;
+		.cta-images {
+			max-width: 185px;
+			left: 20px;
+		}
+	}
+	@media #{$md} {
+		padding-top: 80px;
+		padding-bottom: 80px;
+		.cta-images {
+			max-width: 185px;
+			left: 20px;
+		}
+	}
+	@media #{$sm, $xs} {
+		padding-top: 50px;
+		padding-bottom: 50px;
+		.cta-images {
+			display: none;
+		}
+	}
 }
 
 .cta-main-wrapper {
 	.cta-title {
-		font-size: 300px;
+		font-size: 250px;
 		margin-bottom: 0;
 		text-align: center;
 		color: rgba(255, 255, 255, 0.06);
@@ -45,6 +80,7 @@ START: Theme Cta CSS
 		.form-input {
 			display: flex;
 			align-items: center;
+			row-gap: 20px;
 			input[type="email"] {
 				color: var(--fa-color-common-white);
 				font-family: var(--fa-ff-heading);
@@ -73,6 +109,63 @@ START: Theme Cta CSS
 			font-weight: var(--fa-fw-sbold);
 			margin-top: 35px;
 			margin-bottom: 0;
+		}
+	}
+	@media #{$xxl} {
+		.cta-title {
+			font-size: 220px;
+		}
+	}
+	@media #{$xl} {
+		.cta-title {
+			font-size: 180px;
+		}
+	}
+	@media #{$lg} {
+		.cta-title {
+			font-size: 150px;
+		}
+		.cta-subscribe-form {
+			.desc {
+				margin-top: 25px;
+			}
+		}
+	}
+	@media #{$md} {
+		.cta-title {
+			font-size: 120px;
+		}
+		.cta-subscribe-form {
+			.desc {
+				margin-top: 25px;
+			}
+		}
+	}
+	@media #{$sm} {
+		.cta-title {
+			font-size: 85px;
+		}
+		.cta-subscribe-form {
+			.desc {
+				margin-top: 25px;
+			}
+		}
+	}
+	@media #{$xs} {
+		.cta-title {
+			font-size: 50px;
+		}
+		.cta-subscribe-form {
+			.form-input {
+				flex-direction: column;
+				.submit-btn {
+					width: 100%;
+					justify-content: center;
+				}
+			}
+			.desc {
+				margin-top: 25px;
+			}
 		}
 	}
 }

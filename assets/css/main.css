@@ -1600,14 +1600,19 @@ START: Theme Sec Header CSS
   margin-bottom: 0;
   line-height: 1;
 }
+@media only screen and (min-width: 1400px) and (max-width: 1600px) {
+  .heading-area .sec-title {
+    font-size: 250px;
+  }
+}
 @media only screen and (min-width: 1200px) and (max-width: 1399px) {
   .heading-area .sec-title {
-    font-size: 240px;
+    font-size: 200px;
   }
 }
 @media only screen and (min-width: 992px) and (max-width: 1199px) {
   .heading-area .sec-title {
-    font-size: 185px;
+    font-size: 165px;
   }
 }
 @media only screen and (min-width: 768px) and (max-width: 991px) {
@@ -1627,6 +1632,7 @@ START: Theme Sec Header CSS
   }
   .heading-area .sub-title {
     font-size: 60px;
+    -webkit-text-stroke-width: 2px;
   }
   .heading-area .sec-title {
     font-size: 120px;
@@ -2512,15 +2518,16 @@ START: Theme About CSS
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: end;
-      -ms-flex-align: end;
-          align-items: end;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: start;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
   -webkit-column-gap: 140px;
      -moz-column-gap: 140px;
           column-gap: 140px;
+  row-gap: 25px;
   max-width: 1770px;
   width: 100%;
   margin-left: auto;
@@ -2540,6 +2547,87 @@ START: Theme About CSS
   font-family: var(--fa-ff-heading);
   font-weight: var(--fa-fw-medium);
   margin-bottom: 75px;
+}
+@media only screen and (min-width: 1400px) and (max-width: 1600px) {
+  .fa-about-section.v-2 .heading-area {
+    -webkit-column-gap: 30px;
+       -moz-column-gap: 30px;
+            column-gap: 30px;
+  }
+}
+@media only screen and (min-width: 1200px) and (max-width: 1399px) {
+  .fa-about-section.v-2 .heading-area {
+    -webkit-column-gap: 30px;
+       -moz-column-gap: 30px;
+            column-gap: 30px;
+  }
+  .fa-about-section.v-2 .heading-area .sec-title {
+    margin-top: -55px;
+  }
+}
+@media only screen and (min-width: 992px) and (max-width: 1199px) {
+  .fa-about-section.v-2 .heading-area {
+    -webkit-column-gap: 30px;
+       -moz-column-gap: 30px;
+            column-gap: 30px;
+  }
+  .fa-about-section.v-2 .heading-area .sec-title {
+    margin-top: -55px;
+  }
+}
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+  .fa-about-section.v-2 .heading-area {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+  }
+  .fa-about-section.v-2 .heading-area .sec-title {
+    margin-top: -45px;
+  }
+  .fa-about-section.v-2 .heading-area .header-desc {
+    max-width: 100%;
+  }
+  .fa-about-section.v-2 .heading-area .header-desc .desc {
+    margin-bottom: 35px;
+  }
+}
+@media only screen and (min-width: 576px) and (max-width: 767px) {
+  .fa-about-section.v-2 .heading-area {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+  }
+  .fa-about-section.v-2 .heading-area .sec-title {
+    margin-top: -35px;
+  }
+  .fa-about-section.v-2 .heading-area .header-desc {
+    max-width: 100%;
+  }
+  .fa-about-section.v-2 .heading-area .header-desc .desc {
+    margin-bottom: 35px;
+  }
+}
+@media (max-width: 575px) {
+  .fa-about-section.v-2 .heading-area {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+  }
+  .fa-about-section.v-2 .heading-area .sub-title {
+    -webkit-text-stroke-width: 2px;
+  }
+  .fa-about-section.v-2 .heading-area .sec-title {
+    margin-top: -20px;
+  }
+  .fa-about-section.v-2 .heading-area .header-desc {
+    max-width: 100%;
+  }
+  .fa-about-section.v-2 .heading-area .header-desc .desc {
+    margin-bottom: 25px;
+  }
 }
 .fa-about-section.v-3 {
   padding-top: 0;
@@ -3000,12 +3088,20 @@ START: Theme About CSS
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-column-gap: 25px;
-     -moz-column-gap: 25px;
-          column-gap: 25px;
+  -webkit-column-gap: 50px;
+     -moz-column-gap: 50px;
+          column-gap: 50px;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+}
+@media only screen and (min-width: 768px) and (max-width: 991px), only screen and (min-width: 576px) and (max-width: 767px), (max-width: 575px) {
+  .about-content-wrap {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+  }
 }
 
 .about-count-item {
@@ -3069,6 +3165,74 @@ START: Theme About CSS
   font-family: var(--fa-ff-heading);
   font-weight: var(--fa-fw-sbold);
 }
+@media only screen and (min-width: 1400px) and (max-width: 1600px) {
+  .about-count-item {
+    left: 25px;
+  }
+}
+@media only screen and (min-width: 1200px) and (max-width: 1399px) {
+  .about-count-item {
+    max-width: 440px;
+    height: 440px;
+    left: 25px;
+  }
+}
+@media only screen and (min-width: 992px) and (max-width: 1199px) {
+  .about-count-item {
+    max-width: 440px;
+    height: 440px;
+    left: 25px;
+  }
+}
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+  .about-count-item {
+    max-width: 325px;
+    height: 325px;
+    left: 0px;
+  }
+}
+@media only screen and (min-width: 576px) and (max-width: 767px) {
+  .about-count-item {
+    max-width: 215px;
+    height: 215px;
+    left: 10px;
+  }
+  .about-count-item .ab-count {
+    font-size: 65px;
+    left: -35px;
+    top: 30px;
+  }
+  .about-count-item .ab-count .ab-icons {
+    right: -15px;
+    bottom: -10px;
+  }
+  .about-count-item .sub-title {
+    left: -30px;
+    top: 25px;
+    font-size: 20px;
+  }
+}
+@media (max-width: 575px) {
+  .about-count-item {
+    max-width: 115px;
+    height: 115px;
+    left: 10px;
+  }
+  .about-count-item .ab-count {
+    font-size: 35px;
+    left: -20px;
+    top: 18px;
+  }
+  .about-count-item .ab-count .ab-icons {
+    right: -15px;
+    bottom: 0px;
+  }
+  .about-count-item .sub-title {
+    left: -15px;
+    top: 18px;
+    font-size: 15px;
+  }
+}
 
 .mission-vision-wrap {
   display: -webkit-box;
@@ -3077,6 +3241,7 @@ START: Theme About CSS
   -webkit-box-align: start;
       -ms-flex-align: start;
           align-items: start;
+  row-gap: 25px;
 }
 .mission-vision-wrap .mission-vision-list {
   max-width: 410px;
@@ -3102,6 +3267,40 @@ START: Theme About CSS
   margin-top: 20px;
   margin-bottom: 0;
   line-height: 1.8;
+}
+@media only screen and (min-width: 992px) and (max-width: 1199px), only screen and (min-width: 768px) and (max-width: 991px) {
+  .mission-vision-wrap .mission-vision-list {
+    padding-right: 25px;
+    margin-right: 25px;
+  }
+}
+@media only screen and (min-width: 992px) and (max-width: 1199px), only screen and (min-width: 768px) and (max-width: 991px) {
+  .mission-vision-wrap .mission-vision-list {
+    padding-right: 25px;
+    margin-right: 25px;
+  }
+}
+@media only screen and (min-width: 576px) and (max-width: 767px) {
+  .mission-vision-wrap .mission-vision-list {
+    padding-right: 20px;
+    margin-right: 20px;
+  }
+}
+@media (max-width: 575px) {
+  .mission-vision-wrap {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .mission-vision-wrap .mission-vision-list {
+    padding-right: 0px;
+    margin-right: 0px;
+    border-right: none;
+  }
+  .mission-vision-wrap .mission-vision-list .mission-vision-desc {
+    margin-top: 10px;
+  }
 }
 
 .about-video-thumb {
@@ -3155,6 +3354,53 @@ START: Theme About CSS
   position: relative;
   border-radius: 0px;
   z-index: 1;
+}
+@media only screen and (min-width: 992px) and (max-width: 1199px) {
+  .about-video-thumb {
+    margin-top: -185px;
+  }
+}
+@media only screen and (min-width: 576px) and (max-width: 767px) {
+  .about-video-thumb {
+    margin-top: -160px;
+  }
+  .about-video-thumb .ab-video-button::before {
+    width: 100px;
+    height: 100px;
+  }
+  .about-video-thumb .ab-video-button::after {
+    width: 140px;
+    height: 140px;
+  }
+}
+@media only screen and (min-width: 576px) and (max-width: 767px) {
+  .about-video-thumb {
+    margin-top: -160px;
+  }
+  .about-video-thumb .ab-video-button::before {
+    width: 100px;
+    height: 100px;
+  }
+  .about-video-thumb .ab-video-button::after {
+    width: 140px;
+    height: 140px;
+  }
+}
+@media (max-width: 575px) {
+  .about-video-thumb {
+    margin-top: -85px;
+  }
+  .about-video-thumb img {
+    border-radius: 15px;
+  }
+  .about-video-thumb .ab-video-button::before {
+    width: 65px;
+    height: 65px;
+  }
+  .about-video-thumb .ab-video-button::after {
+    width: 95px;
+    height: 95px;
+  }
 }
 
 .about-3-wrapper {
@@ -5020,9 +5266,50 @@ START: Theme Cta CSS
 .fa-cta-section .cta-images img {
   width: 100%;
 }
+@media only screen and (min-width: 1400px) and (max-width: 1600px) {
+  .fa-cta-section .cta-images {
+    max-width: 285px;
+    left: 30px;
+  }
+}
+@media only screen and (min-width: 1200px) and (max-width: 1399px) {
+  .fa-cta-section .cta-images {
+    max-width: 215px;
+    left: 20px;
+  }
+}
+@media only screen and (min-width: 992px) and (max-width: 1199px) {
+  .fa-cta-section {
+    padding-top: 80px;
+    padding-bottom: 80px;
+  }
+  .fa-cta-section .cta-images {
+    max-width: 185px;
+    left: 20px;
+  }
+}
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+  .fa-cta-section {
+    padding-top: 80px;
+    padding-bottom: 80px;
+  }
+  .fa-cta-section .cta-images {
+    max-width: 185px;
+    left: 20px;
+  }
+}
+@media only screen and (min-width: 576px) and (max-width: 767px), (max-width: 575px) {
+  .fa-cta-section {
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+  .fa-cta-section .cta-images {
+    display: none;
+  }
+}
 
 .cta-main-wrapper .cta-title {
-  font-size: 300px;
+  font-size: 250px;
   margin-bottom: 0;
   text-align: center;
   color: rgba(255, 255, 255, 0.06);
@@ -5052,6 +5339,7 @@ START: Theme Cta CSS
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  row-gap: 20px;
 }
 .cta-main-wrapper .cta-subscribe-form .form-input input[type=email] {
   color: var(--fa-color-common-white);
@@ -5095,6 +5383,60 @@ START: Theme Cta CSS
   font-weight: var(--fa-fw-sbold);
   margin-top: 35px;
   margin-bottom: 0;
+}
+@media only screen and (min-width: 1400px) and (max-width: 1600px) {
+  .cta-main-wrapper .cta-title {
+    font-size: 220px;
+  }
+}
+@media only screen and (min-width: 1200px) and (max-width: 1399px) {
+  .cta-main-wrapper .cta-title {
+    font-size: 180px;
+  }
+}
+@media only screen and (min-width: 992px) and (max-width: 1199px) {
+  .cta-main-wrapper .cta-title {
+    font-size: 150px;
+  }
+  .cta-main-wrapper .cta-subscribe-form .desc {
+    margin-top: 25px;
+  }
+}
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+  .cta-main-wrapper .cta-title {
+    font-size: 120px;
+  }
+  .cta-main-wrapper .cta-subscribe-form .desc {
+    margin-top: 25px;
+  }
+}
+@media only screen and (min-width: 576px) and (max-width: 767px) {
+  .cta-main-wrapper .cta-title {
+    font-size: 85px;
+  }
+  .cta-main-wrapper .cta-subscribe-form .desc {
+    margin-top: 25px;
+  }
+}
+@media (max-width: 575px) {
+  .cta-main-wrapper .cta-title {
+    font-size: 50px;
+  }
+  .cta-main-wrapper .cta-subscribe-form .form-input {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .cta-main-wrapper .cta-subscribe-form .form-input .submit-btn {
+    width: 100%;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .cta-main-wrapper .cta-subscribe-form .desc {
+    margin-top: 25px;
+  }
 }
 
 /* !END: Theme Cta CSS */

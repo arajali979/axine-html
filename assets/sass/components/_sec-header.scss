@@ -32,14 +32,19 @@ START: Theme Sec Header CSS
 		margin-bottom: 0;
 		line-height: 1;
 	}
+	@media #{$xxl} {
+		.sec-title {
+			font-size: 250px;
+		}
+	}
 	@media #{$xl} {
 		.sec-title {
-			font-size: 240px;
+			font-size: 200px;
 		}
 	}
 	@media #{$lg} {
 		.sec-title {
-			font-size: 185px;
+			font-size: 165px;
 		}
 	}
 	@media #{$md} {
@@ -55,6 +60,7 @@ START: Theme Sec Header CSS
 		margin-bottom: 30px;
 		.sub-title {
 			font-size: 60px;
+			-webkit-text-stroke-width: 2px;
 		}
 		.sec-title {
 			font-size: 120px;
