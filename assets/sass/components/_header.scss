@@ -70,6 +70,16 @@ START: Theme Header CSS
 				column-gap: 30px;
 			}
 		}
+		@media #{$xl} {
+			.mainmenu-right-infos {
+				column-gap: 50px;
+			}
+		}
+		@media #{$lg} {
+			.mainmenu-right-infos {
+				column-gap: 30px;
+			}
+		}
 	}
 	@media #{$md, $sm, $xs} {
 		padding: 20px 0;

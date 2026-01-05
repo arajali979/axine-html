@@ -484,6 +484,47 @@ START: Theme Hero CSS
 			background: var(--fa-color-common-white);
 		}
 	}
+	@media #{$xl, $lg} {
+		.hero-top-wrap {
+			.hero-text {
+				padding-left: 50px;
+			}
+		}
+	}
+	@media #{$xl} {
+		.hero-top-wrap {
+			.hero-text {
+				padding-left: 50px;
+			}
+		}
+	}
+	@media #{$lg} {
+		padding: 120px 50px 100px;
+		.hero-top-wrap {
+			.hero-text {
+				padding-left: 50px;
+			}
+		}
+	}
+	@media #{$md} {
+		padding: 85px 15px 80px;
+		.hero-top-wrap {
+			.hero-text {
+				padding-left: 20px;
+			}
+		}
+	}
+	@media #{$sm} {
+		padding: 85px 15px 80px;
+		.hero-top-wrap {
+			.hero-text {
+				padding-left: 0px;
+				.desc {
+					max-width: 100%;
+				}
+			}
+		}
+	}
 }
 
 .hero-thumb-wrap {

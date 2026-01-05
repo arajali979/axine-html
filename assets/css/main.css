@@ -658,6 +658,20 @@ START: Theme Header CSS
      -moz-column-gap: 30px;
           column-gap: 30px;
 }
+@media only screen and (min-width: 1200px) and (max-width: 1399px) {
+  .header-area.v-3 .mainmenu-right-infos {
+    -webkit-column-gap: 50px;
+       -moz-column-gap: 50px;
+            column-gap: 50px;
+  }
+}
+@media only screen and (min-width: 992px) and (max-width: 1199px) {
+  .header-area.v-3 .mainmenu-right-infos {
+    -webkit-column-gap: 30px;
+       -moz-column-gap: 30px;
+            column-gap: 30px;
+  }
+}
 @media only screen and (min-width: 768px) and (max-width: 991px), only screen and (min-width: 576px) and (max-width: 767px), (max-width: 575px) {
   .header-area {
     padding: 20px 0;
@@ -2197,6 +2211,43 @@ START: Theme Hero CSS
   -webkit-mask-size: contain;
           mask-size: contain;
   background: var(--fa-color-common-white);
+}
+@media only screen and (min-width: 1200px) and (max-width: 1399px), only screen and (min-width: 992px) and (max-width: 1199px) {
+  .hero-3-wrapper .hero-top-wrap .hero-text {
+    padding-left: 50px;
+  }
+}
+@media only screen and (min-width: 1200px) and (max-width: 1399px) {
+  .hero-3-wrapper .hero-top-wrap .hero-text {
+    padding-left: 50px;
+  }
+}
+@media only screen and (min-width: 992px) and (max-width: 1199px) {
+  .hero-3-wrapper {
+    padding: 120px 50px 100px;
+  }
+  .hero-3-wrapper .hero-top-wrap .hero-text {
+    padding-left: 50px;
+  }
+}
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+  .hero-3-wrapper {
+    padding: 85px 15px 80px;
+  }
+  .hero-3-wrapper .hero-top-wrap .hero-text {
+    padding-left: 20px;
+  }
+}
+@media only screen and (min-width: 576px) and (max-width: 767px) {
+  .hero-3-wrapper {
+    padding: 85px 15px 80px;
+  }
+  .hero-3-wrapper .hero-top-wrap .hero-text {
+    padding-left: 0px;
+  }
+  .hero-3-wrapper .hero-top-wrap .hero-text .desc {
+    max-width: 100%;
+  }
 }
 
 .hero-thumb-wrap {
