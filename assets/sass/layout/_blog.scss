@@ -194,6 +194,42 @@ START: Theme Blog CSS
 				line-height: 1.8;
 			}
 		}
+		@media #{$md, $sm} {
+			flex-direction: column;
+			padding: 35px 15px 35px 15px;
+			.blog-content {
+				max-width: 100%;
+			}
+			.blog-images {
+				max-width: 100%;
+			}
+			.blog-text {
+				max-width: 100%;
+			}
+		}
+		@media #{$xs} {
+			flex-direction: column;
+			padding: 35px 15px 35px 15px;
+			border-radius: 15px;
+			.blog-content {
+				max-width: 100%;
+				.read-more-btn {
+					padding: 13px 25px;
+				}
+				.blog-author-wrap {
+					margin-bottom: 20px;
+				}
+			}
+			.blog-images {
+				max-width: 100%;
+			}
+			.blog-text {
+				max-width: 100%;
+				.desc {
+					margin-top: 25px;
+				}
+			}
+		}
 	}
 	&.style-3 {
 		flex-direction: column;

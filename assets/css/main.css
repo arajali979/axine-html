@@ -7139,6 +7139,52 @@ START: Theme Blog CSS
   margin-bottom: 0;
   line-height: 1.8;
 }
+@media only screen and (min-width: 768px) and (max-width: 991px), only screen and (min-width: 576px) and (max-width: 767px) {
+  .blog-item.style-2 {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    padding: 35px 15px 35px 15px;
+  }
+  .blog-item.style-2 .blog-content {
+    max-width: 100%;
+  }
+  .blog-item.style-2 .blog-images {
+    max-width: 100%;
+  }
+  .blog-item.style-2 .blog-text {
+    max-width: 100%;
+  }
+}
+@media (max-width: 575px) {
+  .blog-item.style-2 {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    padding: 35px 15px 35px 15px;
+    border-radius: 15px;
+  }
+  .blog-item.style-2 .blog-content {
+    max-width: 100%;
+  }
+  .blog-item.style-2 .blog-content .read-more-btn {
+    padding: 13px 25px;
+  }
+  .blog-item.style-2 .blog-content .blog-author-wrap {
+    margin-bottom: 20px;
+  }
+  .blog-item.style-2 .blog-images {
+    max-width: 100%;
+  }
+  .blog-item.style-2 .blog-text {
+    max-width: 100%;
+  }
+  .blog-item.style-2 .blog-text .desc {
+    margin-top: 25px;
+  }
+}
 .blog-item.style-3 {
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
