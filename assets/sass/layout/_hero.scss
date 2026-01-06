@@ -401,6 +401,7 @@ START: Theme Hero CSS
 		display: flex;
 		flex-wrap: wrap;
 		align-items: start;
+		row-gap: 30px;
 		justify-content: space-between;
 		position: relative;
 		z-index: 1;
@@ -435,6 +436,7 @@ START: Theme Hero CSS
 		flex-wrap: wrap;
 		justify-content: space-between;
 		margin-top: 95px;
+		row-gap: 60px;
 		position: relative;
 		z-index: 1;
 		.hero-title {
@@ -521,7 +523,55 @@ START: Theme Hero CSS
 				padding-left: 0px;
 				.desc {
 					max-width: 100%;
+					margin-top: 35px;
 				}
+			}
+		}
+		.hero-bottom-wrap {
+			margin-top: 50px;
+			.hero-title {
+				.title {
+					margin-top: -20px;
+				}
+			}
+		}
+	}
+	@media #{$xs} {
+		padding: 80px 15px;
+		border-radius: 15px;
+		.hero-top-wrap {
+			.hero-text {
+				padding-left: 0px;
+				.sub-title {
+					font-size: 12px;
+					padding: 18px 20px;
+				}
+				.desc {
+					font-size: 18px;
+					max-width: 100%;
+					margin-top: 35px;
+					line-height: 1.5;
+				}
+			}
+		}
+		.hero-bottom-wrap {
+			row-gap: 50px;
+			margin-top: 35px;
+			.hero-title {
+				.active-color {
+					font-size: 60px;
+				}
+				.title {
+					margin-top: -12px;
+				}
+			}
+		}
+		.hero-btn {
+			width: 175px;
+			height: 175px;
+			&::before {
+				width: 175px;
+				height: 175px;
 			}
 		}
 	}

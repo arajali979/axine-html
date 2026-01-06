@@ -2107,6 +2107,7 @@ START: Theme Hero CSS
   -webkit-box-align: start;
       -ms-flex-align: start;
           align-items: start;
+  row-gap: 30px;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
@@ -2148,6 +2149,7 @@ START: Theme Hero CSS
       -ms-flex-pack: justify;
           justify-content: space-between;
   margin-top: 95px;
+  row-gap: 60px;
   position: relative;
   z-index: 1;
 }
@@ -2247,6 +2249,50 @@ START: Theme Hero CSS
   }
   .hero-3-wrapper .hero-top-wrap .hero-text .desc {
     max-width: 100%;
+    margin-top: 35px;
+  }
+  .hero-3-wrapper .hero-bottom-wrap {
+    margin-top: 50px;
+  }
+  .hero-3-wrapper .hero-bottom-wrap .hero-title .title {
+    margin-top: -20px;
+  }
+}
+@media (max-width: 575px) {
+  .hero-3-wrapper {
+    padding: 80px 15px;
+    border-radius: 15px;
+  }
+  .hero-3-wrapper .hero-top-wrap .hero-text {
+    padding-left: 0px;
+  }
+  .hero-3-wrapper .hero-top-wrap .hero-text .sub-title {
+    font-size: 12px;
+    padding: 18px 20px;
+  }
+  .hero-3-wrapper .hero-top-wrap .hero-text .desc {
+    font-size: 18px;
+    max-width: 100%;
+    margin-top: 35px;
+    line-height: 1.5;
+  }
+  .hero-3-wrapper .hero-bottom-wrap {
+    row-gap: 50px;
+    margin-top: 35px;
+  }
+  .hero-3-wrapper .hero-bottom-wrap .hero-title .active-color {
+    font-size: 60px;
+  }
+  .hero-3-wrapper .hero-bottom-wrap .hero-title .title {
+    margin-top: -12px;
+  }
+  .hero-3-wrapper .hero-btn {
+    width: 175px;
+    height: 175px;
+  }
+  .hero-3-wrapper .hero-btn::before {
+    width: 175px;
+    height: 175px;
   }
 }
 
