@@ -44,6 +44,16 @@ START: Theme Blog CSS
 				grid-template-columns: repeat(2, 1fr);
 			}
 		}
+		@media #{$sm, $xs} {
+			padding-bottom: 80px;
+			.heading-area {
+				flex-direction: column;
+				text-align: center;
+			}
+			.blog-main-wrapper {
+				grid-template-columns: repeat(1, 1fr);
+			}
+		}
 	}
 	@media #{$lg} {
 		padding-top: 120px;
@@ -337,6 +347,9 @@ START: Theme Blog CSS
 			@media #{$xxl} {
 				height: 375px;
 			}
+			@media #{$sm} {
+				max-width: 100%;
+			}
 		}
 		.blog-content {
 			background: var(--fa-color-common-white);
@@ -399,6 +412,60 @@ START: Theme Blog CSS
 			@media #{$xxl} {
 				padding: 88px 20px 31px;
 			}
+			@media #{$md} {
+				padding: 50px 15px 30px;
+				.sub-title {
+					font-size: 16px;
+					padding: 10px 15px;
+				}
+				.blog-author-wrap {
+					column-gap: 15px;
+					margin-bottom: 30px;
+				}
+			}
+			@media #{$sm} {
+				padding: 50px 15px 30px;
+				width: 100%;
+				.sub-title {
+					font-size: 16px;
+					padding: 10px 15px;
+				}
+				.blog-author-wrap {
+					column-gap: 15px;
+					margin-bottom: 30px;
+				}
+			}
+			@media #{$xs} {
+				padding: 50px 15px 30px;
+				border-radius: 15px;
+				width: 100%;
+				.sub-title {
+					font-size: 16px;
+					padding: 10px 15px;
+				}
+				.blog-author-wrap {
+					column-gap: 10px;
+					margin-bottom: 30px;
+					.blog-author {
+						.author-images {
+							max-width: 45px;
+						}
+						.author-name {
+							font-size: 16px;
+						}
+					}
+				}
+			}
+			.read-more-btn {
+				padding: 14px 15px;
+			}
+		}
+		@media #{$sm} {
+			max-width: 100%;
+		}
+		@media #{$xs} {
+			max-width: 100%;
+			border-radius: 15px;
 		}
 	}
 	@media #{$xl, $lg, $md} {

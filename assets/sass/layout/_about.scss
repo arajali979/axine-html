@@ -10,6 +10,11 @@ START: Theme About CSS
 		.sec-title {
 			margin-top: -80px;
 		}
+		@media #{$xl} {
+			.sec-title {
+				margin-top: -50px;
+			}
+		}
 	}
 	&.v-2 {
 		background: linear-gradient(
@@ -690,7 +695,7 @@ START: Theme About CSS
 	display: flex;
 	flex-direction: column;
 	column-gap: 20px;
-	row-gap: 20px;
+	row-gap: 24px;
 	.about-top-wrap {
 		display: flex;
 		flex-wrap: wrap;
@@ -718,12 +723,59 @@ START: Theme About CSS
 			-webkit-text-fill-color: transparent;
 		}
 	}
+	@media #{$xl} {
+		row-gap: 50px;
+	}
+	@media #{$lg} {
+		row-gap: 75px;
+	}
+	@media #{$md} {
+		.about-top-wrap {
+			flex-direction: column-reverse;
+			.about-images {
+				position: initial;
+				max-width: 100%;
+			}
+		}
+	}
+	@media #{$sm} {
+		.about-top-wrap {
+			flex-direction: column-reverse;
+			.about-images {
+				position: initial;
+				max-width: 100%;
+			}
+		}
+		.heading-area {
+			.sub-title {
+				-webkit-text-stroke-width: 2px;
+			}
+		}
+	}
+	@media #{$xs} {
+		.about-top-wrap {
+			flex-direction: column-reverse;
+			.about-images {
+				position: initial;
+				max-width: 100%;
+				img {
+					border-radius: 15px;
+				}
+			}
+		}
+		.heading-area {
+			.sub-title {
+				-webkit-text-stroke-width: 2px;
+			}
+		}
+	}
 }
 
 .about-bottom-wrap {
 	display: flex;
 	align-items: center;
 	column-gap: 25px;
+	row-gap: 25px;
 	.about-thumb-wrap {
 		max-width: 790px;
 		width: 100%;
@@ -734,11 +786,43 @@ START: Theme About CSS
 			object-fit: cover;
 		}
 	}
+	@media #{$xxl} {
+		.about-thumb-wrap {
+			max-width: 550px;
+		}
+	}
+	@media #{$xxl} {
+		.about-thumb-wrap {
+			max-width: 550px;
+		}
+	}
+	@media #{$xl} {
+		.about-thumb-wrap {
+			max-width: 350px;
+		}
+	}
+	@media #{$lg} {
+		.about-thumb-wrap {
+			max-width: 295px;
+		}
+	}
+	@media #{$md, $sm} {
+		flex-direction: column;
+	}
+	@media #{$xs} {
+		flex-direction: column;
+		.about-thumb-wrap {
+			img {
+				border-radius: 15px;
+			}
+		}
+	}
 }
 
 .about-list-wrap {
 	display: inline-flex;
-	width: 395px;
+	max-width: 395px;
+	width: 100%;
 	height: 400px;
 	flex-direction: column;
 	background: var(--fa-color-theme-primary);
@@ -775,6 +859,9 @@ START: Theme About CSS
 			}
 		}
 	}
+	@media #{$lg} {
+		padding: 72px 15px;
+	}
 }
 
 .about-count-wrap {
@@ -782,7 +869,8 @@ START: Theme About CSS
 	flex-direction: column;
 	align-items: center;
 	justify-content: center;
-	width: 395px;
+	max-width: 395px;
+	width: 100%;
 	height: 400px;
 	background: var(--fa-color-theme-secondary);
 	mask-image: url(../images/shapes/h3-about-shape.svg);

@@ -93,7 +93,7 @@ START: Theme Price CSS
 	row-gap: 24px;
 	position: relative;
 	z-index: 1;
-	@media #{$md} {
+	@media #{$lg, $md} {
 		grid-template-columns: repeat(2, 1fr);
 	}
 	@media #{$sm, $xs} {
