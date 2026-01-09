@@ -1626,7 +1626,7 @@ START: Theme Sec Header CSS
 }
 @media only screen and (min-width: 992px) and (max-width: 1199px) {
   .heading-area .sec-title {
-    font-size: 165px;
+    font-size: 160px;
   }
 }
 @media only screen and (min-width: 768px) and (max-width: 991px) {
@@ -5150,9 +5150,15 @@ START: Theme Brand CSS
 .fa-brand-section {
   padding-bottom: 120px;
 }
+.fa-brand-section.v-2 {
+  padding-top: 120px;
+}
 @media only screen and (min-width: 768px) and (max-width: 991px), only screen and (min-width: 576px) and (max-width: 767px), (max-width: 575px) {
   .fa-brand-section {
     padding-bottom: 80px;
+  }
+  .fa-brand-section.v-2 {
+    padding-top: 80px;
   }
 }
 
@@ -5750,6 +5756,8 @@ START: Theme Team CSS
   position: absolute;
   top: 0;
   left: 0;
+  max-width: 635px;
+  width: 100%;
 }
 .fa-team-section.v-2 .heading-area {
   max-width: 100%;
@@ -5777,9 +5785,49 @@ START: Theme Team CSS
     padding-left: 15px;
   }
 }
-@media only screen and (min-width: 768px) and (max-width: 991px), only screen and (min-width: 576px) and (max-width: 767px), (max-width: 575px) {
+@media only screen and (min-width: 768px) and (max-width: 991px) {
   .fa-team-section {
     padding-top: 80px;
+  }
+  .fa-team-section.v-2 {
+    padding-bottom: 80px;
+  }
+  .fa-team-section.v-2 .team-bg-shapes {
+    max-width: 365px;
+  }
+  .fa-team-section .heading-area {
+    padding-left: 15px;
+  }
+  .fa-team-section .heading-area .sub-title {
+    -webkit-text-stroke-width: 2px;
+  }
+}
+@media only screen and (min-width: 576px) and (max-width: 767px) {
+  .fa-team-section {
+    padding-top: 80px;
+  }
+  .fa-team-section.v-2 {
+    padding-bottom: 80px;
+  }
+  .fa-team-section.v-2 .team-bg-shapes {
+    max-width: 250px;
+  }
+  .fa-team-section .heading-area {
+    padding-left: 15px;
+  }
+  .fa-team-section .heading-area .sub-title {
+    -webkit-text-stroke-width: 2px;
+  }
+}
+@media (max-width: 575px) {
+  .fa-team-section {
+    padding-top: 80px;
+  }
+  .fa-team-section.v-2 {
+    padding-bottom: 80px;
+  }
+  .fa-team-section.v-2 .team-bg-shapes {
+    max-width: 250px;
   }
   .fa-team-section .heading-area {
     padding-left: 15px;
@@ -5802,9 +5850,14 @@ START: Theme Team CSS
   position: relative;
   z-index: 2;
 }
-@media only screen and (min-width: 768px) and (max-width: 991px), only screen and (min-width: 576px) and (max-width: 767px), (max-width: 575px) {
+@media only screen and (min-width: 768px) and (max-width: 991px), only screen and (min-width: 576px) and (max-width: 767px) {
   .team-main-wrapper {
     grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (max-width: 575px) {
+  .team-main-wrapper {
+    grid-template-columns: repeat(1, 1fr);
   }
 }
 
@@ -5859,7 +5912,6 @@ START: Theme Team CSS
 
 .team-style-2 {
   position: relative;
-  margin-bottom: 30px;
   border-radius: 50px;
   overflow: hidden;
 }
@@ -5883,13 +5935,35 @@ START: Theme Team CSS
   font-weight: var(--fa-fw-bold);
   position: absolute;
   bottom: 20px;
-  left: 20px;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+      -ms-transform: translateX(-50%);
+          transform: translateX(-50%);
   padding: 18px 25px;
   border-radius: 50px;
+  text-align: center;
   line-height: 1;
 }
 .team-style-2:nth-child(even) .sub-title {
   background: var(--fa-color-theme-secondary);
+}
+@media only screen and (min-width: 768px) and (max-width: 991px), only screen and (min-width: 576px) and (max-width: 767px) {
+  .team-style-2 .sub-title {
+    font-size: 16px;
+    padding: 16px 18px;
+  }
+}
+@media (max-width: 575px) {
+  .team-style-2 {
+    border-radius: 15px;
+  }
+  .team-style-2::before {
+    border-radius: 15px;
+  }
+  .team-style-2 .sub-title {
+    font-size: 16px;
+    padding: 16px 18px;
+  }
 }
 
 /* !END: Theme Team CSS */
@@ -6673,9 +6747,9 @@ START: Theme Choose CSS
 .choose-main-wrapper {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  -webkit-column-gap: 10px;
-     -moz-column-gap: 10px;
-          column-gap: 10px;
+  -webkit-column-gap: 16px;
+     -moz-column-gap: 16px;
+          column-gap: 16px;
   position: relative;
   max-width: 1290px;
   width: 100%;
@@ -6689,10 +6763,12 @@ START: Theme Choose CSS
           mask-image: url(../images/shapes/choose-shape.svg);
   -webkit-mask-repeat: no-repeat;
           mask-repeat: no-repeat;
-  -webkit-mask-size: cover;
-          mask-size: cover;
+  -webkit-mask-size: contain;
+          mask-size: contain;
   -webkit-mask-position: center;
           mask-position: center;
+  max-width: 420px;
+  width: 100%;
   border-radius: 50px;
   margin-bottom: 30px;
 }
@@ -6762,7 +6838,7 @@ START: Theme Price CSS
 .fa-pricing-section {
   position: relative;
   padding-top: 150px;
-  padding-bottom: 120px;
+  padding-bottom: 150px;
   background: var(--fa-color-theme-bg);
   overflow: hidden;
 }
@@ -6776,6 +6852,10 @@ START: Theme Price CSS
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  -webkit-column-gap: 25px;
+     -moz-column-gap: 25px;
+          column-gap: 25px;
+  row-gap: 30px;
   position: relative;
   z-index: 1;
 }
@@ -6831,6 +6911,30 @@ START: Theme Price CSS
   left: 0;
   bottom: 0;
 }
+@media only screen and (min-width: 1200px) and (max-width: 1399px), only screen and (min-width: 992px) and (max-width: 1199px) {
+  .fa-pricing-section {
+    padding-top: 120px;
+    padding-bottom: 120px;
+  }
+}
+@media only screen and (min-width: 768px) and (max-width: 991px), only screen and (min-width: 576px) and (max-width: 767px), (max-width: 575px) {
+  .fa-pricing-section {
+    padding-top: 80px;
+    padding-bottom: 80px;
+  }
+  .fa-pricing-section .heading-area {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    text-align: center;
+    margin-bottom: 50px;
+  }
+  .fa-pricing-section .heading-area .price-menu ul li {
+    width: 120px;
+    height: 70px;
+  }
+}
 
 .price-main-wrapper {
   display: grid;
@@ -6838,8 +6942,19 @@ START: Theme Price CSS
   -webkit-column-gap: 24px;
      -moz-column-gap: 24px;
           column-gap: 24px;
+  row-gap: 24px;
   position: relative;
   z-index: 1;
+}
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+  .price-main-wrapper {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media only screen and (min-width: 576px) and (max-width: 767px), (max-width: 575px) {
+  .price-main-wrapper {
+    grid-template-columns: repeat(1, 1fr);
+  }
 }
 
 .price-item {
@@ -6847,7 +6962,6 @@ START: Theme Price CSS
   background: var(--fa-color-common-white);
   padding: 45px 50px 50px;
   border-radius: 50px;
-  margin-bottom: 30px;
   text-align: center;
   overflow: hidden;
 }
@@ -6924,8 +7038,10 @@ START: Theme Price CSS
   font-family: var(--fa-ff-heading);
 }
 .price-item .price-list {
+  position: relative;
   text-align: start;
   margin-top: 130px;
+  z-index: 1;
 }
 .price-item .price-list ul li {
   display: -webkit-box;
@@ -6946,8 +7062,10 @@ START: Theme Price CSS
   margin-bottom: 0;
 }
 .price-item .price-button {
+  position: relative;
   text-align: start;
   margin-top: 50px;
+  z-index: 1;
 }
 .price-item .price-shapes {
   position: absolute;
@@ -6980,14 +7098,64 @@ START: Theme Price CSS
   -webkit-filter: blur(75px);
           filter: blur(75px);
 }
+@media only screen and (min-width: 1200px) and (max-width: 1399px) {
+  .price-item {
+    padding: 45px 35px 50px;
+  }
+}
+@media only screen and (min-width: 992px) and (max-width: 1199px) {
+  .price-item {
+    padding: 35px 15px 40px;
+  }
+  .price-item .price-list ul li {
+    font-size: 16px;
+    -webkit-column-gap: 15px;
+       -moz-column-gap: 15px;
+            column-gap: 15px;
+  }
+}
+@media only screen and (min-width: 768px) and (max-width: 991px), only screen and (min-width: 576px) and (max-width: 767px) {
+  .price-item {
+    padding: 35px 15px;
+  }
+  .price-item .price-list ul li {
+    font-size: 16px;
+    -webkit-column-gap: 15px;
+       -moz-column-gap: 15px;
+            column-gap: 15px;
+  }
+}
+@media (max-width: 575px) {
+  .price-item {
+    padding: 35px 15px;
+    border-radius: 15px;
+  }
+  .price-item::before {
+    border-radius: 15px 15px 0 0;
+  }
+  .price-item .price-title {
+    font-size: 20px;
+    padding: 12px 20px;
+    margin-bottom: 30px;
+  }
+  .price-item .price-percent .number {
+    font-size: 60px;
+  }
+  .price-item .price-list ul li {
+    font-size: 16px;
+    -webkit-column-gap: 15px;
+       -moz-column-gap: 15px;
+            column-gap: 15px;
+  }
+}
 
 /* !END: Theme Price CSS */
 /**----------------------------------------
 START: Theme Blog CSS
 ----------------------------------------*/
 .fa-blog-section {
-  padding-top: 135px;
-  padding-bottom: 86px;
+  padding-top: 120px;
+  padding-bottom: 120px;
 }
 .fa-blog-section .heading-area {
   display: -webkit-box;
@@ -7013,6 +7181,27 @@ START: Theme Blog CSS
 }
 .fa-blog-section.v-3 .blog-main-wrapper {
   grid-template-columns: repeat(3, 1fr);
+  row-gap: 24px;
+}
+@media only screen and (min-width: 992px) and (max-width: 1199px) {
+  .fa-blog-section.v-3 .blog-main-wrapper {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+  .fa-blog-section.v-3 {
+    padding-bottom: 80px;
+  }
+  .fa-blog-section.v-3 .heading-area {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    text-align: center;
+  }
+  .fa-blog-section.v-3 .blog-main-wrapper {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 @media only screen and (min-width: 992px) and (max-width: 1199px) {
   .fa-blog-section {
@@ -7292,6 +7481,9 @@ START: Theme Blog CSS
   position: relative;
   overflow: hidden;
   border-radius: 50px;
+  max-width: 522px;
+  margin-bottom: 0;
+  width: 100%;
 }
 .blog-item.style-3::before {
   content: "";
@@ -7321,9 +7513,9 @@ START: Theme Blog CSS
 }
 .blog-item.style-3 .blog-images {
   position: relative;
-  max-width: 100%;
+  max-width: 522px;
   width: 100%;
-  height: 100%;
+  height: 445px;
   -webkit-mask-image: url(../images/shapes/h3-blog-shapes.svg);
           mask-image: url(../images/shapes/h3-blog-shapes.svg);
   -webkit-mask-size: cover;
@@ -7378,6 +7570,11 @@ START: Theme Blog CSS
   color: var(--fa-color-common-white);
   font-family: var(--fa-ff-heading);
   font-weight: var(--fa-fw-sbold);
+}
+@media only screen and (min-width: 1400px) and (max-width: 1600px) {
+  .blog-item.style-3 .blog-images {
+    height: 375px;
+  }
 }
 .blog-item.style-3 .blog-content {
   background: var(--fa-color-common-white);
@@ -7461,6 +7658,11 @@ START: Theme Blog CSS
   background: var(--fa-color-common-white);
   z-index: 2;
 }
+@media only screen and (min-width: 1400px) and (max-width: 1600px) {
+  .blog-item.style-3 .blog-content {
+    padding: 88px 20px 31px;
+  }
+}
 @media only screen and (min-width: 1200px) and (max-width: 1399px), only screen and (min-width: 992px) and (max-width: 1199px), only screen and (min-width: 768px) and (max-width: 991px) {
   .blog-item .blog-content .sub-title {
     margin-bottom: 20px;
@@ -7534,31 +7736,6 @@ START: Theme Client CSS
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-}
-
-.client-2-wrapper {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-}
-.client-2-wrapper .client-item {
-  display: -webkit-inline-box;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  width: 180px;
-  height: 120px;
 }
 
 .client-thumb-wrap {

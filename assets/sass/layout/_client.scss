@@ -33,19 +33,6 @@ START: Theme Client CSS
 	justify-content: space-between;
 }
 
-.client-2-wrapper {
-	display: flex;
-	align-items: center;
-	justify-content: space-between;
-	.client-item {
-		display: inline-flex;
-		align-items: center;
-		justify-content: center;
-		width: 180px;
-		height: 120px;
-	}
-}
-
 .client-thumb-wrap {
 	margin-top: 250px;
 	ul {

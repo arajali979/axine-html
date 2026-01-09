@@ -5,8 +5,14 @@ START: Theme Brand CSS
 ----------------------------------------*/
 .fa-brand-section {
 	padding-bottom: 120px;
+	&.v-2 {
+		padding-top: 120px;
+	}
 	@media #{$md, $sm, $xs} {
 		padding-bottom: 80px;
+		&.v-2 {
+			padding-top: 80px;
+		}
 	}
 }
 

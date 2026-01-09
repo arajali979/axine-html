@@ -27,7 +27,7 @@ START: Theme Choose CSS
 .choose-main-wrapper {
 	display: grid;
 	grid-template-columns: repeat(3, 1fr);
-	column-gap: 10px;
+	column-gap: 16px;
 	position: relative;
 	max-width: 1290px;
 	width: 100%;
@@ -39,8 +39,10 @@ START: Theme Choose CSS
 	background: var(--fa-color-common-white);
 	mask-image: url(../images/shapes/choose-shape.svg);
 	mask-repeat: no-repeat;
-	mask-size: cover;
+	mask-size: contain;
 	mask-position: center;
+	max-width: 420px;
+	width: 100%;
 	border-radius: 50px;
 	margin-bottom: 30px;
 	&::before {

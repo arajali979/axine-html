@@ -6,13 +6,15 @@ START: Theme Price CSS
 .fa-pricing-section {
 	position: relative;
 	padding-top: 150px;
-	padding-bottom: 120px;
+	padding-bottom: 150px;
 	background: var(--fa-color-theme-bg);
 	overflow: hidden;
 	.heading-area {
 		display: flex;
 		align-items: center;
 		justify-content: space-between;
+		column-gap: 25px;
+		row-gap: 30px;
 		position: relative;
 		z-index: 1;
 		.sub-title {
@@ -61,14 +63,42 @@ START: Theme Price CSS
 		left: 0;
 		bottom: 0;
 	}
+	@media #{$xl, $lg} {
+		padding-top: 120px;
+		padding-bottom: 120px;
+	}
+	@media #{$md, $sm, $xs} {
+		padding-top: 80px;
+		padding-bottom: 80px;
+		.heading-area {
+			flex-direction: column;
+			text-align: center;
+			margin-bottom: 50px;
+			.price-menu {
+				ul {
+					li {
+						width: 120px;
+						height: 70px;
+					}
+				}
+			}
+		}
+	}
 }
 
 .price-main-wrapper {
 	display: grid;
 	grid-template-columns: repeat(3, 1fr);
 	column-gap: 24px;
+	row-gap: 24px;
 	position: relative;
 	z-index: 1;
+	@media #{$md} {
+		grid-template-columns: repeat(2, 1fr);
+	}
+	@media #{$sm, $xs} {
+		grid-template-columns: repeat(1, 1fr);
+	}
 }
 
 .price-item {
@@ -76,7 +106,6 @@ START: Theme Price CSS
 	background: var(--fa-color-common-white);
 	padding: 45px 50px 50px;
 	border-radius: 50px;
-	margin-bottom: 30px;
 	text-align: center;
 	overflow: hidden;
 	&::before {
@@ -152,8 +181,10 @@ START: Theme Price CSS
 		}
 	}
 	.price-list {
+		position: relative;
 		text-align: start;
 		margin-top: 130px;
+		z-index: 1;
 		ul {
 			li {
 				display: flex;
@@ -170,8 +201,10 @@ START: Theme Price CSS
 		}
 	}
 	.price-button {
+		position: relative;
 		text-align: start;
 		margin-top: 50px;
+		z-index: 1;
 	}
 	.price-shapes {
 		position: absolute;
@@ -209,6 +242,56 @@ START: Theme Price CSS
 			rgba(0, 0, 0, 0) 100%
 		);
 		filter: blur(75px);
+	}
+	@media #{$xl} {
+		padding: 45px 35px 50px;
+	}
+	@media #{$lg} {
+		padding: 35px 15px 40px;
+		.price-list {
+			ul {
+				li {
+					font-size: 16px;
+					column-gap: 15px;
+				}
+			}
+		}
+	}
+	@media #{$md, $sm} {
+		padding: 35px 15px;
+		.price-list {
+			ul {
+				li {
+					font-size: 16px;
+					column-gap: 15px;
+				}
+			}
+		}
+	}
+	@media #{$xs} {
+		padding: 35px 15px;
+		border-radius: 15px;
+		&::before {
+			border-radius: 15px 15px 0 0;
+		}
+		.price-title {
+			font-size: 20px;
+			padding: 12px 20px;
+			margin-bottom: 30px;
+		}
+		.price-percent {
+			.number {
+				font-size: 60px;
+			}
+		}
+		.price-list {
+			ul {
+				li {
+					font-size: 16px;
+					column-gap: 15px;
+				}
+			}
+		}
 	}
 }
 /* !END: Theme Price CSS */

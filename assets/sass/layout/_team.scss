@@ -87,6 +87,8 @@ START: Theme Team CSS
 			position: absolute;
 			top: 0;
 			left: 0;
+			max-width: 635px;
+			width: 100%;
 		}
 		.heading-area {
 			max-width: 100%;
@@ -109,8 +111,44 @@ START: Theme Team CSS
 			padding-left: 15px;
 		}
 	}
-	@media #{$md, $sm, $xs} {
+	@media #{$md} {
 		padding-top: 80px;
+		&.v-2 {
+			padding-bottom: 80px;
+			.team-bg-shapes {
+				max-width: 365px;
+			}
+		}
+		.heading-area {
+			padding-left: 15px;
+			.sub-title {
+				-webkit-text-stroke-width: 2px;
+			}
+		}
+	}
+	@media #{$sm} {
+		padding-top: 80px;
+		&.v-2 {
+			padding-bottom: 80px;
+			.team-bg-shapes {
+				max-width: 250px;
+			}
+		}
+		.heading-area {
+			padding-left: 15px;
+			.sub-title {
+				-webkit-text-stroke-width: 2px;
+			}
+		}
+	}
+	@media #{$xs} {
+		padding-top: 80px;
+		&.v-2 {
+			padding-bottom: 80px;
+			.team-bg-shapes {
+				max-width: 250px;
+			}
+		}
 		.heading-area {
 			padding-left: 15px;
 			.sub-title {
@@ -128,8 +166,11 @@ START: Theme Team CSS
 	row-gap: 30px;
 	position: relative;
 	z-index: 2;
-	@media #{$md, $sm, $xs} {
+	@media #{$md, $sm} {
 		grid-template-columns: repeat(2, 1fr);
+	}
+	@media #{$xs} {
+		grid-template-columns: repeat(1, 1fr);
 	}
 }
 
@@ -194,7 +235,6 @@ START: Theme Team CSS
 
 .team-style-2 {
 	position: relative;
-	margin-bottom: 30px;
 	border-radius: 50px;
 	overflow: hidden;
 	&::before {
@@ -220,14 +260,32 @@ START: Theme Team CSS
 		font-weight: var(--fa-fw-bold);
 		position: absolute;
 		bottom: 20px;
-		left: 20px;
+		left: 50%;
+		transform: translateX(-50%);
 		padding: 18px 25px;
 		border-radius: 50px;
+		text-align: center;
 		line-height: 1;
 	}
 	&:nth-child(even) {
 		.sub-title {
 			background: var(--fa-color-theme-secondary);
+		}
+	}
+	@media #{$md, $sm} {
+		.sub-title {
+			font-size: 16px;
+			padding: 16px 18px;
+		}
+	}
+	@media #{$xs} {
+		border-radius: 15px;
+		&::before {
+			border-radius: 15px;
+		}
+		.sub-title {
+			font-size: 16px;
+			padding: 16px 18px;
 		}
 	}
 }
