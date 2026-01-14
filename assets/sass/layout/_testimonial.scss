@@ -420,12 +420,6 @@ START: Theme Testimonial CSS
 	}
 }
 
-.testimonial-slider-wrapper {
-	display: grid;
-	grid-template-columns: repeat(3, 1fr);
-	column-gap: 24px;
-}
-
 .swiper-pagination-bullet {
 	font-size: 16px;
 	font-weight: 500;

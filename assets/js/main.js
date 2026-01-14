@@ -174,4 +174,30 @@ Mobile Menu Js
 			},
 		});
 	}
+
+	// Testimonial Slider Js
+	if ($(".fa-testimonial-slider2").length > 0) {
+		var brand = new Swiper(".fa-testimonial-slider2", {
+			slidesPerView: 3,
+			spaceBetween: 24,
+			loop: false,
+			breakpoints: {
+				320: {
+					slidesPerView: 1,
+				},
+				576: {
+					slidesPerView: 2,
+				},
+				768: {
+					slidesPerView: 2,
+				},
+				992: {
+					slidesPerView: 3,
+				},
+				1024: {
+					slidesPerView: 3,
+				},
+			},
+		});
+	}
 })(jQuery);

@@ -3957,6 +3957,12 @@ START: Theme Service CSS
     row-gap: 24px;
   }
 }
+.fa-service-section.v-3::before {
+  display: none;
+}
+.fa-service-section.v-3::after {
+  display: none;
+}
 @media only screen and (min-width: 1200px) and (max-width: 1399px), only screen and (min-width: 992px) and (max-width: 1199px) {
   .fa-service-section {
     padding-top: 120px;
@@ -5195,14 +5201,6 @@ START: Theme Testimonial CSS
     height: 70px;
     left: -18px;
   }
-}
-
-.testimonial-slider-wrapper {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  -webkit-column-gap: 24px;
-     -moz-column-gap: 24px;
-          column-gap: 24px;
 }
 
 .swiper-pagination-bullet {
