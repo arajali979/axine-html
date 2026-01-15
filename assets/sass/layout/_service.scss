@@ -215,7 +215,10 @@ START: Theme Service CSS
 	}
 }
 
-
+.service-3-wrapper {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+}
 
 .service-nav-item {
 	max-width: 425px;
@@ -407,6 +410,47 @@ START: Theme Service CSS
 	}
 }
 
+.service-style-3 {
+	position: relative;
+	background: var(--fa-color-grey-4);
+	padding: 30px 110px 35px 30px;
+	border-radius: 50px;
+	.service-content {
+		.service-title {
+			display: flex;
+			align-items: center;
+			font-weight: var(--fa-fw-bold);
+			margin-bottom: 0;
+			a {
+				color: var(--fa-color-common-white);
+			}
+		}
+		.service-desc {
+			font-size: 18px;
+			color: var(--fa-color-grey-15);
+			font-family: var(--fa-ff-heading);
+			font-weight: var(--fa-fw-sbold);
+			margin-top: 20px;
+			margin-bottom: 0;
+		}
+		.list-style-two {
+			margin-top: 40px;
+		}
+	}
+	.service-icon {
+		display: inline-flex;
+		align-items: center;
+		justify-content: center;
+		width: 115px;
+		height: 125px;
+		background: var(--fa-color-theme-primary);
+		position: absolute;
+		top: 0;
+		right: 0;
+		border-radius: 20px;
+	}
+}
+
 .service-list-one {
 	ul {
 		display: flex;
@@ -458,4 +502,14 @@ START: Theme Service CSS
 	}
 }
 
+.list-style-two {
+	ul {
+		li {
+			font-size: 18px;
+			color: var(--fa-color-common-white);
+			font-weight: var(--fa-fw-sbold);
+			font-family: var(--fa-ff-heading);
+		}
+	}
+}
 /* !END: Theme Service CSS */

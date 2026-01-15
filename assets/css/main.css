@@ -75,6 +75,7 @@ START: Theme Default CSS
   --fa-color-grey-12: #e5e5e5;
   --fa-color-grey-13: #201647;
   --fa-color-grey-14: #4e36ad;
+  --fa-color-grey-15: #b2b1b4;
   --fa-color-border-1: #4e4e4e;
   --fa-color-border-2: rgba(24, 16, 52, 0.4);
   --fa-color-border-3: rgba(0, 0, 0, 0.3019607843);
@@ -3987,6 +3988,11 @@ START: Theme Service CSS
   }
 }
 
+.service-3-wrapper {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+
 .service-nav-item {
   max-width: 425px;
   width: 100%;
@@ -4208,6 +4214,55 @@ START: Theme Service CSS
   }
 }
 
+.service-style-3 {
+  position: relative;
+  background: var(--fa-color-grey-4);
+  padding: 30px 110px 35px 30px;
+  border-radius: 50px;
+}
+.service-style-3 .service-content .service-title {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-weight: var(--fa-fw-bold);
+  margin-bottom: 0;
+}
+.service-style-3 .service-content .service-title a {
+  color: var(--fa-color-common-white);
+}
+.service-style-3 .service-content .service-desc {
+  font-size: 18px;
+  color: var(--fa-color-grey-15);
+  font-family: var(--fa-ff-heading);
+  font-weight: var(--fa-fw-sbold);
+  margin-top: 20px;
+  margin-bottom: 0;
+}
+.service-style-3 .service-content .list-style-two {
+  margin-top: 40px;
+}
+.service-style-3 .service-icon {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 115px;
+  height: 125px;
+  background: var(--fa-color-theme-primary);
+  position: absolute;
+  top: 0;
+  right: 0;
+  border-radius: 20px;
+}
+
 .service-list-one ul {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -4268,6 +4323,13 @@ START: Theme Service CSS
     padding: 10px 6px;
     font-size: 13px;
   }
+}
+
+.list-style-two ul li {
+  font-size: 18px;
+  color: var(--fa-color-common-white);
+  font-weight: var(--fa-fw-sbold);
+  font-family: var(--fa-ff-heading);
 }
 
 /* !END: Theme Service CSS */
