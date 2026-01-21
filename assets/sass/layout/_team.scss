@@ -100,6 +100,7 @@ START: Theme Team CSS
 		}
 		.team-main-wrapper {
 			column-gap: 24px;
+			row-gap: 24px;
 		}
 	}
 	@media #{$xl} {
@@ -109,6 +110,11 @@ START: Theme Team CSS
 		padding-top: 120px;
 		.heading-area {
 			padding-left: 15px;
+		}
+		&.v-2 {
+			.team-main-wrapper {
+				grid-template-columns: repeat(2, 1fr);
+			}
 		}
 	}
 	@media #{$md} {
@@ -260,22 +266,41 @@ START: Theme Team CSS
 		font-weight: var(--fa-fw-bold);
 		position: absolute;
 		bottom: 20px;
-		left: 50%;
-		transform: translateX(-50%);
+		left: 20px;
 		padding: 18px 25px;
 		border-radius: 50px;
 		text-align: center;
 		line-height: 1;
+	}
+	.team-title {
+		position: absolute;
+		right: -110px;
+		top: 50%;
+		transform: translateY(-50%) rotate(90deg);
+		font-size: 50px;
+		font-weight: var(--fa-fw-bold);
+		color: var(--fa-color-common-white);
+		margin-bottom: 0;
 	}
 	&:nth-child(even) {
 		.sub-title {
 			background: var(--fa-color-theme-secondary);
 		}
 	}
+	@media #{$xl, $lg} {
+		.team-title {
+			right: -95px;
+			font-size: 40px;
+		}
+	}
 	@media #{$md, $sm} {
 		.sub-title {
 			font-size: 16px;
 			padding: 16px 18px;
+		}
+		.team-title {
+			right: -75px;
+			font-size: 35px;
 		}
 	}
 	@media #{$xs} {
@@ -286,6 +311,10 @@ START: Theme Team CSS
 		.sub-title {
 			font-size: 16px;
 			padding: 16px 18px;
+		}
+		.team-title {
+			right: -50px;
+			font-size: 30px;
 		}
 	}
 }

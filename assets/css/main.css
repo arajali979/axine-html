@@ -515,8 +515,8 @@ img {
       -ms-flex-direction: column;
           flex-direction: column;
   row-gap: 15px;
-  width: 220px;
-  height: 220px;
+  width: 235px;
+  height: 235px;
   font-size: 24px;
   color: var(--fa-color-grey-4);
   font-family: var(--fa-ff-heading);
@@ -3967,6 +3967,9 @@ START: Theme Service CSS
 .fa-service-section.v-3 .heading-area {
   margin-bottom: 120px;
 }
+.fa-service-section.v-3 .heading-area .sec-title {
+  margin-top: -20px;
+}
 .fa-service-section.v-3 .h3-service-shapes {
   position: absolute;
   bottom: 35px;
@@ -3986,6 +3989,9 @@ START: Theme Service CSS
   }
   .fa-service-section.v-3 .heading-area {
     margin-bottom: 50px;
+  }
+  .fa-service-section.v-3 .heading-area .sec-title {
+    margin-top: -10px;
   }
 }
 @media only screen and (min-width: 1200px) and (max-width: 1399px), only screen and (min-width: 992px) and (max-width: 1199px) {
@@ -4363,7 +4369,7 @@ START: Theme Service CSS
     width: 100%;
   }
 }
-@media only screen and (min-width: 768px) and (max-width: 991px) {
+@media only screen and (min-width: 768px) and (max-width: 991px), only screen and (min-width: 576px) and (max-width: 767px) {
   .service-style-3 {
     padding: 35px 35px 50px 15px;
   }
@@ -4386,6 +4392,34 @@ START: Theme Service CSS
   }
   .service-style-3 .service-icon img {
     max-width: 50px;
+    width: 100%;
+  }
+}
+@media (max-width: 575px) {
+  .service-style-3 {
+    padding: 35px 35px 50px 15px;
+    border-radius: 15px;
+  }
+  .service-style-3:nth-child(2) {
+    top: 0px;
+  }
+  .service-style-3:nth-child(3) {
+    top: 0px;
+  }
+  .service-style-3 .service-content .service-title {
+    font-size: 20px;
+  }
+  .service-style-3 .service-content .service-title img {
+    max-width: 60px;
+    width: 100%;
+  }
+  .service-style-3 .service-icon {
+    width: 50px;
+    height: 56px;
+    border-radius: 10px;
+  }
+  .service-style-3 .service-icon img {
+    max-width: 35px;
     width: 100%;
   }
 }
@@ -4581,16 +4615,23 @@ START: Theme Project CSS
   margin-bottom: 100px;
 }
 .fa-project-section.v-3 {
+  background: transparent;
   padding-bottom: 150px;
 }
 @media only screen and (min-width: 992px) and (max-width: 1199px) {
   .fa-project-section {
     padding-top: 120px;
   }
+  .fa-project-section.v-3 {
+    padding-bottom: 120px;
+  }
 }
 @media only screen and (min-width: 768px) and (max-width: 991px), only screen and (min-width: 576px) and (max-width: 767px), (max-width: 575px) {
   .fa-project-section {
     padding-top: 80px;
+  }
+  .fa-project-section.v-3 {
+    padding-bottom: 80px;
   }
   .fa-project-section .heading-area {
     -webkit-box-orient: vertical;
@@ -4630,6 +4671,25 @@ START: Theme Project CSS
 }
 .project-main-wrapper .project-active-thumb img {
   border-radius: 50px;
+}
+
+.project-3-wrapper {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  -webkit-column-gap: 24px;
+     -moz-column-gap: 24px;
+          column-gap: 24px;
+  row-gap: 24px;
+}
+@media only screen and (min-width: 992px) and (max-width: 1199px), only screen and (min-width: 768px) and (max-width: 991px) {
+  .project-3-wrapper {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media only screen and (min-width: 576px) and (max-width: 767px), (max-width: 575px) {
+  .project-3-wrapper {
+    grid-template-columns: repeat(1, 1fr);
+  }
 }
 
 .project-item {
@@ -4769,6 +4829,70 @@ START: Theme Project CSS
 .project-two-item .project-title a:hover .project-icons {
   opacity: 1;
   visibility: visible;
+}
+
+.project-three-item {
+  position: relative;
+  border-radius: 50px;
+}
+.project-three-item::before {
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.3);
+  border-radius: 50px;
+}
+.project-three-item .project-image a img {
+  border-radius: 50px;
+}
+.project-three-item .project-content {
+  position: absolute;
+  left: 25px;
+  bottom: 25px;
+}
+.project-three-item .project-content .project-title {
+  font-weight: var(--fa-fw-bold);
+  margin-bottom: 0;
+}
+.project-three-item .project-content .project-title a {
+  display: inline-block;
+  color: var(--fa-color-common-white);
+  background: rgba(255, 255, 255, 0.3);
+  padding: 12px 25px;
+  border-radius: 80px;
+}
+.project-three-item .project-content .sub-title {
+  display: inline-block;
+  color: var(--fa-color-common-white);
+  background: var(--fa-color-theme-primary);
+  padding: 6px 25px;
+  border-radius: 80px;
+  margin-top: 10px;
+}
+@media (max-width: 575px) {
+  .project-three-item {
+    border-radius: 15px;
+  }
+  .project-three-item::before {
+    border-radius: 15px;
+  }
+  .project-three-item .project-image a img {
+    border-radius: 15px;
+  }
+}
+
+.project-three-item .project-image a {
+  display: inline-block;
+  width: 100%;
+}
+.project-three-item .project-image a img {
+  width: 100%;
+  height: 600px;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 /* !END: Theme Project CSS */
@@ -6084,6 +6208,7 @@ START: Theme Team CSS
   -webkit-column-gap: 24px;
      -moz-column-gap: 24px;
           column-gap: 24px;
+  row-gap: 24px;
 }
 @media only screen and (min-width: 1200px) and (max-width: 1399px) {
   .fa-team-section {
@@ -6096,6 +6221,9 @@ START: Theme Team CSS
   }
   .fa-team-section .heading-area {
     padding-left: 15px;
+  }
+  .fa-team-section.v-2 .team-main-wrapper {
+    grid-template-columns: repeat(2, 1fr);
   }
 }
 @media only screen and (min-width: 768px) and (max-width: 991px) {
@@ -6248,22 +6376,41 @@ START: Theme Team CSS
   font-weight: var(--fa-fw-bold);
   position: absolute;
   bottom: 20px;
-  left: 50%;
-  -webkit-transform: translateX(-50%);
-      -ms-transform: translateX(-50%);
-          transform: translateX(-50%);
+  left: 20px;
   padding: 18px 25px;
   border-radius: 50px;
   text-align: center;
   line-height: 1;
 }
+.team-style-2 .team-title {
+  position: absolute;
+  right: -110px;
+  top: 50%;
+  -webkit-transform: translateY(-50%) rotate(90deg);
+      -ms-transform: translateY(-50%) rotate(90deg);
+          transform: translateY(-50%) rotate(90deg);
+  font-size: 50px;
+  font-weight: var(--fa-fw-bold);
+  color: var(--fa-color-common-white);
+  margin-bottom: 0;
+}
 .team-style-2:nth-child(even) .sub-title {
   background: var(--fa-color-theme-secondary);
+}
+@media only screen and (min-width: 1200px) and (max-width: 1399px), only screen and (min-width: 992px) and (max-width: 1199px) {
+  .team-style-2 .team-title {
+    right: -95px;
+    font-size: 40px;
+  }
 }
 @media only screen and (min-width: 768px) and (max-width: 991px), only screen and (min-width: 576px) and (max-width: 767px) {
   .team-style-2 .sub-title {
     font-size: 16px;
     padding: 16px 18px;
+  }
+  .team-style-2 .team-title {
+    right: -75px;
+    font-size: 35px;
   }
 }
 @media (max-width: 575px) {
@@ -6276,6 +6423,10 @@ START: Theme Team CSS
   .team-style-2 .sub-title {
     font-size: 16px;
     padding: 16px 18px;
+  }
+  .team-style-2 .team-title {
+    right: -50px;
+    font-size: 30px;
   }
 }
 
@@ -7099,7 +7250,7 @@ START: Theme Choose CSS
   -webkit-column-gap: 16px;
      -moz-column-gap: 16px;
           column-gap: 16px;
-  row-gap: 24px;
+  row-gap: 16px;
   position: relative;
   max-width: 1290px;
   width: 100%;
@@ -7242,7 +7393,7 @@ START: Theme Price CSS
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
-.fa-pricing-section .heading-area .price-menu ul {
+.fa-pricing-section .heading-area .price-switcher {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -7253,7 +7404,7 @@ START: Theme Price CSS
      -moz-column-gap: 10px;
           column-gap: 10px;
 }
-.fa-pricing-section .heading-area .price-menu ul li {
+.fa-pricing-section .heading-area .price-switcher span {
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
   display: inline-flex;
@@ -7272,7 +7423,12 @@ START: Theme Price CSS
   background: var(--fa-color-common-white);
   border-radius: 15px;
   padding: 12px 25px;
+  cursor: pointer;
   line-height: 1;
+}
+.fa-pricing-section .heading-area .price-switcher span:hover {
+  color: var(--fa-color-common-white);
+  background: var(--fa-color-theme-secondary);
 }
 .fa-pricing-section .shapes-one {
   position: absolute;
@@ -7303,7 +7459,7 @@ START: Theme Price CSS
     text-align: center;
     margin-bottom: 50px;
   }
-  .fa-pricing-section .heading-area .price-menu ul li {
+  .fa-pricing-section .heading-area .price-switcher span {
     width: 120px;
     height: 70px;
   }
@@ -7368,7 +7524,7 @@ START: Theme Price CSS
 .price-item:nth-child(2) .price-percent {
   color: var(--fa-color-common-white);
 }
-.price-item:nth-child(2) .price-percent .number {
+.price-item:nth-child(2) .price-percent .price-number {
   color: var(--fa-color-common-white);
 }
 .price-item:nth-child(2) .primary-btn .fa-btn-text {
@@ -7404,7 +7560,7 @@ START: Theme Price CSS
   line-height: 1;
   z-index: 1;
 }
-.price-item .price-percent .number {
+.price-item .price-percent .price-number {
   font-size: 80px;
   color: var(--fa-color-heading-primary);
   font-weight: var(--fa-fw-black);

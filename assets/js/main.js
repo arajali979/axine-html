@@ -55,6 +55,34 @@ Mobile Menu Js
 		$(".star-ratings").width(star_rating_width);
 	}
 
+	// Price js
+	var price = $(".price-number");
+	var duration = $(".price-duration");
+	var year = $("#year");
+	var month = $("#month");
+
+	year.on("click", function () {
+		$(this).addClass("active");
+		month.removeClass("active");
+
+		price.each(function () {
+			$(this).text($(this).data("year-price"));
+		});
+
+		duration.text("Year");
+	});
+
+	month.on("click", function () {
+		$(this).addClass("active");
+		year.removeClass("active");
+
+		price.each(function () {
+			$(this).text($(this).data("month-price"));
+		});
+
+		duration.text("Month");
+	});
+
 	// Project Swiper Js
 	var project = new Swiper(".fa-project-slider", {
 		effect: "coverflow",
@@ -83,7 +111,7 @@ Mobile Menu Js
 			},
 			slideChangeTransitionEnd: function () {
 				var activeSlide = document.querySelector(
-					".swiper-slide-active .slide-text"
+					".swiper-slide-active .slide-text",
 				);
 				if (activeSlide) {
 					activeSlide.style.opacity = "1";

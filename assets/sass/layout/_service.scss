@@ -200,6 +200,9 @@ START: Theme Service CSS
 		}
 		.heading-area {
 			margin-bottom: 120px;
+			.sec-title {
+				margin-top: -20px;
+			}
 		}
 		.h3-service-shapes {
 			position: absolute;
@@ -218,6 +221,9 @@ START: Theme Service CSS
 			padding-bottom: 80px;
 			.heading-area {
 				margin-bottom: 50px;
+				.sec-title {
+					margin-top: -10px;
+				}
 			}
 		}
 	}
@@ -542,7 +548,7 @@ START: Theme Service CSS
 			}
 		}
 	}
-	@media #{$md} {
+	@media #{$md, $sm} {
 		padding: 35px 35px 50px 15px;
 		&:nth-child(2) {
 			top: 0px;
@@ -564,6 +570,34 @@ START: Theme Service CSS
 			height: 80px;
 			img {
 				max-width: 50px;
+				width: 100%;
+			}
+		}
+	}
+	@media #{$xs} {
+		padding: 35px 35px 50px 15px;
+		border-radius: 15px;
+		&:nth-child(2) {
+			top: 0px;
+		}
+		&:nth-child(3) {
+			top: 0px;
+		}
+		.service-content {
+			.service-title {
+				font-size: 20px;
+				img {
+					max-width: 60px;
+					width: 100%;
+				}
+			}
+		}
+		.service-icon {
+			width: 50px;
+			height: 56px;
+			border-radius: 10px;
+			img {
+				max-width: 35px;
 				width: 100%;
 			}
 		}
