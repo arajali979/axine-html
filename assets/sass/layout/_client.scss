@@ -41,6 +41,7 @@ START: Theme Client CSS
 				display: flex;
 				flex-wrap: wrap;
 				position: relative;
+				justify-content: end;
 				li {
 					display: inline-flex;
 					align-items: center;
@@ -106,6 +107,7 @@ START: Theme Client CSS
 			&:nth-child(3) {
 				ul {
 					margin-left: -320px;
+					justify-content: start;
 					li {
 						&:nth-child(1) {
 							border-top: none;

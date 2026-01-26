@@ -630,6 +630,9 @@ START: Theme Hero CSS
 		text-align: center;
 		line-height: 1.5;
 	}
+	@media #{$xs} {
+		border-radius: 15px;
+	}
 }
 
 .video-thumb-wrap {

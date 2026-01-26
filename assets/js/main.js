@@ -137,6 +137,8 @@ Mobile Menu Js
 	// Testimonial Swiper Js
 	var testimonial = new Swiper(".testimonial-slider", {
 		loop: false,
+		centeredSlides: true,
+		initialSlide: 1,
 		slidesPerView: 3,
 		spaceBetween: 40,
 		pagination: {
@@ -150,10 +152,11 @@ Mobile Menu Js
 		breakpoints: {
 			320: {
 				slidesPerView: 1,
-				spaceBetween: 60,
+				spaceBetween: 90,
 			},
 			576: {
 				slidesPerView: 1.5,
+				spaceBetween: 60,
 			},
 			768: {
 				slidesPerView: 2,
@@ -205,7 +208,7 @@ Mobile Menu Js
 
 	// Testimonial Slider Js
 	if ($(".fa-testimonial-slider2").length > 0) {
-		var brand = new Swiper(".fa-testimonial-slider2", {
+		var testimonial = new Swiper(".fa-testimonial-slider2", {
 			slidesPerView: 3,
 			spaceBetween: 24,
 			loop: false,

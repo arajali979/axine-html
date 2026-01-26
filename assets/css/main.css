@@ -1507,6 +1507,10 @@ START: Theme Footer CSS
   }
 }
 
+.copyright-2-wrapper {
+  text-align: center;
+}
+
 .fa-select .nice-select {
   border: none;
   border-radius: 0;
@@ -2373,6 +2377,11 @@ START: Theme Hero CSS
   margin-top: 25px;
   text-align: center;
   line-height: 1.5;
+}
+@media (max-width: 575px) {
+  .hero-thumb-wrap {
+    border-radius: 15px;
+  }
 }
 
 .video-thumb-wrap .thumb-images {
@@ -5150,9 +5159,13 @@ START: Theme Testimonial CSS
   .fa-testimonial-section .heading-area {
     margin-bottom: 0px;
   }
+  .fa-testimonial-section .heading-area .sub-title {
+    -webkit-text-stroke-width: 2px;
+    margin-bottom: 20px;
+  }
 }
 .fa-testimonial-section .testimonial-slider {
-  padding: 60px 10px;
+  padding: 65px 10px;
   z-index: 3;
 }
 .fa-testimonial-section .testimonial-slider .swiper-pagination {
@@ -5165,7 +5178,7 @@ START: Theme Testimonial CSS
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  gap: 15px;
+  gap: 40px;
   position: relative;
   bottom: -50px;
 }
@@ -5193,6 +5206,12 @@ START: Theme Testimonial CSS
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
+}
+.fa-testimonial-section.v-3 .testimonial-slider {
+  padding: 120px 20px 70px;
+}
+.fa-testimonial-section.v-3 .testimonial-slider .swiper-slide-active {
+  margin-top: -60px;
 }
 .fa-testimonial-section .circle-1::before {
   position: absolute;
@@ -5536,15 +5555,15 @@ START: Theme Testimonial CSS
 }
 
 .swiper-pagination-bullet {
-  font-size: 16px;
+  font-size: 20px;
   font-weight: 500;
-  color: #999;
+  color: var(--fa-color-grey-6);
   opacity: 1;
   background: none;
 }
 
 .swiper-pagination-bullet-active {
-  color: #ff4a00;
+  color: var(--fa-color-theme-primary);
 }
 
 .star-ratings {
@@ -7435,11 +7454,6 @@ START: Theme Price CSS
   left: 0;
   bottom: 0;
 }
-.fa-pricing-section .shapes-two {
-  position: absolute;
-  left: 0;
-  bottom: 0;
-}
 @media only screen and (min-width: 1200px) and (max-width: 1399px), only screen and (min-width: 992px) and (max-width: 1199px) {
   .fa-pricing-section {
     padding-top: 120px;
@@ -8319,6 +8333,60 @@ START: Theme Blog CSS
 
 /* !END: Theme Blog CSS */
 /**----------------------------------------
+START: Theme Blog Details CSS
+----------------------------------------*/
+.blog-details-section {
+  padding-top: 150px;
+  padding-bottom: 150px;
+}
+
+.blog-details-left-wrap .meta-style-two {
+  padding-top: 40px;
+  padding-bottom: 15px;
+}
+
+.blog-details-text {
+  max-width: 815px;
+  width: 100%;
+}
+.blog-details-text .blog-title {
+  font-weight: var(--fa-fw-bold);
+  margin-bottom: 20px;
+}
+.blog-details-text .desc {
+  font-weight: var(--fa-fw-medium);
+  margin-bottom: 40px;
+}
+.blog-details-text .desc:last-child {
+  margin-bottom: 0;
+}
+
+.meta-style-two ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-column-gap: 30px;
+     -moz-column-gap: 30px;
+          column-gap: 30px;
+}
+.meta-style-two ul li {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-column-gap: 8px;
+     -moz-column-gap: 8px;
+          column-gap: 8px;
+  font-weight: var(--fa-fw-sbold);
+}
+
+/* !END: Theme Blog Details CSS */
+/**----------------------------------------
 START: Theme Client CSS
 ----------------------------------------*/
 .fa-client-section {
@@ -8365,6 +8433,9 @@ START: Theme Client CSS
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   position: relative;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: end;
 }
 .client-thumb-wrap ul li ul li {
   display: -webkit-inline-box;
@@ -8437,6 +8508,9 @@ START: Theme Client CSS
 }
 .client-thumb-wrap ul li:nth-child(3) ul {
   margin-left: -320px;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: start;
 }
 .client-thumb-wrap ul li:nth-child(3) ul li:nth-child(1) {
   border-top: none;
@@ -8468,4 +8542,41 @@ START: Theme Client CSS
   font-weight: var(--fa-fw-sbold);
 }
 
-/* !END: Theme Client CSS *//*# sourceMappingURL=main.css.map */
+/* !END: Theme Client CSS */
+/**----------------------------------------
+START: Theme Breadcrumb CSS
+----------------------------------------*/
+.fa-breadcrumb-area {
+  background-color: var(--fa-color-theme-bg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  padding-top: 450px;
+  padding-bottom: 100px;
+}
+
+.breadcrumb-heading .breadcrumb-title {
+  font-size: 150px;
+  color: var(--fa-color-common-white);
+  font-weight: var(--fa-fw-black);
+  margin-bottom: 20px;
+  line-height: 1;
+}
+.breadcrumb-heading .page-link {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-column-gap: 15px;
+     -moz-column-gap: 15px;
+          column-gap: 15px;
+  font-size: 30px;
+  color: var(--fa-color-common-white);
+  font-family: var(--fa-ff-heading);
+  font-weight: var(--fa-fw-sbold);
+  margin-top: 30px;
+}
+
+/* !END: Breadcrumb CSS *//*# sourceMappingURL=main.css.map */

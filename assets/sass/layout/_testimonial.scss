@@ -31,16 +31,20 @@ START: Theme Testimonial CSS
 		}
 		@media #{$xs} {
 			margin-bottom: 0px;
+			.sub-title {
+				-webkit-text-stroke-width: 2px;
+				margin-bottom: 20px;
+			}
 		}
 	}
 	.testimonial-slider {
-		padding: 60px 10px;
+		padding: 65px 10px;
 		z-index: 3;
 		.swiper-pagination {
 			display: flex;
 			align-items: center;
 			justify-content: center;
-			gap: 15px;
+			gap: 40px;
 			position: relative;
 			bottom: -50px;
 		}
@@ -71,6 +75,14 @@ START: Theme Testimonial CSS
 				-webkit-background-clip: text;
 				-webkit-text-fill-color: transparent;
 				background-clip: text;
+			}
+		}
+	}
+	&.v-3 {
+		.testimonial-slider {
+			padding: 120px 20px 70px;
+			.swiper-slide-active {
+				margin-top: -60px;
 			}
 		}
 	}
@@ -421,15 +433,15 @@ START: Theme Testimonial CSS
 }
 
 .swiper-pagination-bullet {
-	font-size: 16px;
+	font-size: 20px;
 	font-weight: 500;
-	color: #999;
+	color: var(--fa-color-grey-6);
 	opacity: 1;
 	background: none;
 }
 
 .swiper-pagination-bullet-active {
-	color: #ff4a00;
+	color: var(--fa-color-theme-primary);
 }
 
 .star-ratings {
