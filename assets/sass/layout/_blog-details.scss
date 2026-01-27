@@ -13,21 +13,62 @@ START: Theme Blog Details CSS
 		padding-top: 40px;
 		padding-bottom: 15px;
 	}
+	.blog-details-text {
+		max-width: 815px;
+		width: 100%;
+		.blog-title {
+			font-weight: var(--fa-fw-bold);
+			margin-bottom: 20px;
+		}
+		.desc {
+			font-weight: var(--fa-fw-medium);
+			margin-bottom: 40px;
+			&:last-child {
+				margin-bottom: 0;
+			}
+		}
+	}
+	.details-image {
+		img {
+			border-radius: 50px;
+		}
+	}
+	.check-style-3 {
+		.title {
+			font-weight: var(--fa-fw-bold);
+			margin-bottom: 20px;
+		}
+		ul {
+			li {
+				display: flex;
+				align-items: center;
+				column-gap: 15px;
+				margin-bottom: 6px;
+				&:last-child {
+					margin-bottom: 0;
+				}
+			}
+		}
+	}
+	.blog-video-wrap {
+		margin-top: 40px;
+		margin-bottom: 40px;
+		img {
+			border-radius: 20px;
+		}
+	}
 }
 
-.blog-details-text {
-	max-width: 815px;
-	width: 100%;
-	.blog-title {
-		font-weight: var(--fa-fw-bold);
-		margin-bottom: 20px;
-	}
-	.desc {
-		font-weight: var(--fa-fw-medium);
-		margin-bottom: 40px;
-		&:last-child {
-			margin-bottom: 0;
-		}
+blockquote {
+	border: 1px solid var(--fa-color-border-4);
+	border-radius: 20px;
+	margin-top: 40px;
+	margin-bottom: 40px;
+	padding: 34px 50px;
+	text-align: center;
+	p {
+		margin-top: 20px;
+		margin-bottom: 0;
 	}
 }
 
