@@ -1,0 +1,59 @@
+@use "../utilities" as *;
+
+/**----------------------------------------
+START: Theme Project Details CSS
+----------------------------------------*/
+.fa-portfolio-section {
+	padding-top: 150px;
+	padding-bottom: 150px;
+}
+
+.portfolio-details-main-wrapper {
+	.portfolio-images {
+		mask-image: url(../images/shapes/project-details-shape.svg);
+		mask-position: center;
+		mask-repeat: no-repeat;
+		mask-size: cover;
+		img {
+			border-radius: 50px;
+		}
+	}
+}
+
+.portfolio-details-content-wrap {
+	max-width: 80%;
+	width: 100%;
+	margin: 0 auto;
+	background: var(--fa-color-common-white);
+	.portfolio-details-cate-list {
+		ul {
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+			li {
+				color: var(--fa-color-heading-primary);
+				font-size: 20px;
+				font-family: var(--fa-ff-heading);
+				font-weight: var(--fa-fw-bold);
+				span {
+					display: block;
+					font-size: 18px;
+					font-weight: var(--fa-fw-medium);
+					color: var(--fa-color-text-body);
+				}
+			}
+		}
+	}
+	.portfolio-details-bottom-wrap {
+		margin-top: 95px;
+		.portfolio-details-left-text {
+			p {
+				margin-bottom: 25px;
+				&:last-child {
+					margin-bottom: 0;
+				}
+			}
+		}
+	}
+}
+/* !END: Theme Project Details CSS */
