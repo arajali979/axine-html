@@ -18,6 +18,15 @@ START: Theme Project Details CSS
 			border-radius: 50px;
 		}
 	}
+	.project-prev-next-wrap {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		border: 1px solid var(--fa-color-border-4);
+		border-radius: 50px;
+		padding: 10px 10px;
+		margin-top: 80px;
+	}
 }
 
 .portfolio-details-content-wrap {
@@ -25,11 +34,14 @@ START: Theme Project Details CSS
 	width: 100%;
 	margin: 0 auto;
 	background: var(--fa-color-common-white);
+	margin-top: -95px;
 	.portfolio-details-cate-list {
 		ul {
 			display: flex;
 			align-items: center;
 			justify-content: space-between;
+			column-gap: 25px;
+			row-gap: 15px;
 			li {
 				color: var(--fa-color-heading-primary);
 				font-size: 20px;
@@ -44,14 +56,50 @@ START: Theme Project Details CSS
 			}
 		}
 	}
-	.portfolio-details-bottom-wrap {
-		margin-top: 95px;
-		.portfolio-details-left-text {
-			p {
-				margin-bottom: 25px;
-				&:last-child {
-					margin-bottom: 0;
-				}
+}
+
+.portfolio-details-bottom-wrap {
+	display: flex;
+	column-gap: 75px;
+	margin-top: 95px;
+	.portfolio-details-left-text {
+		max-width: 750px;
+		width: 100%;
+		p {
+			font-weight: var(--fa-fw-medium);
+			margin-bottom: 25px;
+			line-height: 1.7;
+			&.desc {
+				color: var(--fa-color-heading-primary);
+				font-weight: var(--fa-fw-medium);
+			}
+			&:last-child {
+				margin-bottom: 0;
+			}
+		}
+	}
+
+	.portfolio-details-right-text {
+		max-width: 495px;
+		width: 100%;
+		.desc {
+			margin-top: 30px;
+			margin-bottom: 0;
+			line-height: 1.7;
+		}
+	}
+}
+
+.check-style-4 {
+	ul {
+		li {
+			display: flex;
+			column-gap: 12px;
+			color: var(--fa-color-heading-primary);
+			font-weight: var(--fa-fw-medium);
+			margin-bottom: 15px;
+			&:last-child {
+				margin-bottom: 0;
 			}
 		}
 	}
