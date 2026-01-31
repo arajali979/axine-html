@@ -4563,6 +4563,49 @@ START: Theme Service CSS
 
 /* !END: Theme Service CSS */
 /**----------------------------------------
+START: Service Details CSS
+----------------------------------------*/
+.fa-service-details-section {
+  padding-top: 150px;
+  padding-bottom: 150px;
+}
+
+.service-details-content-wrapper .service-details-text .title {
+  font-weight: var(--fa-fw-bold);
+  margin-bottom: 0;
+}
+.service-details-content-wrapper .service-details-text .desc {
+  font-weight: var(--fa-fw-medium);
+  margin-top: 30px;
+  margin-bottom: 0;
+  line-height: 1.7;
+}
+
+.service-details-thumb-wrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: start;
+  -webkit-column-gap: 30px;
+     -moz-column-gap: 30px;
+          column-gap: 30px;
+}
+.service-details-thumb-wrap .thumb-image {
+  max-width: 400px;
+  width: 100%;
+}
+.service-details-thumb-wrap .thumb-image img {
+  border-radius: 20px;
+}
+.service-details-thumb-wrap .check-style-5 .title {
+  font-weight: var(--fa-fw-bold);
+  margin-bottom: 20px;
+}
+
+/* !END: Service Details CSS */
+/**----------------------------------------
 START: Theme Project CSS
 ----------------------------------------*/
 .fa-project-section {
@@ -6656,9 +6699,44 @@ START: Theme Details CSS
   background: linear-gradient(360deg, var(--fa-color-grey-6) 0%, var(--fa-color-grey-7) 78.85%);
   padding: 25px 25px 25px 50px;
   border-radius: 20px;
+  max-width: 990px;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 100%;
 }
 .team-detail-top-wrap .right-content .team-style-2 {
   max-width: 500px;
+  width: 100%;
+  height: 500px;
+}
+.team-detail-top-wrap .right-content .infos-wrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 75px 0;
+}
+.team-detail-top-wrap .right-content .infos-wrap .infos-list:last-child {
+  margin-top: auto;
+}
+.team-detail-top-wrap .right-content .infos-wrap .infos-list ul li {
+  color: var(--fa-color-theme-primary);
+  font-size: 18px;
+  font-weight: var(--fa-fw-medium);
+  margin-bottom: 10px;
+}
+.team-detail-top-wrap .right-content .infos-wrap .infos-list ul li:last-child {
+  margin-bottom: 0;
+}
+.team-detail-top-wrap .right-content .infos-wrap .infos-list ul li a {
+  color: var(--fa-color-heading-primary);
+}
+.team-detail-top-wrap .right-content .infos-wrap .infos-list ul li span {
+  color: var(--fa-color-heading-primary);
 }
 
 .check-style-5 ul li {

@@ -37,8 +37,40 @@ START: Theme Details CSS
 		);
 		padding: 25px 25px 25px 50px;
 		border-radius: 20px;
+		max-width: 990px;
+		justify-content: space-between;
+		width: 100%;
 		.team-style-2 {
 			max-width: 500px;
+			width: 100%;
+			height: 500px;
+		}
+		.infos-wrap {
+			display: flex;
+			flex-direction: column;
+			padding: 75px 0;
+			.infos-list {
+				&:last-child {
+					margin-top: auto;
+				}
+				ul {
+					li {
+						color: var(--fa-color-theme-primary);
+						font-size: 18px;
+						font-weight: var(--fa-fw-medium);
+						margin-bottom: 10px;
+						&:last-child {
+							margin-bottom: 0;
+						}
+						a {
+							color: var(--fa-color-heading-primary);
+						}
+						span {
+							color: var(--fa-color-heading-primary);
+						}
+					}
+				}
+			}
 		}
 	}
 }

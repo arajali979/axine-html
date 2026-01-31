@@ -1,0 +1,44 @@
+@use "../utilities" as *;
+
+/**----------------------------------------
+START: Service Details CSS
+----------------------------------------*/
+.fa-service-details-section {
+	padding-top: 150px;
+	padding-bottom: 150px;
+}
+
+.service-details-content-wrapper {
+	.service-details-text {
+		.title {
+			font-weight: var(--fa-fw-bold);
+			margin-bottom: 0;
+		}
+		.desc {
+			font-weight: var(--fa-fw-medium);
+			margin-top: 30px;
+			margin-bottom: 0;
+			line-height: 1.7;
+		}
+	}
+}
+
+.service-details-thumb-wrap {
+	display: flex;
+	align-items: start;
+	column-gap: 30px;
+	.thumb-image {
+		max-width: 400px;
+		width: 100%;
+		img {
+			border-radius: 20px;
+		}
+	}
+	.check-style-5 {
+		.title {
+			font-weight: var(--fa-fw-bold);
+			margin-bottom: 20px;
+		}
+	}
+}
+/* !END: Service Details CSS */
