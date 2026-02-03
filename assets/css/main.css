@@ -4591,6 +4591,8 @@ START: Service Details CSS
   -webkit-column-gap: 30px;
      -moz-column-gap: 30px;
           column-gap: 30px;
+  margin-top: 40px;
+  margin-bottom: 40px;
 }
 .service-details-thumb-wrap .thumb-image {
   max-width: 400px;
@@ -4599,11 +4601,216 @@ START: Service Details CSS
 .service-details-thumb-wrap .thumb-image img {
   border-radius: 20px;
 }
+.service-details-thumb-wrap .check-style-5 {
+  max-width: 595px;
+  width: 100%;
+}
 .service-details-thumb-wrap .check-style-5 .title {
   font-weight: var(--fa-fw-bold);
   margin-bottom: 20px;
 }
 
+.service-details-document-wrap .title {
+  margin-bottom: 25px;
+}
+.service-details-document-wrap .document-list {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  -webkit-column-gap: 40px;
+     -moz-column-gap: 40px;
+          column-gap: 40px;
+  row-gap: 30px;
+  max-width: 725px;
+  width: 100%;
+}
+.service-details-document-wrap .document-list .document-item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: start;
+  -webkit-column-gap: 25px;
+     -moz-column-gap: 25px;
+          column-gap: 25px;
+}
+.service-details-document-wrap .document-list .document-item .document-icons {
+  max-width: 35px;
+  width: 100%;
+}
+.service-details-document-wrap .document-list .document-item .document-text .title {
+  font-size: 20px;
+  font-weight: var(--fa-fw-bold);
+  margin-bottom: 0;
+}
+.service-details-document-wrap .document-list .document-item .document-text .desc {
+  margin-top: 15px;
+  margin-bottom: 0;
+  line-height: 1.7;
+}
+
+.service-details-check-wrap {
+  margin-top: 40px;
+}
+.service-details-check-wrap .title {
+  font-weight: var(--fa-fw-bold);
+  margin-bottom: 20px;
+}
+.service-details-check-wrap ul li {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-column-gap: 10px;
+     -moz-column-gap: 10px;
+          column-gap: 10px;
+  font-weight: var(--fa-fw-medium);
+  margin-bottom: 12px;
+}
+.service-details-check-wrap ul li:last-child {
+  margin-bottom: 0;
+}
+
+.service-details-video-wrap {
+  margin-top: 40px;
+}
+.service-details-video-wrap .video-wrap img {
+  border-radius: 30px;
+}
+.service-details-video-wrap .desc {
+  font-weight: var(--fa-fw-medium);
+  max-width: 795px;
+  width: 100%;
+  margin-top: 30px;
+  margin-bottom: 0;
+  line-height: 1.7;
+}
+
+.fa-service-sidebar-widget {
+  position: relative;
+  border: 1px solid var(--fa-color-border-4);
+  border-radius: 20px;
+  margin-bottom: 30px;
+  padding: 40px 35px;
+  z-index: 1;
+}
+.fa-service-sidebar-widget .widget-title {
+  color: var(--fa-color-heading-primary);
+  position: relative;
+  font-weight: var(--fa-fw-bold);
+  margin-bottom: 20px;
+  line-height: 1;
+  z-index: 1;
+}
+.fa-service-sidebar-widget .widget-title span {
+  display: inline-block;
+  position: relative;
+  width: 40px;
+  height: 2px;
+  background: var(--fa-color-heading-primary);
+  margin-left: 10px;
+  top: -6px;
+}
+.fa-service-sidebar-widget .widget-title span::after, .fa-service-sidebar-widget .widget-title span::before {
+  position: absolute;
+  content: "";
+  width: 7px;
+  height: 7px;
+  left: -6px;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+          transform: translateY(-50%);
+  border: 2px solid var(--fa-color-heading-primary);
+  border-radius: 50%;
+}
+.fa-service-sidebar-widget .widget-title span::after {
+  left: auto;
+  right: -6px;
+}
+.fa-service-sidebar-widget.widget_search .search-box form {
+  position: relative;
+  width: 100%;
+  z-index: 1;
+}
+.fa-service-sidebar-widget.widget_search .search-box form input[type=search] {
+  font-size: 16px;
+  background: var(--fa-color-common-white);
+  width: 100%;
+  border: none;
+  padding: 19px 65px 19px 25px;
+  font-weight: var(--fa-fw-sbold);
+  border: 1px solid var(--fa-color-border-4);
+  text-transform: uppercase;
+  border-radius: 8px;
+  line-height: 1;
+}
+.fa-service-sidebar-widget.widget_search .search-box form input[type=search]::-webkit-input-placeholder {
+  color: var(--fa-color-text-body);
+}
+.fa-service-sidebar-widget.widget_search .search-box form input[type=search]::-moz-placeholder {
+  color: var(--fa-color-text-body);
+}
+.fa-service-sidebar-widget.widget_search .search-box form input[type=search]:-ms-input-placeholder {
+  color: var(--fa-color-text-body);
+}
+.fa-service-sidebar-widget.widget_search .search-box form input[type=search]::-ms-input-placeholder {
+  color: var(--fa-color-text-body);
+}
+.fa-service-sidebar-widget.widget_search .search-box form input[type=search]::placeholder {
+  color: var(--fa-color-text-body);
+}
+.fa-service-sidebar-widget.widget_search .search-box form input[type=search]::-ms-input-placeholder {
+  color: var(--fa-color-text-body);
+}
+.fa-service-sidebar-widget.widget_search .search-box form :focus {
+  outline: none;
+  -webkit-box-shadow: 0 0 0;
+          box-shadow: 0 0 0;
+}
+.fa-service-sidebar-widget.widget_search .search-box form button {
+  width: 45px;
+  height: 45px;
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+          transform: translateY(-50%);
+  right: 10px;
+  background: var(--fa-color-theme-primary);
+  border-radius: 8px;
+  -webkit-transition: all 0.2s ease-in-out 0s;
+  transition: all 0.2s ease-in-out 0s;
+}
+.fa-service-sidebar-widget.widget_categories ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.fa-service-sidebar-widget.widget_categories ul li {
+  margin-bottom: 15px;
+  border: 1px solid var(--fa-color-border-4);
+  border-radius: 8px;
+}
+.fa-service-sidebar-widget.widget_categories ul li:last-child {
+  margin-bottom: 0;
+}
+.fa-service-sidebar-widget.widget_categories ul li a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  font-size: 18px;
+  font-weight: var(--fa-fw-sbold);
+  padding: 16px 25px;
+}
 /* !END: Service Details CSS */
 /**----------------------------------------
 START: Theme Project CSS
