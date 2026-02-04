@@ -1744,6 +1744,302 @@ START: Theme Item List CSS
 
 /* !END: Theme Item List CSS */
 /**----------------------------------------
+START: Theme Item List CSS
+----------------------------------------*/
+.search_popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: var(--fa-color-theme-bg);
+  border-radius: 0 0 24px 24px;
+  z-index: 100;
+  padding-top: 120px;
+  padding-bottom: 130px;
+  opacity: 0;
+  -webkit-transform: translateY(calc(-100% - 80px));
+      -ms-transform: translateY(calc(-100% - 80px));
+          transform: translateY(calc(-100% - 80px));
+  -webkit-transition: opacity 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
+  transition: opacity 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
+  transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+  transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
+  -webkit-transition-delay: 0.5s;
+          transition-delay: 0.5s;
+  z-index: 9999;
+}
+
+.search_popup .search_close {
+  position: absolute;
+  top: 36px;
+  right: 36px;
+}
+
+.search_popup .search_close .search_close_btn {
+  font-size: 24px;
+  line-height: 1;
+  color: var(--fa-color-common-white);
+}
+
+.search_popup .search_close .search_close_btn svg {
+  width: 24px;
+  height: 24px;
+  -webkit-transition: all 0.4s ease-in-out 0s;
+  transition: all 0.4s ease-in-out 0s;
+}
+
+.search_popup .search_close .search_close_btn svg path {
+  fill: var(--fa-color-common-white);
+}
+
+.search_popup .search_close .search_close_btn svg:hover {
+  -webkit-transform: rotate(90deg);
+      -ms-transform: rotate(90deg);
+          transform: rotate(90deg);
+}
+
+.search_popup .search_close .search_close_btn svg:hover path {
+  fill: var(--fa-color-theme-primary);
+}
+
+.search_popup.search-opened {
+  opacity: 1;
+  -webkit-transform: translateY(0%);
+      -ms-transform: translateY(0%);
+          transform: translateY(0%);
+  -webkit-transition-delay: 0s;
+          transition-delay: 0s;
+}
+
+.search_popup.search-opened .search_form .search_input {
+  -webkit-transform: translateY(0px);
+      -ms-transform: translateY(0px);
+          transform: translateY(0px);
+  opacity: 1;
+  -webkit-transition-delay: 0.3s;
+          transition-delay: 0.3s;
+}
+
+.search_popup.search-opened .search_form .search_input::after {
+  width: 100%;
+  -webkit-transition-delay: 0.5s;
+          transition-delay: 0.5s;
+}
+
+.fa_search_wrapper {
+  max-width: 720px;
+  margin: 0 auto;
+}
+
+.fa_search_wrapper .search_form form .search_input {
+  position: relative;
+  z-index: 1;
+}
+
+.fa_search_wrapper .search_form form .search_input .title {
+  color: var(--fa-color-common-white);
+  font-size: 30px;
+  font-weight: var(--fa-fw-bold);
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.fa_search_wrapper .search_form form .search_input .search-box {
+  position: relative;
+  z-index: 1;
+}
+
+.fa_search_wrapper .search_form form .search_input .search-box input[type=search] {
+  width: 100%;
+  font-family: var(--fa-ff-body);
+  color: var(--fa-color-common-white);
+  border: 1px solid var(--fa-color-border-1);
+  background: var(--fa-color-theme-dark);
+  padding: 20px 75px 20px 24px;
+  border-radius: 10px;
+}
+
+.fa_search_wrapper .search_form form .search_input .search-box input[type=search]::-webkit-input-placeholder {
+  color: var(--fa-color-text-body);
+}
+
+.fa_search_wrapper .search_form form .search_input .search-box input[type=search]::-moz-placeholder {
+  color: var(--fa-color-text-body);
+}
+
+.fa_search_wrapper .search_form form .search_input .search-box input[type=search]:-ms-input-placeholder {
+  color: var(--fa-color-text-body);
+}
+
+.fa_search_wrapper .search_form form .search_input .search-box input[type=search]::-ms-input-placeholder {
+  color: var(--fa-color-text-body);
+}
+
+.fa_search_wrapper .search_form form .search_input .search-box input[type=search]::placeholder {
+  color: var(--fa-color-text-body);
+}
+
+.fa_search_wrapper .search_form form .search_input .search-box input[type=search]:focus {
+  border-color: var(--fa-color-theme-primary);
+}
+
+.fa_search_wrapper .search_form form .search_input .search-box [type=submit],
+.fa_search_wrapper .search_form form .search_input .search-box input[type=submit] {
+  color: var(--fa-color-heading-primary);
+  font-size: 24px;
+  line-height: 1;
+  max-width: 62px;
+  width: 100%;
+  height: 100%;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  position: absolute;
+  right: 0;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+
+.fa_search_wrapper .search_form form .search_input .search-box [type=submit]::before,
+.fa_search_wrapper .search_form form .search_input .search-box input[type=submit]::before {
+  content: "";
+  position: absolute;
+  inset-inline-start: 0;
+  top: 20px;
+  height: 28px;
+  -webkit-border-start: 1px solid var(--fa-color-border-1);
+          border-inline-start: 1px solid var(--fa-color-border-1);
+}
+
+.fa_search_wrapper .search_form form .search_input .search-box [type=submit] i,
+.fa_search_wrapper .search_form form .search_input .search-box input[type=submit] i {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  line-height: 1;
+}
+
+.search-popup-overlay {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  backdrop-filter: blur(10px);
+  z-index: 99;
+  -webkit-transform: translateY(calc(-100% - 80px));
+      -ms-transform: translateY(calc(-100% - 80px));
+          transform: translateY(calc(-100% - 80px));
+  -webkit-transition: all 0.5s ease-in-out 0.3s;
+  transition: all 0.5s ease-in-out 0.3s;
+}
+
+.search-popup-overlay.opened {
+  -webkit-transform: translateY(0);
+      -ms-transform: translateY(0);
+          transform: translateY(0);
+  -webkit-transition-delay: 0.1s;
+          transition-delay: 0.1s;
+}
+
+/* !END: Theme Item List CSS */
+/**----------------------------------------
+START: Theme Back To Top CSS
+----------------------------------------*/
+.back-to-top-wrapper {
+  position: fixed;
+  right: 60px;
+  bottom: 0;
+  display: block;
+  border-radius: 50%;
+  z-index: 99;
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
+}
+
+.back-to-top-btn-show {
+  visibility: visible;
+  opacity: 1;
+  bottom: 60px;
+}
+
+.back-to-top-btn-show:hover {
+  -webkit-transform: translateY(-6px);
+      -ms-transform: translateY(-6px);
+          transform: translateY(-6px);
+}
+
+.back-to-top-btn-show:hover .back_to_top_icon i {
+  -webkit-transform: translateY(-40px);
+      -ms-transform: translateY(-40px);
+          transform: translateY(-40px);
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+.back-to-top-btn {
+  color: var(--fa-color-theme-primary);
+  line-height: 1;
+  font-weight: var(--fa-fw-sbold);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 12px;
+}
+
+.back-to-top-btn .back_to_top_icon {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 50px;
+  height: 50px;
+  font-size: 10px;
+  color: var(--fa-color-theme-bg);
+  background-color: var(--fa-color-theme-secondary);
+  border-radius: 50%;
+  text-shadow: 0 40px 0 var(--fa-color-theme-dark);
+  overflow: hidden;
+}
+
+.back-to-top-btn .back_to_top_text {
+  font-weight: var(--fa-fw-medium);
+  line-height: 1;
+  letter-spacing: 0%;
+  text-align: right;
+  -webkit-writing-mode: vertical-lr;
+      -ms-writing-mode: tb-lr;
+          writing-mode: vertical-lr;
+  -webkit-transform: scale(-1);
+      -ms-transform: scale(-1);
+          transform: scale(-1);
+}
+
+/* !END: Theme Back To Top CSS */
+/**----------------------------------------
 START: Theme Hero CSS
 ----------------------------------------*/
 .fa-hero-section {

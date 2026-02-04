@@ -1,0 +1,67 @@
+@use "../utilities" as *;
+
+/**----------------------------------------
+START: Theme Back To Top CSS
+----------------------------------------*/
+.back-to-top-wrapper {
+	position: fixed;
+	right: 60px;
+	bottom: 0;
+	display: block;
+	border-radius: 50%;
+	z-index: 99;
+	opacity: 0;
+	visibility: hidden;
+	transition: all 0.3s ease-in-out;
+	cursor: pointer;
+}
+
+.back-to-top-btn-show {
+	visibility: visible;
+	opacity: 1;
+	bottom: 60px;
+}
+
+.back-to-top-btn-show:hover {
+	transform: translateY(-6px);
+}
+
+.back-to-top-btn-show:hover .back_to_top_icon i {
+	transform: translateY(-40px);
+	transition: all 0.3s ease-in-out;
+}
+
+.back-to-top-btn {
+	color: var(--fa-color-theme-primary);
+	line-height: 1;
+	font-weight: var(--fa-fw-sbold);
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 12px;
+}
+
+.back-to-top-btn .back_to_top_icon {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	width: 50px;
+	height: 50px;
+	font-size: 10px;
+	color: var(--fa-color-theme-bg);
+	background-color: var(--fa-color-theme-secondary);
+	border-radius: 50%;
+	text-shadow: 0 40px 0 var(--fa-color-theme-dark);
+	overflow: hidden;
+}
+
+.back-to-top-btn .back_to_top_text {
+	font-weight: var(--fa-fw-medium);
+	line-height: 1;
+	letter-spacing: 0%;
+	text-align: right;
+	writing-mode: vertical-lr;
+	transform: scale(-1);
+}
+
+/* !END: Theme Back To Top CSS */

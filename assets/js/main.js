@@ -15,6 +15,40 @@ Mobile Menu Js
 		$this.css("background-image", "url(" + $image + ")");
 	});
 
+	// Search Bar Js
+	$(".header-search").on("click", function () {
+		$(".search_popup").addClass("search-opened");
+		$(".search-popup-overlay").addClass("opened");
+	});
+	$(".search_close_btn").on("click", function () {
+		$(".search_popup").removeClass("search-opened");
+		$(".search-popup-overlay").removeClass("opened");
+	});
+	$(".search-popup-overlay").on("click", function () {
+		$(".search_popup").removeClass("search-opened");
+		$(this).removeClass("opened");
+	});
+
+	// Back to Top Js
+	function back_to_top() {
+		var btn = $("#back_to_top");
+		var btn_wrapper = $(".back-to-top-wrapper");
+
+		$(window).on("scroll", function () {
+			if ($(window).scrollTop() > 1200) {
+				btn_wrapper.addClass("back-to-top-btn-show");
+			} else {
+				btn_wrapper.removeClass("back-to-top-btn-show");
+			}
+		});
+
+		btn.on("click", function (e) {
+			e.preventDefault();
+			$("html, body").animate({ scrollTop: 0 }, "300");
+		});
+	}
+	back_to_top();
+
 	// Nice Select Js
 	if ($("select").length > 0) {
 		$("select").niceSelect();
