@@ -15,6 +15,47 @@ Mobile Menu Js
 		$this.css("background-image", "url(" + $image + ")");
 	});
 
+	// Preloader js
+	$(window).on("load", function () {
+		const faPreloader = $(".fa-preloader");
+		if (faPreloader?.length) {
+			setTimeout(function () {
+				faPreloader.removeClass("is-loading").addClass("is-loaded");
+				setTimeout(function () {
+					faPreloader.fadeOut(400);
+					wowController();
+					gsapController();
+				}, 700);
+			}, 2000);
+		} else {
+			wowController();
+			gsapController();
+		}
+	});
+
+	// Sticky Js
+	var lastScrollTop = "";
+	function stickyMenu($targetMenu, $toggleClass) {
+		var st = $(window).scrollTop();
+		if ($(window).scrollTop() > 500) {
+			if (st > lastScrollTop) {
+				$targetMenu.removeClass($toggleClass);
+			} else {
+				$targetMenu.addClass($toggleClass);
+			}
+		} else {
+			$targetMenu.removeClass($toggleClass);
+		}
+
+		lastScrollTop = st;
+	}
+
+	$(window).on("scroll", function () {
+		if ($(".header-area").length) {
+			stickyMenu($(".header-sticky"), "sticky");
+		}
+	});
+
 	// Search Bar Js
 	$(".header-search").on("click", function () {
 		$(".search_popup").addClass("search-opened");

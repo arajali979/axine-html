@@ -16,6 +16,7 @@
 
    <!-- CSS here -->
    <link rel="stylesheet" href="assets/css/bootstrap.min.css" />
+   <link rel="stylesheet" href="assets/css/axine-icons.css" />
    <link rel="stylesheet" href="assets/css/odometer-theme-default.css" />
    <link rel="stylesheet" href="assets/css/font-awesome-pro.min.css" />
    <link rel="stylesheet" href="assets/css/nice-select.css" />
@@ -25,6 +26,23 @@
 </head>
 
 <body>
+
+   <!-- Preloader Start -->
+   <!-- <div class="fa-preloader is-loading">
+      <div class="fa-preloader-inner">
+         <div class="fa-preloader-ball-wrap">
+            <div class="fa-preloader-ball-inner-wrap">
+               <div class="fa-preloader-ball-inner">
+                  <div class="fa-preloader-ball"></div>
+               </div>
+               <div class="fa-preloader-ball-shadow"></div>
+            </div>
+            <div id="fa-weave-anim" class="fa-preloader-text">Loading...</div>
+         </div>
+      </div>
+      <div class="fa-preloader-overlay"></div>
+   </div> -->
+   <!-- Preloader end -->
 
    <!-- back to top start -->
    <div class="back-to-top-wrapper">
@@ -84,9 +102,66 @@
                   </div>
                   <div class="mainmenu main-mobile-menu d-none d-lg-inline-flex">
                      <ul>
+                        <li class="has-dropdown">
+                           <a href="javascript:void(0)">Home</a>
+                           <ul class="sub-menu">
+                              <li class="current-menu-item">
+                                 <a href="index.html">Home One</a>
+                              </li>
+                              <li>
+                                 <a href="index-2.html">Home Two</a>
+                              </li>
+                           </ul>
+                        </li>
+                        <li><a href="#">About</a></li>
+                        <li><a href="#">Portfolio</a></li>
+                        <li><a href="#">Blog</a></li>
+                        <li><a href="#">Contact</a></li>
+                     </ul>
+                  </div>
+                  <div class="mainmenu-right-infos">
+                     <div class="header-search d-none d-lg-block">
+                        <button class="search">
+                           <span>
+                              <img src="assets/images/icons/search.svg" alt="Icons">
+                           </span>
+                           Search here</button>
+                     </div>
+                     <div class="header-button d-none d-lg-flex">
+                        <a class="primary-btn" href="#">
+                           <span class="fa-icon">
+                              <img src="assets/images/icons/btn-arrow.svg" alt="Icons">
+                           </span>
+                           <span class="fa-btn-text">Get In Touch</span>
+                           <span class="fa-icon icon-1">
+                              <img src="assets/images/icons/btn-arrow.svg" alt="Icons">
+                           </span>
+                        </a>
+                     </div>
+                  </div>
+                  <div class="mobile-menu-bar d-lg-none">
+                     <button class="canvas-btn">
+                        <i class="fa-regular fa-bars"></i>
+                     </button>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+   </header>
+
+   <header class="header-area header-duplicate header-sticky">
+      <div class="container">
+         <div class="row">
+            <div class="col-12">
+               <div class="maimmenu-main-wrapper">
+                  <div class="site-logo">
+                     <a href="#"><img src="assets/images/logo/primary-logo.png" alt="Images"></a>
+                  </div>
+                  <div class="mainmenu main-mobile-menu d-none d-lg-inline-flex">
+                     <ul>
                         <li><a href="#">Home</a></li>
                         <li><a href="#">About</a></li>
-                        <li><a href="#">Pages</a></li>
                         <li><a href="#">Portfolio</a></li>
                         <li><a href="#">Blog</a></li>
                         <li><a href="#">Contact</a></li>

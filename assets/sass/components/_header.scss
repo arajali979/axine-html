@@ -11,6 +11,23 @@ START: Theme Header CSS
 	z-index: 98;
 	background: var(--fa-color-theme-secondary);
 	@include transition(all 0.3s ease-in-out 0s);
+	&.header-duplicate {
+		background-color: var(--fa-color-theme-bg);
+		display: none;
+		opacity: 0;
+		visibility: hidden;
+	}
+	&.sticky {
+		position: fixed;
+		width: 100%;
+		top: 0;
+		left: 0;
+		animation: sticky 0.9s;
+		z-index: 99;
+		opacity: 1;
+		visibility: visible;
+		display: block;
+	}
 	&.header-absolute {
 		position: absolute;
 		width: 100%;
@@ -116,6 +133,33 @@ START: Theme Header CSS
 		> li {
 			position: relative;
 			z-index: 1;
+			&.has-dropdown {
+				> a {
+					padding-right: 20px;
+					&::before {
+						position: absolute;
+						content: "\2b";
+						font-family: "Font Awesome 6 Pro";
+						top: 50%;
+						right: 0;
+						font-weight: var(--fa-fw-sbold);
+						transform: translateY(-50%);
+						transition: all 0.1s ease-out;
+						font-size: 12px;
+					}
+					&::after {
+						position: absolute;
+						content: "\f068";
+						font-family: "Font Awesome 6 Pro";
+						top: 50%;
+						right: 0;
+						font-weight: var(--fa-fw-sbold);
+						transform: translateY(-50%);
+						transition: all 0.1s ease-out;
+						font-size: 12px;
+					}
+				}
+			}
 			> a {
 				display: block;
 				position: relative;
@@ -123,8 +167,109 @@ START: Theme Header CSS
 				color: var(--fa-color-common-white);
 				font-family: var(--fa-ff-heading);
 				font-weight: var(--fa-fw-bold);
-				padding: 46px 0;
+				padding: 32px 0;
 				z-index: 2;
+			}
+			&.current-menu-ancestor,
+			&.current-menu-item,
+			&:hover {
+				a {
+					color: var(--fa-color-theme-primary);
+					&::after {
+						opacity: 1;
+						visibility: visible;
+					}
+					&::before {
+						opacity: 0;
+						visibility: hidden;
+					}
+				}
+			}
+			> .sub-menu {
+				display: block;
+				position: absolute;
+				top: 100%;
+				left: 0;
+				width: 220px;
+				top: 100%;
+				left: 0;
+				z-index: 99;
+				transform-origin: 0 0;
+				text-align: left;
+				background-color: var(--fa-color-common-white);
+				transform: scaleY(0);
+				opacity: 0;
+				visibility: hidden;
+				gap: 0;
+				padding: 10px 0;
+				pointer-events: none;
+				> li {
+					display: block;
+					width: 100%;
+					margin-right: 0;
+					transition: 0.4s;
+					position: relative;
+					z-index: 1;
+					&.has-dropdown::after {
+						display: none;
+					}
+					> a {
+						position: relative;
+						padding: 4px 20px;
+						display: block;
+						color: var(--fa-color-grey-3);
+						text-transform: capitalize;
+						&::before {
+							display: none;
+						}
+						&::after {
+							display: none;
+						}
+						&:hover {
+							padding-inline-start: 25px;
+						}
+					}
+					&:last-child {
+						padding-bottom: 0;
+					}
+
+					&.has-dropdown {
+						> a {
+							&::after {
+								content: "\f105";
+								right: 10px;
+								color: var(--fa-color-theme-primary);
+							}
+						}
+					}
+					&.current-menu-ancestor,
+					&.current-menu-item,
+					&:hover {
+						> a {
+							color: var(--fa-color-theme-primary);
+							&::before {
+								opacity: 1;
+								visibility: visible;
+							}
+							&::after {
+								color: var(--fa-color-heading-primary);
+							}
+						}
+					}
+					> .sub-menu {
+						left: 100%;
+						top: 0;
+					}
+				}
+			}
+			&:hover {
+				> .sub-menu {
+					opacity: 1;
+					visibility: visible;
+					transform: scaleY(1);
+					transition: all 0.5s ease;
+					pointer-events: inherit;
+				}
 			}
 		}
 	}
