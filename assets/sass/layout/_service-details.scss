@@ -223,7 +223,47 @@ START: Service Details CSS
 			}
 		}
 	}
-	&.widget_information {
+	&.widget_form {
+		.form-wrap {
+			.form-input {
+				margin-bottom: 20px;
+				input:not([type="submit"]):not([type="radio"]):not(
+						[type="checkbox"]
+					):not([type="search"]),
+				textarea,
+				input[type="email"],
+				input[type="text"] {
+					width: 100%;
+					padding: 17px 20px;
+					background: transparent;
+					border: 1px solid var(--fa-color-border-4);
+					font-weight: var(--fa-fw-sbold);
+					text-transform: uppercase;
+					border-radius: 8px;
+					letter-spacing: 0.05em;
+					&::placeholder {
+						color: var(--fa-color-text-body);
+						font-weight: var(--fa-fw-sbold);
+						letter-spacing: 0.05em;
+					}
+					&::-ms-input-placeholder {
+						color: var(--fa-color-text-body);
+						font-weight: var(--fa-fw-sbold);
+						letter-spacing: 0.05em;
+					}
+				}
+				textarea {
+					min-height: 180px;
+					resize: none;
+				}
+			}
+			.fa-select {
+				.nice-select {
+					border: 1px solid var(--fa-color-border-4);
+				}
+			}
+		}
 	}
 }
+
 /* !END: Service Details CSS */

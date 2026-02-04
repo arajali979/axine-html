@@ -4811,6 +4811,66 @@ START: Service Details CSS
   font-weight: var(--fa-fw-sbold);
   padding: 16px 25px;
 }
+.fa-service-sidebar-widget.widget_form .form-wrap .form-input {
+  margin-bottom: 20px;
+}
+.fa-service-sidebar-widget.widget_form .form-wrap .form-input input:not([type=submit]):not([type=radio]):not([type=checkbox]):not([type=search]),
+.fa-service-sidebar-widget.widget_form .form-wrap .form-input textarea,
+.fa-service-sidebar-widget.widget_form .form-wrap .form-input input[type=email],
+.fa-service-sidebar-widget.widget_form .form-wrap .form-input input[type=text] {
+  width: 100%;
+  padding: 17px 20px;
+  background: transparent;
+  border: 1px solid var(--fa-color-border-4);
+  font-weight: var(--fa-fw-sbold);
+  text-transform: uppercase;
+  border-radius: 8px;
+  letter-spacing: 0.05em;
+}
+.fa-service-sidebar-widget.widget_form .form-wrap .form-input input:not([type=submit]):not([type=radio]):not([type=checkbox]):not([type=search])::-webkit-input-placeholder, .fa-service-sidebar-widget.widget_form .form-wrap .form-input textarea::-webkit-input-placeholder, .fa-service-sidebar-widget.widget_form .form-wrap .form-input input[type=email]::-webkit-input-placeholder, .fa-service-sidebar-widget.widget_form .form-wrap .form-input input[type=text]::-webkit-input-placeholder {
+  color: var(--fa-color-text-body);
+  font-weight: var(--fa-fw-sbold);
+  letter-spacing: 0.05em;
+}
+.fa-service-sidebar-widget.widget_form .form-wrap .form-input input:not([type=submit]):not([type=radio]):not([type=checkbox]):not([type=search])::-moz-placeholder, .fa-service-sidebar-widget.widget_form .form-wrap .form-input textarea::-moz-placeholder, .fa-service-sidebar-widget.widget_form .form-wrap .form-input input[type=email]::-moz-placeholder, .fa-service-sidebar-widget.widget_form .form-wrap .form-input input[type=text]::-moz-placeholder {
+  color: var(--fa-color-text-body);
+  font-weight: var(--fa-fw-sbold);
+  letter-spacing: 0.05em;
+}
+.fa-service-sidebar-widget.widget_form .form-wrap .form-input input:not([type=submit]):not([type=radio]):not([type=checkbox]):not([type=search]):-ms-input-placeholder, .fa-service-sidebar-widget.widget_form .form-wrap .form-input textarea:-ms-input-placeholder, .fa-service-sidebar-widget.widget_form .form-wrap .form-input input[type=email]:-ms-input-placeholder, .fa-service-sidebar-widget.widget_form .form-wrap .form-input input[type=text]:-ms-input-placeholder {
+  color: var(--fa-color-text-body);
+  font-weight: var(--fa-fw-sbold);
+  letter-spacing: 0.05em;
+}
+.fa-service-sidebar-widget.widget_form .form-wrap .form-input input:not([type=submit]):not([type=radio]):not([type=checkbox]):not([type=search])::-ms-input-placeholder, .fa-service-sidebar-widget.widget_form .form-wrap .form-input textarea::-ms-input-placeholder, .fa-service-sidebar-widget.widget_form .form-wrap .form-input input[type=email]::-ms-input-placeholder, .fa-service-sidebar-widget.widget_form .form-wrap .form-input input[type=text]::-ms-input-placeholder {
+  color: var(--fa-color-text-body);
+  font-weight: var(--fa-fw-sbold);
+  letter-spacing: 0.05em;
+}
+.fa-service-sidebar-widget.widget_form .form-wrap .form-input input:not([type=submit]):not([type=radio]):not([type=checkbox]):not([type=search])::placeholder,
+.fa-service-sidebar-widget.widget_form .form-wrap .form-input textarea::placeholder,
+.fa-service-sidebar-widget.widget_form .form-wrap .form-input input[type=email]::placeholder,
+.fa-service-sidebar-widget.widget_form .form-wrap .form-input input[type=text]::placeholder {
+  color: var(--fa-color-text-body);
+  font-weight: var(--fa-fw-sbold);
+  letter-spacing: 0.05em;
+}
+.fa-service-sidebar-widget.widget_form .form-wrap .form-input input:not([type=submit]):not([type=radio]):not([type=checkbox]):not([type=search])::-ms-input-placeholder,
+.fa-service-sidebar-widget.widget_form .form-wrap .form-input textarea::-ms-input-placeholder,
+.fa-service-sidebar-widget.widget_form .form-wrap .form-input input[type=email]::-ms-input-placeholder,
+.fa-service-sidebar-widget.widget_form .form-wrap .form-input input[type=text]::-ms-input-placeholder {
+  color: var(--fa-color-text-body);
+  font-weight: var(--fa-fw-sbold);
+  letter-spacing: 0.05em;
+}
+.fa-service-sidebar-widget.widget_form .form-wrap .form-input textarea {
+  min-height: 180px;
+  resize: none;
+}
+.fa-service-sidebar-widget.widget_form .form-wrap .fa-select .nice-select {
+  border: 1px solid var(--fa-color-border-4);
+}
+
 /* !END: Service Details CSS */
 /**----------------------------------------
 START: Theme Project CSS
@@ -5593,7 +5653,7 @@ START: Theme Testimonial CSS
           justify-content: center;
   gap: 40px;
   position: relative;
-  bottom: -50px;
+  bottom: -40px;
 }
 @media only screen and (min-width: 1200px) and (max-width: 1399px), only screen and (min-width: 992px) and (max-width: 1199px), only screen and (min-width: 768px) and (max-width: 991px), only screen and (min-width: 576px) and (max-width: 767px), (max-width: 575px) {
   .fa-testimonial-section .testimonial-slider {
@@ -7537,8 +7597,8 @@ START: Theme Counter CSS
 }
 .counter-main-wrapper .counter-item {
   position: relative;
-  padding: 118px 90px 118px 0;
-  margin-right: 106px;
+  padding: 118px 70px 118px 0;
+  margin-right: 75px;
 }
 .counter-main-wrapper .counter-item::before {
   position: absolute;
@@ -7550,10 +7610,10 @@ START: Theme Counter CSS
   background: var(--fa-color-theme-bg);
 }
 .counter-main-wrapper .counter-item:nth-child(2)::before {
-  height: 114.5%;
+  height: 113.5%;
 }
 .counter-main-wrapper .counter-item:nth-child(3)::before {
-  height: 105.5%;
+  height: 104.5%;
 }
 .counter-main-wrapper .counter-item:last-child {
   padding-right: 0px;
@@ -7575,7 +7635,7 @@ START: Theme Counter CSS
           column-gap: 10px;
   position: relative;
 }
-.counter-main-wrapper .counter-item .number-count .number {
+.counter-main-wrapper .counter-item .number-count .fa-count {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -7584,12 +7644,12 @@ START: Theme Counter CSS
           align-items: center;
   font-family: var(--fa-ff-heading);
   font-weight: var(--fa-fw-black);
-  font-size: 150px;
+  font-size: 145px;
   color: var(--fa-color-heading-primary);
   margin-bottom: 0;
   line-height: 1;
 }
-.counter-main-wrapper .counter-item .number-count .number span {
+.counter-main-wrapper .counter-item .number-count .fa-count span {
   font-family: var(--fa-ff-heading);
 }
 .counter-main-wrapper .counter-item .number-count .subtitle {
@@ -7598,7 +7658,7 @@ START: Theme Counter CSS
   font-family: var(--fa-ff-heading);
   font-weight: var(--fa-fw-sbold);
   position: relative;
-  top: -20px;
+  top: -40px;
   line-height: 1;
 }
 .counter-main-wrapper .counter-item .count-subtitle {
@@ -7611,17 +7671,23 @@ START: Theme Counter CSS
 }
 @media only screen and (min-width: 1400px) and (max-width: 1600px) {
   .counter-main-wrapper .counter-item {
-    padding: 118px 65px 118px 0;
-    margin-right: 65px;
+    padding: 118px 45px 118px 0;
+    margin-right: 45px;
   }
   .counter-main-wrapper .counter-item::before {
-    height: 101%;
+    height: 102%;
   }
   .counter-main-wrapper .counter-item:nth-child(2)::before {
-    height: 113.5%;
+    height: 113.4%;
   }
   .counter-main-wrapper .counter-item:nth-child(3)::before {
     height: 104.5%;
+  }
+  .counter-main-wrapper .counter-item .number-count .fa-count {
+    font-size: 125px;
+  }
+  .counter-main-wrapper .counter-item .number-count .subtitle {
+    top: -35px;
   }
 }
 @media only screen and (min-width: 1200px) and (max-width: 1399px) {
@@ -7633,13 +7699,16 @@ START: Theme Counter CSS
     height: 108.5%;
   }
   .counter-main-wrapper .counter-item:nth-child(2)::before {
-    height: 121.5%;
+    height: 122.2%;
   }
   .counter-main-wrapper .counter-item:nth-child(3)::before {
-    height: 109.5%;
+    height: 106.4%;
   }
-  .counter-main-wrapper .counter-item .number-count .number {
-    font-size: 115px;
+  .counter-main-wrapper .counter-item .number-count .fa-count {
+    font-size: 85px;
+  }
+  .counter-main-wrapper .counter-item .number-count .subtitle {
+    top: -25px;
   }
 }
 @media only screen and (min-width: 992px) and (max-width: 1199px) {
@@ -7648,10 +7717,16 @@ START: Theme Counter CSS
     margin-right: 30px;
   }
   .counter-main-wrapper .counter-item::before {
-    height: 103.5%;
+    height: 104.5%;
   }
-  .counter-main-wrapper .counter-item .number-count .number {
-    font-size: 100px;
+  .counter-main-wrapper .counter-item:nth-child(2)::before {
+    height: 115.2%;
+  }
+  .counter-main-wrapper .counter-item .number-count .fa-count {
+    font-size: 75px;
+  }
+  .counter-main-wrapper .counter-item .number-count .subtitle {
+    top: -20px;
   }
   .counter-main-wrapper .counter-item .count-subtitle {
     font-size: 20px;
@@ -7670,8 +7745,11 @@ START: Theme Counter CSS
   .counter-main-wrapper .counter-item::before {
     display: none;
   }
-  .counter-main-wrapper .counter-item .number-count .number {
-    font-size: 85px;
+  .counter-main-wrapper .counter-item .number-count .fa-count {
+    font-size: 70px;
+  }
+  .counter-main-wrapper .counter-item .number-count .subtitle {
+    top: -20px;
   }
   .counter-main-wrapper .counter-item .count-subtitle {
     font-size: 18px;
@@ -7690,8 +7768,11 @@ START: Theme Counter CSS
   .counter-main-wrapper .counter-item::before {
     display: none;
   }
-  .counter-main-wrapper .counter-item .number-count .number {
-    font-size: 85px;
+  .counter-main-wrapper .counter-item .number-count .fa-count {
+    font-size: 65px;
+  }
+  .counter-main-wrapper .counter-item .number-count .subtitle {
+    top: -20px;
   }
   .counter-main-wrapper .counter-item .count-subtitle {
     font-size: 18px;
@@ -7710,12 +7791,12 @@ START: Theme Counter CSS
   .counter-main-wrapper .counter-item::before {
     display: none;
   }
-  .counter-main-wrapper .counter-item .number-count .number {
-    font-size: 65px;
+  .counter-main-wrapper .counter-item .number-count .fa-count {
+    font-size: 60px;
   }
   .counter-main-wrapper .counter-item .number-count .subtitle {
     font-size: 20px;
-    top: -10px;
+    top: -18px;
   }
   .counter-main-wrapper .counter-item .count-subtitle {
     font-size: 16px;

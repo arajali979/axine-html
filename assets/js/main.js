@@ -55,6 +55,17 @@ Mobile Menu Js
 		$(".star-ratings").width(star_rating_width);
 	}
 
+	// Fun Fact Js
+	if ($(".odometer").length > 0) {
+		$(".odometer").appear(function () {
+			var odo = $(".odometer");
+			odo.each(function () {
+				var countNumber = $(this).attr("data-count");
+				$(this).html(countNumber);
+			});
+		});
+	}
+
 	// Price js
 	var price = $(".price-number");
 	var duration = $(".price-duration");
