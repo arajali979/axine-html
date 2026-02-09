@@ -39,29 +39,32 @@ START: Theme Back To Top CSS
 	flex-direction: column;
 	align-items: center;
 	gap: 12px;
-}
-
-.back-to-top-btn .back_to_top_icon {
-	display: inline-flex;
-	align-items: center;
-	justify-content: center;
-	width: 50px;
-	height: 50px;
-	font-size: 10px;
-	color: var(--fa-color-theme-bg);
-	background-color: var(--fa-color-theme-secondary);
-	border-radius: 50%;
-	text-shadow: 0 40px 0 var(--fa-color-theme-dark);
-	overflow: hidden;
-}
-
-.back-to-top-btn .back_to_top_text {
-	font-weight: var(--fa-fw-medium);
-	line-height: 1;
-	letter-spacing: 0%;
-	text-align: right;
-	writing-mode: vertical-lr;
-	transform: scale(-1);
+	.back_to_top_icon {
+		display: inline-flex;
+		align-items: center;
+		justify-content: center;
+		width: 50px;
+		height: 50px;
+		font-size: 10px;
+		color: var(--fa-color-theme-bg);
+		background-color: var(--fa-color-theme-primary);
+		border-radius: 50%;
+		text-shadow: 0 40px 0 var(--fa-color-theme-bg);
+		overflow: hidden;
+		img {
+			transform: rotate(-90deg);
+		}
+	}
+	.back_to_top_text {
+		font-weight: var(--fa-fw-medium);
+		line-height: 1;
+		text-align: right;
+		writing-mode: vertical-lr;
+		transform: scale(-1);
+	}
+	&:hover {
+		color: var(--fa-color-theme-primary);
+	}
 }
 
 /* !END: Theme Back To Top CSS */

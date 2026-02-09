@@ -2148,7 +2148,6 @@ START: Theme Back To Top CSS
           align-items: center;
   gap: 12px;
 }
-
 .back-to-top-btn .back_to_top_icon {
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
@@ -2163,16 +2162,19 @@ START: Theme Back To Top CSS
   height: 50px;
   font-size: 10px;
   color: var(--fa-color-theme-bg);
-  background-color: var(--fa-color-theme-secondary);
+  background-color: var(--fa-color-theme-primary);
   border-radius: 50%;
-  text-shadow: 0 40px 0 var(--fa-color-theme-dark);
+  text-shadow: 0 40px 0 var(--fa-color-theme-bg);
   overflow: hidden;
 }
-
+.back-to-top-btn .back_to_top_icon img {
+  -webkit-transform: rotate(-90deg);
+      -ms-transform: rotate(-90deg);
+          transform: rotate(-90deg);
+}
 .back-to-top-btn .back_to_top_text {
   font-weight: var(--fa-fw-medium);
   line-height: 1;
-  letter-spacing: 0%;
   text-align: right;
   -webkit-writing-mode: vertical-lr;
       -ms-writing-mode: tb-lr;
@@ -2180,6 +2182,9 @@ START: Theme Back To Top CSS
   -webkit-transform: scale(-1);
       -ms-transform: scale(-1);
           transform: scale(-1);
+}
+.back-to-top-btn:hover {
+  color: var(--fa-color-theme-primary);
 }
 
 /* !END: Theme Back To Top CSS */
