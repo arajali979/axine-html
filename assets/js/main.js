@@ -16,22 +16,6 @@ Mobile Menu Js
 	});
 
 	// Preloader js
-	$(window).on("load", function () {
-		const faPreloader = $(".fa-preloader");
-		if (faPreloader?.length) {
-			setTimeout(function () {
-				faPreloader.removeClass("is-loading").addClass("is-loaded");
-				setTimeout(function () {
-					faPreloader.fadeOut(400);
-					wowController();
-					gsapController();
-				}, 700);
-			}, 2000);
-		} else {
-			wowController();
-			gsapController();
-		}
-	});
 
 	// Sticky Js
 	var lastScrollTop = "";
