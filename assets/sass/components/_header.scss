@@ -107,6 +107,9 @@ START: Theme Header CSS
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
+	.mean-push {
+		display: none;
+	}
 }
 
 .footer-logo,
@@ -339,6 +342,14 @@ START: Theme Header CSS
 
 .mobile-menu-bar {
 	.canvas-btn {
+		font-size: 30px;
+		color: var(--fa-color-common-white);
+	}
+}
+
+.hamburger-button {
+	.hamburger_menu {
+		display: inline-flex;
 		font-size: 30px;
 		color: var(--fa-color-common-white);
 	}

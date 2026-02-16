@@ -222,14 +222,14 @@
 							fadeDirection == "left"
 								? -fadeOffset
 								: fadeDirection == "right"
-								? fadeOffset
-								: 0,
+									? fadeOffset
+									: 0,
 						y:
 							fadeDirection == "top"
 								? -fadeOffset
 								: fadeDirection == "bottom"
-								? fadeOffset
-								: 0,
+									? fadeOffset
+									: 0,
 					};
 				if (onscrollValue == 1) {
 					animationSetting.scrollTrigger = {
@@ -482,7 +482,7 @@
 				{
 					yPercent: -30,
 					ease: "none",
-				}
+				},
 			);
 		});
 

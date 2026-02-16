@@ -54,6 +54,28 @@ Mobile Menu Js
 		$(this).removeClass("opened");
 	});
 
+	// Mobile Menu Js
+	$(".main-mobile-menu").meanmenu({
+		meanMenuContainer: ".mobile_menu",
+		meanScreenWidth: "10000",
+		meanExpand: ['<i class="fa-light fa-plus"></i>'],
+	});
+
+	$(".mobile_menu_bar").on("click", function () {
+		$(".hamburger-area").addClass("opened");
+		$(".body-overlay").addClass("opened");
+	});
+	$(".hamburger_close_btn").on("click", function () {
+		$(".hamburger-area").removeClass("opened");
+		$(".body-overlay").removeClass("opened");
+		$(".mobile_menu_bar").removeClass("on");
+	});
+	$(".body-overlay").on("click", function () {
+		$(".hamburger-area").removeClass("opened");
+		$(".body-overlay").removeClass("opened");
+		$(".mobile_menu_bar").removeClass("on");
+	});
+
 	// Back to Top Js
 	function back_to_top() {
 		var btn = $("#back_to_top");
