@@ -59,7 +59,7 @@ START: Theme Service CSS
 			background-clip: text;
 			margin-top: -60px;
 		}
-		@media #{$lg, $md} {
+		@media #{$xl, $lg, $md} {
 			.sec-title {
 				margin-top: -25px;
 			}

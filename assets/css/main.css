@@ -5021,7 +5021,7 @@ START: Theme Service CSS
   background-clip: text;
   margin-top: -60px;
 }
-@media only screen and (min-width: 992px) and (max-width: 1199px), only screen and (min-width: 768px) and (max-width: 991px) {
+@media only screen and (min-width: 1200px) and (max-width: 1399px), only screen and (min-width: 992px) and (max-width: 1199px), only screen and (min-width: 768px) and (max-width: 991px) {
   .fa-service-section .heading-area .sec-title {
     margin-top: -25px;
   }
