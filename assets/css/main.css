@@ -1364,9 +1364,9 @@ START: Theme Header CSS
   }
 }
 .header-area.v-3 .mainmenu-right-infos {
-  -webkit-column-gap: 115px;
-     -moz-column-gap: 115px;
-          column-gap: 115px;
+  -webkit-column-gap: 30px;
+     -moz-column-gap: 30px;
+          column-gap: 30px;
 }
 .header-area.v-3 .mainmenu-right-infos .header-media-wrap {
   display: -webkit-box;
@@ -1378,20 +1378,6 @@ START: Theme Header CSS
   -webkit-column-gap: 30px;
      -moz-column-gap: 30px;
           column-gap: 30px;
-}
-@media only screen and (min-width: 1200px) and (max-width: 1399px) {
-  .header-area.v-3 .mainmenu-right-infos {
-    -webkit-column-gap: 50px;
-       -moz-column-gap: 50px;
-            column-gap: 50px;
-  }
-}
-@media only screen and (min-width: 992px) and (max-width: 1199px) {
-  .header-area.v-3 .mainmenu-right-infos {
-    -webkit-column-gap: 30px;
-       -moz-column-gap: 30px;
-            column-gap: 30px;
-  }
 }
 @media only screen and (min-width: 768px) and (max-width: 991px), only screen and (min-width: 576px) and (max-width: 767px), (max-width: 575px) {
   .header-area {
@@ -1793,8 +1779,17 @@ START: Theme Footer CSS
   height: 100%;
   width: 100%;
 }
+.fa-footer-area.v-3 {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
 .fa-footer-area.v-3 .footer-main-wrapper {
   padding-top: 120px;
+}
+.fa-footer-area.v-3 .footer-marquee-area {
+  position: relative;
+  z-index: 2;
 }
 .fa-footer-area.v-3 .footer-shapes {
   position: absolute;
@@ -1802,7 +1797,13 @@ START: Theme Footer CSS
   left: 0;
 }
 .fa-footer-area.v-3 .footer-copyright-area {
-  background: transparent;
+  background: radial-gradient(50% 50% at 50% 50%, var(--fa-color-theme-secondary) 0%, rgba(77, 53, 172, 0) 100%);
+}
+.fa-footer-area.v-3 .footer-copyright-area .copyright-2-wrapper p {
+  color: var(--fa-color-common-white);
+  font-size: 18px;
+  font-family: var(--fa-ff-heading);
+  font-weight: var(--fa-fw-sbold);
 }
 
 .footer-contact-area {
@@ -2773,7 +2774,7 @@ START: Theme Back To Top CSS
 ----------------------------------------*/
 .back-to-top-wrapper {
   position: fixed;
-  right: 60px;
+  right: 25px;
   bottom: 0;
   display: block;
   border-radius: 50%;
@@ -2788,7 +2789,7 @@ START: Theme Back To Top CSS
 .back-to-top-btn-show {
   visibility: visible;
   opacity: 1;
-  bottom: 60px;
+  bottom: 25px;
 }
 
 .back-to-top-btn-show:hover {

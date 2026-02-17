@@ -5,7 +5,7 @@ START: Theme Back To Top CSS
 ----------------------------------------*/
 .back-to-top-wrapper {
 	position: fixed;
-	right: 60px;
+	right: 25px;
 	bottom: 0;
 	display: block;
 	border-radius: 50%;
@@ -19,7 +19,7 @@ START: Theme Back To Top CSS
 .back-to-top-btn-show {
 	visibility: visible;
 	opacity: 1;
-	bottom: 60px;
+	bottom: 25px;
 }
 
 .back-to-top-btn-show:hover {

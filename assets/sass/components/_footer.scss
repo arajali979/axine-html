@@ -90,8 +90,15 @@ START: Theme Footer CSS
 		}
 	}
 	&.v-3 {
+		background-repeat: no-repeat;
+		background-size: cover;
+		background-position: center;
 		.footer-main-wrapper {
 			padding-top: 120px;
+		}
+		.footer-marquee-area {
+			position: relative;
+			z-index: 2;
 		}
 		.footer-shapes {
 			position: absolute;
@@ -99,7 +106,19 @@ START: Theme Footer CSS
 			left: 0;
 		}
 		.footer-copyright-area {
-			background: transparent;
+			background: radial-gradient(
+				50% 50% at 50% 50%,
+				var(--fa-color-theme-secondary) 0%,
+				rgba(77, 53, 172, 0) 100%
+			);
+			.copyright-2-wrapper {
+				p {
+					color: var(--fa-color-common-white);
+					font-size: 18px;
+					font-family: var(--fa-ff-heading);
+					font-weight: var(--fa-fw-sbold);
+				}
+			}
 		}
 	}
 }
