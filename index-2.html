@@ -27,12 +27,12 @@
 <body>
 
    <!-- back to top start -->
-   <!-- <div class="back-to-top-wrapper">
+   <div class="back-to-top-wrapper">
       <button id="back_to_top" type="button" class="back-to-top-btn">
-         <span class="back_to_top_icon"><i class="fai-arrow-up-4"></i></span>
+         <span class="back_to_top_icon"><img src="assets/images/icons/btn-arrow.svg" alt="Icons"></span>
          <span class="back_to_top_text">Scroll Top</span>
       </button>
-   </div> -->
+   </div>
    <!-- back to top end -->
 
    <!-- start: Search Popup -->
@@ -59,7 +59,7 @@
                               <input class="search-input-field" type="search" placeholder="Search here..."
                                  required="" />
                               <button type="submit">
-                                 <i class="fai-search"></i>
+                                 <img src="assets/images/icons/search.svg" alt="Icons">
                               </button>
                            </div>
                         </div>
@@ -73,8 +73,70 @@
    <div class="search-popup-overlay"></div>
    <!-- end: Search Popup -->
 
+   <!-- start: Hamburger Menu -->
+   <div class="hamburger-area d-lg-none" data-lenis-prevent>
+      <div class="hamburger_bg"></div>
+      <div class="hamburger_wrapper">
+         <div class="hamburger_top d-flex align-items-center justify-content-between">
+            <div class="hamburger_logo">
+               <a href="index.html" class="mobile_logo">
+                  <img src="assets/images/logo/primary-logo.png" alt="Logo" />
+               </a>
+            </div>
+            <div class="hamburger_close">
+               <button class="hamburger_close_btn"><i class="fa-thin fa-times"></i></button>
+            </div>
+         </div>
+         <div class="hamburger_search">
+            <form method="get" action="index.html">
+               <button type="submit"><i class="fal fa-search"></i></button>
+               <input type="search" autocomplete="off" name="s" value="" placeholder="Search here" />
+            </form>
+         </div>
+         <div class="hamburger_menu">
+            <div class="mobile_menu"></div>
+         </div>
+         <div class="hamburger-infos">
+            <h4 class="hamburger-title">Information</h4>
+            <div class="contact-item">
+               <div class="contact-text">
+                  <div class="text"><a class="link" href="mailto:support@bydos.com">support@axine.com</a></div>
+               </div>
+            </div>
+            <div class="contact-item">
+               <div class="contact-text">
+                  <div class="text"><a class="link" href="tel:000123456789">(000) 123 456 789</a></div>
+               </div>
+            </div>
+            <div class="contact-item">
+               <div class="contact-text">
+                  <div class="text">Santa, United State</div>
+               </div>
+            </div>
+         </div>
+         <div class="hamburger-socials">
+            <h4 class="hamburger-title">Follow Us</h4>
+            <ul>
+               <li>
+                  <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+               </li>
+               <li>
+                  <a href="#"><i class="fa-brands fa-instagram"></i></a>
+               </li>
+               <li>
+                  <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+               </li>
+               <li>
+                  <a href="#"><i class="fa-brands fa-twitter"></i></a>
+               </li>
+            </ul>
+         </div>
+      </div>
+   </div>
+   <!-- end: Hamburger Menu -->
+
    <!-- start: Header Area -->
-   <header class="header-area header-absolute v-3">
+   <header class="header-area v-3 header-absolute">
       <div class="container">
          <div class="row">
             <div class="col-12">
@@ -84,7 +146,76 @@
                   </div>
                   <div class="mainmenu main-mobile-menu d-none d-lg-inline-flex">
                      <ul>
-                        <li><a href="#">Home</a></li>
+                        <li class="has-dropdown">
+                           <a href="javascript:void(0)">Home</a>
+                           <ul class="sub-menu">
+                              <li class="current-menu-item">
+                                 <a href="index.html">Home One</a>
+                              </li>
+                              <li>
+                                 <a href="index-2.html">Home Two</a>
+                              </li>
+                           </ul>
+                        </li>
+                        <li><a href="#">About</a></li>
+                        <li><a href="#">Portfolio</a></li>
+                        <li><a href="#">Blog</a></li>
+                        <li><a href="#">Contact</a></li>
+                     </ul>
+                  </div>
+                  <div class="mainmenu-right-infos">
+                     <div class="header-search d-none d-lg-block">
+                        <button class="search">
+                           <span>
+                              <img src="assets/images/icons/search.svg" alt="Icons">
+                           </span>
+                           Search here</button>
+                     </div>
+                     <div class="header-media-wrap d-none d-lg-flex">
+                        <div class="header-social-media">
+                           <ul>
+                              <li><a href="#"><img src="assets/images/icons/facebook-1.png" alt="Icons"></a></li>
+                              <li><a href="#"><img src="assets/images/icons/twitter-1.png" alt="Icons"></a></li>
+                              <li><a href="#"><img src="assets/images/icons/linkedin-1.png" alt="Icons"></a></li>
+                           </ul>
+                        </div>
+                        <div class="menu-bar">
+                           <a href="#"><img src="assets/images/icons/bars.png" alt="Icons"></a>
+                        </div>
+                     </div>
+                     <div class="mobile-menu-bar d-lg-none">
+                        <button class="canvas-btn">
+                           <i class="fa-regular fa-bars"></i>
+                        </button>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+   </header>
+
+   <header class="header-area v-3 header-duplicate header-sticky">
+      <div class="container">
+         <div class="row">
+            <div class="col-12">
+               <div class="maimmenu-main-wrapper">
+                  <div class="site-logo">
+                     <a href="#"><img src="assets/images/logo/primary-logo.png" alt="Images"></a>
+                  </div>
+                  <div class="mainmenu d-none d-lg-inline-flex">
+                     <ul>
+                        <li class="has-dropdown">
+                           <a href="javascript:void(0)">Home</a>
+                           <ul class="sub-menu">
+                              <li class="current-menu-item">
+                                 <a href="index.html">Home One</a>
+                              </li>
+                              <li>
+                                 <a href="index-2.html">Home Two</a>
+                              </li>
+                           </ul>
+                        </li>
                         <li><a href="#">About</a></li>
                         <li><a href="#">Portfolio</a></li>
                         <li><a href="#">Blog</a></li>
@@ -160,29 +291,11 @@
                            <div class="hero-bottom-wrap">
                               <h1 class="hero-title"><span class="active-color">creative</span><span
                                     class="title">agency</span></h1>
-                              <a href="#" class="hero-btn"><span class="btn-text">get enrolled</span><span
-                                    class="btn-arrow">
-                                    <svg width="35" height="35" viewBox="0 0 35 35" fill="none"
-                                       xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-                                       <mask id="mask0_94_53" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0"
-                                          y="0" width="35" height="35">
-                                          <rect x="35" width="35" height="35" transform="rotate(90 35 0)"
-                                             fill="url(#pattern0_94_53)" />
-                                       </mask>
-                                       <g mask="url(#mask0_94_53)">
-                                          <rect x="77" y="-42" width="119.318" height="119.318"
-                                             transform="rotate(90 77 -42)" fill="white" />
-                                       </g>
-                                       <defs>
-                                          <pattern id="pattern0_94_53" patternContentUnits="objectBoundingBox" width="1"
-                                             height="1">
-                                             <use xlink:href="#image0_94_53" transform="scale(0.00195312)" />
-                                          </pattern>
-                                          <image id="image0_94_53" width="512" height="512" preserveAspectRatio="none"
-                                             xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAgAAAAIACAYAAAD0eNT6AAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAAAOxAAADsQBlSsOGwAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAz8SURBVHic7d1fyP9nXcfx5/5YW245tZ8bhdt0OstwSEVFW2NNKdPAQEdE2EmdFFRQUdBRREFURxZ00EEgraM8yZAMNclBkA0kpHRu7Z5gNJeUtpr75zq4J8w13fbb/flc9/d+Px7wgd/RdV3f38nrdV2f7319CwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPgqF6xeAMCOrqiur15ZXV59Q/XF6j+rf63urR5btjoA4ES8qPqx6k+qu6onnuV5sPpQ9evVqxasFwB4Ac5Vv1V9rmcP/a/3fLB6a05LAeBU+8bqNzreyb+Q4H/6c0f1PTt+DgDgObqh+udONvif+jxW/U7HrxUAgFPgXdVDbRf+T30+Wr18n48FAHwtv1J9uX3C/yvPJ6tr9vhwAMD/93PtG/xPfe6rXr39RwQAnurHq8dbVwCe6PjeACcBALCTV1afb234OwkAgJ19uPXB7yQAAHb0E60PfCUAAHZ0Uc/tSl+vAwDgDHln60PeSQAA7OwDrQ94JwEAsKMrO76Od3W4OwngTLhw9QIAnqM3d/wdgENxbfV3OQnglFIAgENx8+oFnIerqw/lJAAAztvft/5Y33cCAGBn/9H6IPedAADY0YXt/4t/TgIAYLFvbn14OwkAgJ29uPXB7SQAAHZ2Vl4BOAkAgOfps60PbScBnBnuAQAOxT2rF7AB9wSwjAIAHIo7Vy9gI9fmxkAWUACAQ3HH6gVsyEkAAHwNl1f/2/r39r4TAAA7+4vWh/TWz705CQCAr/JDrQ9oJwEAsMDHWh/QTgIAYGc3dvYuBXISAADPwe2tD2cnAQCwsyuqo9aHs5MAANjZ91b/0/pwdhIAADt7e/VY68NZCQCAnd1WPdr6cN7r8ToAAJ6kBADAUEoAAAylBADAUEoAAAylBADAUEoAAAylBADAUEoAAAylBADAUEoAAAylBADAUEoAAAylBADAUEoAAAylBADAUEoAAAylBADAUEoAAAylBADAUEoAAAylBADAUEoAAAylBADAUEoAAAylBADAUEoAAAylBADAUEoAAAylBADAUEoAAAylBADAUEoAAAylBADAUEoAAAylBADAUEoAAAylBADAUEoAAAylBADAUEoAAAylBADAUEoAAAylBADAUEoAAAylBADAUEoAAAylBADAUEoAAAylBADAUEoAAAylBADAUEoAAAylBADAUEoAAAylBADAUEoAAAylBADAUEoAAAylBADAUEoAAAylBADAUEoAAAylBADAUEoAAAylBADAUEoAAAylBADAUEoAAAylBADAUEoAAAylBADAUEoAAAylBADAUEoAAAylBADAUEoAAAylBADAUEoAAAylBADAUEoAAAylBADAUEoAAAylBADAUEoAAAylBADAUEoAAAylBADAUEoAAAylBADAUEoAAAylBADAUEoAAAylBADAUEoAAAylBADAUEoAAAylBADAUEoAAAylBADAUEoAAAylBADAUEoAAAylBADAUEoAAAylBADAUEoAAAylBADAUEoAAAylBADAUEoAAAylBCx0weoFPIuXV6+tLqteungtAJy82558pjiqbum4DCx12grAVdU7qjdVN1Xn1i4HAE7cUaegBJyWAnBL9avVW6qL1i4FADZ31OISsLoA3FD9YXXz4nUAwN6OWlgCLlwxaXVx9dvVnQl/AGa6tvpIdc2KyVecAJyr3lv94IK5AeC0OWrBScDeBeCa6gPV63aeFwBOs6N2LgF7FoBz1R3V9TvOCQCH4p7qxur+PSbb6zsAl3a88xf+APDMrqveV12yx2R7/cndH1dv22kuADhU39bxxXfv33qiPV4BvK36qx3mAYCz4kerv95ygq0LwKXVJzpFdx8DwAG4q3pD9chWE2z9HYCfTfgDwPN1ffUzW06w5QnAxR1/o/HqDecAgLPqno7/bP7xLQbf8gTgLQl/ADhf11Vv3mrwLQvAT204NgBM8JNbDbzVK4ALO77I4Fs2Gh8AJnigurJ64qQH3uoE4A0JfwB4oc5V377FwFsVgBs2GhcApnnjFoNuVQBc+QsAJ+O1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" />
-                                       </defs>
-                                    </svg>
-                                 </span></a>
+                              <a href="#" class="hero-btn">
+                                 <span class="btn-text">get enrolled</span><span class="btn-arrow">
+                                    <img src="assets/images/icons/down-arrow.png" alt="Icons">
+                                 </span>
+                              </a>
                            </div>
                         </div>
                      </div>
@@ -270,7 +383,7 @@
                                  </div>
                               </div>
                               <div class="about-count-wrap">
-                                 <div class="fa-count">30<span>+</span></div>
+                                 <div class="fa-count"><span class="odometer" data-count="30">0</span>+</div>
                                  <span class="sub-title">Years of experience</span>
                               </div>
                               <div class="about-thumb-wrap">
@@ -497,7 +610,7 @@
                               </div>
                               <div class="choose-content">
                                  <div class="choose-header">
-                                    <span><img src="assets/images/icons/choose-1.png" alt="Icons"></span>
+                                    <span><img src="assets/images/icons/choose-2.png" alt="Icons"></span>
                                     <h4 class="choose-title">Expert Manpower</h4>
                                  </div>
                                  <div class="choose-list">
@@ -520,7 +633,7 @@
                               </div>
                               <div class="choose-content">
                                  <div class="choose-header">
-                                    <span><img src="assets/images/icons/choose-1.png" alt="Icons"></span>
+                                    <span><img src="assets/images/icons/choose-3.png" alt="Icons"></span>
                                     <h4 class="choose-title">Different Thinking</h4>
                                  </div>
                                  <div class="choose-list">

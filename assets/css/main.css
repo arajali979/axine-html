@@ -3356,6 +3356,7 @@ START: Theme Hero CSS
   -webkit-text-stroke-color: var(--fa-color-theme-primary);
   -webkit-text-fill-color: var(--fa-color-theme-bg);
   letter-spacing: 0em;
+  text-transform: uppercase;
   line-height: 1;
 }
 .hero-3-wrapper .hero-bottom-wrap .hero-title .title {
