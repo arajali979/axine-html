@@ -16,6 +16,8 @@
 
    <!-- CSS here -->
    <link rel="stylesheet" href="assets/css/bootstrap.min.css" />
+   <link rel="stylesheet" href="assets/css/axine-icons.css" />
+   <link rel="stylesheet" href="assets/css/odometer-theme-default.css" />
    <link rel="stylesheet" href="assets/css/font-awesome-pro.min.css" />
    <link rel="stylesheet" href="assets/css/nice-select.css" />
    <link rel="stylesheet" href="assets/css/swiper.min.css" />
@@ -25,6 +27,115 @@
 
 <body>
 
+   <!-- back to top start -->
+   <div class="back-to-top-wrapper">
+      <button id="back_to_top" type="button" class="back-to-top-btn">
+         <span class="back_to_top_icon"><img src="assets/images/icons/btn-arrow.svg" alt="Icons"></span>
+         <span class="back_to_top_text">Scroll Top</span>
+      </button>
+   </div>
+   <!-- back to top end -->
+
+   <!-- start: Search Popup -->
+   <div class="search_popup">
+      <div class="search_close">
+         <button type="button" class="search_close_btn">
+            <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+               <path d="M17 1L1 17" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+                  stroke-linejoin="round" />
+               <path d="M1 1L17 17" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+                  stroke-linejoin="round" />
+            </svg>
+         </button>
+      </div>
+      <div class="container">
+         <div class="row">
+            <div class="col-xxl-12">
+               <div class="fa_search_wrapper">
+                  <div class="search_form">
+                     <form action="#">
+                        <div class="search_input">
+                           <h4 class="title">Search Projects, Service or Blog.</h4>
+                           <div class="search-box">
+                              <input class="search-input-field" type="search" placeholder="Search here..."
+                                 required="" />
+                              <button type="submit">
+                                 <img src="assets/images/icons/search.svg" alt="Icons">
+                              </button>
+                           </div>
+                        </div>
+                     </form>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+   <div class="search-popup-overlay"></div>
+   <!-- end: Search Popup -->
+
+   <!-- start: Hamburger Menu -->
+   <div class="hamburger-area d-lg-none" data-lenis-prevent>
+      <div class="hamburger_bg"></div>
+      <div class="hamburger_wrapper">
+         <div class="hamburger_top d-flex align-items-center justify-content-between">
+            <div class="hamburger_logo">
+               <a href="index.html" class="mobile_logo">
+                  <img src="assets/images/logo/primary-logo.png" alt="Logo" />
+               </a>
+            </div>
+            <div class="hamburger_close">
+               <button class="hamburger_close_btn"><i class="fa-thin fa-times"></i></button>
+            </div>
+         </div>
+         <div class="hamburger_search">
+            <form method="get" action="index.html">
+               <button type="submit"><i class="fal fa-search"></i></button>
+               <input type="search" autocomplete="off" name="s" value="" placeholder="Search here" />
+            </form>
+         </div>
+         <div class="hamburger_menu">
+            <div class="mobile_menu"></div>
+         </div>
+         <div class="hamburger-infos">
+            <h4 class="hamburger-title">Information</h4>
+            <div class="contact-item">
+               <div class="contact-text">
+                  <div class="text"><a class="link" href="mailto:support@bydos.com">support@axine.com</a></div>
+               </div>
+            </div>
+            <div class="contact-item">
+               <div class="contact-text">
+                  <div class="text"><a class="link" href="tel:000123456789">(000) 123 456 789</a></div>
+               </div>
+            </div>
+            <div class="contact-item">
+               <div class="contact-text">
+                  <div class="text">Santa, United State</div>
+               </div>
+            </div>
+         </div>
+         <div class="hamburger-socials">
+            <h4 class="hamburger-title">Follow Us</h4>
+            <ul>
+               <li>
+                  <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+               </li>
+               <li>
+                  <a href="#"><i class="fa-brands fa-instagram"></i></a>
+               </li>
+               <li>
+                  <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+               </li>
+               <li>
+                  <a href="#"><i class="fa-brands fa-twitter"></i></a>
+               </li>
+            </ul>
+         </div>
+      </div>
+   </div>
+   <!-- end: Hamburger Menu -->
+
    <!-- start: Header Area -->
    <header class="header-area header-absolute">
       <div class="container">
@@ -32,16 +143,25 @@
             <div class="col-12">
                <div class="maimmenu-main-wrapper">
                   <div class="site-logo">
-                     <a href="#"><img src="assets/images/logo/primary-logo.png" alt="Images"></a>
+                     <a href="index.html"><img src="assets/images/logo/primary-logo.png" alt="Images"></a>
                   </div>
                   <div class="mainmenu main-mobile-menu d-none d-lg-inline-flex">
                      <ul>
-                        <li><a href="#">Home</a></li>
-                        <li><a href="#">About</a></li>
-                        <li><a href="#">Pages</a></li>
-                        <li><a href="#">Portfolio</a></li>
-                        <li><a href="#">Blog</a></li>
-                        <li><a href="#">Contact</a></li>
+                        <li class="has-dropdown">
+                           <a href="javascript:void(0)">Home</a>
+                           <ul class="sub-menu">
+                              <li>
+                                 <a href="index.html">Home One</a>
+                              </li>
+                              <li>
+                                 <a href="index-2.html">Home Two</a>
+                              </li>
+                           </ul>
+                        </li>
+                        <li class="current-menu-item"><a href="about.html">About</a></li>
+                        <li><a href="portfolio.html">Portfolio</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                        <li><a href="contact.html">Contact</a></li>
                      </ul>
                   </div>
                   <div class="mainmenu-right-infos">
@@ -53,7 +173,7 @@
                            Search here</button>
                      </div>
                      <div class="header-button d-none d-lg-flex">
-                        <a class="primary-btn" href="#">
+                        <a class="primary-btn" href="contact.html">
                            <span class="fa-icon">
                               <img src="assets/images/icons/btn-arrow.svg" alt="Icons">
                            </span>
@@ -64,8 +184,66 @@
                         </a>
                      </div>
                   </div>
-                  <div class="mobile-menu-bar d-lg-none">
-                     <button class="canvas-btn">
+                  <div class="hamburger-button d-lg-none">
+                     <button class="hamburger_menu mobile_menu_bar">
+                        <i class="fa-regular fa-bars"></i>
+                     </button>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+   </header>
+
+   <header class="header-area header-duplicate header-sticky">
+      <div class="container">
+         <div class="row">
+            <div class="col-12">
+               <div class="maimmenu-main-wrapper">
+                  <div class="site-logo">
+                     <a href="index.html"><img src="assets/images/logo/primary-logo.png" alt="Images"></a>
+                  </div>
+                  <div class="mainmenu d-none d-lg-inline-flex">
+                     <ul>
+                        <li class="has-dropdown">
+                           <a href="javascript:void(0)">Home</a>
+                           <ul class="sub-menu">
+                              <li>
+                                 <a href="index.html">Home One</a>
+                              </li>
+                              <li>
+                                 <a href="index-2.html">Home Two</a>
+                              </li>
+                           </ul>
+                        </li>
+                        <li class="current-menu-item"><a href="about.html">About</a></li>
+                        <li><a href="portfolio.html">Portfolio</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                     </ul>
+                  </div>
+                  <div class="mainmenu-right-infos">
+                     <div class="header-search d-none d-lg-block">
+                        <button class="search">
+                           <span>
+                              <img src="assets/images/icons/search.svg" alt="Icons">
+                           </span>
+                           Search here</button>
+                     </div>
+                     <div class="header-button d-none d-lg-flex">
+                        <a class="primary-btn" href="contact.html">
+                           <span class="fa-icon">
+                              <img src="assets/images/icons/btn-arrow.svg" alt="Icons">
+                           </span>
+                           <span class="fa-btn-text">Get In Touch</span>
+                           <span class="fa-icon icon-1">
+                              <img src="assets/images/icons/btn-arrow.svg" alt="Icons">
+                           </span>
+                        </a>
+                     </div>
+                  </div>
+                  <div class="hamburger-button d-lg-none">
+                     <button class="hamburger_menu mobile_menu_bar">
                         <i class="fa-regular fa-bars"></i>
                      </button>
                   </div>
@@ -76,203 +254,1025 @@
    </header>
    <!-- end: Header Area -->
 
-   <main id="primary" class="site-main">
-
-      <!-- start: Breadcrumb Area  -->
-      <section class="fa-breadcrumb-area" data-bg-image="assets/images/breadcrumb/breadcrumb.png">
-         <div class="container">
-            <div class="row">
-               <div class="col-12">
-                  <div class="breadcrumb-heading">
-                     <h1 class="breadcrumb-title">Portfolio Details</h1>
-                     <div class="page-link">
-                        <a class="title-link" href="#">Home</a>/<span class="sub-title">Portfolio Details</span>
+   <div id="smooth-wrapper">
+      <div id="smooth-content">
+         <main id="primary" class="site-main">
+            <!-- start: Breadcrumb Area  -->
+            <section class="fa-breadcrumb-area" data-bg-image="assets/images/breadcrumb/breadcrumb.png">
+               <div class="container">
+                  <div class="row">
+                     <div class="col-12">
+                        <div class="breadcrumb-heading">
+                           <h1 class="breadcrumb-title">Portfolio Details</h1>
+                           <div class="page-link">
+                              <a class="title-link" href="index.html">Home</a>/<span class="sub-title">Portfolio
+                                 Details</span>
+                           </div>
+                        </div>
                      </div>
                   </div>
                </div>
-            </div>
-         </div>
-      </section>
-      <!-- end: Breadcrumb Area -->
+            </section>
+            <!-- end: Breadcrumb Area -->
 
-      <!-- start: Portfolio Details Area  -->
-      <section class="fa-portfolio-section">
-         <div class="container">
-            <div class="row">
-               <div class="col-lg-12">
-                  <div class="portfolio-details-main-wrapper">
-                     <div class="portfolio-images">
-                        <img src="assets/images/project/portfolio-image.png" alt="Images">
-                     </div>
-                     <div class="portfolio-details-content-wrap">
-                        <div class="portfolio-details-cate-list">
-                           <ul>
-                              <li>
-                                 Clients : <span>Jason B. Roy</span>
-                              </li>
-                              <li>
-                                 Categories : <span>Market Reporting</span>
-                              </li>
-                              <li>
-                                 Date : <span>18.04.2025</span>
-                              </li>
-                              <li>
-                                 Tags : <span>Business Consulting</span>
-                              </li>
-                              <li>
-                                 Place : <span>New York City, America</span>
-                              </li>
-                           </ul>
-                        </div>
-                        <div class="portfolio-details-bottom-wrap">
-                           <div class="portfolio-details-left-text">
-                              <p>In an era of constant change, staying ahead requires more than just good
-                                 instincts—it requires expert
-                                 planning and precise execution. Our corporate strategy consulting services help of
-                                 organizations
-                                 evaluate their current position, identify new opportunities, and implement high-impact
-                                 strategies that
-                                 maximize value. We work as an extension of..</p>
-                              <p class="desc">With deep industry knowledge and data-driven insights, we help you make
-                                 smarter decisions that
-                                 lead to long-term success we work as an extension.</p>
-                              <p>We specialize in helping small and medium-sized businesses overcome obstacles and
-                                 unlock
-                                 their
-                                 full potential. From streamlining internal processes to crafting effective marketing
-                                 strategies, our
-                                 consulting team works closely with you to create practical.</p>
+            <!-- start: About Section -->
+            <section class="fa-about-section">
+               <div class="container">
+                  <div class="row">
+                     <div class="col-12">
+                        <div class="heading-area">
+                           <div class="heading-area">
+                              <span class="sub-title">about</span>
+                              <h2 class="sec-title tj-slide-left">company</h2>
                            </div>
-                           <div class="portfolio-details-right-text">
-                              <div class="check-style-4">
+                        </div>
+                     </div>
+                  </div>
+                  <div class="row">
+                     <div class="col-12">
+                        <div class="about-main-wrapper">
+                           <div class="about-feature-wrap">
+                              <div class="about-feature-item-wrap">
+                                 <div class="feature-brand">
+                                    <h3 class="brand-title"><span><img src="assets/images/icons/about.png"
+                                             alt="Icons"></span>Brand Identity</h3>
+                                    <ul class="feature-list-one">
+                                       <li><span><img src="assets/images/icons/line-1.png" alt="Icons"></span> Mockup
+                                          Design
+                                       </li>
+                                       <li><span><img src="assets/images/icons/line-1.png" alt="Icons"></span>Brand
+                                          Guidelines
+                                       </li>
+                                       <li><span><img src="assets/images/icons/line-1.png" alt="Icons"></span>Identity
+                                          Build
+                                       </li>
+                                    </ul>
+                                 </div>
+                                 <div class="mission-vision-item">
+                                    <div class="mission-vision-list">
+                                       <h3 class="mission-vision-title">Our Mission</h3>
+                                       <p class="mission-vision-desc">
+                                          We craft stunning, responsive websites
+                                          that deliver seamless user experiences
+                                          across all devices.
+                                       </p>
+                                    </div>
+                                    <div class="mission-vision-list">
+                                       <h3 class="mission-vision-title">Our Objective</h3>
+                                       <p class="mission-vision-desc">
+                                          Whether you're building a new brand
+                                          or refreshing your current site, our
+                                          developers
+                                       </p>
+                                    </div>
+                                 </div>
+                              </div>
+                              <div class="about-images-group">
+                                 <img src="assets/images/about/h1-about-1.png" alt="Images">
+                              </div>
+                           </div>
+                           <div class="about-video-wrap">
+                              <div class="about-content">
+                                 <div class="about-images">
+                                    <img src="assets/images/about/h1-about-2.png" alt="Images">
+                                 </div>
+                                 <div class="about-text">
+                                    <p class="about-desc">
+                                       Driven by passion and fueled by data, our team of digital experts helps
+                                       businesses
+                                       achieve their online goals through smart design and powerful campaigns. From
+                                       engaging websites to impactful ad strategies, we make sure your brand stands out
+                                       in a crowded digital world blends to ..
+                                    </p>
+                                    <div class="about-button">
+                                       <a class="primary-btn" href="about.html">
+                                          <span class="fa-icon">
+                                             <img src="assets/images/icons/btn-arrow.svg" alt="Icons">
+                                          </span>
+                                          <span class="fa-btn-text">Explore More</span>
+                                          <span class="fa-icon icon-1">
+                                             <img src="assets/images/icons/btn-arrow.svg" alt="Icons">
+                                          </span>
+                                       </a>
+                                    </div>
+                                 </div>
+                              </div>
+                              <div class="about-video-btn">
+                                 <a class="video-btn" href="#"><img src="assets/images/shapes/video.svg"
+                                       alt="Video"></a>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </section>
+            <!-- end: About Section -->
+
+            <!-- start: Testimonial Section -->
+            <section class="fa-testimonial-section v-3">
+               <div class="container">
+                  <div class="row">
+                     <div class="col-12">
+                        <div class="heading-area">
+                           <span class="sub-title">clients</span>
+                           <h2 class="sec-title">feedback</h2>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="row">
+                     <div class="col-12">
+                        <div class="swiper testimonial-slider">
+                           <div class="swiper-wrapper">
+                              <div class="swiper-slide">
+                                 <div class="testimonial-item">
+                                    <div class="testimonial-images">
+                                       <img src="assets/images/testimonial/h1-test-1.png" alt="Images">
+                                    </div>
+                                    <div class="testimonial-content">
+                                       <div class="testimonial-rating">
+                                          <div class="star-ratings">
+                                             <div class="fill-ratings" style="width: 73%">
+                                                <span>★★★★★</span>
+                                             </div>
+                                             <div class="empty-ratings">
+                                                <span>★★★★★</span>
+                                             </div>
+                                          </div>
+                                          <span class="rating-number">5.0 Out of 4.0</span>
+                                       </div>
+                                       <div class="testimonial-author">
+                                          <span class="description">Brand Designer</span>
+                                          <h4 class="author-name">Aleesha Brown</h4>
+                                       </div>
+                                       <p class="testimonial-desc">Working with this consulting firm was a turning point
+                                          for
+                                          season our company. They quickly understods our challenge firm was turning
+                                          point for
+                                          our ..</p>
+                                    </div>
+                                    <div class="testimonial-icons">
+                                       <img src="assets/images/icons/h1-test-1.svg" alt="Icons">
+                                    </div>
+                                 </div>
+                              </div>
+                              <div class="swiper-slide">
+                                 <div class="testimonial-item">
+                                    <div class="testimonial-images">
+                                       <img src="assets/images/testimonial/h1-test-2.png" alt="Images">
+                                    </div>
+                                    <div class="testimonial-content">
+                                       <div class="testimonial-rating">
+                                          <div class="star-ratings">
+                                             <div class="fill-ratings" style="width: 73%">
+                                                <span>★★★★★</span>
+                                             </div>
+                                             <div class="empty-ratings">
+                                                <span>★★★★★</span>
+                                             </div>
+                                          </div>
+                                          <span class="rating-number">5.0 Out of 4.0</span>
+                                       </div>
+                                       <div class="testimonial-author">
+                                          <span class="description">Marketing Head</span>
+                                          <h4 class="author-name">Jonathan Reed</h4>
+                                       </div>
+                                       <p class="testimonial-desc">Working with this consulting firm was a turning point
+                                          for
+                                          season our company. They quickly understods our challenge firm was turning
+                                          point for
+                                          our ..</p>
+                                    </div>
+                                    <div class="testimonial-icons">
+                                       <img src="assets/images/icons/h1-test-1.svg" alt="Icons">
+                                    </div>
+                                 </div>
+                              </div>
+                              <div class="swiper-slide">
+                                 <div class="testimonial-item">
+                                    <div class="testimonial-images">
+                                       <img src="assets/images/testimonial/h1-test-3.png" alt="Images">
+                                    </div>
+                                    <div class="testimonial-content">
+                                       <div class="testimonial-rating">
+                                          <div class="star-ratings">
+                                             <div class="fill-ratings" style="width: 73%">
+                                                <span>★★★★★</span>
+                                             </div>
+                                             <div class="empty-ratings">
+                                                <span>★★★★★</span>
+                                             </div>
+                                          </div>
+                                          <span class="rating-number">5.0 Out of 4.0</span>
+                                       </div>
+                                       <div class="testimonial-author">
+                                          <span class="description">Product Owner</span>
+                                          <h4 class="author-name">Samira Warnor</h4>
+                                       </div>
+                                       <p class="testimonial-desc">Working with this consulting firm was a turning point
+                                          for
+                                          season our company. They quickly understods our challenge firm was turning
+                                          point for
+                                          our ..</p>
+                                    </div>
+                                    <div class="testimonial-icons">
+                                       <img src="assets/images/icons/h1-test-1.svg" alt="Icons">
+                                    </div>
+                                 </div>
+                              </div>
+                              <div class="swiper-slide">
+                                 <div class="testimonial-item">
+                                    <div class="testimonial-images">
+                                       <img src="assets/images/testimonial/h1-test-1.png" alt="Images">
+                                    </div>
+                                    <div class="testimonial-content">
+                                       <div class="testimonial-rating">
+                                          <div class="star-ratings">
+                                             <div class="fill-ratings" style="width: 73%">
+                                                <span>★★★★★</span>
+                                             </div>
+                                             <div class="empty-ratings">
+                                                <span>★★★★★</span>
+                                             </div>
+                                          </div>
+                                          <span class="rating-number">5.0 Out of 4.0</span>
+                                       </div>
+                                       <div class="testimonial-author">
+                                          <span class="description">Brand Designer</span>
+                                          <h4 class="author-name">Aleesha Brown</h4>
+                                       </div>
+                                       <p class="testimonial-desc">Working with this consulting firm was a turning point
+                                          for
+                                          season our company. They quickly understods our challenge firm was turning
+                                          point for
+                                          our ..</p>
+                                    </div>
+                                    <div class="testimonial-icons">
+                                       <img src="assets/images/icons/h1-test-1.svg" alt="Icons">
+                                    </div>
+                                 </div>
+                              </div>
+                              <div class="swiper-slide">
+                                 <div class="testimonial-item">
+                                    <div class="testimonial-images">
+                                       <img src="assets/images/testimonial/h1-test-1.png" alt="Images">
+                                    </div>
+                                    <div class="testimonial-content">
+                                       <div class="testimonial-rating">
+                                          <div class="star-ratings">
+                                             <div class="fill-ratings" style="width: 73%">
+                                                <span>★★★★★</span>
+                                             </div>
+                                             <div class="empty-ratings">
+                                                <span>★★★★★</span>
+                                             </div>
+                                          </div>
+                                          <span class="rating-number">5.0 Out of 4.0</span>
+                                       </div>
+                                       <div class="testimonial-author">
+                                          <span class="description">Brand Designer</span>
+                                          <h4 class="author-name">Aleesha Brown</h4>
+                                       </div>
+                                       <p class="testimonial-desc">Working with this consulting firm was a turning point
+                                          for
+                                          season our company. They quickly understods our challenge firm was turning
+                                          point for
+                                          our ..</p>
+                                    </div>
+                                    <div class="testimonial-icons">
+                                       <img src="assets/images/icons/h1-test-1.svg" alt="Icons">
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                           <div class="swiper-pagination"></div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+               <div class="circle-1"></div>
+               <div class="circle-2"></div>
+            </section>
+            <!-- end: Testimonial Section -->
+
+            <!-- start: award Section -->
+            <section class="fa-award-section">
+               <div class="container">
+                  <div class="row">
+                     <div class="col-12">
+                        <div class="heading-area">
+                           <span class="sub-title">we are</span>
+                           <h2 class="sec-title">honoured</h2>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="row">
+                     <div class="col-12">
+                        <div class="award-main-wrapper">
+                           <div class="award-left">
+                              <div class="award-item">
+                                 <span class="number">01</span>
+                                 <div class="award-images">
+                                    <img src="assets/images/award/award-1.png" alt="Images">
+                                 </div>
+                              </div>
+                              <div class="award-item">
+                                 <span class="number">02</span>
+                                 <div class="award-images">
+                                    <img src="assets/images/award/award-2.png" alt="Images">
+                                 </div>
+                              </div>
+                              <div class="award-item">
+                                 <span class="number">03</span>
+                                 <div class="award-images">
+                                    <img src="assets/images/award/award-3.png" alt="Images">
+                                 </div>
+                              </div>
+                           </div>
+                           <div class="accordion fa-faq-wrap" id="faqOne">
+                              <div class="accordion-item style-2 active">
+                                 <button class="faq-title" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#faq-1" aria-expanded="true">
+                                    <span class="number">2019</span>Digital Agencies Worldwide
+                                 </button>
+                                 <div id="faq-1" class="collapse show" data-bs-parent="#faqOne">
+                                    <div class="accordion-body faq-text">
+                                       <p>"We offer a full range of services including web design, branding, SEO, social
+                                          media
+                                          marketing, content creation, and paid advertising to help businesses grow
+                                          online.Our
+                                          digital agency provides a wide range of services designed to strengthen your
+                                          brand’s
+                                          online presence and generate measurable results."</p>
+                                    </div>
+                                 </div>
+                              </div>
+                              <div class="accordion-item style-2">
+                                 <button class="faq-title collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#faq-2" aria-expanded="false">
+                                    <span class="number">2014</span>Advance High Technology
+                                 </button>
+                                 <div id="faq-2" class="collapse" data-bs-parent="#faqOne">
+                                    <div class="accordion-body faq-text">
+                                       <p>"We offer a full range of services including web design, branding, SEO, social
+                                          media
+                                          marketing, content creation, and paid advertising to help businesses grow
+                                          online.Our
+                                          digital agency provides a wide range of services designed to strengthen your
+                                          brand’s
+                                          online presence and generate measurable results."</p>
+                                    </div>
+                                 </div>
+                              </div>
+                              <div class="accordion-item style-2">
+                                 <button class="faq-title collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#faq-3" aria-expanded="false">
+                                    <span class="number">2021</span>FWA, Site of the Day
+                                 </button>
+                                 <div id="faq-3" class="collapse" data-bs-parent="#faqOne">
+                                    <div class="accordion-body faq-text">
+                                       <p>"We offer a full range of services including web design, branding, SEO, social
+                                          media
+                                          marketing, content creation, and paid advertising to help businesses grow
+                                          online.Our
+                                          digital agency provides a wide range of services designed to strengthen your
+                                          brand’s
+                                          online presence and generate measurable results."</p>
+                                    </div>
+                                 </div>
+                              </div>
+                              <div class="accordion-item style-2">
+                                 <button class="faq-title collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#faq-4" aria-expanded="false">
+                                    <span class="number">2017</span>Architect Design Awards
+                                 </button>
+                                 <div id="faq-4" class="collapse" data-bs-parent="#faqOne">
+                                    <div class="accordion-body faq-text">
+                                       <p>"We offer a full range of services including web design, branding, SEO, social
+                                          media
+                                          marketing, content creation, and paid advertising to help businesses grow
+                                          online.Our
+                                          digital agency provides a wide range of services designed to strengthen your
+                                          brand’s
+                                          online presence and generate measurable results."</p>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </section>
+            <!-- end: award Section -->
+
+            <!-- start: Project Section -->
+            <section class="fa-project-section inner-page">
+               <div class="container">
+                  <div class="row">
+                     <div class="col-12">
+                        <div class="heading-area">
+                           <div class="view-blog-button">
+                              <a class="view-blog-btn" href="portfolio-details.html">
+                                 View All Projects
+                                 <span><img src="assets/images/icons/down-arrow.svg" alt="Icons"></span>
+                              </a>
+                           </div>
+                           <div class="header-text">
+                              <span class="sub-title">our latest</span>
+                              <h2 class="sec-title">portfolio</h2>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="row">
+                     <div class="col-12">
+                        <div class="swiper fa-project-slider">
+                           <div class="swiper-wrapper">
+                              <div class="swiper-slide">
+                                 <div class="project-item">
+                                    <img src="assets/images/project/h1-project-1.png" alt="Images">
+                                    <div class="project-content">
+                                       <span class="sub-title">Branding</span>
+                                       <h3 class="project-title"><a href="portfolio-details.html">Creative Web Design
+                                             Showcase</a></h3>
+                                    </div>
+                                 </div>
+                              </div>
+                              <div class="swiper-slide">
+                                 <div class="project-item">
+                                    <img src="assets/images/project/h1-project-2.png" alt="Images">
+                                    <div class="project-content">
+                                       <span class="sub-title">Development</span>
+                                       <h3 class="project-title"><a href="portfolio-details.html">Strategic Creativity
+                                             for Modern Brands</a>
+                                       </h3>
+                                    </div>
+                                 </div>
+                              </div>
+                              <div class="swiper-slide">
+                                 <div class="project-item">
+                                    <img src="assets/images/project/h1-project-3.png" alt="Images">
+                                    <div class="project-content">
+                                       <span class="sub-title">Marketing</span>
+                                       <h3 class="project-title"><a href="portfolio-details.html">Elevating Brands
+                                             Through Creativity</a>
+                                       </h3>
+                                    </div>
+                                 </div>
+                              </div>
+                              <div class="swiper-slide">
+                                 <div class="project-item">
+                                    <img src="assets/images/project/h1-project-4.png" alt="Images">
+                                    <div class="project-content">
+                                       <span class="sub-title">UI/UX Design</span>
+                                       <h3 class="project-title"><a href="portfolio-details.html">Creative Solutions for
+                                             Bold Brands</a></h3>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </section>
+            <!-- end: Project Section -->
+
+            <!-- start: Pricing Section -->
+            <section class="fa-pricing-section">
+               <div class="container">
+                  <div class="col-12">
+                     <div class="row">
+                        <div class="heading-area">
+                           <div class="header-text">
+                              <span class="sub-title">pricing</span>
+                              <h2 class="sec-title">package</h2>
+                           </div>
+                           <div class="price-switcher">
+                              <span id="month">Monthly</span>
+                              <span id="year">Yearly</span>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="row">
+                     <div class="col-12">
+                        <div class="price-main-wrapper">
+                           <div class="price-item">
+                              <h4 class="price-title">Advanced Plan</h4>
+                              <div class="price-percent">$
+                                 <span class="price-number" data-year-price="99.8"
+                                    data-month-price="49.9">49.9</span>/<span class="price-duration">Month</span>
+                              </div>
+                              <div class="price-list">
                                  <ul>
-                                    <li><span><img src="assets/images/icons/check.png" alt="Icons"></span>At [Your
-                                       Company Name], we offer strategic business</li>
-                                    <li><span><img src="assets/images/icons/check.png" alt="Icons"></span>Designed to
-                                       drive growth, improve operations, & enhance</li>
-                                    <li><span><img src="assets/images/icons/check.png" alt="Icons"></span>Our tailored
-                                       solutions are built to align with your unique goals.</li>
+                                    <li>
+                                       <span><img src="assets/images/icons/check.png" alt="Icons"></span>
+                                       Unlimited pages website
+                                    </li>
+                                    <li>
+                                       <span><img src="assets/images/icons/check.png" alt="Icons"></span>
+                                       Conversion-focused UX design
+                                    </li>
+                                    <li>
+                                       <span><img src="assets/images/icons/check.png" alt="Icons"></span>
+                                       SEO + Content strategy
+                                    </li>
+                                    <li>
+                                       <span><img src="assets/images/icons/check.png" alt="Icons"></span>
+                                       4 social media platforms + ads
+                                    </li>
+                                    <li>
+                                       <span><img src="assets/images/icons/check.png" alt="Icons"></span>
+                                       Weekly performance reports
+                                    </li>
+                                    <li>
+                                       <span><img src="assets/images/icons/check.png" alt="Icons"></span>
+                                       24/7 support with SLA
+                                    </li>
                                  </ul>
                               </div>
-                              <p class="desc">Our mission is to empower your business to grow sustainably
-                                 & competitively in today's ever-evolving market. With deep
-                                 industry knowledge & data-driven insights.</p>
+                              <div class="price-button">
+                                 <a class="primary-btn" href="contact.html">
+                                    <span class="fa-icon">
+                                       <img src="assets/images/icons/btn-arrow.svg" alt="Icons">
+                                    </span>
+                                    <span class="fa-btn-text">Purchase Now</span>
+                                    <span class="fa-icon icon-1">
+                                       <img src="assets/images/icons/btn-arrow.svg" alt="Icons">
+                                    </span>
+                                 </a>
+                              </div>
+                              <div class="price-shapes">
+                                 <img src="assets/images/shapes/price-1.png" alt="Shapes">
+                              </div>
+                              <span class="circle-1"></span>
+                              <span class="circle-2"></span>
+                           </div>
+                           <div class="price-item">
+                              <h4 class="price-title">Premium Plan</h4>
+                              <div class="price-percent">$
+                                 <span class="price-number" data-year-price="89.6"
+                                    data-month-price="69.9">69.9</span>/<span class="price-duration">Month</span>
+                              </div>
+                              <div class="price-list">
+                                 <ul>
+                                    <li>
+                                       <span><img src="assets/images/icons/check.png" alt="Icons"></span>
+                                       Unlimited pages website
+                                    </li>
+                                    <li>
+                                       <span><img src="assets/images/icons/check.png" alt="Icons"></span>
+                                       Conversion-focused UX design
+                                    </li>
+                                    <li>
+                                       <span><img src="assets/images/icons/check.png" alt="Icons"></span>
+                                       SEO + Content strategy
+                                    </li>
+                                    <li>
+                                       <span><img src="assets/images/icons/check.png" alt="Icons"></span>
+                                       4 social media platforms + ads
+                                    </li>
+                                    <li>
+                                       <span><img src="assets/images/icons/check.png" alt="Icons"></span>
+                                       Weekly performance reports
+                                    </li>
+                                    <li>
+                                       <span><img src="assets/images/icons/check.png" alt="Icons"></span>
+                                       24/7 support with SLA
+                                    </li>
+                                 </ul>
+                              </div>
+                              <div class="price-button">
+                                 <a class="primary-btn" href="contact.html">
+                                    <span class="fa-icon">
+                                       <img src="assets/images/icons/btn-arrow.svg" alt="Icons">
+                                    </span>
+                                    <span class="fa-btn-text">Purchase Now</span>
+                                    <span class="fa-icon icon-1">
+                                       <img src="assets/images/icons/btn-arrow.svg" alt="Icons">
+                                    </span>
+                                 </a>
+                              </div>
+                              <div class="price-shapes">
+                                 <img src="assets/images/shapes/price-1.png" alt="Shapes">
+                              </div>
+                              <span class="circle-1"></span>
+                              <span class="circle-2"></span>
+                           </div>
+                           <div class="price-item">
+                              <h4 class="price-title">Basic Plan</h4>
+                              <div class="price-percent">$
+                                 <span class="price-number" data-year-price="78.4"
+                                    data-month-price="59.9">59.9</span>/<span class="price-duration">Month</span>
+                              </div>
+                              <div class="price-list">
+                                 <ul>
+                                    <li>
+                                       <span><img src="assets/images/icons/check.png" alt="Icons"></span>
+                                       Unlimited pages website
+                                    </li>
+                                    <li>
+                                       <span><img src="assets/images/icons/check.png" alt="Icons"></span>
+                                       Conversion-focused UX design
+                                    </li>
+                                    <li>
+                                       <span><img src="assets/images/icons/check.png" alt="Icons"></span>
+                                       SEO + Content strategy
+                                    </li>
+                                    <li>
+                                       <span><img src="assets/images/icons/check.png" alt="Icons"></span>
+                                       4 social media platforms + ads
+                                    </li>
+                                    <li>
+                                       <span><img src="assets/images/icons/check.png" alt="Icons"></span>
+                                       Weekly performance reports
+                                    </li>
+                                    <li>
+                                       <span><img src="assets/images/icons/check.png" alt="Icons"></span>
+                                       24/7 support with SLA
+                                    </li>
+                                 </ul>
+                              </div>
+                              <div class="price-button">
+                                 <a class="primary-btn" href="contact.html">
+                                    <span class="fa-icon">
+                                       <img src="assets/images/icons/btn-arrow.svg" alt="Icons">
+                                    </span>
+                                    <span class="fa-btn-text">Purchase Now</span>
+                                    <span class="fa-icon icon-1">
+                                       <img src="assets/images/icons/btn-arrow.svg" alt="Icons">
+                                    </span>
+                                 </a>
+                              </div>
+                              <div class="price-shapes">
+                                 <img src="assets/images/shapes/price-1.png" alt="Shapes">
+                              </div>
+                              <span class="circle-1"></span>
+                              <span class="circle-2"></span>
                            </div>
                         </div>
                      </div>
-                     <div class="project-prev-next-wrap">
-                        <a class="prev-next-btn" href="#"><span><img src="assets/images/icons/arrow-2.png"
-                                 alt="Icons"></span>Previous</a>
-                        <a class="prev-next-btn btn-1" href="#">Next<span><img src="assets/images/icons/arrow-2.png"
-                                 alt="Icons"></span></a>
-                     </div>
                   </div>
                </div>
-            </div>
-         </div>
-      </section>
-      <!-- end: Portfolio Details Area  -->
+               <div class="shapes-one">
+                  <img src="assets/images/shapes/price-bg-2.png" alt="Shapes">
+               </div>
+            </section>
+            <!-- end: Pricing Section -->
 
-   </main>
+            <!-- start: FAQ Section -->
+            <section class="fa-faq-section inner-page">
+               <div class="container">
+                  <div class="row">
+                     <div class="col-12">
+                        <div class="faq-main-wrapper">
+                           <div class="heading-area">
+                              <span class="sub-title">support &</span>
+                              <h2 class="sec-title">faq’s</h2>
+                           </div>
+                           <div class="accordion fa-faq-wrap" id="faqOne">
+                              <div class="accordion-item active">
+                                 <button class="faq-title" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#faq-1" aria-expanded="true">
+                                    <span class="number">01</span> How do you charge for your services ?
+                                 </button>
+                                 <div id="faq-1" class="collapse show" data-bs-parent="#faqOne">
+                                    <div class="accordion-body faq-text">
+                                       <p>"We offer a full range of services including web design, branding, SEO, social
+                                          media
+                                          marketing, content creation, and paid advertising to help businesses grow
+                                          online.Our
+                                          digital agency provides a wide range of services designed to strengthen your
+                                          brand’s
+                                          online presence and generate measurable results."</p>
+                                    </div>
+                                 </div>
+                              </div>
+                              <div class="accordion-item">
+                                 <button class="faq-title collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#faq-2" aria-expanded="false">
+                                    <span class="number">02</span>What services does your digital agency provide?
+                                 </button>
+                                 <div id="faq-2" class="collapse" data-bs-parent="#faqOne">
+                                    <div class="accordion-body faq-text">
+                                       <p>"Through strategic web design, brand positioning, SEO optimization, content
+                                          marketing, and targeted advertising campaigns, we help organizations
+                                          strengthen their digital footprint and achieve sustainable performance
+                                          growth."</p>
+                                    </div>
+                                 </div>
+                              </div>
+                              <div class="accordion-item">
+                                 <button class="faq-title collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#faq-3" aria-expanded="false">
+                                    <span class="number">03</span>How do you measure the success of a campaign?
+                                 </button>
+                                 <div id="faq-3" class="collapse" data-bs-parent="#faqOne">
+                                    <div class="accordion-body faq-text">
+                                       <p>"We transform brands into digital leaders. Our comprehensive services —
+                                          including website design, branding, SEO, social media marketing, content
+                                          creation, and paid campaigns — are strategically aligned to increase
+                                          visibility, generate quality leads, and maximize long-term profitability."</p>
+                                    </div>
+                                 </div>
+                              </div>
+                              <div class="accordion-item">
+                                 <button class="faq-title collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#faq-4" aria-expanded="false">
+                                    <span class="number">04</span>Do you work with businesses of all sizes?
+                                 </button>
+                                 <div id="faq-4" class="collapse" data-bs-parent="#faqOne">
+                                    <div class="accordion-body faq-text">
+                                       <p>"We architect digital growth for ambitious brands. Through strategic web
+                                          design, distinctive brand identity, search engine optimization, high-impact
+                                          content, social media influence, and precision-driven advertising, we create
+                                          cohesive digital systems that transform attention into measurable revenue."
+                                       </p>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </section>
+            <!-- end: FAQ Section -->
 
-   <!-- start: Footer Area -->
-   <footer class="fa-footer-area">
-      <div class="footer-menu-area">
-         <div class="container">
-            <div class="row">
-               <div class="col-12">
-                  <div class="footer-main-wrapper">
-                     <div class="footer-widget footer1-col-1 widget-infos">
-                        <div class="footer-logo">
-                           <a href="index.html">
-                              <img src="assets/images/logo/primary-logo.png" alt="Logos">
-                           </a>
-                        </div>
-                        <p class="footer-desc">Refresh your skills, our team of experienced
-                           instructors will guide you every step the
-                           way. Our comprehensive ..</p>
-                        <form>
-                           <div class="footer-search">
-                              <input type="email" id="email" name="email" placeholder="Enter your email" required="">
-                              <button>
-                                 <img src="assets/images/icons/send.svg" alt="Icons">
-                              </button>
+            <!-- start: Brand Section -->
+            <section class="fa-brand-section v-2">
+               <div class="container">
+                  <div class="row">
+                     <div class="col-12">
+                        <div class="swiper fa-brand-slider">
+                           <div class="swiper-wrapper">
+                              <div class="swiper-slide">
+                                 <div class="brand-item">
+                                    <img src="assets/images/brand/h1-brand-1.png" alt="Brand">
+                                 </div>
+                              </div>
+                              <div class="swiper-slide">
+                                 <div class="brand-item">
+                                    <img src="assets/images/brand/h1-brand-2.png" alt="Brand">
+                                 </div>
+                              </div>
+                              <div class="swiper-slide">
+                                 <div class="brand-item">
+                                    <img src="assets/images/brand/h1-brand-3.png" alt="Brand">
+                                 </div>
+                              </div>
+                              <div class="swiper-slide">
+                                 <div class="brand-item">
+                                    <img src="assets/images/brand/h1-brand-4.png" alt="Brand">
+                                 </div>
+                              </div>
+                              <div class="swiper-slide">
+                                 <div class="brand-item">
+                                    <img src="assets/images/brand/h1-brand-5.png" alt="Brand">
+                                 </div>
+                              </div>
                            </div>
-                        </form>
-                     </div>
-                     <div class="footer-widget footer1-col-2 widget-nav-menu">
-                        <div class="footer-title">
-                           <h3 class="title">Our Services</h3>
-                           <span class="line"></span>
                         </div>
-                        <ul>
-                           <li><a href="#"><span>>></span> Business Process</a></li>
-                           <li><a href="#"><span>>></span> Financial Management</a></li>
-                           <li><a href="#"><span>>></span> Market Research</a></li>
-                           <li><a href="#"><span>>></span> Change Mnagement</a></li>
-                           <li><a href="#"><span>>></span> Strategic Planning</a></li>
-                           <li><a href="#"><span>>></span> Leadership</a></li>
-                        </ul>
                      </div>
-                     <div class="footer-widget footer1-col-3 widget-nav-menu">
-                        <div class="footer-title">
-                           <h3 class="title">Resourses</h3>
-                           <span class="line"></span>
-                        </div>
-                        <ul>
-                           <li><a href="#"><span>>></span> Contact Us</a></li>
-                           <li><a href="#"><span>>></span> Privacy Policy</a></li>
-                           <li><a href="#"><span>>></span> Blog Post</a></li>
-                           <li><a href="#"><span>>></span> Clients' Feedback</a></li>
-                           <li><a href="#"><span>>></span> Recognitions</a></li>
-                           <li><a href="#"><span>>></span> Error 404</a></li>
-                        </ul>
-                     </div>
-                     <div class="footer-widget footer1-col-4 widget-location-infos">
-                        <div class="footer-title">
-                           <h3 class="title">Our Offices</h3>
-                           <span class="line"></span>
-                        </div>
-                        <div class="location-infos-wrap">
-                           <div class="location-infos-item">
-                              <span class="subtitle">Headquarters- USA</span>
-                              <h6 class="location-title">Seattle (major city in the state <br>
-                                 Washington).
-                              </h6>
+                  </div>
+               </div>
+            </section>
+            <!-- end: Brand Section -->
+
+            <!-- start: Blog Section -->
+            <section class="fa-blog-section v-3">
+               <div class="container">
+                  <div class="row">
+                     <div class="col-12">
+                        <div class="heading-area">
+                           <div class="header-text">
+                              <span class="sub-title">recent</span>
+                              <h2 class="sec-title">articles</h2>
                            </div>
-                           <div class="location-infos-item">
-                              <span class="subtitle">Operations - China</span>
-                              <h6 class="location-title">Shanghai (major global financial <br>
-                                 hub & China's largest cities).
-                              </h6>
+                           <div class="view-blog-button">
+                              <a class="view-blog-btn" href="blog-details.html">
+                                 View All Blog
+                                 <span><img src="assets/images/icons/down-arrow.svg" alt="Icons"></span>
+                              </a>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="row">
+                     <div class="col-12">
+                        <div class="blog-main-wrapper">
+                           <div class="blog-item style-3">
+                              <div class="blog-images">
+                                 <a href="blog-details.html"><img src="assets/images/blog/h1-blog-1.png" alt="Blog"></a>
+                                 <div class="blog-date">
+                                    <span class="date">24</span>
+                                    <span class="month">May 2025</span>
+                                 </div>
+                              </div>
+                              <div class="blog-content">
+                                 <div class="blog-author-wrap">
+                                    <div class="blog-author">
+                                       <div class="author-images">
+                                          <img src="assets/images/blog/author-1.png" alt="Images">
+                                       </div>
+                                       <h6 class="author-name"><a href="blog-details.html">Tim Warnor</a></h6>
+                                    </div>
+                                    <h6 class="sub-title btn-1">
+                                       <span>
+                                          <img src="assets/images/icons/file.svg" alt="Icons">
+                                       </span>Marketing
+                                    </h6>
+                                 </div>
+                                 <h3 class="blog-title">
+                                    <a href="blog-details.html">The Beginner’s Guide to Digital Marketing Strategy</a>
+                                 </h3>
+                                 <a class="read-more-btn" href="blog-details.html"> <span class="read-more-link">Read
+                                       More</span>
+                                    <span><img src="assets/images/icons/arrow.svg" alt="Icons"></span></a>
+                              </div>
+                           </div>
+                           <div class="blog-item style-3">
+                              <div class="blog-images">
+                                 <a href="blog-details.html"><img src="assets/images/blog/h1-blog-2.png" alt="Blog"></a>
+                                 <div class="blog-date">
+                                    <span class="date">06</span>
+                                    <span class="month">Nov 2025</span>
+                                 </div>
+                              </div>
+                              <div class="blog-content">
+                                 <div class="blog-author-wrap">
+                                    <div class="blog-author">
+                                       <div class="author-images">
+                                          <img src="assets/images/blog/author-2.png" alt="Images">
+                                       </div>
+                                       <h6 class="author-name"><a href="blog-details.html">Orion Vale</a></h6>
+                                    </div>
+                                    <h6 class="sub-title btn-1">
+                                       <span>
+                                          <img src="assets/images/icons/file.svg" alt="Icons">
+                                       </span>Business
+                                    </h6>
+                                 </div>
+                                 <h3 class="blog-title">
+                                    <a href="blog-details.html">Why Strategy Beats Aesthetics in Digital Design</a>
+                                 </h3>
+                                 <a class="read-more-btn" href="blog-details.html"> <span class="read-more-link">Read
+                                       More</span>
+                                    <span><img src="assets/images/icons/arrow.svg" alt="Icons"></span></a>
+                              </div>
+                           </div>
+                           <div class="blog-item style-3">
+                              <div class="blog-images">
+                                 <a href="blog-details.html"><img src="assets/images/blog/h1-blog-3.png" alt="Blog"></a>
+                                 <div class="blog-date">
+                                    <span class="date">17</span>
+                                    <span class="month">Feb 2025</span>
+                                 </div>
+                              </div>
+                              <div class="blog-content">
+                                 <div class="blog-author-wrap">
+                                    <div class="blog-author">
+                                       <div class="author-images">
+                                          <img src="assets/images/blog/author-3.png" alt="Images">
+                                       </div>
+                                       <h6 class="author-name"><a href="blog-details.html">Axel Grant</a></h6>
+                                    </div>
+                                    <h6 class="sub-title btn-1">
+                                       <span>
+                                          <img src="assets/images/icons/file.svg" alt="Icons">
+                                       </span>Financial
+                                    </h6>
+                                 </div>
+                                 <h3 class="blog-title"><a href="blog-details.html">How We Helped a Startup Grow 400%
+                                       Through Paid
+                                       Ads</a>
+                                 </h3>
+                                 <a class="read-more-btn" href="blog-details.html"> <span class="read-more-link">Read
+                                       More</span>
+                                    <span><img src="assets/images/icons/arrow.svg" alt="Icons"></span></a>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </section>
+            <!-- end: Blog Section -->
+
+         </main>
+
+         <!-- start: Footer Area -->
+         <footer class="fa-footer-area">
+            <div class="footer-menu-area">
+               <div class="container">
+                  <div class="row">
+                     <div class="col-12">
+                        <div class="footer-main-wrapper">
+                           <div class="footer-widget footer1-col-1 widget-infos">
+                              <div class="footer-logo">
+                                 <a href="index.html">
+                                    <img src="assets/images/logo/primary-logo.png" alt="Logos">
+                                 </a>
+                              </div>
+                              <p class="footer-desc">Refresh your skills, our team of experienced
+                                 instructors will guide you every step the
+                                 way. Our comprehensive ..</p>
+                              <form>
+                                 <div class="footer-search">
+                                    <input type="email" id="email" name="email" placeholder="Enter your email"
+                                       required="">
+                                    <button>
+                                       <img src="assets/images/icons/send.svg" alt="Icons">
+                                    </button>
+                                 </div>
+                              </form>
+                           </div>
+                           <div class="footer-widget footer1-col-2 widget-nav-menu">
+                              <div class="footer-title">
+                                 <h3 class="title">Our Services</h3>
+                                 <span class="line"></span>
+                              </div>
+                              <ul>
+                                 <li><a href="#"><span>>></span> Business Process</a></li>
+                                 <li><a href="#"><span>>></span> Financial Management</a></li>
+                                 <li><a href="#"><span>>></span> Market Research</a></li>
+                                 <li><a href="#"><span>>></span> Change Mnagement</a></li>
+                                 <li><a href="#"><span>>></span> Strategic Planning</a></li>
+                                 <li><a href="#"><span>>></span> Leadership</a></li>
+                              </ul>
+                           </div>
+                           <div class="footer-widget footer1-col-3 widget-nav-menu">
+                              <div class="footer-title">
+                                 <h3 class="title">Resourses</h3>
+                                 <span class="line"></span>
+                              </div>
+                              <ul>
+                                 <li><a href="#"><span>>></span> Contact Us</a></li>
+                                 <li><a href="#"><span>>></span> Privacy Policy</a></li>
+                                 <li><a href="#"><span>>></span> Blog Post</a></li>
+                                 <li><a href="#"><span>>></span> Clients' Feedback</a></li>
+                                 <li><a href="#"><span>>></span> Recognitions</a></li>
+                                 <li><a href="#"><span>>></span> Error 404</a></li>
+                              </ul>
+                           </div>
+                           <div class="footer-widget footer1-col-4 widget-location-infos">
+                              <div class="footer-title">
+                                 <h3 class="title">Our Offices</h3>
+                                 <span class="line"></span>
+                              </div>
+                              <div class="location-infos-wrap">
+                                 <div class="location-infos-item">
+                                    <span class="subtitle">Headquarters- USA</span>
+                                    <h6 class="location-title">Seattle (major city in the state <br>
+                                       Washington).
+                                    </h6>
+                                 </div>
+                                 <div class="location-infos-item">
+                                    <span class="subtitle">Operations - China</span>
+                                    <h6 class="location-title">Shanghai (major global financial <br>
+                                       hub & China's largest cities).
+                                    </h6>
+                                 </div>
+                              </div>
                            </div>
                         </div>
                      </div>
                   </div>
                </div>
             </div>
-         </div>
-      </div>
-      <div class="footer-copyright-area">
-         <div class="container">
-            <div class="row">
-               <div class="col-12">
-                  <div class="copyright-wrapper">
-                     <p>© 2025&nbsp;<a href="#" target="_blank">Axine</a> of Digital Agency, All Right Reserved</p>
+            <div class="footer-copyright-area">
+               <div class="container">
+                  <div class="row">
+                     <div class="col-12">
+                        <div class="copyright-wrapper">
+                           <p>© 2025&nbsp;<a href="#" target="_blank">Axine</a> of Digital Agency, All Right Reserved
+                           </p>
+                        </div>
+                     </div>
                   </div>
                </div>
             </div>
-         </div>
+         </footer>
+         <!-- end: Footer Area -->
       </div>
-   </footer>
-   <!-- end: Footer Area -->
+   </div>
 
    <!-- JS here -->
    <script src="assets/js/jquery.min.js"></script>
    <script src="assets/js/bootstrap.bundle.min.js"></script>
+   <script src="assets/js/appear.min.js"></script>
+   <script src="assets/js/odometer.min.js"></script>
    <script src="assets/js/jquery.nice-select.min.js"></script>
    <script src="assets/js/swiper.min.js"></script>
    <script src="assets/js/meanmenu.js"></script>
+   <script src="assets/js/gsap.min.js"></script>
+   <script src="assets/js/gsap-scroll-smoother.js"></script>
+   <script src="assets/js/gsap-scroll-to-plugin.min.js"></script>
+   <script src="assets/js/gsap-scroll-trigger.min.js"></script>
+   <script src="assets/js/gsap-split-text.min.js"></script>
+   <script src="assets/js/gsap-animation.js"></script>
    <script src="assets/js/main.js"></script>
 </body>
 

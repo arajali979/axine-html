@@ -30,6 +30,9 @@ START: Theme FAQ CSS
 			margin-top: 0;
 		}
 	}
+	&.inner-page {
+		padding-bottom: 0;
+	}
 	@media #{$lg} {
 		padding-top: 120px;
 	}

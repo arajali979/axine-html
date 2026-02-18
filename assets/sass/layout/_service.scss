@@ -466,11 +466,9 @@ START: Theme Service CSS
 		.service-title {
 			display: flex;
 			align-items: center;
+			color: var(--fa-color-common-white);
 			font-weight: var(--fa-fw-bold);
 			margin-bottom: 0;
-			a {
-				color: var(--fa-color-common-white);
-			}
 		}
 		.service-desc {
 			font-size: 18px;

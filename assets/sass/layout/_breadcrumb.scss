@@ -10,6 +10,22 @@ START: Theme Breadcrumb CSS
 	background-size: cover;
 	padding-top: 450px;
 	padding-bottom: 100px;
+	@media #{$xl} {
+		padding-top: 350px;
+	}
+	@media #{$lg} {
+		padding-top: 280px;
+	}
+	@media #{$md} {
+		padding-top: 220px;
+	}
+	@media #{$sm} {
+		padding-top: 210px;
+	}
+	@media #{$xs} {
+		padding-top: 200px;
+		padding-bottom: 80px;
+	}
 }
 
 .breadcrumb-heading {
@@ -29,6 +45,36 @@ START: Theme Breadcrumb CSS
 		font-family: var(--fa-ff-heading);
 		font-weight: var(--fa-fw-sbold);
 		margin-top: 30px;
+	}
+	@media #{$xl} {
+		.breadcrumb-title {
+			font-size: 120px;
+		}
+	}
+	@media #{$lg} {
+		.breadcrumb-title {
+			font-size: 100px;
+		}
+	}
+	@media #{$md} {
+		.breadcrumb-title {
+			font-size: 80px;
+		}
+	}
+	@media #{$sm} {
+		.breadcrumb-title {
+			font-size: 65px;
+		}
+	}
+	@media #{$xs} {
+		.breadcrumb-title {
+			font-size: 45px;
+			margin-bottom: 10px;
+		}
+		.page-link {
+			font-size: 20px;
+			margin-top: 20px;
+		}
 	}
 }
 

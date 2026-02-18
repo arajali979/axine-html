@@ -5479,11 +5479,9 @@ START: Theme Service CSS
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  color: var(--fa-color-common-white);
   font-weight: var(--fa-fw-bold);
   margin-bottom: 0;
-}
-.service-style-3 .service-content .service-title a {
-  color: var(--fa-color-common-white);
 }
 .service-style-3 .service-content .service-desc {
   font-size: 18px;
@@ -6125,11 +6123,17 @@ START: Theme Project CSS
   background: transparent;
   padding-bottom: 150px;
 }
+.fa-project-section.inner-page {
+  padding-bottom: 150px;
+}
 @media only screen and (min-width: 992px) and (max-width: 1199px) {
   .fa-project-section {
     padding-top: 120px;
   }
   .fa-project-section.v-3 {
+    padding-bottom: 120px;
+  }
+  .fa-project-section.inner-page {
     padding-bottom: 120px;
   }
 }
@@ -6138,6 +6142,9 @@ START: Theme Project CSS
     padding-top: 80px;
   }
   .fa-project-section.v-3 {
+    padding-bottom: 80px;
+  }
+  .fa-project-section.inner-page {
     padding-bottom: 80px;
   }
   .fa-project-section .heading-area {
@@ -8212,6 +8219,9 @@ START: Theme FAQ CSS
   -webkit-text-fill-color: transparent;
   background-clip: text;
   margin-top: 0;
+}
+.fa-faq-section.inner-page {
+  padding-bottom: 0;
 }
 @media only screen and (min-width: 992px) and (max-width: 1199px) {
   .fa-faq-section {
@@ -10798,6 +10808,32 @@ START: Theme Breadcrumb CSS
   padding-top: 450px;
   padding-bottom: 100px;
 }
+@media only screen and (min-width: 1200px) and (max-width: 1399px) {
+  .fa-breadcrumb-area {
+    padding-top: 350px;
+  }
+}
+@media only screen and (min-width: 992px) and (max-width: 1199px) {
+  .fa-breadcrumb-area {
+    padding-top: 280px;
+  }
+}
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+  .fa-breadcrumb-area {
+    padding-top: 220px;
+  }
+}
+@media only screen and (min-width: 576px) and (max-width: 767px) {
+  .fa-breadcrumb-area {
+    padding-top: 210px;
+  }
+}
+@media (max-width: 575px) {
+  .fa-breadcrumb-area {
+    padding-top: 200px;
+    padding-bottom: 80px;
+  }
+}
 
 .breadcrumb-heading .breadcrumb-title {
   font-size: 150px;
@@ -10821,6 +10857,36 @@ START: Theme Breadcrumb CSS
   font-family: var(--fa-ff-heading);
   font-weight: var(--fa-fw-sbold);
   margin-top: 30px;
+}
+@media only screen and (min-width: 1200px) and (max-width: 1399px) {
+  .breadcrumb-heading .breadcrumb-title {
+    font-size: 120px;
+  }
+}
+@media only screen and (min-width: 992px) and (max-width: 1199px) {
+  .breadcrumb-heading .breadcrumb-title {
+    font-size: 100px;
+  }
+}
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+  .breadcrumb-heading .breadcrumb-title {
+    font-size: 80px;
+  }
+}
+@media only screen and (min-width: 576px) and (max-width: 767px) {
+  .breadcrumb-heading .breadcrumb-title {
+    font-size: 65px;
+  }
+}
+@media (max-width: 575px) {
+  .breadcrumb-heading .breadcrumb-title {
+    font-size: 45px;
+    margin-bottom: 10px;
+  }
+  .breadcrumb-heading .page-link {
+    font-size: 20px;
+    margin-top: 20px;
+  }
 }
 
 /* !END: Breadcrumb CSS *//*# sourceMappingURL=main.css.map */
