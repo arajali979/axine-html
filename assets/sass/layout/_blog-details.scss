@@ -6,6 +6,17 @@ START: Theme Blog Details CSS
 .blog-details-section {
 	padding-top: 150px;
 	padding-bottom: 150px;
+	@media #{$lg} {
+		padding-top: 120px;
+		padding-bottom: 120px;
+	}
+	@media #{$md, $sm, $xs} {
+		padding-top: 80px;
+		padding-bottom: 80px;
+		.fa-main-sidebar {
+			margin-top: 50px;
+		}
+	}
 }
 
 .blog-details-left-wrap {
@@ -90,6 +101,8 @@ START: Theme Blog Details CSS
 	}
 	.prev-next-wrap {
 		display: flex;
+		flex-wrap: wrap;
+		row-gap: 10px;
 		align-items: center;
 		justify-content: space-between;
 		margin-top: 40px;
@@ -98,12 +111,31 @@ START: Theme Blog Details CSS
 		border-radius: 50px;
 		padding: 10px 10px;
 	}
+	@media #{$sm} {
+		.details-image {
+			img {
+				border-radius: 15px;
+			}
+		}
+	}
+	@media #{$xs} {
+		.details-image {
+			img {
+				border-radius: 15px;
+			}
+		}
+		.prev-next-wrap {
+			justify-content: center;
+		}
+	}
 }
 
 .infos-cate-wrap {
 	display: flex;
+	flex-wrap: wrap;
 	align-items: center;
 	justify-content: space-between;
+	row-gap: 20px;
 	border-top: 1px solid var(--fa-color-border-4);
 	border-bottom: 1px solid var(--fa-color-border-4);
 	padding-top: 20px;
@@ -113,8 +145,10 @@ START: Theme Blog Details CSS
 .blog-tags-list {
 	ul {
 		display: flex;
+		flex-wrap: wrap;
 		align-items: center;
 		column-gap: 10px;
+		row-gap: 10px;
 		li {
 			span {
 				font-size: 24px;
@@ -159,6 +193,9 @@ blockquote {
 	p {
 		margin-top: 20px;
 		margin-bottom: 0;
+	}
+	@media #{$sm, $xs} {
+		padding: 30px 15px;
 	}
 }
 
@@ -382,12 +419,14 @@ blockquote {
 				.commment-author {
 					display: flex;
 					flex-wrap: wrap;
+					gap: 20px;
 					align-items: start;
 					justify-content: space-between;
 					.comment-avatar {
 						display: flex;
 						align-items: center;
 						column-gap: 30px;
+						row-gap: 20px;
 						width: calc(100% - 75px);
 						.avatar-images {
 							max-width: 200px;
@@ -409,6 +448,14 @@ blockquote {
 							.date {
 								display: block;
 								font-weight: var(--fa-fw-sbold);
+							}
+						}
+						@media #{$xs} {
+							flex-direction: column;
+							width: 100%;
+							.avatar-images {
+								max-width: 100%;
+								height: auto;
 							}
 						}
 					}
