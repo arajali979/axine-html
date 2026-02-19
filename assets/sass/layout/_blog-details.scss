@@ -9,9 +9,9 @@ START: Theme Blog Details CSS
 }
 
 .blog-details-left-wrap {
-	.meta-style-two {
+	.blog-meta {
 		padding-top: 40px;
-		padding-bottom: 15px;
+		padding-bottom: 25px;
 	}
 	.blog-details-text {
 		max-width: 815px;
@@ -51,10 +51,27 @@ START: Theme Blog Details CSS
 		}
 	}
 	.blog-video-wrap {
+		position: relative;
 		margin-top: 40px;
 		margin-bottom: 40px;
 		img {
 			border-radius: 20px;
+		}
+		.video-play-btn {
+			display: inline-flex;
+			align-items: center;
+			justify-content: center;
+			width: 80px;
+			height: 80px;
+			border: 2px solid var(--fa-color-theme-primary);
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+			border-radius: 50%;
+			img {
+				border-radius: 0px;
+			}
 		}
 	}
 	.blog-info-wrap {
@@ -341,6 +358,9 @@ blockquote {
 		.information-button {
 			margin-top: 25px;
 		}
+	}
+	@media #{$lg, $xs} {
+		padding: 30px 15px;
 	}
 }
 

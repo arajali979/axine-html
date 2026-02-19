@@ -74,8 +74,19 @@ START: Theme Blog CSS
 }
 
 .blog-inner-section {
-	padding-top: 120px;
-	padding-bottom: 90px;
+	padding-top: 150px;
+	padding-bottom: 150px;
+	@media #{$lg} {
+		padding-top: 120px;
+		padding-bottom: 120px;
+	}
+	@media #{$md, $sm, $xs} {
+		padding-top: 80px;
+		padding-bottom: 50px;
+		.fa-main-sidebar {
+			margin-top: 50px;
+		}
+	}
 }
 
 .blog-main-wrapper {
@@ -85,6 +96,12 @@ START: Theme Blog CSS
 	@media #{$md, $sm, $xs} {
 		grid-template-columns: repeat(1, 1fr);
 	}
+}
+
+.blog-inner-wrapper {
+	display: flex;
+	flex-direction: column;
+	row-gap: 50px;
 }
 
 .blog-item {
@@ -571,6 +588,15 @@ START: Theme Blog CSS
 			margin-top: 30px;
 		}
 	}
+	@media #{$sm, $xs} {
+		.blog-images {
+			a {
+				img {
+					border-radius: 15px;
+				}
+			}
+		}
+	}
 }
 
 .blog-meta {
@@ -584,6 +610,50 @@ START: Theme Blog CSS
 			align-items: center;
 			column-gap: 10px;
 			font-weight: var(--fa-fw-sbold);
+		}
+	}
+}
+
+.page-pagination {
+	margin-top: 60px;
+	ul {
+		padding: 0;
+		margin: 0;
+		list-style: none;
+		display: flex;
+		flex-wrap: wrap;
+		align-items: center;
+		gap: 15px;
+		li {
+			.page-numbers {
+				display: inline-flex;
+				align-items: center;
+				justify-content: center;
+				width: 45px;
+				height: 45px;
+				line-height: 1;
+				font-size: 18px;
+				color: var(--fa-color-heading-primary);
+				font-family: var(--fa-ff-heading);
+				background: transparent;
+				border: 1px solid var(--fa-color-border-4);
+				font-weight: var(--fa-fw-sbold);
+				border-radius: 8px;
+				transition: all 0.3s ease-in-out 0s;
+				i {
+					font-size: 12px;
+					color: var(--fa-color-heading-primary);
+				}
+				&:hover,
+				&.current {
+					background-color: var(--fa-color-heading-primary);
+					border-color: var(--fa-color-theme-secondary);
+					color: var(--fa-color-common-white);
+					i {
+						color: var(--fa-color-common-white);
+					}
+				}
+			}
 		}
 	}
 }
