@@ -9650,6 +9650,11 @@ START: Theme Blog CSS
   }
 }
 
+.blog-inner-section {
+  padding-top: 120px;
+  padding-bottom: 90px;
+}
+
 .blog-main-wrapper {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -10190,6 +10195,98 @@ START: Theme Blog CSS
   .blog-item .blog-content .read-more-btn {
     margin-top: 15px;
   }
+}
+
+.blog-inner-item .blog-images {
+  position: relative;
+}
+.blog-inner-item .blog-images a {
+  display: inline-block;
+}
+.blog-inner-item .blog-images a img {
+  border-radius: 50px;
+}
+.blog-inner-item .blog-images .blog-date {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 120px;
+  height: 120px;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  background: rgba(77, 53, 172, 0.4);
+  border-radius: 50%;
+}
+.blog-inner-item .blog-images .blog-date .date {
+  display: block;
+  font-size: 30px;
+  font-family: var(--fa-ff-heading);
+  font-weight: var(--fa-fw-black);
+  color: var(--fa-color-common-white);
+}
+.blog-inner-item .blog-images .blog-date .month {
+  display: block;
+  font-size: 18px;
+  color: var(--fa-color-common-white);
+  font-family: var(--fa-ff-heading);
+  font-weight: var(--fa-fw-sbold);
+}
+.blog-inner-item .blog-meta {
+  margin-top: 40px;
+  margin-bottom: 15px;
+}
+.blog-inner-item .blog-content {
+  max-width: 850px;
+  width: 100%;
+}
+.blog-inner-item .blog-content .blog-title {
+  font-weight: var(--fa-fw-bold);
+  margin-bottom: 0;
+}
+.blog-inner-item .blog-content .desc {
+  font-weight: var(--fa-fw-medium);
+  margin-top: 20px;
+  margin-bottom: 0;
+}
+.blog-inner-item .blog-content .blog-button {
+  margin-top: 30px;
+}
+
+.blog-meta ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-column-gap: 30px;
+     -moz-column-gap: 30px;
+          column-gap: 30px;
+}
+.blog-meta ul li {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-column-gap: 10px;
+     -moz-column-gap: 10px;
+          column-gap: 10px;
+  font-weight: var(--fa-fw-sbold);
 }
 
 /* !END: Theme Blog CSS */
