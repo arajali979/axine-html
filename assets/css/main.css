@@ -573,6 +573,11 @@ img {
 .prev-next-btn.btn-1 {
   padding: 15px 10px 15px 56px;
 }
+.prev-next-btn.btn-1 span img {
+  -webkit-transform: rotate(0deg);
+      -ms-transform: rotate(0deg);
+          transform: rotate(0deg);
+}
 .prev-next-btn span {
   background: var(--fa-color-theme-bg);
   border-radius: 50px;
@@ -584,9 +589,15 @@ img {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-transform: rotate(-180deg);
+      -ms-transform: rotate(-180deg);
+          transform: rotate(-180deg);
 }
 .prev-next-btn:hover {
   color: var(--fa-color-grey-16);
+}
+.prev-next-btn:hover span {
+  background-color: var(--fa-color-theme-primary);
 }
 
 .submit-btn {
@@ -6417,6 +6428,18 @@ START: Theme Project Details CSS
   padding-top: 150px;
   padding-bottom: 150px;
 }
+@media only screen and (min-width: 992px) and (max-width: 1199px) {
+  .fa-portfolio-details-area {
+    padding-top: 120px;
+    padding-bottom: 120px;
+  }
+}
+@media only screen and (min-width: 768px) and (max-width: 991px), only screen and (min-width: 576px) and (max-width: 767px), (max-width: 575px) {
+  .fa-portfolio-details-area {
+    padding-top: 80px;
+    padding-bottom: 80px;
+  }
+}
 
 .portfolio-details-main-wrapper .portfolio-images {
   -webkit-mask-image: url(../images/shapes/project-details-shape.svg);
@@ -6446,6 +6469,16 @@ START: Theme Project Details CSS
   padding: 10px 10px;
   margin-top: 80px;
 }
+@media only screen and (min-width: 992px) and (max-width: 1199px) {
+  .portfolio-details-main-wrapper .portfolio-images img {
+    border-radius: 30px;
+  }
+}
+@media only screen and (min-width: 768px) and (max-width: 991px), only screen and (min-width: 576px) and (max-width: 767px), (max-width: 575px) {
+  .portfolio-details-main-wrapper .portfolio-images img {
+    border-radius: 15px;
+  }
+}
 
 .portfolio-details-content-wrap {
   max-width: 80%;
@@ -6458,6 +6491,8 @@ START: Theme Project Details CSS
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -6481,6 +6516,16 @@ START: Theme Project Details CSS
   font-weight: var(--fa-fw-medium);
   color: var(--fa-color-text-body);
 }
+@media only screen and (min-width: 992px) and (max-width: 1199px) {
+  .portfolio-details-content-wrap {
+    margin-top: -65px;
+  }
+}
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+  .portfolio-details-content-wrap {
+    margin-top: -40px;
+  }
+}
 
 .portfolio-details-bottom-wrap {
   display: -webkit-box;
@@ -6489,6 +6534,7 @@ START: Theme Project Details CSS
   -webkit-column-gap: 75px;
      -moz-column-gap: 75px;
           column-gap: 75px;
+  row-gap: 35px;
   margin-top: 95px;
 }
 .portfolio-details-bottom-wrap .portfolio-details-left-text {
@@ -6515,6 +6561,30 @@ START: Theme Project Details CSS
   margin-top: 30px;
   margin-bottom: 0;
   line-height: 1.7;
+}
+@media only screen and (min-width: 992px) and (max-width: 1199px) {
+  .portfolio-details-bottom-wrap {
+    -webkit-column-gap: 45px;
+       -moz-column-gap: 45px;
+            column-gap: 45px;
+  }
+}
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+  .portfolio-details-bottom-wrap {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    margin-top: 50px;
+  }
+}
+@media only screen and (min-width: 576px) and (max-width: 767px), (max-width: 575px) {
+  .portfolio-details-bottom-wrap {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
 }
 
 .check-style-4 ul li {
