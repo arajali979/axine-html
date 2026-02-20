@@ -1,7 +1,23 @@
 /***************************************************
 ==================== JS INDEX ======================
 ****************************************************
-Mobile Menu Js
+// Data Js
+// Preloader Js
+// Sticky Js
+// Search Bar Js
+// Mobile Menu Js
+// Back to Top Js
+// Nice Select Js
+// Video Js
+// Project Hover Js
+// Accordion Js
+// Rating Js
+// Fun Fact Js
+// Price Js
+// Project Swiper Js
+// Testimonial Swiper Js
+// Brand Slider Js
+// Testimonial Slider Js
 
 ****************************************************/
 
@@ -163,7 +179,7 @@ Mobile Menu Js
 		});
 	}
 
-	// Price js
+	// Price Js
 	var price = $(".price-number");
 	var duration = $(".price-duration");
 	var year = $("#year");
