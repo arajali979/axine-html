@@ -5211,6 +5211,7 @@ START: Theme Contact CSS
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  font-size: 24px;
   -webkit-column-gap: 8px;
      -moz-column-gap: 8px;
           column-gap: 8px;
@@ -6792,6 +6793,10 @@ START: Theme Project Details CSS
   background: var(--fa-color-common-white);
   margin-top: -95px;
 }
+.portfolio-details-content-wrap .portfolio-details-cate-list {
+  position: relative;
+  z-index: 1;
+}
 .portfolio-details-content-wrap .portfolio-details-cate-list ul {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -6862,12 +6867,15 @@ START: Theme Project Details CSS
   margin-bottom: 25px;
   line-height: 1.7;
 }
-.portfolio-details-bottom-wrap .portfolio-details-left-text p.desc {
-  color: var(--fa-color-heading-primary);
-  font-weight: var(--fa-fw-medium);
-}
 .portfolio-details-bottom-wrap .portfolio-details-left-text p:last-child {
   margin-bottom: 0;
+}
+.portfolio-details-bottom-wrap .portfolio-details-left-text .desc {
+  font-size: 18px;
+  font-family: var(--fa-ff-body);
+  color: var(--fa-color-heading-primary);
+  font-weight: var(--fa-fw-medium);
+  line-height: 1.6;
 }
 .portfolio-details-bottom-wrap .portfolio-details-right-text {
   max-width: 495px;

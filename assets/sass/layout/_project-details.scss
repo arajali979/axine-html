@@ -67,6 +67,8 @@ START: Theme Project Details CSS
 	background: var(--fa-color-common-white);
 	margin-top: -95px;
 	.portfolio-details-cate-list {
+		position: relative;
+		z-index: 1;
 		ul {
 			display: flex;
 			flex-wrap: wrap;
@@ -115,13 +117,16 @@ START: Theme Project Details CSS
 			font-weight: var(--fa-fw-medium);
 			margin-bottom: 25px;
 			line-height: 1.7;
-			&.desc {
-				color: var(--fa-color-heading-primary);
-				font-weight: var(--fa-fw-medium);
-			}
 			&:last-child {
 				margin-bottom: 0;
 			}
+		}
+		.desc {
+			font-size: 18px;
+			font-family: var(--fa-ff-body);
+			color: var(--fa-color-heading-primary);
+			font-weight: var(--fa-fw-medium);
+			line-height: 1.6;
 		}
 	}
 
