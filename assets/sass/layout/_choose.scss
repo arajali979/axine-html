@@ -110,7 +110,10 @@ START: Theme Choose CSS
 			align-items: center;
 			column-gap: 16px;
 			.choose-title {
+				font-size: 24px;
+				color: var(--fa-color-heading-primary);
 				font-weight: var(--fa-fw-bold);
+				font-family: var(--fa-ff-heading);
 				margin-bottom: 0;
 			}
 		}

@@ -2089,6 +2089,8 @@ START: Theme Footer CSS
 }
 .footer-widget.widget-location-infos .location-infos-wrap .location-infos-item .location-title {
   color: var(--fa-color-common-white);
+  font-size: 18px;
+  font-family: var(--fa-ff-heading);
   font-weight: var(--fa-fw-sbold);
   margin-bottom: 0;
   line-height: 1.7;
@@ -2697,8 +2699,10 @@ START: Theme Item List CSS
 }
 
 .fa_search_wrapper .search_form form .search_input .title {
+  display: block;
   color: var(--fa-color-common-white);
   font-size: 30px;
+  font-family: var(--fa-ff-heading);
   font-weight: var(--fa-fw-bold);
   text-align: center;
   margin-bottom: 30px;
@@ -7320,6 +7324,9 @@ START: Theme Testimonial CSS
 }
 .testimonial-item .testimonial-content .testimonial-author .author-name {
   display: block;
+  font-size: 24px;
+  font-family: var(--fa-ff-heading);
+  color: var(--fa-color-heading-primary);
   font-weight: var(--fa-fw-sbold);
   line-height: 1.8;
 }
@@ -9480,7 +9487,10 @@ START: Theme Choose CSS
           column-gap: 16px;
 }
 .choose-item .choose-content .choose-header .choose-title {
+  font-size: 24px;
+  color: var(--fa-color-heading-primary);
   font-weight: var(--fa-fw-bold);
+  font-family: var(--fa-ff-heading);
   margin-bottom: 0;
 }
 .choose-item .choose-content .choose-list {
@@ -9704,6 +9714,8 @@ START: Theme Price CSS
   position: relative;
   color: var(--fa-color-theme-primary);
   font-weight: var(--fa-fw-bold);
+  font-size: 24px;
+  font-family: var(--fa-ff-heading);
   background: var(--fa-color-common-white);
   -webkit-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
           box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
@@ -10382,6 +10394,7 @@ START: Theme Blog CSS
           mask-repeat: no-repeat;
 }
 .blog-item.style-3 .blog-content .blog-author-wrap .blog-author .author-name {
+  font-size: 18px;
   margin-bottom: 0;
 }
 .blog-item.style-3 .blog-content .sub-title {
@@ -10691,8 +10704,23 @@ START: Theme Blog Details CSS
   width: 100%;
 }
 .blog-details-left-wrap .blog-details-text .blog-title {
+  display: block;
+  font-size: 30px;
+  font-family: var(--fa-ff-heading);
+  color: var(--fa-color-heading-primary);
   font-weight: var(--fa-fw-bold);
-  margin-bottom: 20px;
+  margin-bottom: 12px;
+  line-height: 1.2;
+}
+@media only screen and (min-width: 576px) and (max-width: 767px) {
+  .blog-details-left-wrap .blog-details-text .blog-title {
+    font-size: 24px;
+  }
+}
+@media (max-width: 575px) {
+  .blog-details-left-wrap .blog-details-text .blog-title {
+    font-size: 22px;
+  }
 }
 .blog-details-left-wrap .blog-details-text .desc {
   font-weight: var(--fa-fw-medium);
@@ -10705,6 +10733,10 @@ START: Theme Blog Details CSS
   border-radius: 50px;
 }
 .blog-details-left-wrap .check-style-3 .title {
+  display: block;
+  font-size: 24px;
+  color: var(--fa-color-heading-primary);
+  font-family: var(--fa-ff-heading);
   font-weight: var(--fa-fw-bold);
   margin-bottom: 20px;
 }
@@ -10759,6 +10791,9 @@ START: Theme Blog Details CSS
   margin-bottom: 40px;
 }
 .blog-details-left-wrap .blog-info-wrap .blog-text .title {
+  font-size: 24px;
+  font-family: var(--fa-ff-heading);
+  color: var(--fa-color-heading-primary);
   font-weight: var(--fa-fw-bold);
   margin-bottom: 20px;
 }
@@ -10915,6 +10950,10 @@ blockquote p {
 }
 
 .fa-comments-wrap .comments-title .title {
+  display: block;
+  font-size: 24px;
+  color: var(--fa-color-heading-primary);
+  font-family: var(--fa-ff-heading);
   font-weight: var(--fa-fw-bold);
   margin-bottom: 30px;
 }
@@ -11158,7 +11197,7 @@ blockquote p {
      -moz-column-gap: 30px;
           column-gap: 30px;
   row-gap: 20px;
-  width: calc(100% - 75px);
+  width: calc(100% - 150px);
 }
 .fa-latest-comments ul .fa-comment .comment-content .commment-author .comment-avatar .avatar-images {
   max-width: 200px;
@@ -11174,6 +11213,7 @@ blockquote p {
 }
 .fa-latest-comments ul .fa-comment .comment-content .commment-author .comment-avatar .avatar-name .title {
   display: inline-block;
+  font-size: 24px;
   font-weight: var(--fa-fw-sbold);
   margin-bottom: 10px;
 }
@@ -11226,6 +11266,10 @@ blockquote p {
   margin-bottom: 20px;
 }
 .fa-comment-respond .comment-header .title {
+  display: block;
+  font-size: 24px;
+  color: var(--fa-color-heading-primary);
+  font-family: var(--fa-ff-heading);
   font-weight: var(--fa-fw-bold);
   margin-bottom: 20px;
 }

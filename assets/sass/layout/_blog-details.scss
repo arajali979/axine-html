@@ -28,8 +28,19 @@ START: Theme Blog Details CSS
 		max-width: 815px;
 		width: 100%;
 		.blog-title {
+			display: block;
+			font-size: 30px;
+			font-family: var(--fa-ff-heading);
+			color: var(--fa-color-heading-primary);
 			font-weight: var(--fa-fw-bold);
-			margin-bottom: 20px;
+			margin-bottom: 12px;
+			line-height: 1.2;
+			@media #{$sm} {
+				font-size: 24px;
+			}
+			@media #{$xs} {
+				font-size: 22px;
+			}
 		}
 		.desc {
 			font-weight: var(--fa-fw-medium);
@@ -46,6 +57,10 @@ START: Theme Blog Details CSS
 	}
 	.check-style-3 {
 		.title {
+			display: block;
+			font-size: 24px;
+			color: var(--fa-color-heading-primary);
+			font-family: var(--fa-ff-heading);
 			font-weight: var(--fa-fw-bold);
 			margin-bottom: 20px;
 		}
@@ -89,6 +104,9 @@ START: Theme Blog Details CSS
 		.blog-text {
 			margin-bottom: 40px;
 			.title {
+				font-size: 24px;
+				font-family: var(--fa-ff-heading);
+				color: var(--fa-color-heading-primary);
 				font-weight: var(--fa-fw-bold);
 				margin-bottom: 20px;
 			}
@@ -219,6 +237,10 @@ blockquote {
 .fa-comments-wrap {
 	.comments-title {
 		.title {
+			display: block;
+			font-size: 24px;
+			color: var(--fa-color-heading-primary);
+			font-family: var(--fa-ff-heading);
 			font-weight: var(--fa-fw-bold);
 			margin-bottom: 30px;
 		}
@@ -430,7 +452,7 @@ blockquote {
 						align-items: center;
 						column-gap: 30px;
 						row-gap: 20px;
-						width: calc(100% - 75px);
+						width: calc(100% - 150px);
 						.avatar-images {
 							max-width: 200px;
 							height: 150px;
@@ -445,6 +467,7 @@ blockquote {
 						.avatar-name {
 							.title {
 								display: inline-block;
+								font-size: 24px;
 								font-weight: var(--fa-fw-sbold);
 								margin-bottom: 10px;
 							}
@@ -497,6 +520,10 @@ blockquote {
 	.comment-header {
 		margin-bottom: 20px;
 		.title {
+			display: block;
+			font-size: 24px;
+			color: var(--fa-color-heading-primary);
+			font-family: var(--fa-ff-heading);
 			font-weight: var(--fa-fw-bold);
 			margin-bottom: 20px;
 		}

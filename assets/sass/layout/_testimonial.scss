@@ -185,6 +185,9 @@ START: Theme Testimonial CSS
 			}
 			.author-name {
 				display: block;
+				font-size: 24px;
+				font-family: var(--fa-ff-heading);
+				color: var(--fa-color-heading-primary);
 				font-weight: var(--fa-fw-sbold);
 				line-height: 1.8;
 			}

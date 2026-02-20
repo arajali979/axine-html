@@ -80,8 +80,10 @@ START: Theme Item List CSS
 }
 
 .fa_search_wrapper .search_form form .search_input .title {
+	display: block;
 	color: var(--fa-color-common-white);
 	font-size: 30px;
+	font-family: var(--fa-ff-heading);
 	font-weight: var(--fa-fw-bold);
 	text-align: center;
 	margin-bottom: 30px;
