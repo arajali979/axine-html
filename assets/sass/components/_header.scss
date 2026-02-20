@@ -112,7 +112,7 @@ START: Theme Header CSS
 			width: 100%;
 		}
 	}
-	@media #{$lg, $xs} {
+	@media #{$xl, $lg, $xs} {
 		max-width: 135px;
 	}
 }

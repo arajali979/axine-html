@@ -1,8 +1,8 @@
 /*-----------------------------------------------------------------------------------
 
     Theme Name: Axine - Digital Agency HTML Template
-    Author: webplateone
-    Support: webplateone@gmail.com
+    Author: mdfahimattari4
+    Support: mdfahimattari4@gmail.com
     Description: Axine - Digital Agency HTML Template
 
 -----------------------------------------------------------------------------------
@@ -1455,7 +1455,7 @@ START: Theme Header CSS
 .site-logo a img {
   width: 100%;
 }
-@media only screen and (min-width: 992px) and (max-width: 1199px), (max-width: 575px) {
+@media only screen and (min-width: 1200px) and (max-width: 1399px), only screen and (min-width: 992px) and (max-width: 1199px), (max-width: 575px) {
   .footer-logo,
   .site-logo {
     max-width: 135px;
@@ -9326,7 +9326,7 @@ START: Theme Counter CSS
     display: none;
   }
   .counter-main-wrapper .counter-item .number-count .fa-count {
-    font-size: 60px;
+    font-size: 45px;
   }
   .counter-main-wrapper .counter-item .number-count .subtitle {
     font-size: 20px;
