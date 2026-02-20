@@ -10575,8 +10575,14 @@ START: Theme Blog CSS
   width: 100%;
 }
 .blog-inner-item .blog-content .blog-title {
+  font-size: 30px;
   font-weight: var(--fa-fw-bold);
   margin-bottom: 0;
+}
+@media (max-width: 575px) {
+  .blog-inner-item .blog-content .blog-title {
+    font-size: 22px;
+  }
 }
 .blog-inner-item .blog-content .desc {
   font-weight: var(--fa-fw-medium);
@@ -10967,8 +10973,11 @@ blockquote p {
   z-index: 1;
 }
 .fa-sidebar__widget .widget-title {
+  display: block;
   color: var(--fa-color-heading-primary);
   position: relative;
+  font-size: 24px;
+  font-family: var(--fa-color-grey-17);
   font-weight: var(--fa-fw-bold);
   margin-bottom: 20px;
   line-height: 1;
@@ -11214,6 +11223,8 @@ blockquote p {
 .fa-latest-comments ul .fa-comment .comment-content .commment-author .comment-avatar .avatar-name .title {
   display: inline-block;
   font-size: 24px;
+  color: var(--fa-color-heading-primary);
+  font-family: var(--fa-ff-heading);
   font-weight: var(--fa-fw-sbold);
   margin-bottom: 10px;
 }

@@ -255,8 +255,11 @@ blockquote {
 	padding: 40px 35px;
 	z-index: 1;
 	.widget-title {
+		display: block;
 		color: var(--fa-color-heading-primary);
 		position: relative;
+		font-size: 24px;
+		font-family: var(--fa-color-grey-17);
 		font-weight: var(--fa-fw-bold);
 		margin-bottom: 20px;
 		line-height: 1;
@@ -468,6 +471,8 @@ blockquote {
 							.title {
 								display: inline-block;
 								font-size: 24px;
+								color: var(--fa-color-heading-primary);
+								font-family: var(--fa-ff-heading);
 								font-weight: var(--fa-fw-sbold);
 								margin-bottom: 10px;
 							}
