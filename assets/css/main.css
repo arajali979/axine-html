@@ -6731,6 +6731,10 @@ START: Theme Project Details CSS
   }
 }
 
+.extra-title {
+  display: none;
+}
+
 .portfolio-details-main-wrapper .portfolio-images {
   -webkit-mask-image: url(../images/shapes/project-details-shape.svg);
           mask-image: url(../images/shapes/project-details-shape.svg);
