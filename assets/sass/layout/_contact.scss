@@ -47,7 +47,14 @@ START: Theme Contact CSS
 			}
 		}
 		.contact-images-group {
+			max-width: 485px;
 			bottom: 0;
+			@media #{$xl} {
+				max-width: 400px;
+			}
+			@media #{$lg} {
+				max-width: 350px;
+			}
 		}
 	}
 }
@@ -81,6 +88,9 @@ START: Theme Contact CSS
 			column-gap: 8px;
 			font-weight: var(--fa-fw-sbold);
 			margin-bottom: 0;
+		}
+		@media #{$xl} {
+			padding: 30px 20px;
 		}
 	}
 	@media #{$lg} {

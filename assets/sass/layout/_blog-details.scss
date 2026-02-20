@@ -163,6 +163,9 @@ START: Theme Blog Details CSS
 				border: 1px solid var(--fa-color-border-4);
 				padding: 11px 25px;
 				border-radius: 50px;
+				@media #{$xs} {
+					padding: 11px 20px;
+				}
 			}
 		}
 	}

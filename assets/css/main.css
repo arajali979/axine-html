@@ -5150,7 +5150,18 @@ START: Theme Contact CSS
   color: var(--fa-color-text-body);
 }
 .contact-inner-section .footer-contact-area .contact-images-group {
+  max-width: 485px;
   bottom: 0;
+}
+@media only screen and (min-width: 1200px) and (max-width: 1399px) {
+  .contact-inner-section .footer-contact-area .contact-images-group {
+    max-width: 400px;
+  }
+}
+@media only screen and (min-width: 992px) and (max-width: 1199px) {
+  .contact-inner-section .footer-contact-area .contact-images-group {
+    max-width: 350px;
+  }
 }
 
 .contact-main-wrapper {
@@ -5201,6 +5212,11 @@ START: Theme Contact CSS
           column-gap: 8px;
   font-weight: var(--fa-fw-sbold);
   margin-bottom: 0;
+}
+@media only screen and (min-width: 1200px) and (max-width: 1399px) {
+  .contact-main-wrapper .contact-item {
+    padding: 30px 20px;
+  }
 }
 @media only screen and (min-width: 992px) and (max-width: 1199px) {
   .contact-main-wrapper {
@@ -10832,6 +10848,11 @@ START: Theme Blog Details CSS
   border: 1px solid var(--fa-color-border-4);
   padding: 11px 25px;
   border-radius: 50px;
+}
+@media (max-width: 575px) {
+  .blog-tags-list ul li a {
+    padding: 11px 20px;
+  }
 }
 
 .blog-media-list ul {
