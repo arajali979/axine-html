@@ -15,7 +15,10 @@ Mobile Menu Js
 		$this.css("background-image", "url(" + $image + ")");
 	});
 
-	// Preloader js
+	// Preloader Js
+	$(window).on("load", function () {
+		$(".preloader").fadeOut(300);
+	});
 
 	// Sticky Js
 	var lastScrollTop = "";
@@ -99,6 +102,19 @@ Mobile Menu Js
 	// Nice Select Js
 	if ($("select").length > 0) {
 		$("select").niceSelect();
+	}
+
+	// Video Js
+	var popupvideos = $(".popup-videos-button");
+	if (popupvideos.length) {
+		$(".popup-videos-button").magnificPopup({
+			disableOn: 10,
+			type: "iframe",
+			mainClass: "mfp-fade",
+			removalDelay: 160,
+			preloader: false,
+			fixedContentPos: false,
+		});
 	}
 
 	// Project Hover Js
