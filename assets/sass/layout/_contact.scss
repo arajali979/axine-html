@@ -1,0 +1,96 @@
+@use "../utilities" as *;
+
+/**----------------------------------------
+START: Theme Contact CSS
+----------------------------------------*/
+.contact-inner-section {
+	.footer-contact-area {
+		.heading-area {
+			.sub-title {
+				-webkit-text-fill-color: var(--fa-color-common-white);
+			}
+			.sec-title {
+				background: linear-gradient(
+					-90deg,
+					var(--fa-color-common-white) 0%,
+					var(--fa-color-theme-bg) 71.63%
+				);
+				-webkit-background-clip: text;
+				-webkit-text-fill-color: transparent;
+				background-clip: text;
+			}
+		}
+		.contact-item form {
+			.form-input {
+				&:last-child {
+					margin-bottom: 0;
+				}
+				textarea,
+				input[type="tel"],
+				input[type="email"],
+				input[type="text"] {
+					color: var(--fa-color-heading-primary);
+					&::-ms-input-placeholder {
+						color: var(--fa-color-text-body);
+					}
+					&::placeholder {
+						color: var(--fa-color-text-body);
+					}
+				}
+			}
+		}
+		.fa-select {
+			.nice-select {
+				span {
+					color: var(--fa-color-text-body);
+				}
+			}
+		}
+		.contact-images-group {
+			bottom: 0;
+		}
+	}
+}
+
+.contact-main-wrapper {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	column-gap: 24px;
+	align-items: center;
+	padding-top: 80px;
+	.contact-item {
+		display: flex;
+		align-items: center;
+		column-gap: 20px;
+		background: var(--fa-color-common-white);
+		border: 1px solid var(--fa-color-border-4);
+		box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.08);
+		padding: 30px 30px;
+		border-radius: 15px;
+		.sub-title {
+			display: block;
+			font-weight: var(--fa-fw-sbold);
+			text-transform: uppercase;
+			letter-spacing: 0.05em;
+			margin-bottom: 4px;
+		}
+		.contact-title {
+			display: flex;
+			align-items: center;
+			column-gap: 8px;
+			font-weight: var(--fa-fw-sbold);
+			margin-bottom: 0;
+		}
+	}
+}
+
+.google-map-wrapper {
+	padding-top: 80px;
+	padding-bottom: 150px;
+	iframe {
+		width: 100%;
+		height: 500px;
+		border-radius: 50px;
+	}
+}
+/* !END: Theme Contact CSS */
