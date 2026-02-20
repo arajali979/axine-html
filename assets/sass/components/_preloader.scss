@@ -10,7 +10,7 @@ START: Theme Preloader CSS
 	right: 0;
 	bottom: 0;
 	z-index: 99999;
-	background-color: var(--fa-color-theme-primary);
+	background-color: var(--fa-color-common-white);
 	display: flex;
 	align-items: center;
 	justify-content: center;
@@ -29,8 +29,8 @@ START: Theme Preloader CSS
 
 .loading {
 	border: 1px solid transparent;
-	border-color: transparent var(--fa-color-common-white) transparent
-		var(--fa-color-common-white);
+	border-color: transparent var(--fa-color-theme-secondary) transparent
+		var(--fa-color-theme-secondary);
 	animation: rotate-loading 1.5s linear 0s infinite normal;
 	transform-origin: 50% 50%;
 }
