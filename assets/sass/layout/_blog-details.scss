@@ -181,6 +181,11 @@ START: Theme Blog Details CSS
 				border: 1px solid var(--fa-color-border-4);
 				padding: 11px 25px;
 				border-radius: 50px;
+				&:hover {
+					color: var(--fa-color-common-white);
+					background: var(--fa-color-theme-secondary);
+					border-color: var(--fa-color-theme-secondary);
+				}
 				@media #{$xs} {
 					padding: 11px 20px;
 				}
@@ -199,6 +204,13 @@ START: Theme Blog Details CSS
 				color: var(--fa-color-heading-primary);
 				font-size: 24px;
 				font-weight: var(--fa-fw-sbold);
+			}
+			a {
+				&:hover {
+					img {
+						animation: gelatine 0.6s;
+					}
+				}
 			}
 		}
 	}
@@ -480,6 +492,9 @@ blockquote {
 							max-width: 200px;
 							height: 150px;
 							width: 100%;
+							position: relative;
+							overflow: hidden;
+							border-radius: 20px;
 							img {
 								width: 100%;
 								height: 100%;
@@ -517,6 +532,9 @@ blockquote {
 							column-gap: 15px;
 							color: var(--fa-color-heading-primary);
 							font-weight: var(--fa-fw-sbold);
+							&:hover {
+								color: var(--fa-color-theme-primary);
+							}
 						}
 					}
 				}

@@ -11205,6 +11205,11 @@ START: Theme Blog Details CSS
   padding: 11px 25px;
   border-radius: 50px;
 }
+.blog-tags-list ul li a:hover {
+  color: var(--fa-color-common-white);
+  background: var(--fa-color-theme-secondary);
+  border-color: var(--fa-color-theme-secondary);
+}
 @media (max-width: 575px) {
   .blog-tags-list ul li a {
     padding: 11px 20px;
@@ -11226,6 +11231,10 @@ START: Theme Blog Details CSS
   color: var(--fa-color-heading-primary);
   font-size: 24px;
   font-weight: var(--fa-fw-sbold);
+}
+.blog-media-list ul li a:hover img {
+  -webkit-animation: gelatine 0.6s;
+          animation: gelatine 0.6s;
 }
 
 blockquote {
@@ -11544,6 +11553,9 @@ blockquote p {
   max-width: 200px;
   height: 150px;
   width: 100%;
+  position: relative;
+  overflow: hidden;
+  border-radius: 20px;
 }
 .fa-latest-comments ul .fa-comment .comment-content .commment-author .comment-avatar .avatar-images img {
   width: 100%;
@@ -11589,6 +11601,9 @@ blockquote p {
           column-gap: 15px;
   color: var(--fa-color-heading-primary);
   font-weight: var(--fa-fw-sbold);
+}
+.fa-latest-comments ul .fa-comment .comment-content .commment-author .reply-button .reply-btn:hover {
+  color: var(--fa-color-theme-primary);
 }
 .fa-latest-comments ul .fa-comment .desc {
   margin-top: 20px;
