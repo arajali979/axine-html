@@ -89,6 +89,25 @@ START: Theme Contact CSS
 			column-gap: 8px;
 			font-weight: var(--fa-fw-sbold);
 			margin-bottom: 0;
+			a {
+				position: relative;
+				&::before {
+					position: absolute;
+					content: "";
+					bottom: 0px;
+					inset-inline-end: 0;
+					width: 0;
+					left: 0;
+					height: 1px;
+					background: var(--fa-color-heading-primary);
+				}
+				&:hover {
+					&::before {
+						width: 100%;
+						animation: linehover 0.8s linear;
+					}
+				}
+			}
 		}
 		&:hover {
 			.contact-icon {

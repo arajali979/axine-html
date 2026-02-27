@@ -238,23 +238,31 @@ START: Theme Project CSS
 		}
 	}
 	@media #{$lg} {
-		img {
-			height: 615px;
+		.project-image {
+			img {
+				height: 615px;
+			}
 		}
 	}
 	@media #{$lg} {
-		img {
-			height: 615px;
+		.project-image {
+			img {
+				height: 615px;
+			}
 		}
 	}
 	@media #{$md} {
-		img {
-			height: 565px;
+		.project-image {
+			img {
+				height: 565px;
+			}
 		}
 	}
 	@media #{$sm} {
-		img {
-			height: 495px;
+		.project-image {
+			img {
+				height: 495px;
+			}
 		}
 	}
 	@media #{$xs} {
@@ -264,9 +272,11 @@ START: Theme Project CSS
 				margin-bottom: 20px;
 			}
 		}
-		img {
-			height: 395px;
-			border-radius: 15px 15px 0 0;
+		.project-image {
+			img {
+				height: 395px;
+				border-radius: 15px 15px 0 0;
+			}
 		}
 	}
 }
