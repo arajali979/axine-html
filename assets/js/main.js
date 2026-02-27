@@ -18,6 +18,9 @@
 // Testimonial Swiper Js
 // Brand Slider Js
 // Testimonial Slider Js
+// Image Js
+// Text Effect Animation Js
+// Arrange on Scroll Animation Js
 
 ****************************************************/
 
