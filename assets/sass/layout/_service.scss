@@ -494,6 +494,13 @@ START: Theme Service CSS
 		right: 0;
 		border-radius: 20px;
 	}
+	&:hover {
+		.service-icon {
+			img {
+				animation: gelatine 0.6s;
+			}
+		}
+	}
 	@media #{$xxl} {
 		.service-icon {
 			width: 100px;

@@ -352,6 +352,7 @@ blockquote {
 			max-width: 140px;
 			width: 100%;
 			overflow: hidden;
+			border-radius: 10px;
 			a {
 				display: inline-block;
 				width: 100%;
@@ -369,6 +370,20 @@ blockquote {
 				font-weight: var(--fa-fw-bold);
 				margin-bottom: 0px;
 				line-height: 1.5;
+				a {
+					display: inline;
+					background-image: linear-gradient(
+						to top,
+						currentColor 0%,
+						currentColor 100%
+					);
+					background-size: 0 1px;
+					background-repeat: no-repeat;
+					background-position: 0 100%;
+					&:hover {
+						background-size: 100% 1px;
+					}
+				}
 			}
 			.blog-meta {
 				ul {
@@ -403,6 +418,11 @@ blockquote {
 					font-size: 18px;
 					font-weight: var(--fa-fw-sbold);
 					padding: 16px 25px;
+					border-radius: 8px;
+					&:hover {
+						color: var(--fa-color-common-white);
+						background: var(--fa-color-theme-secondary);
+					}
 				}
 			}
 		}
@@ -581,6 +601,11 @@ blockquote {
 		border-radius: 8px;
 		padding: 16px 20px;
 		line-height: 1;
+		&:hover {
+			color: var(--fa-color-common-white);
+			background: var(--fa-color-theme-secondary);
+			border: 1px solid var(--fa-color-theme-secondary);
+		}
 	}
 }
 /* !END: Theme Blog Details CSS */

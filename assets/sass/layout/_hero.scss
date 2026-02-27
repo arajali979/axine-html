@@ -477,7 +477,6 @@ START: Theme Hero CSS
 			content: "";
 			top: 50%;
 			left: 50%;
-			transform: translate(-50%, -50%);
 			width: 210px;
 			height: 210px;
 			mask-image: url(../images/shapes/blog-shapes.svg);
@@ -485,6 +484,7 @@ START: Theme Hero CSS
 			mask-position: center;
 			mask-size: contain;
 			background: var(--fa-color-common-white);
+			animation: contactrotate 20s infinite linear;
 		}
 	}
 	@media #{$xl, $lg} {

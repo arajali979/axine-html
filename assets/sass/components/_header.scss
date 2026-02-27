@@ -309,6 +309,16 @@ START: Theme Header CSS
 		color: var(--fa-color-common-white);
 		font-family: var(--fa-ff-heading);
 		font-weight: var(--fa-fw-bold);
+		span {
+			display: flex;
+			position: relative;
+			top: 4px;
+		}
+		&:hover {
+			span {
+				animation: gelatine 0.6s;
+			}
+		}
 	}
 }
 
@@ -317,6 +327,14 @@ START: Theme Header CSS
 		display: flex;
 		align-items: center;
 		column-gap: 20px;
+		li {
+			a {
+				display: inline-block;
+				&:hover {
+					animation: gelatine 0.6s;
+				}
+			}
+		}
 	}
 }
 
@@ -342,6 +360,22 @@ START: Theme Header CSS
 		display: inline-flex;
 		font-size: 30px;
 		color: var(--fa-color-common-white);
+	}
+}
+
+@keyframes gelatine {
+	from,
+	to {
+		transform: scale(1, 1);
+	}
+	25% {
+		transform: scale(0.7, 1.1);
+	}
+	50% {
+		transform: scale(1.1, 0.7);
+	}
+	75% {
+		transform: scale(0.95, 1.05);
 	}
 }
 /* !END: Theme Header CSS */

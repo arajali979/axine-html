@@ -135,7 +135,10 @@ START: Theme Process CSS
 		line-height: 1.7;
 	}
 	.process-images {
+		position: relative;
 		margin-top: 30px;
+		overflow: hidden;
+		border-radius: 50%;
 		img {
 			border-radius: 50%;
 		}

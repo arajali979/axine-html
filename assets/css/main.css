@@ -421,6 +421,16 @@ img {
   max-width: 1640px;
 }
 
+.img-reveal img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  -webkit-transform-origin: center;
+      -ms-transform-origin: center;
+          transform-origin: center;
+  -webkit-transition: all 0.4s linear 0s;
+  transition: all 0.4s linear 0s;
+}
+
 /**
   Buttons CSS
 */
@@ -527,11 +537,43 @@ img {
 .read-more-btn .read-more-link::before {
   position: absolute;
   content: "";
+  bottom: 3px;
+  inset-inline-end: 0;
   width: 100%;
-  height: 1px;
   left: 0;
-  bottom: 4px;
+  height: 1px;
   background: var(--fa-color-text-body);
+}
+.read-more-btn span {
+  position: relative;
+  overflow: hidden;
+}
+.read-more-btn span img {
+  position: relative;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+.read-more-btn span img:last-child {
+  position: absolute;
+  top: 0;
+  left: 0;
+  -webkit-transform: translateX(-150%);
+      -ms-transform: translateX(-150%);
+          transform: translateX(-150%);
+}
+.read-more-btn:hover .read-more-link::before {
+  -webkit-animation: linehover 0.8s linear;
+          animation: linehover 0.8s linear;
+}
+.read-more-btn:hover span img:first-child {
+  -webkit-transform: translateX(150%);
+      -ms-transform: translateX(150%);
+          transform: translateX(150%);
+}
+.read-more-btn:hover span img:last-child {
+  -webkit-transform: translateX(0);
+      -ms-transform: translateX(0);
+          transform: translateX(0);
 }
 
 .view-blog-btn {
@@ -560,6 +602,8 @@ img {
 .view-blog-btn::before {
   position: absolute;
   content: "";
+  top: 50%;
+  left: 50%;
   width: 100%;
   height: 100%;
   -webkit-mask-image: url(../images/shapes/blog-shapes.svg);
@@ -571,6 +615,8 @@ img {
   -webkit-mask-size: contain;
           mask-size: contain;
   background: var(--fa-color-theme-primary);
+  -webkit-animation: contactrotate 20s infinite linear;
+          animation: contactrotate 20s infinite linear;
 }
 .view-blog-btn:hover {
   color: var(--fa-color-grey-4);
@@ -1681,6 +1727,17 @@ START: Theme Header CSS
   font-family: var(--fa-ff-heading);
   font-weight: var(--fa-fw-bold);
 }
+.header-search .search span {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+  top: 4px;
+}
+.header-search .search:hover span {
+  -webkit-animation: gelatine 0.6s;
+          animation: gelatine 0.6s;
+}
 
 .header-social-media ul {
   display: -webkit-box;
@@ -1692,6 +1749,13 @@ START: Theme Header CSS
   -webkit-column-gap: 20px;
      -moz-column-gap: 20px;
           column-gap: 20px;
+}
+.header-social-media ul li a {
+  display: inline-block;
+}
+.header-social-media ul li a:hover {
+  -webkit-animation: gelatine 0.6s;
+          animation: gelatine 0.6s;
 }
 
 .menu-bar {
@@ -1723,6 +1787,43 @@ START: Theme Header CSS
   color: var(--fa-color-common-white);
 }
 
+@-webkit-keyframes gelatine {
+  from, to {
+    -webkit-transform: scale(1, 1);
+            transform: scale(1, 1);
+  }
+  25% {
+    -webkit-transform: scale(0.7, 1.1);
+            transform: scale(0.7, 1.1);
+  }
+  50% {
+    -webkit-transform: scale(1.1, 0.7);
+            transform: scale(1.1, 0.7);
+  }
+  75% {
+    -webkit-transform: scale(0.95, 1.05);
+            transform: scale(0.95, 1.05);
+  }
+}
+
+@keyframes gelatine {
+  from, to {
+    -webkit-transform: scale(1, 1);
+            transform: scale(1, 1);
+  }
+  25% {
+    -webkit-transform: scale(0.7, 1.1);
+            transform: scale(0.7, 1.1);
+  }
+  50% {
+    -webkit-transform: scale(1.1, 0.7);
+            transform: scale(1.1, 0.7);
+  }
+  75% {
+    -webkit-transform: scale(0.95, 1.05);
+            transform: scale(0.95, 1.05);
+  }
+}
 /* !END: Theme Header CSS */
 /**----------------------------------------
 START: Theme Footer CSS
@@ -1846,6 +1947,9 @@ START: Theme Footer CSS
   font-size: 18px;
   font-family: var(--fa-ff-heading);
   font-weight: var(--fa-fw-sbold);
+}
+.fa-footer-area.v-3 .footer-copyright-area .copyright-2-wrapper p a:hover {
+  color: var(--fa-color-theme-primary);
 }
 
 .footer-contact-area {
@@ -2040,6 +2144,19 @@ START: Theme Footer CSS
   position: absolute;
   right: 0;
   top: 0;
+  -webkit-transition: all 0.3s linear;
+  transition: all 0.3s linear;
+  overflow: hidden;
+}
+.footer-widget.widget-infos form .footer-search button img {
+  position: relative;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+.footer-widget.widget-infos form .footer-search button:hover img {
+  -webkit-transform: scale(1.1);
+      -ms-transform: scale(1.1);
+          transform: scale(1.1);
 }
 @media only screen and (min-width: 768px) and (max-width: 991px) {
   .footer-widget.widget-infos {
@@ -2052,9 +2169,6 @@ START: Theme Footer CSS
   }
 }
 .footer-widget.widget-nav-menu ul li {
-  line-height: 40px;
-}
-.footer-widget.widget-nav-menu ul li a {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -2068,6 +2182,41 @@ START: Theme Footer CSS
   color: var(--fa-color-grey-2);
   font-weight: var(--fa-fw-sbold);
   font-family: var(--fa-ff-heading);
+  margin-bottom: 10px;
+}
+.footer-widget.widget-nav-menu ul li:last-child {
+  margin-bottom: 0;
+}
+.footer-widget.widget-nav-menu ul li a {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-column-gap: 10px;
+     -moz-column-gap: 10px;
+          column-gap: 10px;
+  font-size: 18px;
+  color: var(--fa-color-grey-2);
+  font-weight: var(--fa-fw-sbold);
+  font-family: var(--fa-ff-heading);
+  position: relative;
+}
+.footer-widget.widget-nav-menu ul li a::before {
+  position: absolute;
+  content: "";
+  bottom: 0px;
+  inset-inline-end: 0;
+  width: 0;
+  left: 0;
+  height: 1px;
+  background: var(--fa-color-grey-2);
+}
+.footer-widget.widget-nav-menu ul li a:hover::before {
+  width: 100%;
+  -webkit-animation: linehover 0.8s linear;
+          animation: linehover 0.8s linear;
 }
 .footer-widget.widget-location-infos .location-infos-wrap {
   display: -webkit-box;
@@ -2199,6 +2348,9 @@ START: Theme Footer CSS
   font-weight: var(--fa-fw-sbold);
   margin-bottom: 0;
 }
+.copyright-wrapper p a:hover {
+  color: var(--fa-color-theme-primary);
+}
 @media (max-width: 575px) {
   .copyright-wrapper p {
     font-size: 18px;
@@ -2329,6 +2481,7 @@ START: Theme Footer CSS
   width: 100%;
   padding-top: 35px;
   border-radius: 50px;
+  overflow: hidden;
   z-index: 2;
 }
 .contact-images-group img {
@@ -2449,6 +2602,32 @@ START: Theme Footer CSS
   font-weight: var(--fa-fw-sbold);
 }
 
+@-webkit-keyframes linehover {
+  0% {
+    width: 100%;
+  }
+  50% {
+    width: 0;
+    inset-inline-end: 0;
+  }
+  100% {
+    width: 100%;
+    inset-inline-start: 0;
+  }
+}
+@keyframes linehover {
+  0% {
+    width: 100%;
+  }
+  50% {
+    width: 0;
+    inset-inline-end: 0;
+  }
+  100% {
+    width: 100%;
+    inset-inline-start: 0;
+  }
+}
 @-webkit-keyframes marquee-slide {
   0% {
     -webkit-transform: translateX(0);
@@ -2459,7 +2638,6 @@ START: Theme Footer CSS
             transform: translateX(-100%);
   }
 }
-
 @keyframes marquee-slide {
   0% {
     -webkit-transform: translateX(0);
@@ -3516,9 +3694,6 @@ START: Theme Hero CSS
   content: "";
   top: 50%;
   left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-      -ms-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
   width: 210px;
   height: 210px;
   -webkit-mask-image: url(../images/shapes/blog-shapes.svg);
@@ -3530,6 +3705,8 @@ START: Theme Hero CSS
   -webkit-mask-size: contain;
           mask-size: contain;
   background: var(--fa-color-common-white);
+  -webkit-animation: contactrotate 20s infinite linear;
+          animation: contactrotate 20s infinite linear;
 }
 @media only screen and (min-width: 1200px) and (max-width: 1399px), only screen and (min-width: 992px) and (max-width: 1199px) {
   .hero-3-wrapper .hero-top-wrap .hero-text {
@@ -4317,8 +4494,11 @@ START: Theme About CSS
   row-gap: 20px;
 }
 .about-video-wrap .about-content .about-images {
+  position: relative;
   max-width: 600px;
   width: 100%;
+  overflow: hidden;
+  border-radius: 50px;
 }
 .about-video-wrap .about-content .about-images img {
   width: 100%;
@@ -4366,6 +4546,8 @@ START: Theme About CSS
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
+  -webkit-animation: contactrotate 20s infinite linear;
+          animation: contactrotate 20s infinite linear;
 }
 .about-video-wrap .about-video-btn .video-btn::after {
   position: absolute;
@@ -4382,6 +4564,14 @@ START: Theme About CSS
       -ms-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
   z-index: -1;
+}
+.about-video-wrap .about-video-btn .video-btn:hover::before {
+  -webkit-animation-play-state: paused;
+          animation-play-state: paused;
+}
+.about-video-wrap .about-video-btn .video-btn:hover img {
+  -webkit-animation: gelatine 0.6s;
+          animation: gelatine 0.6s;
 }
 @media only screen and (min-width: 1200px) and (max-width: 1399px) {
   .about-video-wrap {
@@ -4441,6 +4631,7 @@ START: Theme About CSS
   }
   .about-video-wrap .about-content .about-images {
     max-width: 100%;
+    border-radius: 15px;
   }
   .about-video-wrap .about-content .about-images img {
     border-radius: 15px;
@@ -5103,6 +5294,27 @@ START: Theme About CSS
   margin-top: 10px;
 }
 
+@-webkit-keyframes contactrotate {
+  from {
+    -webkit-transform: translate(-50%, -50%) rotate(0deg);
+            transform: translate(-50%, -50%) rotate(0deg);
+  }
+  to {
+    -webkit-transform: translate(-50%, -50%) rotate(360deg);
+            transform: translate(-50%, -50%) rotate(360deg);
+  }
+}
+
+@keyframes contactrotate {
+  from {
+    -webkit-transform: translate(-50%, -50%) rotate(0deg);
+            transform: translate(-50%, -50%) rotate(0deg);
+  }
+  to {
+    -webkit-transform: translate(-50%, -50%) rotate(360deg);
+            transform: translate(-50%, -50%) rotate(360deg);
+  }
+}
 /* !END: Theme About CSS */
 /**----------------------------------------
 START: Theme Contact CSS
@@ -5813,6 +6025,10 @@ START: Theme Service CSS
   right: 0;
   border-radius: 20px;
 }
+.service-style-3:hover .service-icon img {
+  -webkit-animation: gelatine 0.6s;
+          animation: gelatine 0.6s;
+}
 @media only screen and (min-width: 1400px) and (max-width: 1600px) {
   .service-style-3 .service-icon {
     width: 100px;
@@ -6376,6 +6592,11 @@ START: Theme Project CSS
       -ms-transform: translateY(0);
           transform: translateY(0);
 }
+.fa-project-section .swiper-wrapper .swiper-slide.swiper-slide-active .project-item:hover .project-image img {
+  -webkit-transform: scale(1.1) rotate(1deg);
+      -ms-transform: scale(1.1) rotate(1deg);
+          transform: scale(1.1) rotate(1deg);
+}
 .fa-project-section.v-2 {
   position: relative;
   background: var(--fa-color-common-white);
@@ -6511,7 +6732,12 @@ START: Theme Project CSS
   position: relative;
   opacity: 0.5;
 }
-.project-item::before {
+.project-item .project-image {
+  position: relative;
+  overflow: hidden;
+  border-radius: 50px 50px 0 0;
+}
+.project-item .project-image::before {
   position: absolute;
   content: "";
   bottom: 0;
@@ -6520,8 +6746,9 @@ START: Theme Project CSS
   height: 100%;
   background: -webkit-gradient(linear, left top, left bottom, color-stop(26.44%, rgba(24, 16, 52, 0)), to(rgba(24, 16, 52, 0.9)));
   background: linear-gradient(180deg, rgba(24, 16, 52, 0) 26.44%, rgba(24, 16, 52, 0.9) 100%);
+  z-index: 1;
 }
-.project-item img {
+.project-item .project-image img {
   border-radius: 50px 50px 0 0;
   height: 700px;
   -o-object-fit: cover;
@@ -6534,12 +6761,10 @@ START: Theme Project CSS
   left: 0;
   opacity: 0;
   visibility: hidden;
-  padding: 45px 40px;
-  -webkit-transform: translateY(30px);
-      -ms-transform: translateY(30px);
-          transform: translateY(30px);
-  -webkit-transition: all 0.6s ease;
-  transition: all 0.6s ease;
+  padding: 35px 40px;
+  -webkit-transition: all 0.4s ease;
+  transition: all 0.4s ease;
+  z-index: 2;
 }
 .project-item .project-content .sub-title {
   display: inline-block;
@@ -6554,6 +6779,12 @@ START: Theme Project CSS
   color: var(--fa-color-common-white);
   font-weight: var(--fa-fw-bold);
   margin-bottom: 0;
+}
+.project-item .project-content .project-title:hover a {
+  letter-spacing: 0.03em;
+}
+.project-item:hover .project-content {
+  bottom: 10px;
 }
 @media only screen and (min-width: 992px) and (max-width: 1199px) {
   .project-item img {
@@ -6659,6 +6890,12 @@ START: Theme Project CSS
   height: 100%;
   background: rgba(0, 0, 0, 0.3);
   border-radius: 50px;
+  z-index: 1;
+}
+.project-three-item .project-image {
+  position: relative;
+  overflow: hidden;
+  border-radius: 50px;
 }
 .project-three-item .project-image a img {
   border-radius: 50px;
@@ -6667,6 +6904,7 @@ START: Theme Project CSS
   position: absolute;
   left: 25px;
   bottom: 25px;
+  z-index: 2;
 }
 .project-three-item .project-content .project-title {
   font-weight: var(--fa-fw-bold);
@@ -6685,13 +6923,26 @@ START: Theme Project CSS
   background: var(--fa-color-theme-primary);
   padding: 6px 25px;
   border-radius: 80px;
-  margin-top: 10px;
+  margin-top: 20px;
+}
+.project-three-item:hover .project-content .project-title {
+  -webkit-transform: translateY(5px);
+      -ms-transform: translateY(5px);
+          transform: translateY(5px);
+}
+.project-three-item:hover .project-content .sub-title {
+  -webkit-transform: translateY(-5px);
+      -ms-transform: translateY(-5px);
+          transform: translateY(-5px);
 }
 @media (max-width: 575px) {
   .project-three-item {
     border-radius: 15px;
   }
   .project-three-item::before {
+    border-radius: 15px;
+  }
+  .project-three-item .project-image {
     border-radius: 15px;
   }
   .project-three-item .project-image a img {
@@ -7085,7 +7336,10 @@ START: Theme Process CSS
   line-height: 1.7;
 }
 .process-item .process-images {
+  position: relative;
   margin-top: 30px;
+  overflow: hidden;
+  border-radius: 50%;
 }
 .process-item .process-images img {
   border-radius: 50%;
@@ -8424,6 +8678,7 @@ START: Theme Team CSS
   background: -webkit-gradient(linear, left top, right top, color-stop(23.56%, rgba(255, 255, 255, 0)), color-stop(95%, var(--fa-color-theme-secondary)));
   background: linear-gradient(90deg, rgba(255, 255, 255, 0) 23.56%, var(--fa-color-theme-secondary) 95%);
   border-radius: 50px;
+  z-index: 1;
 }
 .team-style-2 .sub-title {
   display: inline-block;
@@ -8438,11 +8693,12 @@ START: Theme Team CSS
   padding: 18px 25px;
   border-radius: 50px;
   text-align: center;
+  z-index: 2;
   line-height: 1;
 }
 .team-style-2 .team-title {
   position: absolute;
-  right: -110px;
+  right: -210px;
   top: 50%;
   -webkit-transform: translateY(-50%) rotate(90deg);
       -ms-transform: translateY(-50%) rotate(90deg);
@@ -8451,6 +8707,13 @@ START: Theme Team CSS
   font-weight: var(--fa-fw-bold);
   color: var(--fa-color-common-white);
   margin-bottom: 0;
+  z-index: 2;
+}
+.team-style-2:hover .team-title {
+  right: -110px;
+}
+.team-style-2:hover .sub-title {
+  bottom: 30px;
 }
 .team-style-2:nth-child(even) .sub-title {
   background: var(--fa-color-theme-secondary);
@@ -9475,6 +9738,11 @@ START: Theme Choose CSS
   left: 0;
   background: -webkit-gradient(linear, left top, left bottom, color-stop(25%, rgba(255, 255, 255, 0)), color-stop(45%, var(--fa-color-common-white)));
   background: linear-gradient(180deg, rgba(255, 255, 255, 0) 25%, var(--fa-color-common-white) 45%);
+  z-index: 1;
+}
+.choose-item .choose-images {
+  position: relative;
+  overflow: hidden;
 }
 .choose-item .choose-images img {
   width: 100%;
@@ -9485,7 +9753,7 @@ START: Theme Choose CSS
 .choose-item .choose-content {
   position: relative;
   padding: 0px 30px 42px;
-  z-index: 1;
+  z-index: 2;
 }
 .choose-item .choose-content .choose-header {
   display: -webkit-box;
@@ -9526,6 +9794,10 @@ START: Theme Choose CSS
 }
 .choose-item .choose-content .choose-list ul li:last-child {
   margin-bottom: 0;
+}
+.choose-item:hover .choose-content .choose-header span img {
+  -webkit-animation: gelatine 0.6s;
+          animation: gelatine 0.6s;
 }
 @media only screen and (min-width: 992px) and (max-width: 1199px), only screen and (min-width: 768px) and (max-width: 991px), only screen and (min-width: 576px) and (max-width: 767px) {
   .choose-item {
@@ -10047,6 +10319,17 @@ START: Theme Blog CSS
   margin-bottom: 0;
   line-height: 1.3;
 }
+.blog-item .blog-content .blog-title a {
+  display: inline;
+  background-image: -webkit-gradient(linear, left bottom, left top, from(currentColor), to(currentColor));
+  background-image: linear-gradient(to top, currentColor 0%, currentColor 100%);
+  background-size: 0 2px;
+  background-repeat: no-repeat;
+  background-position: 0 100%;
+}
+.blog-item .blog-content .blog-title a:hover {
+  background-size: 100% 2px;
+}
 .blog-item .blog-content .read-more-btn {
   margin-top: 30px;
 }
@@ -10063,6 +10346,8 @@ START: Theme Blog CSS
 .blog-item .blog-images a img {
   width: 100%;
   border-radius: 24px;
+  -webkit-transition: all 0.4s linear 0s;
+  transition: all 0.4s linear 0s;
 }
 .blog-item.style-2 {
   border: 1px solid var(--fa-color-border-3);
@@ -10288,6 +10573,8 @@ START: Theme Blog CSS
   height: 445px;
   -o-object-fit: cover;
      object-fit: cover;
+  -webkit-transition: 0.4s all;
+  transition: 0.4s all;
 }
 .blog-item.style-3 .blog-images .blog-date {
   display: -webkit-inline-box;
@@ -10535,6 +10822,8 @@ START: Theme Blog CSS
 
 .blog-inner-item .blog-images {
   position: relative;
+  overflow: hidden;
+  border-radius: 50px;
 }
 .blog-inner-item .blog-images a {
   display: inline-block;
@@ -10591,6 +10880,17 @@ START: Theme Blog CSS
   font-weight: var(--fa-fw-bold);
   margin-bottom: 0;
 }
+.blog-inner-item .blog-content .blog-title a {
+  display: inline;
+  background-image: -webkit-gradient(linear, left bottom, left top, from(currentColor), to(currentColor));
+  background-image: linear-gradient(to top, currentColor 0%, currentColor 100%);
+  background-size: 0 2px;
+  background-repeat: no-repeat;
+  background-position: 0 100%;
+}
+.blog-inner-item .blog-content .blog-title a:hover {
+  background-size: 100% 2px;
+}
 @media (max-width: 575px) {
   .blog-inner-item .blog-content .blog-title {
     font-size: 22px;
@@ -10605,6 +10905,9 @@ START: Theme Blog CSS
   margin-top: 30px;
 }
 @media only screen and (min-width: 576px) and (max-width: 767px), (max-width: 575px) {
+  .blog-inner-item .blog-images {
+    border-radius: 15px;
+  }
   .blog-inner-item .blog-images a img {
     border-radius: 15px;
   }
@@ -11100,6 +11403,7 @@ blockquote p {
   max-width: 140px;
   width: 100%;
   overflow: hidden;
+  border-radius: 10px;
 }
 .fa-sidebar__widget.fa_recent_posts .post-thumb a {
   display: inline-block;
@@ -11117,6 +11421,17 @@ blockquote p {
   font-weight: var(--fa-fw-bold);
   margin-bottom: 0px;
   line-height: 1.5;
+}
+.fa-sidebar__widget.fa_recent_posts .post-content .post-title a {
+  display: inline;
+  background-image: -webkit-gradient(linear, left bottom, left top, from(currentColor), to(currentColor));
+  background-image: linear-gradient(to top, currentColor 0%, currentColor 100%);
+  background-size: 0 1px;
+  background-repeat: no-repeat;
+  background-position: 0 100%;
+}
+.fa-sidebar__widget.fa_recent_posts .post-content .post-title a:hover {
+  background-size: 100% 1px;
 }
 .fa-sidebar__widget.fa_recent_posts .post-content .blog-meta ul li {
   gap: 6px;
@@ -11154,6 +11469,11 @@ blockquote p {
   font-size: 18px;
   font-weight: var(--fa-fw-sbold);
   padding: 16px 25px;
+  border-radius: 8px;
+}
+.fa-sidebar__widget.widget_categories ul li a:hover {
+  color: var(--fa-color-common-white);
+  background: var(--fa-color-theme-secondary);
 }
 .fa-sidebar__widget.widget_information .desc {
   max-width: 345px;
@@ -11371,6 +11691,11 @@ blockquote p {
   border-radius: 8px;
   padding: 16px 20px;
   line-height: 1;
+}
+.tagcloud a:hover {
+  color: var(--fa-color-common-white);
+  background: var(--fa-color-theme-secondary);
+  border: 1px solid var(--fa-color-theme-secondary);
 }
 
 /* !END: Theme Blog Details CSS */

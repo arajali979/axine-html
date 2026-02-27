@@ -223,7 +223,7 @@
 		loop: true,
 		speed: 800,
 		autoplay: {
-			delay: 2500,
+			delay: 4500,
 			disableOnInteraction: false,
 		},
 		on: {
@@ -355,4 +355,84 @@
 			},
 		});
 	}
+
+	// Image Js
+	if (document.querySelectorAll(".img-reveal").length > 0) {
+		let imgReveal = document.querySelectorAll(".img-reveal");
+		imgReveal.forEach(element => {
+			let image = element.querySelector("img");
+			let tl = gsap.timeline({
+				scrollTrigger: {
+					trigger: element,
+					start: "top 80%",
+				},
+			});
+
+			tl.set(element, { autoAlpha: 1 });
+			tl.from(element, 1.4, {
+				opacity: 0,
+				ease: Power2.out,
+			});
+			tl.from(image, 1.4, {
+				scale: 1.4,
+				delay: -1.4,
+				ease: Power2.out,
+			});
+		});
+	}
+
+	// Text Effect Animation Js
+	if ($(".text-anim").length) {
+		let staggerAmount = 0.02,
+			translateXValue = rtlValue(20),
+			delayValue = 0.1,
+			easeType = "power2.out",
+			animatedTextElements = document.querySelectorAll(".text-anim");
+
+		animatedTextElements.forEach(element => {
+			let animationSplitText = new SplitText(element, {
+				type: "chars, words",
+			});
+			gsap.from(animationSplitText.chars, {
+				duration: 1,
+				delay: delayValue,
+				x: translateXValue,
+				autoAlpha: 0,
+				stagger: staggerAmount,
+				ease: easeType,
+				scrollTrigger: { trigger: element, start: "top 85%" },
+			});
+		});
+	}
+
+	// Arrange on Scroll Animation Js
+	function initArrangeAnim() {
+		const panelsContainers = document.querySelectorAll(".tj-arrange-container");
+		if (panelsContainers?.length) {
+			mediaMatch.add("(min-width: 992px)", () => {
+				panelsContainers.forEach((panelsContainer, idx) => {
+					const panels = panelsContainer.querySelectorAll(".tj-arrange-item");
+
+					const startOffset = 50;
+					panels.forEach((panel, i) => {
+						gsap.from(panel, {
+							xPercent: i % 2 === 0 ? rtlValue(-20) : rtlValue(20),
+							ease: "none",
+							scrollTrigger: {
+								trigger: panel,
+								start: `top bottom`,
+								end: `bottom bottom`,
+								pin: false,
+								pinSpacing: false,
+								scrub: true,
+								markers: false,
+								invalidateOnRefresh: true,
+							},
+						});
+					});
+				});
+			});
+		}
+	}
+	initArrangeAnim();
 })(jQuery);

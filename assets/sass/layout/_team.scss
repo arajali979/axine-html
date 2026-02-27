@@ -256,6 +256,7 @@ START: Theme Team CSS
 			var(--fa-color-theme-secondary) 95%
 		);
 		border-radius: 50px;
+		z-index: 1;
 	}
 	.sub-title {
 		display: inline-block;
@@ -270,17 +271,27 @@ START: Theme Team CSS
 		padding: 18px 25px;
 		border-radius: 50px;
 		text-align: center;
+		z-index: 2;
 		line-height: 1;
 	}
 	.team-title {
 		position: absolute;
-		right: -110px;
+		right: -210px;
 		top: 50%;
 		transform: translateY(-50%) rotate(90deg);
 		font-size: 50px;
 		font-weight: var(--fa-fw-bold);
 		color: var(--fa-color-common-white);
 		margin-bottom: 0;
+		z-index: 2;
+	}
+	&:hover {
+		.team-title {
+			right: -110px;
+		}
+		.sub-title {
+			bottom: 30px;
+		}
 	}
 	&:nth-child(even) {
 		.sub-title {

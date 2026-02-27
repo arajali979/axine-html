@@ -22,4 +22,16 @@
 		/* ------------- Match media Js -------------*/
 		let mediaMatch = gsap.matchMedia();
 	};
+
+	// wow Js
+	$(window).on("load", function () {
+		var wow = new WOW({
+			boxClass: "wow",
+			animateClass: "animated",
+			offset: 0,
+			mobile: true,
+			live: true,
+		});
+		wow.init();
+	});
 })(jQuery);

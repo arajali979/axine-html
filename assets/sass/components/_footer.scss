@@ -117,6 +117,11 @@ START: Theme Footer CSS
 					font-size: 18px;
 					font-family: var(--fa-ff-heading);
 					font-weight: var(--fa-fw-sbold);
+					a {
+						&:hover {
+							color: var(--fa-color-theme-primary);
+						}
+					}
 				}
 			}
 		}
@@ -279,6 +284,17 @@ START: Theme Footer CSS
 					position: absolute;
 					right: 0;
 					top: 0;
+					transition: all 0.3s linear;
+					overflow: hidden;
+					img {
+						position: relative;
+						transition: all 0.3s;
+					}
+					&:hover {
+						img {
+							transform: scale(1.1);
+						}
+					}
 				}
 			}
 		}
@@ -292,15 +308,42 @@ START: Theme Footer CSS
 	&.widget-nav-menu {
 		ul {
 			li {
-				line-height: 40px;
+				display: flex;
+				align-items: center;
+				column-gap: 10px;
+				font-size: 18px;
+				color: var(--fa-color-grey-2);
+				font-weight: var(--fa-fw-sbold);
+				font-family: var(--fa-ff-heading);
+				margin-bottom: 10px;
+				&:last-child {
+					margin-bottom: 0;
+				}
 				a {
-					display: flex;
+					display: inline-flex;
 					align-items: center;
 					column-gap: 10px;
 					font-size: 18px;
 					color: var(--fa-color-grey-2);
 					font-weight: var(--fa-fw-sbold);
 					font-family: var(--fa-ff-heading);
+					position: relative;
+					&::before {
+						position: absolute;
+						content: "";
+						bottom: 0px;
+						inset-inline-end: 0;
+						width: 0;
+						left: 0;
+						height: 1px;
+						background: var(--fa-color-grey-2);
+					}
+					&:hover {
+						&::before {
+							width: 100%;
+							animation: linehover 0.8s linear;
+						}
+					}
 				}
 			}
 		}
@@ -394,6 +437,11 @@ START: Theme Footer CSS
 		font-family: var(--fa-ff-heading);
 		font-weight: var(--fa-fw-sbold);
 		margin-bottom: 0;
+		a {
+			&:hover {
+				color: var(--fa-color-theme-primary);
+			}
+		}
 	}
 	@media #{$xs} {
 		p {
@@ -491,6 +539,7 @@ START: Theme Footer CSS
 	width: 100%;
 	padding-top: 35px;
 	border-radius: 50px;
+	overflow: hidden;
 	z-index: 2;
 	img {
 		border-radius: 50px;
@@ -594,6 +643,20 @@ START: Theme Footer CSS
 			font-size: 18px;
 			font-weight: var(--fa-fw-sbold);
 		}
+	}
+}
+
+@include keyframes(linehover) {
+	0% {
+		width: 100%;
+	}
+	50% {
+		width: 0;
+		inset-inline-end: 0;
+	}
+	100% {
+		width: 100%;
+		inset-inline-start: 0;
 	}
 }
 

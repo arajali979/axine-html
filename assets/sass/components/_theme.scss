@@ -322,3 +322,9 @@ img {
 .container-xxl {
 	max-width: 1640px;
 }
+
+.img-reveal img {
+	object-fit: cover;
+	transform-origin: center;
+	transition: all 0.4s linear 0s;
+}

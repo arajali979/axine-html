@@ -287,8 +287,11 @@ START: Theme About CSS
 		column-gap: 50px;
 		row-gap: 20px;
 		.about-images {
+			position: relative;
 			max-width: 600px;
 			width: 100%;
+			overflow: hidden;
+			border-radius: 50px;
 			img {
 				width: 100%;
 				border-radius: 50px;
@@ -329,6 +332,7 @@ START: Theme About CSS
 				background-repeat: no-repeat;
 				background-position: center;
 				background-size: cover;
+				animation: contactrotate 20s infinite linear;
 			}
 			&::after {
 				position: absolute;
@@ -343,6 +347,14 @@ START: Theme About CSS
 				background-position: center;
 				transform: translate(-50%, -50%);
 				z-index: -1;
+			}
+			&:hover {
+				&::before {
+					animation-play-state: paused;
+				}
+				img {
+					animation: gelatine 0.6s;
+				}
 			}
 		}
 	}
@@ -376,6 +388,7 @@ START: Theme About CSS
 			flex-direction: column;
 			.about-images {
 				max-width: 100%;
+				border-radius: 15px;
 				img {
 					border-radius: 15px;
 				}
@@ -892,6 +905,15 @@ START: Theme About CSS
 		font-family: var(--fa-ff-heading);
 		font-weight: var(--fa-fw-bold);
 		margin-top: 10px;
+	}
+}
+
+@keyframes contactrotate {
+	from {
+		transform: translate(-50%, -50%) rotate(0deg);
+	}
+	to {
+		transform: translate(-50%, -50%) rotate(360deg);
 	}
 }
 /* !END: Theme About CSS */
