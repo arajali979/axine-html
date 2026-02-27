@@ -90,6 +90,11 @@ START: Theme Contact CSS
 			font-weight: var(--fa-fw-sbold);
 			margin-bottom: 0;
 		}
+		&:hover {
+			.contact-icon {
+				animation: gelatine 0.6s;
+			}
+		}
 		@media #{$xl} {
 			padding: 30px 20px;
 		}
