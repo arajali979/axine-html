@@ -5319,6 +5319,10 @@ START: Theme About CSS
 /**----------------------------------------
 START: Theme Contact CSS
 ----------------------------------------*/
+.contact-inner-section {
+  position: relative;
+  overflow: hidden;
+}
 .contact-inner-section .footer-contact-area .heading-area .sub-title {
   -webkit-text-fill-color: var(--fa-color-common-white);
 }
