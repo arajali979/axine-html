@@ -48,15 +48,27 @@ START: Theme Header CSS
 				padding: 0 45px;
 				border-radius: 50px;
 				ul > {
-					li > {
+					li {
+						&.has-dropdown {
+							a {
+								padding-right: 20px;
+							}
+						}
 						a {
 							padding: 18px 0;
+						}
+						.sub-menu {
+							li > {
+								a {
+									padding: 4px 20px;
+								}
+							}
 						}
 					}
 				}
 			}
 			.mainmenu-right-infos {
-				column-gap: 90px;
+				column-gap: 30px;
 				.header-media-wrap {
 					display: flex;
 					align-items: center;
@@ -190,6 +202,7 @@ START: Theme Header CSS
 				transform-origin: 0 0;
 				text-align: left;
 				background-color: var(--fa-color-common-white);
+				box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.08);
 				transform: scaleY(0);
 				opacity: 0;
 				visibility: hidden;

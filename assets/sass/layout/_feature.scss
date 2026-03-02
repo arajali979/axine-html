@@ -62,8 +62,8 @@ START: Theme Feature CSS
 		background: var(--fa-color-common-white);
 		border-radius: 50%;
 		position: absolute;
-		top: -1px;
-		right: -1px;
+		top: -4px;
+		right: -4px;
 		z-index: 1;
 	}
 	.feature-item {
@@ -91,9 +91,8 @@ START: Theme Feature CSS
 		}
 		.item-shapes {
 			position: absolute;
-			left: 0;
-			bottom: -40px;
-			display: none;
+			right: 0;
+			top: 0;
 		}
 	}
 	@media #{$lg, $md} {

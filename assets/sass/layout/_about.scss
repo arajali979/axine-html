@@ -24,13 +24,14 @@ START: Theme About CSS
 		);
 		.heading-area {
 			display: flex;
-			align-items: start;
+			align-items: end;
 			justify-content: space-between;
 			column-gap: 140px;
 			row-gap: 25px;
 			max-width: 1770px;
 			width: 100%;
 			margin-left: auto;
+			margin-bottom: 80px;
 			.sub-title {
 				-webkit-text-stroke-width: 3px;
 				-webkit-text-stroke-color: var(--fa-color-theme-primary);

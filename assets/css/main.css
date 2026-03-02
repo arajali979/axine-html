@@ -1415,13 +1415,19 @@ START: Theme Header CSS
   padding: 0 45px;
   border-radius: 50px;
 }
-.header-area.v-2 .maimmenu-main-wrapper .mainmenu ul > li > a {
+.header-area.v-2 .maimmenu-main-wrapper .mainmenu ul > li.has-dropdown a {
+  padding-right: 20px;
+}
+.header-area.v-2 .maimmenu-main-wrapper .mainmenu ul > li a {
   padding: 18px 0;
 }
+.header-area.v-2 .maimmenu-main-wrapper .mainmenu ul > li .sub-menu li > a {
+  padding: 4px 20px;
+}
 .header-area.v-2 .maimmenu-main-wrapper .mainmenu-right-infos {
-  -webkit-column-gap: 90px;
-     -moz-column-gap: 90px;
-          column-gap: 90px;
+  -webkit-column-gap: 30px;
+     -moz-column-gap: 30px;
+          column-gap: 30px;
 }
 .header-area.v-2 .maimmenu-main-wrapper .mainmenu-right-infos .header-media-wrap {
   display: -webkit-box;
@@ -1591,6 +1597,8 @@ START: Theme Header CSS
           transform-origin: 0 0;
   text-align: left;
   background-color: var(--fa-color-common-white);
+  -webkit-box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.08);
+          box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.08);
   -webkit-transform: scaleY(0);
       -ms-transform: scaleY(0);
           transform: scaleY(0);
@@ -3438,7 +3446,7 @@ START: Theme Hero CSS
      -moz-column-gap: 60px;
           column-gap: 60px;
   row-gap: 20px;
-  margin-top: 90px;
+  margin-top: 80px;
 }
 .hero-2-wrapper .hero-content .hero-desc {
   max-width: 395px;
@@ -4119,9 +4127,9 @@ START: Theme About CSS
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: start;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: end;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
@@ -4132,6 +4140,7 @@ START: Theme About CSS
   max-width: 1770px;
   width: 100%;
   margin-left: auto;
+  margin-bottom: 80px;
 }
 .fa-about-section.v-2 .heading-area .sub-title {
   -webkit-text-stroke-width: 3px;
@@ -6846,6 +6855,7 @@ START: Theme Project CSS
 }
 
 .project-two-item .project-title {
+  position: relative;
   color: var(--fa-color-grey-12);
   font-weight: var(--fa-fw-bold);
   margin-bottom: 0;
@@ -6855,6 +6865,7 @@ START: Theme Project CSS
   margin-bottom: 75px;
   max-width: 1085px;
   width: 100%;
+  z-index: 1;
 }
 .project-two-item .project-title:nth-child(2) {
   -webkit-transform: rotate(-7.35deg);
@@ -8391,8 +8402,8 @@ START: Theme Feature CSS
   background: var(--fa-color-common-white);
   border-radius: 50%;
   position: absolute;
-  top: -1px;
-  right: -1px;
+  top: -4px;
+  right: -4px;
   z-index: 1;
 }
 .item-wrap .feature-item {
@@ -8421,9 +8432,8 @@ START: Theme Feature CSS
 }
 .item-wrap .feature-item .item-shapes {
   position: absolute;
-  left: 0;
-  bottom: -40px;
-  display: none;
+  right: 0;
+  top: 0;
 }
 @media only screen and (min-width: 992px) and (max-width: 1199px), only screen and (min-width: 768px) and (max-width: 991px) {
   .item-wrap .feature-item {
