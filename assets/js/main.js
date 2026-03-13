@@ -303,6 +303,42 @@
 		},
 	});
 
+	// Testimonial Slider Js
+	if ($(".fa-testimonial-slider2").length > 0) {
+		var testimonial = new Swiper(".fa-testimonial-slider2", {
+			slidesPerView: 3,
+			spaceBetween: 24,
+			loop: true,
+			centeredSlides: true,
+			centeredSlidesBounds: true,
+			pagination: {
+				el: ".swiper-pagination",
+				clickable: true,
+				renderBullet: function (index, className) {
+					let number = (index + 1).toString().padStart(2, "0");
+					return '<span class="' + className + '">' + number + "</span>";
+				},
+			},
+			breakpoints: {
+				320: {
+					slidesPerView: 1,
+				},
+				576: {
+					slidesPerView: 1,
+				},
+				768: {
+					slidesPerView: 2,
+				},
+				992: {
+					slidesPerView: 2,
+				},
+				1024: {
+					slidesPerView: 3,
+				},
+			},
+		});
+	}
+
 	// Brand Slider Js
 	if ($(".fa-brand-slider").length > 0) {
 		var brand = new Swiper(".fa-brand-slider", {
@@ -328,32 +364,6 @@
 				},
 				1024: {
 					slidesPerView: 5,
-				},
-			},
-		});
-	}
-
-	// Testimonial Slider Js
-	if ($(".fa-testimonial-slider2").length > 0) {
-		var testimonial = new Swiper(".fa-testimonial-slider2", {
-			slidesPerView: 3,
-			spaceBetween: 24,
-			loop: false,
-			breakpoints: {
-				320: {
-					slidesPerView: 1,
-				},
-				576: {
-					slidesPerView: 2,
-				},
-				768: {
-					slidesPerView: 2,
-				},
-				992: {
-					slidesPerView: 3,
-				},
-				1024: {
-					slidesPerView: 3,
 				},
 			},
 		});

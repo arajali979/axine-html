@@ -54,7 +54,21 @@ START: Theme Testimonial CSS
 	}
 	&.v-2 {
 		padding-top: 150px;
-		padding-bottom: 150px;
+		padding-bottom: 180px;
+		@media #{$lg} {
+			padding-top: 120px;
+			padding-bottom: 150px;
+		}
+		@media #{$md, $sm, $xs} {
+			padding-top: 80px;
+			padding-bottom: 110px;
+			.heading-area {
+				margin-bottom: 40px !important;
+				.sub-title {
+					margin-bottom: 10px;
+				}
+			}
+		}
 		background: linear-gradient(
 			360deg,
 			var(--fa-color-grey-6) 0%,
@@ -75,6 +89,49 @@ START: Theme Testimonial CSS
 				-webkit-background-clip: text;
 				-webkit-text-fill-color: transparent;
 				background-clip: text;
+			}
+		}
+		.fa-testimonial-slider2 {
+			.swiper-slide {
+				&.swiper-slide-active {
+					.testimonial-item {
+						&.style-2 {
+							background-color: var(--fa-color-theme-bg);
+							border-color: var(--fa-color-theme-bg);
+							.testimonial-content {
+								.desc {
+									color: var(--fa-color-common-white);
+								}
+							}
+							.item-shapes {
+								img {
+									opacity: 0.2;
+								}
+							}
+							.testimonial-author {
+								.author-header {
+									.auother-name {
+										color: var(--fa-color-common-white);
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+		.swiper-pagination {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			gap: 30px;
+			position: relative;
+			bottom: -30px;
+			.swiper-pagination-bullet {
+				color: var(--fa-color-text-body);
+				&.swiper-pagination-bullet-active {
+					color: var(--fa-color-theme-primary);
+				}
 			}
 		}
 	}
@@ -234,13 +291,24 @@ START: Theme Testimonial CSS
 		position: relative;
 		border-radius: 50px;
 		padding: 35px 30px 30px;
+		border: 1px solid var(--fa-color-theme-primary);
+		background: var(--fa-color-grey-8);
+		overflow: hidden;
+		@media #{$lg, $md} {
+			padding: 35px 15px 30px;
+		}
+		@media #{$sm, $xs} {
+			padding: 35px 15px 30px;
+			border-radius: 15px;
+		}
 		.testimonial-content {
 			position: relative;
 			text-align: center;
 			mask-image: initial;
 			background: transparent;
-			padding: 15px 28px 25px 25px;
 			z-index: 1;
+			width: auto;
+			height: auto;
 			.quote {
 				display: block;
 				margin-bottom: 20px;
@@ -252,6 +320,12 @@ START: Theme Testimonial CSS
 				font-weight: var(--fa-fw-medium);
 				margin-bottom: 35px;
 				line-height: 1.3;
+				@media #{$xl, $md, $sm, $xs} {
+					font-size: 20px;
+				}
+				@media #{$lg} {
+					font-size: 22px;
+				}
 			}
 			.rating-number {
 				display: block;
@@ -289,35 +363,6 @@ START: Theme Testimonial CSS
 					margin-bottom: 0;
 				}
 			}
-		}
-		&:nth-child(1) {
-			background: var(--fa-color-grey-8);
-			border: 1px solid var(--fa-color-theme-primary);
-		}
-		&:nth-child(2) {
-			background: var(--fa-color-theme-bg);
-			.testimonial-content {
-				.desc {
-					color: var(--fa-color-common-white);
-				}
-				.rating-number {
-					color: var(--fa-color-grey-11);
-				}
-			}
-			.testimonial-author {
-				.author-header {
-					.sub-title {
-						color: var(--fa-color-grey-11);
-					}
-					.auother-name {
-						color: var(--fa-color-common-white);
-					}
-				}
-			}
-		}
-		&:nth-child(3) {
-			background: var(--fa-color-grey-9);
-			border: 1px solid var(--fa-color-theme-secondary);
 		}
 		.item-shapes {
 			position: absolute;
