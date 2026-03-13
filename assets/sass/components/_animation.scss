@@ -11,4 +11,16 @@ START: Theme Animtion CSS
 		transform: translateY(0%);
 	}
 }
+
+@keyframes faAnim {
+	0% {
+		transform: scale(1);
+	}
+	50% {
+		transform: scale(0);
+	}
+	100% {
+		transform: scale(1);
+	}
+}
 /* !END: Animtion CSS */

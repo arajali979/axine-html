@@ -16,4 +16,34 @@ START: Theme Brand CSS
 	}
 }
 
+.brand-item {
+	position: relative;
+	overflow: hidden;
+	.active {
+		transition: all 0.7s ease-in-out;
+		transform: translateY(0%);
+	}
+	.hover {
+		position: absolute;
+		left: 0;
+		bottom: 0;
+		opacity: 0;
+		visibility: hidden;
+		transition: all 0.7s ease-in-out;
+		transform: translateY(100%);
+	}
+	&:hover {
+		.active {
+			opacity: 0;
+			visibility: hidden;
+			transition: all 0.3s ease-in-out;
+			transform: translateY(-100%);
+		}
+		.hover {
+			opacity: 1;
+			visibility: visible;
+			transform: translateY(0);
+		}
+	}
+}
 /* !END: Theme Brand CSS */

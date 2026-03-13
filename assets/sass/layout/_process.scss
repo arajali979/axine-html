@@ -8,6 +8,8 @@ START: Theme Process CSS
 	padding-bottom: 150px;
 	.heading-area {
 		margin-bottom: 250px;
+		position: relative;
+		z-index: 2;
 		.process-desc {
 			font-size: 18px;
 			font-weight: var(--fa-fw-medium);
@@ -152,6 +154,11 @@ START: Theme Process CSS
 		top: -85px;
 		right: -120px;
 		line-height: 1;
+	}
+	&:hover {
+		.number {
+			animation: faAnim 0.4s ease-in-out;
+		}
 	}
 	@media #{$xxl} {
 		.number {

@@ -279,6 +279,13 @@ START: Theme Service CSS
 			border-bottom: none;
 		}
 	}
+	&:hover {
+		.service-title {
+			span {
+				transform: rotate(45deg);
+			}
+		}
+	}
 	@media #{$md} {
 		max-width: 595px;
 	}
@@ -324,6 +331,11 @@ START: Theme Service CSS
 			column-gap: 30px;
 			font-weight: var(--fa-fw-bold);
 			margin-bottom: 0;
+			&:hover {
+				a {
+					letter-spacing: 0.03em;
+				}
+			}
 		}
 		.service-desc {
 			font-weight: var(--fa-fw-medium);
@@ -338,6 +350,17 @@ START: Theme Service CSS
 			max-width: 670px;
 			width: 100%;
 			margin-top: 30px;
+		}
+	}
+	&:hover {
+		.service-content {
+			.service-text {
+				.service-title {
+					span {
+						animation: faAnim 0.4s ease-in-out;
+					}
+				}
+			}
 		}
 	}
 	@media #{$lg} {

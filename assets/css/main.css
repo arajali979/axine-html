@@ -1743,8 +1743,8 @@ START: Theme Header CSS
   top: 4px;
 }
 .header-search .search:hover span {
-  -webkit-animation: gelatine 0.6s;
-          animation: gelatine 0.6s;
+  -webkit-animation: faAnim 0.4s ease-in-out;
+          animation: faAnim 0.4s ease-in-out;
 }
 
 .header-social-media ul {
@@ -3199,6 +3199,34 @@ START: Theme Animtion CSS
             transform: translateY(0%);
   }
 }
+@-webkit-keyframes faAnim {
+  0% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  50% {
+    -webkit-transform: scale(0);
+            transform: scale(0);
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+@keyframes faAnim {
+  0% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  50% {
+    -webkit-transform: scale(0);
+            transform: scale(0);
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
 /* !END: Animtion CSS */
 /**----------------------------------------
 START: Theme Hero CSS
@@ -4579,8 +4607,8 @@ START: Theme About CSS
           animation-play-state: paused;
 }
 .about-video-wrap .about-video-btn .video-btn:hover img {
-  -webkit-animation: gelatine 0.6s;
-          animation: gelatine 0.6s;
+  -webkit-animation: faAnim 0.4s ease-in-out;
+          animation: faAnim 0.4s ease-in-out;
 }
 @media only screen and (min-width: 1200px) and (max-width: 1399px) {
   .about-video-wrap {
@@ -5810,6 +5838,11 @@ START: Theme Service CSS
   margin-bottom: 0px;
   border-bottom: none;
 }
+.service-nav-item:hover .service-title span {
+  -webkit-transform: rotate(45deg);
+      -ms-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
 @media only screen and (min-width: 768px) and (max-width: 991px) {
   .service-nav-item {
     max-width: 595px;
@@ -5871,6 +5904,9 @@ START: Theme Service CSS
   font-weight: var(--fa-fw-bold);
   margin-bottom: 0;
 }
+.service-item .service-content .service-title:hover a {
+  letter-spacing: 0.03em;
+}
 .service-item .service-content .service-desc {
   font-weight: var(--fa-fw-medium);
   font-family: var(--fa-ff-heading);
@@ -5884,6 +5920,10 @@ START: Theme Service CSS
   max-width: 670px;
   width: 100%;
   margin-top: 30px;
+}
+.service-item:hover .service-content .service-text .service-title span {
+  -webkit-animation: faAnim 0.4s ease-in-out;
+          animation: faAnim 0.4s ease-in-out;
 }
 @media only screen and (min-width: 992px) and (max-width: 1199px) {
   .service-item .service-content {
@@ -7238,6 +7278,8 @@ START: Theme Process CSS
 }
 .fa-process-section .heading-area {
   margin-bottom: 250px;
+  position: relative;
+  z-index: 2;
 }
 .fa-process-section .heading-area .process-desc {
   font-size: 18px;
@@ -7390,6 +7432,10 @@ START: Theme Process CSS
   top: -85px;
   right: -120px;
   line-height: 1;
+}
+.process-item:hover .number {
+  -webkit-animation: faAnim 0.4s ease-in-out;
+          animation: faAnim 0.4s ease-in-out;
 }
 @media only screen and (min-width: 1400px) and (max-width: 1600px) {
   .process-item .number {
@@ -8001,6 +8047,46 @@ START: Theme Brand CSS
   .fa-brand-section.v-2 {
     padding-top: 80px;
   }
+}
+
+.brand-item {
+  position: relative;
+  overflow: hidden;
+}
+.brand-item .active {
+  -webkit-transition: all 0.7s ease-in-out;
+  transition: all 0.7s ease-in-out;
+  -webkit-transform: translateY(0%);
+      -ms-transform: translateY(0%);
+          transform: translateY(0%);
+}
+.brand-item .hover {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transition: all 0.7s ease-in-out;
+  transition: all 0.7s ease-in-out;
+  -webkit-transform: translateY(100%);
+      -ms-transform: translateY(100%);
+          transform: translateY(100%);
+}
+.brand-item:hover .active {
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  -webkit-transform: translateY(-100%);
+      -ms-transform: translateY(-100%);
+          transform: translateY(-100%);
+}
+.brand-item:hover .hover {
+  opacity: 1;
+  visibility: visible;
+  -webkit-transform: translateY(0);
+      -ms-transform: translateY(0);
+          transform: translateY(0);
 }
 
 /* !END: Theme Brand CSS */
