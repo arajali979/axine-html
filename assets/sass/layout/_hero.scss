@@ -688,6 +688,7 @@ START: Theme Hero CSS
 					background-position: center;
 					background-size: cover;
 					transform: translate(-50%, -50%);
+					animation: contactrotate 20s infinite linear;
 					z-index: 1;
 				}
 				&::after {
@@ -707,6 +708,14 @@ START: Theme Hero CSS
 					position: relative;
 					border-radius: 0;
 					z-index: 1;
+				}
+				&:hover {
+					&::before {
+						animation-play-state: paused;
+					}
+					img {
+						animation: faAnim 0.4s ease-in-out;
+					}
 				}
 			}
 		}

@@ -518,6 +518,14 @@ START: Theme Service CSS
 		border-radius: 20px;
 	}
 	&:hover {
+		.service-content {
+			.service-title {
+				letter-spacing: 0.03em;
+				img {
+					transform: rotate(45deg);
+				}
+			}
+		}
 		.service-icon {
 			img {
 				animation: gelatine 0.6s;

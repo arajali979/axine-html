@@ -3977,6 +3977,8 @@ START: Theme Hero CSS
   -webkit-transform: translate(-50%, -50%);
       -ms-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
+  -webkit-animation: contactrotate 20s infinite linear;
+          animation: contactrotate 20s infinite linear;
   z-index: 1;
 }
 .video-thumb-wrap .thumb-images .hero-video a::after {
@@ -3998,6 +4000,14 @@ START: Theme Hero CSS
   position: relative;
   border-radius: 0;
   z-index: 1;
+}
+.video-thumb-wrap .thumb-images .hero-video a:hover::before {
+  -webkit-animation-play-state: paused;
+          animation-play-state: paused;
+}
+.video-thumb-wrap .thumb-images .hero-video a:hover img {
+  -webkit-animation: faAnim 0.4s ease-in-out;
+          animation: faAnim 0.4s ease-in-out;
 }
 @media only screen and (min-width: 1400px) and (max-width: 1600px) {
   .video-thumb-wrap .thumb-images {
@@ -4985,6 +4995,8 @@ START: Theme About CSS
   -webkit-transform: translate(-50%, -50%);
       -ms-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
+  -webkit-animation: contactrotate 20s infinite linear;
+          animation: contactrotate 20s infinite linear;
   z-index: 1;
 }
 .about-video-thumb .ab-video-button::after {
@@ -5006,6 +5018,14 @@ START: Theme About CSS
   position: relative;
   border-radius: 0px;
   z-index: 1;
+}
+.about-video-thumb .ab-video-button:hover::before {
+  -webkit-animation-play-state: paused;
+          animation-play-state: paused;
+}
+.about-video-thumb .ab-video-button:hover img {
+  -webkit-animation: faAnim 0.4s ease-in-out;
+          animation: faAnim 0.4s ease-in-out;
 }
 @media only screen and (min-width: 992px) and (max-width: 1199px) {
   .about-video-thumb {
@@ -5280,6 +5300,10 @@ START: Theme About CSS
 }
 .about-list-wrap .about-list ul li:last-child {
   margin-bottom: 0;
+}
+.about-list-wrap:hover .about-text span {
+  -webkit-animation: gelatine 0.6s;
+          animation: gelatine 0.6s;
 }
 @media only screen and (min-width: 992px) and (max-width: 1199px) {
   .about-list-wrap {
@@ -6099,6 +6123,14 @@ START: Theme Service CSS
   top: 0;
   right: 0;
   border-radius: 20px;
+}
+.service-style-3:hover .service-content .service-title {
+  letter-spacing: 0.03em;
+}
+.service-style-3:hover .service-content .service-title img {
+  -webkit-transform: rotate(45deg);
+      -ms-transform: rotate(45deg);
+          transform: rotate(45deg);
 }
 .service-style-3:hover .service-icon img {
   -webkit-animation: gelatine 0.6s;
@@ -6993,6 +7025,9 @@ START: Theme Project CSS
   background: rgba(255, 255, 255, 0.3);
   padding: 12px 25px;
   border-radius: 80px;
+}
+.project-three-item .project-content .project-title a:hover {
+  letter-spacing: 0.03em;
 }
 .project-three-item .project-content .sub-title {
   display: inline-block;
@@ -8054,8 +8089,8 @@ START: Theme Brand CSS
   overflow: hidden;
 }
 .brand-item .active {
-  -webkit-transition: all 0.7s ease-in-out;
-  transition: all 0.7s ease-in-out;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
   -webkit-transform: translateY(0%);
       -ms-transform: translateY(0%);
           transform: translateY(0%);
@@ -8066,8 +8101,8 @@ START: Theme Brand CSS
   bottom: 0;
   opacity: 0;
   visibility: hidden;
-  -webkit-transition: all 0.7s ease-in-out;
-  transition: all 0.7s ease-in-out;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
   -webkit-transform: translateY(100%);
       -ms-transform: translateY(100%);
           transform: translateY(100%);
@@ -8075,8 +8110,6 @@ START: Theme Brand CSS
 .brand-item:hover .active {
   opacity: 0;
   visibility: hidden;
-  -webkit-transition: all 0.3s ease-in-out;
-  transition: all 0.3s ease-in-out;
   -webkit-transform: translateY(-100%);
       -ms-transform: translateY(-100%);
           transform: translateY(-100%);
@@ -8516,6 +8549,7 @@ START: Theme Feature CSS
   background: var(--fa-color-grey-9);
   border-radius: 50px;
   border: 1px solid var(--fa-color-theme-secondary);
+  overflow: hidden;
 }
 .item-wrap:nth-child(2) {
   background: var(--fa-color-theme-bg);
@@ -8543,6 +8577,8 @@ START: Theme Feature CSS
   background: var(--fa-color-common-white);
   border-radius: 50%;
   position: absolute;
+  -webkit-transition: all 0.3s ease-in-out 0s;
+  transition: all 0.3s ease-in-out 0s;
   top: -4px;
   right: -4px;
   z-index: 1;
@@ -8550,31 +8586,59 @@ START: Theme Feature CSS
 .item-wrap .feature-item {
   position: relative;
   overflow: hidden;
-  padding: 60px 45px;
+  padding: 60px 45px 45px;
 }
 .item-wrap .feature-item .feature-content {
   position: relative;
   z-index: 1;
 }
-.item-wrap .feature-item .feature-content .feature-icons {
-  display: block;
-  margin-bottom: 50px;
+.item-wrap .feature-item .feature-content .feature-text {
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transition: all 0.3s ease-in-out 0s;
+  transition: all 0.3s ease-in-out 0s;
 }
-.item-wrap .feature-item .feature-content .feature-title {
+.item-wrap .feature-item .feature-content .feature-text .feature-title {
   font-weight: var(--fa-fw-bold);
   margin-bottom: 0;
 }
-.item-wrap .feature-item .feature-content .feature-desc {
+.item-wrap .feature-item .feature-content .feature-text .feature-desc {
   font-size: 18px;
   font-family: var(--fa-ff-heading);
   font-weight: var(--fa-fw-medium);
-  margin-top: 30px;
+  margin-top: 20px;
   margin-bottom: 0;
+}
+.item-wrap .feature-item .feature-content .feature-icons {
+  display: block;
+  margin-bottom: 50px;
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transition: all 0.3s ease-in-out 0s;
+  transition: all 0.3s ease-in-out 0s;
 }
 .item-wrap .feature-item .item-shapes {
   position: absolute;
   right: 0;
   top: 0;
+}
+.item-wrap:hover .show-icons {
+  top: -95px;
+  right: -95px;
+}
+.item-wrap:hover .feature-item .feature-content .feature-icons {
+  opacity: 1;
+  visibility: visible;
+  -webkit-transform: translateY(10px);
+      -ms-transform: translateY(10px);
+          transform: translateY(10px);
+}
+.item-wrap:hover .feature-item .feature-content .feature-text {
+  opacity: 1;
+  visibility: visible;
+  -webkit-transform: translateY(-10px);
+      -ms-transform: translateY(-10px);
+          transform: translateY(-10px);
 }
 @media only screen and (min-width: 992px) and (max-width: 1199px), only screen and (min-width: 768px) and (max-width: 991px) {
   .item-wrap .feature-item {
@@ -8885,6 +8949,9 @@ START: Theme Team CSS
   color: var(--fa-color-common-white);
   margin-bottom: 0;
   z-index: 2;
+}
+.team-style-2 .team-title a:hover {
+  letter-spacing: 0.03em;
 }
 .team-style-2:hover .team-title {
   right: -110px;

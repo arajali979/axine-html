@@ -38,6 +38,7 @@ START: Theme Feature CSS
 	background: var(--fa-color-grey-9);
 	border-radius: 50px;
 	border: 1px solid var(--fa-color-theme-secondary);
+	overflow: hidden;
 	&:nth-child(2) {
 		background: var(--fa-color-theme-bg);
 		border: 1px solid var(--fa-color-theme-bg);
@@ -62,6 +63,7 @@ START: Theme Feature CSS
 		background: var(--fa-color-common-white);
 		border-radius: 50%;
 		position: absolute;
+		transition: all 0.3s ease-in-out 0s;
 		top: -4px;
 		right: -4px;
 		z-index: 1;
@@ -69,30 +71,58 @@ START: Theme Feature CSS
 	.feature-item {
 		position: relative;
 		overflow: hidden;
-		padding: 60px 45px;
+		padding: 60px 45px 45px;
 		.feature-content {
 			position: relative;
 			z-index: 1;
+			.feature-text {
+				opacity: 0;
+				visibility: hidden;
+				transition: all 0.3s ease-in-out 0s;
+				.feature-title {
+					font-weight: var(--fa-fw-bold);
+					margin-bottom: 0;
+				}
+				.feature-desc {
+					font-size: 18px;
+					font-family: var(--fa-ff-heading);
+					font-weight: var(--fa-fw-medium);
+					margin-top: 20px;
+					margin-bottom: 0;
+				}
+			}
 			.feature-icons {
 				display: block;
 				margin-bottom: 50px;
-			}
-			.feature-title {
-				font-weight: var(--fa-fw-bold);
-				margin-bottom: 0;
-			}
-			.feature-desc {
-				font-size: 18px;
-				font-family: var(--fa-ff-heading);
-				font-weight: var(--fa-fw-medium);
-				margin-top: 30px;
-				margin-bottom: 0;
+				opacity: 0;
+				visibility: hidden;
+				transition: all 0.3s ease-in-out 0s;
 			}
 		}
 		.item-shapes {
 			position: absolute;
 			right: 0;
 			top: 0;
+		}
+	}
+	&:hover {
+		.show-icons {
+			top: -95px;
+			right: -95px;
+		}
+		.feature-item {
+			.feature-content {
+				.feature-icons {
+					opacity: 1;
+					visibility: visible;
+					transform: translateY(10px);
+				}
+				.feature-text {
+					opacity: 1;
+					visibility: visible;
+					transform: translateY(-10px);
+				}
+			}
 		}
 	}
 	@media #{$lg, $md} {

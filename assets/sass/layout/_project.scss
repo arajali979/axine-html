@@ -365,6 +365,9 @@ START: Theme Project CSS
 				background: rgba(255, 255, 255, 0.3);
 				padding: 12px 25px;
 				border-radius: 80px;
+				&:hover {
+					letter-spacing: 0.03em;
+				}
 			}
 		}
 		.sub-title {

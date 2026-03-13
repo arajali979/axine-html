@@ -637,6 +637,7 @@ START: Theme About CSS
 			background-position: center;
 			background-size: cover;
 			transform: translate(-50%, -50%);
+			animation: contactrotate 20s infinite linear;
 			z-index: 1;
 		}
 		&::after {
@@ -656,6 +657,14 @@ START: Theme About CSS
 			position: relative;
 			border-radius: 0px;
 			z-index: 1;
+		}
+		&:hover {
+			&::before {
+				animation-play-state: paused;
+			}
+			img {
+				animation: faAnim 0.4s ease-in-out;
+			}
 		}
 	}
 	@media #{$lg} {
@@ -870,6 +879,13 @@ START: Theme About CSS
 				&:last-child {
 					margin-bottom: 0;
 				}
+			}
+		}
+	}
+	&:hover {
+		.about-text {
+			span {
+				animation: gelatine 0.6s;
 			}
 		}
 	}

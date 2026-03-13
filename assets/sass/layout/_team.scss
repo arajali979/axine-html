@@ -284,6 +284,11 @@ START: Theme Team CSS
 		color: var(--fa-color-common-white);
 		margin-bottom: 0;
 		z-index: 2;
+		a {
+			&:hover {
+				letter-spacing: 0.03em;
+			}
+		}
 	}
 	&:hover {
 		.team-title {
