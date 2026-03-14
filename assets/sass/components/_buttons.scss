@@ -219,6 +219,25 @@
 	padding: 21px 26px;
 	line-height: 1;
 	span {
+		display: flex;
+		align-items: center;
+		position: relative;
+		overflow: hidden;
 		width: 16px;
+		img {
+			transition: all 0.3s;
+		}
+		.hover-arrow {
+			position: absolute;
+			transform: translateX(-150%);
+		}
+	}
+	&:hover {
+		.active-arrow {
+			transform: translateX(150%);
+		}
+		.hover-arrow {
+			transform: translateX(0);
+		}
 	}
 }

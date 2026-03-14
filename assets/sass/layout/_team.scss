@@ -183,7 +183,7 @@ START: Theme Team CSS
 .team-item {
 	.team-content {
 		position: relative;
-		max-width: 210px;
+		max-width: 245px;
 		width: 100%;
 		text-align: center;
 		.sub-title {
@@ -198,6 +198,11 @@ START: Theme Team CSS
 			color: var(--fa-color-common-white);
 			font-weight: var(--fa-fw-bold);
 			margin-bottom: 0;
+			a {
+				&:hover {
+					letter-spacing: 0.03em;
+				}
+			}
 		}
 		.item-arrow {
 			display: inline-block;

@@ -697,7 +697,35 @@ img {
   line-height: 1;
 }
 .submit-btn span {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: relative;
+  overflow: hidden;
   width: 16px;
+}
+.submit-btn span img {
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+.submit-btn span .hover-arrow {
+  position: absolute;
+  -webkit-transform: translateX(-150%);
+      -ms-transform: translateX(-150%);
+          transform: translateX(-150%);
+}
+.submit-btn:hover .active-arrow {
+  -webkit-transform: translateX(150%);
+      -ms-transform: translateX(150%);
+          transform: translateX(150%);
+}
+.submit-btn:hover .hover-arrow {
+  -webkit-transform: translateX(0);
+      -ms-transform: translateX(0);
+          transform: translateX(0);
 }
 
 /* !START: hamburger CSS */
@@ -6000,6 +6028,9 @@ START: Theme Service CSS
   margin-bottom: 0;
   z-index: 1;
 }
+.service-style-2 .service-title a:hover {
+  letter-spacing: 0.03em;
+}
 .service-style-2 .service-icons {
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
@@ -6050,6 +6081,10 @@ START: Theme Service CSS
 }
 .service-style-2 .service-list-one ul li:nth-child(3) {
   top: -22px;
+}
+.service-style-2:hover .service-icons img {
+  -webkit-transform: rotateY(360deg);
+          transform: rotateY(360deg);
 }
 @media only screen and (min-width: 992px) and (max-width: 1199px), only screen and (min-width: 768px) and (max-width: 991px), only screen and (min-width: 576px) and (max-width: 767px) {
   .service-style-2 {
@@ -6276,7 +6311,7 @@ START: Theme Service CSS
   font-size: 16px;
   text-align: start;
   padding: 20px 12px;
-  line-height: 1.7;
+  line-height: 1.4;
 }
 .service-list-one ul li span {
   max-width: 18px;
@@ -8857,7 +8892,7 @@ START: Theme Team CSS
 
 .team-item .team-content {
   position: relative;
-  max-width: 210px;
+  max-width: 245px;
   width: 100%;
   text-align: center;
 }
@@ -8873,6 +8908,9 @@ START: Theme Team CSS
   color: var(--fa-color-common-white);
   font-weight: var(--fa-fw-bold);
   margin-bottom: 0;
+}
+.team-item .team-content .team-title a:hover {
+  letter-spacing: 0.03em;
 }
 .team-item .team-content .item-arrow {
   display: inline-block;
