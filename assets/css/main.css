@@ -1452,6 +1452,10 @@ START: Theme Header CSS
 .header-area.v-2 .maimmenu-main-wrapper .mainmenu ul > li .sub-menu li > a {
   padding: 4px 20px;
 }
+.header-area.v-2 .maimmenu-main-wrapper .mainmenu ul > li .sub-menu li > a:hover {
+  -webkit-padding-start: 25px;
+          padding-inline-start: 25px;
+}
 .header-area.v-2 .maimmenu-main-wrapper .mainmenu-right-infos {
   -webkit-column-gap: 30px;
      -moz-column-gap: 30px;
@@ -2550,6 +2554,13 @@ START: Theme Footer CSS
      -moz-column-gap: 30px;
           column-gap: 30px;
 }
+.copyright-social-media ul li a {
+  display: inline-block;
+}
+.copyright-social-media ul li a:hover {
+  -webkit-animation: gelatine 0.6s;
+          animation: gelatine 0.6s;
+}
 
 .copyright-menu ul {
   display: -webkit-box;
@@ -2591,6 +2602,9 @@ START: Theme Footer CSS
   color: var(--fa-color-common-white);
   font-family: var(--fa-ff-heading);
   font-weight: var(--fa-fw-sbold);
+}
+.copyright-menu ul li a:hover {
+  color: var(--fa-color-theme-primary);
 }
 @media (max-width: 575px) {
   .copyright-menu ul li a {
@@ -10743,6 +10757,9 @@ START: Theme Blog CSS
   font-weight: var(--fa-fw-bold);
   margin-bottom: 0;
 }
+.blog-item.style-2 .blog-content .blog-author-wrap .author-item .author-name a:hover {
+  letter-spacing: 0.03em;
+}
 .blog-item.style-2 .blog-content .blog-author-wrap .sub-title {
   margin-bottom: 0;
   background: var(--fa-color-theme-primary);
@@ -12114,16 +12131,55 @@ START: Theme Client CSS
   width: 320px;
   height: 200px;
   border: 1px solid rgba(0, 0, 0, 0.3);
+  position: relative;
   padding: 25px 25px;
+  overflow: hidden;
 }
 .client-thumb-wrap ul li ul li:first-child {
   border-right: none;
 }
 .client-thumb-wrap ul li ul li span {
-  max-width: 180px;
-  width: 100%;
+  position: relative;
+  overflow: hidden;
   margin-left: auto;
   margin-right: auto;
+}
+.client-thumb-wrap ul li ul li span img {
+  max-width: 180px;
+  width: 100%;
+}
+.client-thumb-wrap ul li ul li span .active-img {
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  -webkit-transform: translateY(0%);
+      -ms-transform: translateY(0%);
+          transform: translateY(0%);
+}
+.client-thumb-wrap ul li ul li span .hover-img {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  -webkit-transform: translateY(100%);
+      -ms-transform: translateY(100%);
+          transform: translateY(100%);
+}
+.client-thumb-wrap ul li ul li:hover .active-img {
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transform: translateY(-100%);
+      -ms-transform: translateY(-100%);
+          transform: translateY(-100%);
+}
+.client-thumb-wrap ul li ul li:hover .hover-img {
+  opacity: 1;
+  visibility: visible;
+  -webkit-transform: translateY(0);
+      -ms-transform: translateY(0);
+          transform: translateY(0);
 }
 .client-thumb-wrap ul li:nth-child(2) ul li:nth-child(1) {
   position: absolute;
@@ -12169,6 +12225,9 @@ START: Theme Client CSS
 .client-thumb-wrap ul li:nth-child(2) ul li .client-thumb span img {
   border: 1px solid var(--fa-color-heading-primary);
   border-radius: 50%;
+}
+.client-thumb-wrap ul li:nth-child(2) ul li .client-thumb span:hover {
+  margin-left: -15px;
 }
 .client-thumb-wrap ul li:nth-child(3) ul {
   margin-left: -320px;

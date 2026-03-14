@@ -258,6 +258,11 @@ START: Theme Blog CSS
 					.author-name {
 						font-weight: var(--fa-fw-bold);
 						margin-bottom: 0;
+						a {
+							&:hover {
+								letter-spacing: 0.03em;
+							}
+						}
 					}
 				}
 				.sub-title {

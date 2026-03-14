@@ -560,6 +560,14 @@ START: Theme Footer CSS
 		display: flex;
 		align-items: center;
 		column-gap: 30px;
+		li {
+			a {
+				display: inline-block;
+				&:hover {
+					animation: gelatine 0.6s;
+				}
+			}
+		}
 	}
 }
 
@@ -596,6 +604,9 @@ START: Theme Footer CSS
 				color: var(--fa-color-common-white);
 				font-family: var(--fa-ff-heading);
 				font-weight: var(--fa-fw-sbold);
+				&:hover {
+					color: var(--fa-color-theme-primary);
+				}
 				@media #{$xs} {
 					font-size: 16px;
 				}

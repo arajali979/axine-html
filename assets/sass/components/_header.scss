@@ -61,6 +61,9 @@ START: Theme Header CSS
 							li > {
 								a {
 									padding: 4px 20px;
+									&:hover {
+										padding-inline-start: 25px;
+									}
 								}
 							}
 						}
