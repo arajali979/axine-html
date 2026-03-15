@@ -72,6 +72,7 @@ START: Theme About CSS
 		}
 		@media #{$md} {
 			.heading-area {
+				align-items: start;
 				flex-direction: column-reverse;
 				.sec-title {
 					margin-top: -45px;
@@ -86,7 +87,9 @@ START: Theme About CSS
 		}
 		@media #{$sm} {
 			.heading-area {
+				align-items: start;
 				flex-direction: column-reverse;
+				margin-bottom: 50px;
 				.sec-title {
 					margin-top: -35px;
 				}
@@ -100,7 +103,9 @@ START: Theme About CSS
 		}
 		@media #{$xs} {
 			.heading-area {
+				align-items: start;
 				flex-direction: column-reverse;
+				margin-bottom: 40px;
 				.sub-title {
 					-webkit-text-stroke-width: 2px;
 				}

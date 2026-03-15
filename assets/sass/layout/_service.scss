@@ -181,7 +181,8 @@ START: Theme Service CSS
 			display: grid;
 			grid-template-columns: repeat(3, 1fr);
 			column-gap: 24px;
-			@media #{$md} {
+			@media #{$lg, $md} {
+				align-items: start;
 				grid-template-columns: repeat(2, 1fr);
 				row-gap: 24px;
 			}

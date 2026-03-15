@@ -4333,6 +4333,9 @@ START: Theme About CSS
 }
 @media only screen and (min-width: 768px) and (max-width: 991px) {
   .fa-about-section.v-2 .heading-area {
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: start;
     -webkit-box-orient: vertical;
     -webkit-box-direction: reverse;
         -ms-flex-direction: column-reverse;
@@ -4350,10 +4353,14 @@ START: Theme About CSS
 }
 @media only screen and (min-width: 576px) and (max-width: 767px) {
   .fa-about-section.v-2 .heading-area {
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: start;
     -webkit-box-orient: vertical;
     -webkit-box-direction: reverse;
         -ms-flex-direction: column-reverse;
             flex-direction: column-reverse;
+    margin-bottom: 50px;
   }
   .fa-about-section.v-2 .heading-area .sec-title {
     margin-top: -35px;
@@ -4367,10 +4374,14 @@ START: Theme About CSS
 }
 @media (max-width: 575px) {
   .fa-about-section.v-2 .heading-area {
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: start;
     -webkit-box-orient: vertical;
     -webkit-box-direction: reverse;
         -ms-flex-direction: column-reverse;
             flex-direction: column-reverse;
+    margin-bottom: 40px;
   }
   .fa-about-section.v-2 .heading-area .sub-title {
     -webkit-text-stroke-width: 2px;
@@ -5851,8 +5862,11 @@ START: Theme Service CSS
      -moz-column-gap: 24px;
           column-gap: 24px;
 }
-@media only screen and (min-width: 768px) and (max-width: 991px) {
+@media only screen and (min-width: 992px) and (max-width: 1199px), only screen and (min-width: 768px) and (max-width: 991px) {
   .fa-service-section.v-2 .service-main-wrapper {
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: start;
     grid-template-columns: repeat(2, 1fr);
     row-gap: 24px;
   }
@@ -8764,9 +8778,14 @@ START: Theme Feature CSS
   .item-wrap .feature-item {
     padding: 30px 15px;
   }
+  .item-wrap .feature-item .feature-content .feature-text .feature-desc {
+    font-size: 16px;
+  }
   .item-wrap .show-icons {
     width: 70px;
     height: 70px;
+    right: 0;
+    top: 0;
   }
 }
 @media (max-width: 575px) {

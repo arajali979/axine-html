@@ -133,10 +133,19 @@ START: Theme Feature CSS
 	@media #{$sm} {
 		.feature-item {
 			padding: 30px 15px;
+			.feature-content {
+				.feature-text {
+					.feature-desc {
+						font-size: 16px;
+					}
+				}
+			}
 		}
 		.show-icons {
 			width: 70px;
 			height: 70px;
+			right: 0;
+			top: 0;
 		}
 	}
 	@media #{$xs} {
