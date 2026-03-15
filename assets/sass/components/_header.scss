@@ -43,6 +43,7 @@ START: Theme Header CSS
 			padding: 10px 0;
 		}
 		.maimmenu-main-wrapper {
+			column-gap: 25px;
 			.mainmenu {
 				background: rgba(255, 255, 255, 0.1);
 				padding: 0 45px;
@@ -69,6 +70,18 @@ START: Theme Header CSS
 						}
 					}
 				}
+				@media #{$xxl} {
+					padding: 0 20px;
+					ul {
+						column-gap: 30px;
+					}
+				}
+				@media #{$xl} {
+					padding: 0 16px;
+					ul {
+						column-gap: 15px;
+					}
+				}
 			}
 			.mainmenu-right-infos {
 				column-gap: 30px;
@@ -77,10 +90,25 @@ START: Theme Header CSS
 					align-items: center;
 					column-gap: 30px;
 				}
+				@media #{$xxl} {
+					column-gap: 20px;
+				}
+				@media #{$xl} {
+					column-gap: 10px;
+					.header-media-wrap {
+						column-gap: 10px;
+					}
+				}
 			}
 			@media #{$xl} {
+				column-gap: 15px;
 				.mainmenu-right-infos {
-					column-gap: 30px;
+					column-gap: 12px;
+				}
+				.primary-btn {
+					.fa-btn-text {
+						padding: 20px 20px;
+					}
 				}
 			}
 			@media #{$lg} {
@@ -102,6 +130,31 @@ START: Theme Header CSS
 				column-gap: 30px;
 			}
 		}
+		@media #{$xxl} {
+			.mainmenu {
+				ul {
+					column-gap: 35px;
+				}
+			}
+		}
+		@media #{$xl} {
+			.mainmenu {
+				ul {
+					column-gap: 20px;
+				}
+			}
+			.primary-btn {
+				.fa-btn-text {
+					padding: 20px 20px;
+				}
+			}
+			.mainmenu-right-infos {
+				column-gap: 10px;
+				.header-media-wrap {
+					column-gap: 10px;
+				}
+			}
+		}
 	}
 	@media #{$md, $sm, $xs} {
 		padding: 20px 0;
@@ -112,6 +165,7 @@ START: Theme Header CSS
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
+	column-gap: 25px;
 	.mean-push {
 		display: none;
 	}
@@ -293,7 +347,7 @@ START: Theme Header CSS
 			> li {
 				> a {
 					font-size: 16px;
-					padding: 40px 0;
+					padding: 30px 0;
 				}
 			}
 		}
