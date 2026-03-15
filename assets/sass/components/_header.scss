@@ -154,6 +154,11 @@ START: Theme Header CSS
 					column-gap: 10px;
 				}
 			}
+			.header-search {
+				.search {
+					column-gap: 12px;
+				}
+			}
 		}
 	}
 	@media #{$md, $sm, $xs} {
