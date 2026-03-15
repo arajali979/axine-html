@@ -3436,12 +3436,18 @@ START: Theme Hero CSS
 }
 @media only screen and (min-width: 576px) and (max-width: 767px) {
   .fa-hero-section.v-2::before {
-    height: 550px;
+    height: 125px;
+  }
+  .fa-hero-section.v-2 .h2-hero-shapes {
+    display: none;
   }
 }
 @media (max-width: 575px) {
   .fa-hero-section.v-2::before {
-    height: 450px;
+    height: 90px;
+  }
+  .fa-hero-section.v-2 .h2-hero-shapes {
+    display: none;
   }
 }
 .fa-hero-section.v-3 {
@@ -3489,7 +3495,7 @@ START: Theme Hero CSS
     padding-bottom: 215px;
   }
   .fa-hero-section.v-2 {
-    padding-top: 150px;
+    padding-top: 135px;
   }
 }
 
@@ -3673,7 +3679,7 @@ START: Theme Hero CSS
     -webkit-column-gap: 30px;
        -moz-column-gap: 30px;
             column-gap: 30px;
-    margin-top: 80px;
+    margin-top: 60px;
   }
   .hero-2-wrapper .hero-content .hero-desc .desc {
     font-size: 20px;
@@ -4063,6 +4069,11 @@ START: Theme Hero CSS
       -ms-transform: rotate(-4.64deg);
           transform: rotate(-4.64deg);
 }
+@media only screen and (min-width: 576px) and (max-width: 767px), (max-width: 575px) {
+  .video-thumb-wrap .thumb-images:nth-child(2) {
+    margin-top: 0;
+  }
+}
 .video-thumb-wrap .thumb-images:nth-child(3) {
   margin-top: -265px;
 }
@@ -4078,6 +4089,7 @@ START: Theme Hero CSS
   position: absolute;
   top: -85px;
   left: 210px;
+  text-align: center;
 }
 .video-thumb-wrap .thumb-images .hero-video a {
   display: -webkit-inline-box;
@@ -4190,40 +4202,17 @@ START: Theme Hero CSS
     margin-top: -25px;
   }
 }
-@media only screen and (min-width: 576px) and (max-width: 767px) {
+@media only screen and (min-width: 576px) and (max-width: 767px), (max-width: 575px) {
   .video-thumb-wrap {
     margin-top: 180px;
   }
-  .video-thumb-wrap .thumb-images {
-    max-width: 510px;
-  }
-  .video-thumb-wrap .thumb-images .hero-video {
-    top: -120px;
-  }
-  .video-thumb-wrap .thumb-images .hero-video a::before {
-    width: 120px;
-    height: 120px;
-  }
-  .video-thumb-wrap .thumb-images .hero-video a::after {
-    width: 165px;
-    height: 165px;
-  }
-  .video-thumb-wrap .thumb-images:nth-child(1) {
-    margin-top: -25px;
-  }
-}
-@media (max-width: 575px) {
-  .video-thumb-wrap {
-    margin-top: 300px;
-  }
-  .video-thumb-wrap .thumb-images {
-    max-width: 510px;
-  }
   .video-thumb-wrap .thumb-images img {
-    border-radius: 15px;
+    display: none;
   }
   .video-thumb-wrap .thumb-images .hero-video {
+    position: relative;
     top: -120px;
+    left: 0;
   }
   .video-thumb-wrap .thumb-images .hero-video a::before {
     width: 120px;
@@ -4233,23 +4222,8 @@ START: Theme Hero CSS
     width: 165px;
     height: 165px;
   }
-  .video-thumb-wrap .thumb-images:nth-child(1) {
-    margin-top: -25px;
-  }
-  .video-thumb-wrap .thumb-images:nth-child(1) img {
-    -webkit-transform: rotate(2.39deg);
-        -ms-transform: rotate(2.39deg);
-            transform: rotate(2.39deg);
-  }
-  .video-thumb-wrap .thumb-images:nth-child(2) img {
-    -webkit-transform: rotate(-2.64deg);
-        -ms-transform: rotate(-2.64deg);
-            transform: rotate(-2.64deg);
-  }
-  .video-thumb-wrap .thumb-images:nth-child(3) img {
-    -webkit-transform: rotate(2.59deg);
-        -ms-transform: rotate(2.59deg);
-            transform: rotate(2.59deg);
+  .video-thumb-wrap .thumb-images .hero-video a img {
+    display: block;
   }
 }
 
@@ -4267,6 +4241,11 @@ START: Theme Hero CSS
 @media only screen and (min-width: 768px) and (max-width: 991px) {
   .hero-marquee-wrap {
     margin-top: 120px;
+  }
+}
+@media (max-width: 575px) {
+  .hero-marquee-wrap {
+    padding: 18px 0;
   }
 }
 
