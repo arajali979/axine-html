@@ -6883,6 +6883,39 @@ START: Theme Project CSS
     height: 1125px;
   }
 }
+@media only screen and (min-width: 992px) and (max-width: 1199px) {
+  .fa-project-section.v-2::after {
+    width: 725px;
+    height: 725px;
+  }
+  .fa-project-section.v-2 .heading-area .sec-title {
+    margin-top: 0px;
+  }
+}
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+  .fa-project-section.v-2 {
+    padding-bottom: 110px;
+  }
+  .fa-project-section.v-2::after {
+    width: 625px;
+    height: 625px;
+  }
+  .fa-project-section.v-2 .heading-area {
+    margin-bottom: 50px;
+  }
+}
+@media only screen and (min-width: 576px) and (max-width: 767px), (max-width: 575px) {
+  .fa-project-section.v-2 {
+    padding-bottom: 80px;
+  }
+  .fa-project-section.v-2::after {
+    width: 425px;
+    height: 425px;
+  }
+  .fa-project-section.v-2 .heading-area {
+    margin-bottom: 50px;
+  }
+}
 .fa-project-section.v-3 {
   background: transparent;
   padding-bottom: 150px;
@@ -6934,6 +6967,7 @@ START: Theme Project CSS
       -ms-flex-pack: justify;
           justify-content: space-between;
   position: relative;
+  row-gap: 50px;
 }
 .project-main-wrapper .project-active-thumb {
   position: absolute;
@@ -6953,6 +6987,65 @@ START: Theme Project CSS
 @media only screen and (min-width: 1200px) and (max-width: 1399px) {
   .project-main-wrapper .project-active-thumb {
     max-width: 450px;
+  }
+}
+@media only screen and (min-width: 992px) and (max-width: 1199px) {
+  .project-main-wrapper .project-active-thumb {
+    max-width: 425px;
+  }
+}
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+  .project-main-wrapper {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .project-main-wrapper .project-active-thumb {
+    position: initial;
+    right: 0;
+    top: 0;
+    -webkit-transform: translateY(0) rotate(5.77deg);
+        -ms-transform: translateY(0) rotate(5.77deg);
+            transform: translateY(0) rotate(5.77deg);
+  }
+}
+@media only screen and (min-width: 576px) and (max-width: 767px) {
+  .project-main-wrapper {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    row-gap: 40px;
+  }
+  .project-main-wrapper .project-active-thumb {
+    position: initial;
+    right: 0;
+    top: 0;
+    -webkit-transform: translateY(0) rotate(0);
+        -ms-transform: translateY(0) rotate(0);
+            transform: translateY(0) rotate(0);
+  }
+}
+@media (max-width: 575px) {
+  .project-main-wrapper {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    row-gap: 40px;
+  }
+  .project-main-wrapper .project-active-thumb {
+    position: initial;
+    right: 0;
+    top: 0;
+    -webkit-transform: translateY(0) rotate(0);
+        -ms-transform: translateY(0) rotate(0);
+            transform: translateY(0) rotate(0);
+    border-radius: 15px;
+  }
+  .project-main-wrapper .project-active-thumb img {
+    border-radius: 15px;
   }
 }
 
@@ -7117,6 +7210,8 @@ START: Theme Project CSS
 .project-two-item .project-title a .project-icons {
   opacity: 0;
   visibility: hidden;
+  max-width: 100px;
+  width: 100%;
 }
 .project-two-item .project-title a:hover {
   color: var(--fa-color-heading-primary);
@@ -7137,6 +7232,149 @@ START: Theme Project CSS
   }
   .project-two-item .project-title:nth-child(4) {
     margin-bottom: 65px;
+  }
+}
+@media only screen and (min-width: 992px) and (max-width: 1199px) {
+  .project-two-item .project-title {
+    font-size: 50px;
+    margin-bottom: 45px;
+  }
+  .project-two-item .project-title:nth-child(2) {
+    margin-bottom: 35px;
+  }
+  .project-two-item .project-title:nth-child(3) {
+    margin-bottom: 40px;
+  }
+  .project-two-item .project-title:nth-child(4) {
+    margin-bottom: 45px;
+  }
+  .project-two-item .project-title a {
+    -webkit-column-gap: 25px;
+       -moz-column-gap: 25px;
+            column-gap: 25px;
+  }
+}
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+  .project-two-item .project-title {
+    font-size: 45px;
+    margin-bottom: 15px;
+    -webkit-transform: rotate(-5.84deg);
+        -ms-transform: rotate(-5.84deg);
+            transform: rotate(-5.84deg);
+  }
+  .project-two-item .project-title:nth-child(2) {
+    margin-bottom: 15px;
+    -webkit-transform: rotate(-4.35deg);
+        -ms-transform: rotate(-4.35deg);
+            transform: rotate(-4.35deg);
+  }
+  .project-two-item .project-title:nth-child(3) {
+    margin-bottom: 15px;
+    -webkit-transform: rotate(1.97deg);
+        -ms-transform: rotate(1.97deg);
+            transform: rotate(1.97deg);
+  }
+  .project-two-item .project-title:nth-child(4) {
+    margin-bottom: 15px;
+    -webkit-transform: rotate(3.47deg);
+        -ms-transform: rotate(3.47deg);
+            transform: rotate(3.47deg);
+  }
+  .project-two-item .project-title:nth-child(5) {
+    margin-bottom: 15px;
+    -webkit-transform: rotate(4.47deg);
+        -ms-transform: rotate(4.47deg);
+            transform: rotate(4.47deg);
+  }
+  .project-two-item .project-title a {
+    -webkit-column-gap: 20px;
+       -moz-column-gap: 20px;
+            column-gap: 20px;
+  }
+  .project-two-item .project-title a .project-icons {
+    max-width: 80px;
+  }
+}
+@media only screen and (min-width: 576px) and (max-width: 767px) {
+  .project-two-item .project-title {
+    font-size: 35px;
+    margin-bottom: 10px;
+    -webkit-transform: rotate(0);
+        -ms-transform: rotate(0);
+            transform: rotate(0);
+  }
+  .project-two-item .project-title:nth-child(2) {
+    margin-bottom: 15px;
+    -webkit-transform: rotate(0);
+        -ms-transform: rotate(0);
+            transform: rotate(0);
+  }
+  .project-two-item .project-title:nth-child(3) {
+    margin-bottom: 15px;
+    -webkit-transform: rotate(0);
+        -ms-transform: rotate(0);
+            transform: rotate(0);
+  }
+  .project-two-item .project-title:nth-child(4) {
+    margin-bottom: 15px;
+    -webkit-transform: rotate(0);
+        -ms-transform: rotate(0);
+            transform: rotate(0);
+  }
+  .project-two-item .project-title:nth-child(5) {
+    margin-bottom: 15px;
+    -webkit-transform: rotate(0);
+        -ms-transform: rotate(0);
+            transform: rotate(0);
+  }
+  .project-two-item .project-title a {
+    -webkit-column-gap: 20px;
+       -moz-column-gap: 20px;
+            column-gap: 20px;
+  }
+  .project-two-item .project-title a .project-icons {
+    max-width: 50px;
+  }
+}
+@media (max-width: 575px) {
+  .project-two-item .project-title {
+    font-size: 25px;
+    margin-bottom: 10px;
+    -webkit-transform: rotate(0);
+        -ms-transform: rotate(0);
+            transform: rotate(0);
+  }
+  .project-two-item .project-title:nth-child(2) {
+    margin-bottom: 15px;
+    -webkit-transform: rotate(0);
+        -ms-transform: rotate(0);
+            transform: rotate(0);
+  }
+  .project-two-item .project-title:nth-child(3) {
+    margin-bottom: 15px;
+    -webkit-transform: rotate(0);
+        -ms-transform: rotate(0);
+            transform: rotate(0);
+  }
+  .project-two-item .project-title:nth-child(4) {
+    margin-bottom: 15px;
+    -webkit-transform: rotate(0);
+        -ms-transform: rotate(0);
+            transform: rotate(0);
+  }
+  .project-two-item .project-title:nth-child(5) {
+    margin-bottom: 15px;
+    -webkit-transform: rotate(0);
+        -ms-transform: rotate(0);
+            transform: rotate(0);
+  }
+  .project-two-item .project-title a {
+    -webkit-column-gap: 20px;
+       -moz-column-gap: 20px;
+            column-gap: 20px;
+  }
+  .project-two-item .project-title a .project-icons {
+    max-width: 30px;
   }
 }
 
@@ -10839,6 +11077,18 @@ START: Theme Blog CSS
 .blog-item.style-2 .blog-content .blog-author-wrap .sub-title {
   margin-bottom: 0;
   background: var(--fa-color-theme-primary);
+}
+.blog-item.style-2 .blog-content .blog-author-wrap .sub-title span {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+}
+@media (max-width: 575px) {
+  .blog-item.style-2 .blog-content .blog-author-wrap .sub-title {
+    font-size: 14px;
+  }
 }
 .blog-item.style-2 .blog-images {
   max-width: 580px;
