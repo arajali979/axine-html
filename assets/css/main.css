@@ -12430,10 +12430,7 @@ START: Theme Client CSS
           justify-content: space-between;
 }
 
-.client-thumb-wrap {
-  margin-top: 250px;
-}
-.client-thumb-wrap ul li ul {
+.client-thumb-wrap ul {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -12444,7 +12441,7 @@ START: Theme Client CSS
       -ms-flex-pack: end;
           justify-content: end;
 }
-.client-thumb-wrap ul li ul li {
+.client-thumb-wrap ul li {
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
   display: inline-flex;
@@ -12461,27 +12458,24 @@ START: Theme Client CSS
   padding: 25px 25px;
   overflow: hidden;
 }
-.client-thumb-wrap ul li ul li:first-child {
-  border-right: none;
-}
-.client-thumb-wrap ul li ul li span {
+.client-thumb-wrap ul li span {
   position: relative;
   overflow: hidden;
   margin-left: auto;
   margin-right: auto;
 }
-.client-thumb-wrap ul li ul li span img {
+.client-thumb-wrap ul li span img {
   max-width: 180px;
   width: 100%;
 }
-.client-thumb-wrap ul li ul li span .active-img {
+.client-thumb-wrap ul li span .active-img {
   -webkit-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
   -webkit-transform: translateY(0%);
       -ms-transform: translateY(0%);
           transform: translateY(0%);
 }
-.client-thumb-wrap ul li ul li span .hover-img {
+.client-thumb-wrap ul li span .hover-img {
   position: absolute;
   left: 0;
   bottom: 0;
@@ -12493,86 +12487,25 @@ START: Theme Client CSS
       -ms-transform: translateY(100%);
           transform: translateY(100%);
 }
-.client-thumb-wrap ul li ul li:hover .active-img {
+.client-thumb-wrap ul li:hover .active-img {
   opacity: 0;
   visibility: hidden;
   -webkit-transform: translateY(-100%);
       -ms-transform: translateY(-100%);
           transform: translateY(-100%);
 }
-.client-thumb-wrap ul li ul li:hover .hover-img {
+.client-thumb-wrap ul li:hover .hover-img {
   opacity: 1;
   visibility: visible;
   -webkit-transform: translateY(0);
       -ms-transform: translateY(0);
           transform: translateY(0);
 }
-.client-thumb-wrap ul li:nth-child(2) ul li:nth-child(1) {
-  position: absolute;
-  left: -320px;
-  height: 201px;
-  top: -1px;
-  border-right: none;
-}
-.client-thumb-wrap ul li:nth-child(2) ul li:nth-child(2) {
-  border-top: none;
-  width: 321px;
-}
-.client-thumb-wrap ul li:nth-child(2) ul li:nth-child(3) {
-  border: none;
-  width: 319px;
-}
-.client-thumb-wrap ul li:nth-child(2) ul li .client-thumb {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-}
-.client-thumb-wrap ul li:nth-child(2) ul li .client-thumb span {
-  display: -webkit-inline-box;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  width: 75px;
-  height: 75px;
-  margin-left: -25px;
-  border-radius: 50%;
-}
-.client-thumb-wrap ul li:nth-child(2) ul li .client-thumb span:first-child {
-  margin-left: 0;
-}
-.client-thumb-wrap ul li:nth-child(2) ul li .client-thumb span:last-child {
-  background: var(--fa-color-theme-secondary);
-}
-.client-thumb-wrap ul li:nth-child(2) ul li .client-thumb span img {
-  border: 1px solid var(--fa-color-heading-primary);
-  border-radius: 50%;
-}
-.client-thumb-wrap ul li:nth-child(2) ul li .client-thumb span:hover {
-  margin-left: -15px;
-}
-.client-thumb-wrap ul li:nth-child(3) ul {
-  margin-left: -320px;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: start;
-}
-.client-thumb-wrap ul li:nth-child(3) ul li:nth-child(1) {
-  border-top: none;
-  border-right: 1px solid rgba(0, 0, 0, 0.3);
-  width: 321px;
-}
-.client-thumb-wrap ul li:nth-child(3) ul li:nth-child(2) {
-  border: none;
-}
-.client-thumb-wrap ul li:nth-child(3) .client-count {
+
+.client-count {
   text-align: center;
 }
-.client-thumb-wrap ul li:nth-child(3) .client-count .client-number {
+.client-count .client-number {
   font-size: 150px;
   -webkit-text-stroke-width: 2px;
   -webkit-text-stroke-color: var(--fa-color-heading-primary);
@@ -12581,10 +12514,10 @@ START: Theme Client CSS
   font-weight: var(--fa-fw-black);
   line-height: 1;
 }
-.client-thumb-wrap ul li:nth-child(3) .client-count .client-number span {
+.client-count .client-number span {
   font-size: 70px;
 }
-.client-thumb-wrap ul li:nth-child(3) .client-count .sub-title {
+.client-count .sub-title {
   display: block;
   font-size: 24px;
   font-family: var(--fa-ff-heading);
