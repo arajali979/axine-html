@@ -9330,8 +9330,8 @@ START: Theme Team CSS
 }
 @media only screen and (min-width: 1200px) and (max-width: 1399px), only screen and (min-width: 992px) and (max-width: 1199px) {
   .team-style-2 .team-title {
-    right: -95px;
-    font-size: 40px;
+    right: -80px;
+    font-size: 35px;
   }
 }
 @media only screen and (min-width: 768px) and (max-width: 991px), only screen and (min-width: 576px) and (max-width: 767px) {
@@ -10503,6 +10503,30 @@ START: Theme Price CSS
   position: absolute;
   left: 0;
   bottom: 0;
+}
+.fa-pricing-section.inner-page {
+  background: var(--fa-color-common-white);
+}
+.fa-pricing-section.inner-page .heading-area .header-text .sub-title {
+  -webkit-text-fill-color: var(--fa-color-common-white);
+}
+.fa-pricing-section.inner-page .heading-area .header-text .sec-title {
+  background: -webkit-gradient(linear, left top, right top, from(var(--fa-color-theme-bg)), to(var(--fa-color-common-white)));
+  background: linear-gradient(90deg, var(--fa-color-theme-bg) 0%, var(--fa-color-common-white) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.fa-pricing-section.inner-page .heading-area .price-switcher span {
+  color: var(--fa-color-common-white);
+  background: var(--fa-color-theme-secondary);
+}
+.fa-pricing-section.inner-page .heading-area .price-switcher span:hover {
+  color: var(--fa-color-common-white);
+  background-color: var(--fa-color-theme-bg);
+}
+.fa-pricing-section.inner-page .price-item {
+  -webkit-box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.08);
+          box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.08);
 }
 @media only screen and (min-width: 1200px) and (max-width: 1399px), only screen and (min-width: 992px) and (max-width: 1199px) {
   .fa-pricing-section {

@@ -61,6 +61,38 @@ START: Theme Price CSS
 		left: 0;
 		bottom: 0;
 	}
+	&.inner-page {
+		background: var(--fa-color-common-white);
+		.heading-area {
+			.header-text {
+				.sub-title {
+					-webkit-text-fill-color: var(--fa-color-common-white);
+				}
+				.sec-title {
+					background: linear-gradient(
+						90deg,
+						var(--fa-color-theme-bg) 0%,
+						var(--fa-color-common-white) 100%
+					);
+					-webkit-background-clip: text;
+					-webkit-text-fill-color: transparent;
+				}
+			}
+			.price-switcher {
+				span {
+					color: var(--fa-color-common-white);
+					background: var(--fa-color-theme-secondary);
+					&:hover {
+						color: var(--fa-color-common-white);
+						background-color: var(--fa-color-theme-bg);
+					}
+				}
+			}
+		}
+		.price-item {
+			box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.08);
+		}
+	}
 	@media #{$xl, $lg} {
 		padding-top: 120px;
 		padding-bottom: 120px;
