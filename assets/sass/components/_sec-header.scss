@@ -19,14 +19,8 @@ START: Theme Sec Header CSS
 	.sec-title {
 		display: inline-block;
 		font-size: 300px;
-		background: linear-gradient(
-			90deg,
-			var(--fa-color-theme-bg) 0%,
-			var(--fa-color-common-white) 100%
-		);
-		-webkit-background-clip: text;
-		-webkit-text-fill-color: transparent;
-		background-clip: text;
+		color: var(--fa-color-heading-primary);
+
 		font-weight: var(--fa-fw-black);
 		letter-spacing: -0.02em;
 		margin-bottom: 0;

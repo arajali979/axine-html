@@ -397,7 +397,7 @@
 	// Text Effect Animation Js
 	if ($(".text-anim").length) {
 		let staggerAmount = 0.02,
-			translateXValue = rtlValue(20),
+			translateXValue = 20,
 			delayValue = 0.1,
 			easeType = "power2.out",
 			animatedTextElements = document.querySelectorAll(".text-anim");

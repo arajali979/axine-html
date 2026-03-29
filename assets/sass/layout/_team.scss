@@ -44,7 +44,7 @@ START: Theme Team CSS
 	}
 	.heading-area {
 		position: relative;
-		max-width: 1130px;
+		max-width: 1165px;
 		width: 100%;
 		margin-left: auto;
 		z-index: 2;
@@ -54,14 +54,7 @@ START: Theme Team CSS
 			-webkit-text-fill-color: var(--fa-color-theme-bg);
 		}
 		.sec-title {
-			background: linear-gradient(
-				-90deg,
-				var(--fa-color-theme-bg) 0%,
-				var(--fa-color-common-white) 100%
-			);
-			-webkit-background-clip: text;
-			-webkit-text-fill-color: transparent;
-			background-clip: text;
+			color: rgba(255, 255, 255, 0.12);
 		}
 	}
 	.shapes-one {
@@ -96,6 +89,9 @@ START: Theme Team CSS
 			float: right;
 			.sub-title {
 				-webkit-text-fill-color: var(--fa-color-common-white);
+			}
+			.sec-title {
+				color: var(--fa-color-heading-primary);
 			}
 		}
 		.team-main-wrapper {

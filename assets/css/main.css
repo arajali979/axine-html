@@ -2090,11 +2090,7 @@ START: Theme Footer CSS
   -webkit-text-fill-color: var(--fa-color-theme-bg-2);
 }
 .footer-contact-area .heading-area .sec-title {
-  background: -webkit-gradient(linear, left top, right top, from(var(--fa-color-common-white)), color-stop(71.63%, var(--fa-color-theme-bg)));
-  background: linear-gradient(90deg, var(--fa-color-common-white) 0%, var(--fa-color-theme-bg) 71.63%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
+  color: rgba(255, 255, 255, 0.12);
 }
 .footer-contact-area .footer-contact-main-wrapper {
   display: -webkit-box;
@@ -2826,11 +2822,7 @@ START: Theme Sec Header CSS
 .heading-area .sec-title {
   display: inline-block;
   font-size: 300px;
-  background: -webkit-gradient(linear, left top, right top, from(var(--fa-color-theme-bg)), to(var(--fa-color-common-white)));
-  background: linear-gradient(90deg, var(--fa-color-theme-bg) 0%, var(--fa-color-common-white) 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
+  color: var(--fa-color-heading-primary);
   font-weight: var(--fa-fw-black);
   letter-spacing: -0.02em;
   margin-bottom: 0;
@@ -3501,7 +3493,7 @@ START: Theme Hero CSS
 
 .hero-main-wrapper {
   position: relative;
-  max-width: 950px;
+  max-width: 975px;
   width: 100%;
   margin-left: auto;
   padding-right: 50px;
@@ -4279,9 +4271,9 @@ START: Theme About CSS
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  -webkit-column-gap: 140px;
-     -moz-column-gap: 140px;
-          column-gap: 140px;
+  -webkit-column-gap: 50px;
+     -moz-column-gap: 50px;
+          column-gap: 50px;
   row-gap: 25px;
   max-width: 1770px;
   width: 100%;
@@ -4294,7 +4286,7 @@ START: Theme About CSS
   -webkit-text-fill-color: var(--fa-color-grey-7);
 }
 .fa-about-section.v-2 .heading-area .header-desc {
-  max-width: 375px;
+  max-width: 275px;
   width: 100%;
 }
 .fa-about-section.v-2 .heading-area .header-desc .desc {
@@ -5735,11 +5727,7 @@ START: Theme Service CSS
   -webkit-text-fill-color: var(--fa-color-theme-bg);
 }
 .fa-service-section .heading-area .sec-title {
-  background: -webkit-gradient(linear, left top, right top, from(var(--fa-color-common-white)), to(var(--fa-color-theme-bg)));
-  background: linear-gradient(90deg, var(--fa-color-common-white) 0%, var(--fa-color-theme-bg) 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
+  color: rgba(255, 255, 255, 0.12);
   margin-top: -60px;
 }
 @media only screen and (min-width: 1200px) and (max-width: 1399px), only screen and (min-width: 992px) and (max-width: 1199px), only screen and (min-width: 768px) and (max-width: 991px) {
@@ -5849,11 +5837,7 @@ START: Theme Service CSS
   -webkit-text-fill-color: var(--fa-color-common-white);
 }
 .fa-service-section.v-2 .heading-area .sec-title {
-  background: -webkit-gradient(linear, right top, left top, from(var(--fa-color-common-white)), to(var(--fa-color-theme-bg)));
-  background: linear-gradient(-90deg, var(--fa-color-common-white) 0%, var(--fa-color-theme-bg) 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
+  color: var(--fa-color-heading-primary);
 }
 .fa-service-section.v-2 .service-main-wrapper {
   display: grid;
@@ -8021,11 +8005,7 @@ START: Theme Testimonial CSS
   -webkit-text-fill-color: var(--fa-color-grey-7);
 }
 .fa-testimonial-section.v-2 .heading-area .sec-title {
-  background: -webkit-gradient(linear, left top, right top, from(var(--fa-color-theme-bg)), to(var(--fa-color-grey-10)));
-  background: linear-gradient(90deg, var(--fa-color-theme-bg) 0%, var(--fa-color-grey-10) 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
+  color: var(--fa-color-heading-primary);
 }
 .fa-testimonial-section.v-2 .fa-testimonial-slider2 .swiper-slide.swiper-slide-active .testimonial-item.style-2 {
   background-color: var(--fa-color-theme-bg);
@@ -9102,7 +9082,7 @@ START: Theme Team CSS
 }
 .fa-team-section .heading-area {
   position: relative;
-  max-width: 1130px;
+  max-width: 1165px;
   width: 100%;
   margin-left: auto;
   z-index: 2;
@@ -9113,11 +9093,7 @@ START: Theme Team CSS
   -webkit-text-fill-color: var(--fa-color-theme-bg);
 }
 .fa-team-section .heading-area .sec-title {
-  background: -webkit-gradient(linear, right top, left top, from(var(--fa-color-theme-bg)), to(var(--fa-color-common-white)));
-  background: linear-gradient(-90deg, var(--fa-color-theme-bg) 0%, var(--fa-color-common-white) 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
+  color: rgba(255, 255, 255, 0.12);
 }
 .fa-team-section .shapes-one {
   position: absolute;
@@ -9153,6 +9129,9 @@ START: Theme Team CSS
 }
 .fa-team-section.v-2 .heading-area .sub-title {
   -webkit-text-fill-color: var(--fa-color-common-white);
+}
+.fa-team-section.v-2 .heading-area .sec-title {
+  color: var(--fa-color-heading-primary);
 }
 .fa-team-section.v-2 .team-main-wrapper {
   -webkit-column-gap: 24px;
@@ -9497,11 +9476,6 @@ START: Theme FAQ CSS
   -webkit-transform: rotate(-180deg);
       -ms-transform: rotate(-180deg);
           transform: rotate(-180deg);
-  background: -webkit-gradient(linear, left top, left bottom, from(var(--fa-color-theme-bg)), to(var(--fa-color-common-white)));
-  background: linear-gradient(180deg, var(--fa-color-theme-bg) 0%, var(--fa-color-common-white) 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
   margin-top: 0;
 }
 .fa-faq-section.inner-page {
@@ -10456,11 +10430,8 @@ START: Theme Price CSS
   -webkit-text-fill-color: var(--fa-color-theme-bg);
 }
 .fa-pricing-section .heading-area .sec-title {
+  color: rgba(255, 255, 255, 0.12);
   line-height: initial;
-  background: -webkit-gradient(linear, right top, left top, from(var(--fa-color-theme-bg)), to(var(--fa-color-common-white)));
-  background: linear-gradient(-90deg, var(--fa-color-theme-bg) 0%, var(--fa-color-common-white) 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
 }
 .fa-pricing-section .heading-area .price-switcher {
   display: -webkit-box;

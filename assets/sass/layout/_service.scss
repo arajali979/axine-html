@@ -42,21 +42,7 @@ START: Theme Service CSS
 			-webkit-text-fill-color: var(--fa-color-theme-bg);
 		}
 		.sec-title {
-			background: -webkit-gradient(
-				linear,
-				left top,
-				right top,
-				from(var(--fa-color-theme-bg)),
-				to(var(--fa-color-common-white))
-			);
-			background: linear-gradient(
-				90deg,
-				var(--fa-color-common-white) 0%,
-				var(--fa-color-theme-bg) 100%
-			);
-			-webkit-background-clip: text;
-			-webkit-text-fill-color: transparent;
-			background-clip: text;
+			color: rgba(255, 255, 255, 0.12);
 			margin-top: -60px;
 		}
 		@media #{$xl, $lg, $md} {
@@ -160,21 +146,7 @@ START: Theme Service CSS
 				-webkit-text-fill-color: var(--fa-color-common-white);
 			}
 			.sec-title {
-				background: -webkit-gradient(
-					linear,
-					left top,
-					right top,
-					from(var(--fa-color-theme-bg)),
-					to(var(--fa-color-common-white))
-				);
-				background: linear-gradient(
-					-90deg,
-					var(--fa-color-common-white) 0%,
-					var(--fa-color-theme-bg) 100%
-				);
-				-webkit-background-clip: text;
-				-webkit-text-fill-color: transparent;
-				background-clip: text;
+				color: var(--fa-color-heading-primary);
 			}
 		}
 		.service-main-wrapper {

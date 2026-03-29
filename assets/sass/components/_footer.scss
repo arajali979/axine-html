@@ -137,14 +137,7 @@ START: Theme Footer CSS
 			-webkit-text-fill-color: var(--fa-color-theme-bg-2);
 		}
 		.sec-title {
-			background: linear-gradient(
-				90deg,
-				var(--fa-color-common-white) 0%,
-				var(--fa-color-theme-bg) 71.63%
-			);
-			-webkit-background-clip: text;
-			-webkit-text-fill-color: transparent;
-			background-clip: text;
+			color: rgba(255, 255, 255, 0.12);
 		}
 	}
 	.footer-contact-main-wrapper {

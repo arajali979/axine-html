@@ -81,14 +81,7 @@ START: Theme Testimonial CSS
 				-webkit-text-fill-color: var(--fa-color-grey-7);
 			}
 			.sec-title {
-				background: linear-gradient(
-					90deg,
-					var(--fa-color-theme-bg) 0%,
-					var(--fa-color-grey-10) 100%
-				);
-				-webkit-background-clip: text;
-				-webkit-text-fill-color: transparent;
-				background-clip: text;
+				color: var(--fa-color-heading-primary);
 			}
 		}
 		.fa-testimonial-slider2 {
