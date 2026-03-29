@@ -5499,11 +5499,7 @@ START: Theme Contact CSS
   -webkit-text-fill-color: var(--fa-color-common-white);
 }
 .contact-inner-section .footer-contact-area .heading-area .sec-title {
-  background: -webkit-gradient(linear, right top, left top, from(var(--fa-color-common-white)), color-stop(71.63%, var(--fa-color-theme-bg)));
-  background: linear-gradient(-90deg, var(--fa-color-common-white) 0%, var(--fa-color-theme-bg) 71.63%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
+  color: var(--fa-color-heading-primary);
 }
 .contact-inner-section .footer-contact-area .contact-item form .form-input:last-child {
   margin-bottom: 0;
@@ -9348,6 +9344,18 @@ START: Theme Details CSS
   padding-top: 150px;
   padding-bottom: 150px;
 }
+@media only screen and (min-width: 1200px) and (max-width: 1399px), only screen and (min-width: 992px) and (max-width: 1199px) {
+  .fa-team-details-section {
+    padding-top: 120px;
+    padding-bottom: 120px;
+  }
+}
+@media only screen and (min-width: 768px) and (max-width: 991px), only screen and (min-width: 576px) and (max-width: 767px), (max-width: 575px) {
+  .fa-team-details-section {
+    padding-top: 80px;
+    padding-bottom: 80px;
+  }
+}
 
 .team-detail-top-wrap {
   display: -webkit-box;
@@ -9376,6 +9384,11 @@ START: Theme Details CSS
 .team-detail-top-wrap .left-content .check-style-5 {
   margin-top: 30px;
 }
+@media only screen and (min-width: 1200px) and (max-width: 1399px) {
+  .team-detail-top-wrap .left-content {
+    max-width: 360px;
+  }
+}
 .team-detail-top-wrap .right-content {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -9394,6 +9407,11 @@ START: Theme Details CSS
   max-width: 500px;
   width: 100%;
   height: 500px;
+}
+@media only screen and (min-width: 1400px) and (max-width: 1600px), only screen and (min-width: 1200px) and (max-width: 1399px) {
+  .team-detail-top-wrap .right-content .team-style-2 {
+    max-width: 385px;
+  }
 }
 .team-detail-top-wrap .right-content .infos-wrap {
   display: -webkit-box;
@@ -10482,10 +10500,7 @@ START: Theme Price CSS
   -webkit-text-fill-color: var(--fa-color-common-white);
 }
 .fa-pricing-section.inner-page .heading-area .header-text .sec-title {
-  background: -webkit-gradient(linear, left top, right top, from(var(--fa-color-theme-bg)), to(var(--fa-color-common-white)));
-  background: linear-gradient(90deg, var(--fa-color-theme-bg) 0%, var(--fa-color-common-white) 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  color: var(--fa-color-heading-primary);
 }
 .fa-pricing-section.inner-page .heading-area .price-switcher span {
   color: var(--fa-color-common-white);

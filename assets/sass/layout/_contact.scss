@@ -12,14 +12,7 @@ START: Theme Contact CSS
 				-webkit-text-fill-color: var(--fa-color-common-white);
 			}
 			.sec-title {
-				background: linear-gradient(
-					-90deg,
-					var(--fa-color-common-white) 0%,
-					var(--fa-color-theme-bg) 71.63%
-				);
-				-webkit-background-clip: text;
-				-webkit-text-fill-color: transparent;
-				background-clip: text;
+				color: var(--fa-color-heading-primary);
 			}
 		}
 		.contact-item form {

@@ -6,6 +6,14 @@ START: Theme Details CSS
 .fa-team-details-section {
 	padding-top: 150px;
 	padding-bottom: 150px;
+	@media #{$xl, $lg} {
+		padding-top: 120px;
+		padding-bottom: 120px;
+	}
+	@media #{$md, $sm, $xs} {
+		padding-top: 80px;
+		padding-bottom: 80px;
+	}
 }
 
 .team-detail-top-wrap {
@@ -27,6 +35,9 @@ START: Theme Details CSS
 		.check-style-5 {
 			margin-top: 30px;
 		}
+		@media #{$xl} {
+			max-width: 360px;
+		}
 	}
 	.right-content {
 		display: flex;
@@ -44,6 +55,9 @@ START: Theme Details CSS
 			max-width: 500px;
 			width: 100%;
 			height: 500px;
+			@media #{$xxl, $xl} {
+				max-width: 385px;
+			}
 		}
 		.infos-wrap {
 			display: flex;
