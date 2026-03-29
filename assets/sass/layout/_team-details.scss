@@ -19,6 +19,7 @@ START: Theme Details CSS
 .team-detail-top-wrap {
 	display: flex;
 	column-gap: 55px;
+	row-gap: 50px;
 	justify-content: space-between;
 	.left-content {
 		max-width: 575px;
@@ -38,9 +39,13 @@ START: Theme Details CSS
 		@media #{$xl} {
 			max-width: 360px;
 		}
+		@media #{$lg, $md, $sm, $xs} {
+			max-width: 100%;
+		}
 	}
 	.right-content {
 		display: flex;
+		row-gap: 40px;
 		background: linear-gradient(
 			360deg,
 			var(--fa-color-grey-6) 0%,
@@ -55,8 +60,11 @@ START: Theme Details CSS
 			max-width: 500px;
 			width: 100%;
 			height: 500px;
-			@media #{$xxl, $xl} {
+			@media #{$xxl, $xl, $md} {
 				max-width: 385px;
+			}
+			@media #{$md, $sm, $xs} {
+				height: auto;
 			}
 		}
 		.infos-wrap {
@@ -86,6 +94,16 @@ START: Theme Details CSS
 				}
 			}
 		}
+		@media #{$sm, $xs} {
+			flex-direction: column;
+			padding: 25px 15px;
+			.infos-wrap {
+				padding: 0px 0;
+			}
+		}
+	}
+	@media #{$lg, $md, $sm, $xs} {
+		flex-direction: column;
 	}
 }
 

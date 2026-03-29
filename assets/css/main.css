@@ -9364,6 +9364,7 @@ START: Theme Details CSS
   -webkit-column-gap: 55px;
      -moz-column-gap: 55px;
           column-gap: 55px;
+  row-gap: 50px;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
@@ -9389,10 +9390,16 @@ START: Theme Details CSS
     max-width: 360px;
   }
 }
+@media only screen and (min-width: 992px) and (max-width: 1199px), only screen and (min-width: 768px) and (max-width: 991px), only screen and (min-width: 576px) and (max-width: 767px), (max-width: 575px) {
+  .team-detail-top-wrap .left-content {
+    max-width: 100%;
+  }
+}
 .team-detail-top-wrap .right-content {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  row-gap: 40px;
   background: -webkit-gradient(linear, left bottom, left top, from(var(--fa-color-grey-6)), color-stop(78.85%, var(--fa-color-grey-7)));
   background: linear-gradient(360deg, var(--fa-color-grey-6) 0%, var(--fa-color-grey-7) 78.85%);
   padding: 25px 25px 25px 50px;
@@ -9408,9 +9415,14 @@ START: Theme Details CSS
   width: 100%;
   height: 500px;
 }
-@media only screen and (min-width: 1400px) and (max-width: 1600px), only screen and (min-width: 1200px) and (max-width: 1399px) {
+@media only screen and (min-width: 1400px) and (max-width: 1600px), only screen and (min-width: 1200px) and (max-width: 1399px), only screen and (min-width: 768px) and (max-width: 991px) {
   .team-detail-top-wrap .right-content .team-style-2 {
     max-width: 385px;
+  }
+}
+@media only screen and (min-width: 768px) and (max-width: 991px), only screen and (min-width: 576px) and (max-width: 767px), (max-width: 575px) {
+  .team-detail-top-wrap .right-content .team-style-2 {
+    height: auto;
   }
 }
 .team-detail-top-wrap .right-content .infos-wrap {
@@ -9440,6 +9452,26 @@ START: Theme Details CSS
 }
 .team-detail-top-wrap .right-content .infos-wrap .infos-list ul li span {
   color: var(--fa-color-heading-primary);
+}
+@media only screen and (min-width: 576px) and (max-width: 767px), (max-width: 575px) {
+  .team-detail-top-wrap .right-content {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    padding: 25px 15px;
+  }
+  .team-detail-top-wrap .right-content .infos-wrap {
+    padding: 0px 0;
+  }
+}
+@media only screen and (min-width: 992px) and (max-width: 1199px), only screen and (min-width: 768px) and (max-width: 991px), only screen and (min-width: 576px) and (max-width: 767px), (max-width: 575px) {
+  .team-detail-top-wrap {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
 }
 
 .check-style-5 ul li {
