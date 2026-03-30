@@ -61,6 +61,10 @@ START: Theme Team CSS
 		position: absolute;
 		top: 0;
 		left: 0;
+		@media #{$md, $sm, $xs} {
+			max-width: 250px;
+			width: 100%;
+		}
 	}
 	.shapes-two {
 		position: absolute;

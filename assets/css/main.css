@@ -2840,7 +2840,7 @@ START: Theme Sec Header CSS
 }
 @media only screen and (min-width: 992px) and (max-width: 1199px) {
   .heading-area .sec-title {
-    font-size: 160px;
+    font-size: 150px;
   }
 }
 @media only screen and (min-width: 768px) and (max-width: 991px) {
@@ -3616,7 +3616,7 @@ START: Theme Hero CSS
 }
 @media only screen and (min-width: 1400px) and (max-width: 1600px) {
   .hero-2-wrapper .title-wrap .hero-line {
-    width: 180px;
+    width: 140px;
   }
 }
 @media only screen and (min-width: 1200px) and (max-width: 1399px) {
@@ -3624,7 +3624,7 @@ START: Theme Hero CSS
     font-size: 80px;
   }
   .hero-2-wrapper .title-wrap .hero-line {
-    width: 200px;
+    width: 160px;
   }
 }
 @media only screen and (min-width: 992px) and (max-width: 1199px) {
@@ -3635,7 +3635,7 @@ START: Theme Hero CSS
     top: 65px;
   }
   .hero-2-wrapper .title-wrap .hero-line {
-    width: 170px;
+    width: 140px;
     left: -45px;
   }
 }
@@ -3647,13 +3647,13 @@ START: Theme Hero CSS
     top: 45px;
   }
   .hero-2-wrapper .title-wrap .hero-line {
-    width: 60px;
+    width: 45px;
     left: -45px;
   }
 }
 @media only screen and (min-width: 576px) and (max-width: 767px) {
   .hero-2-wrapper .title-wrap .hero-title {
-    font-size: 45px;
+    font-size: 40px;
   }
   .hero-2-wrapper .title-wrap .hero-title .primary-color {
     -webkit-text-stroke-width: 1px;
@@ -9166,6 +9166,12 @@ START: Theme Team CSS
   position: absolute;
   top: 0;
   left: 0;
+}
+@media only screen and (min-width: 768px) and (max-width: 991px), only screen and (min-width: 576px) and (max-width: 767px), (max-width: 575px) {
+  .fa-team-section .shapes-one {
+    max-width: 250px;
+    width: 100%;
+  }
 }
 .fa-team-section .shapes-two {
   position: absolute;
