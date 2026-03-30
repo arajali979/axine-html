@@ -6,6 +6,24 @@ START: Service Details CSS
 .fa-service-details-section {
 	padding-top: 150px;
 	padding-bottom: 150px;
+	@media #{$xl} {
+		padding-top: 120px;
+		padding-bottom: 90px;
+	}
+	@media #{$lg} {
+		padding-top: 120px;
+		padding-bottom: 90px;
+		.fa-main-sidebar {
+			margin-top: 50px;
+		}
+	}
+	@media #{$md, $sm, $xs} {
+		padding-top: 80px;
+		padding-bottom: 50px;
+		.fa-main-sidebar {
+			margin-top: 50px;
+		}
+	}
 }
 
 .service-details-content-wrapper {
@@ -27,6 +45,7 @@ START: Service Details CSS
 	display: flex;
 	align-items: start;
 	column-gap: 30px;
+	row-gap: 30px;
 	margin-top: 40px;
 	margin-bottom: 40px;
 	.thumb-image {
@@ -42,6 +61,15 @@ START: Service Details CSS
 		.title {
 			font-weight: var(--fa-fw-bold);
 			margin-bottom: 20px;
+		}
+	}
+	@media #{$md, $sm, $xs} {
+		flex-direction: column;
+		.thumb-image {
+			max-width: 100%;
+			img {
+				width: 100%;
+			}
 		}
 	}
 }
@@ -78,6 +106,9 @@ START: Service Details CSS
 				}
 			}
 		}
+		@media #{$xs} {
+			grid-template-columns: repeat(1, 1fr);
+		}
 	}
 }
 
@@ -90,12 +121,18 @@ START: Service Details CSS
 	ul {
 		li {
 			display: flex;
-			align-items: center;
+			align-items: start;
 			column-gap: 10px;
 			font-weight: var(--fa-fw-medium);
 			margin-bottom: 12px;
 			&:last-child {
 				margin-bottom: 0;
+			}
+			span {
+				display: flex;
+				flex-shrink: 0;
+				position: relative;
+				top: 3px;
 			}
 		}
 	}
@@ -106,6 +143,9 @@ START: Service Details CSS
 	.video-wrap {
 		img {
 			border-radius: 30px;
+			@media #{$xs} {
+				border-radius: 15px;
+			}
 		}
 	}
 	.desc {
@@ -125,6 +165,9 @@ START: Service Details CSS
 	margin-bottom: 30px;
 	padding: 40px 35px;
 	z-index: 1;
+	@media #{$xs} {
+		padding: 30px 15px;
+	}
 	.widget-title {
 		color: var(--fa-color-heading-primary);
 		position: relative;
@@ -219,6 +262,11 @@ START: Service Details CSS
 					font-size: 18px;
 					font-weight: var(--fa-fw-sbold);
 					padding: 16px 25px;
+					border-radius: 8px;
+					&:hover {
+						color: var(--fa-color-common-white);
+						background-color: var(--fa-color-theme-secondary);
+					}
 				}
 			}
 		}

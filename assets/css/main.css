@@ -6448,6 +6448,30 @@ START: Service Details CSS
   padding-top: 150px;
   padding-bottom: 150px;
 }
+@media only screen and (min-width: 1200px) and (max-width: 1399px) {
+  .fa-service-details-section {
+    padding-top: 120px;
+    padding-bottom: 90px;
+  }
+}
+@media only screen and (min-width: 992px) and (max-width: 1199px) {
+  .fa-service-details-section {
+    padding-top: 120px;
+    padding-bottom: 90px;
+  }
+  .fa-service-details-section .fa-main-sidebar {
+    margin-top: 50px;
+  }
+}
+@media only screen and (min-width: 768px) and (max-width: 991px), only screen and (min-width: 576px) and (max-width: 767px), (max-width: 575px) {
+  .fa-service-details-section {
+    padding-top: 80px;
+    padding-bottom: 50px;
+  }
+  .fa-service-details-section .fa-main-sidebar {
+    margin-top: 50px;
+  }
+}
 
 .service-details-content-wrapper .service-details-text .title {
   font-weight: var(--fa-fw-bold);
@@ -6470,6 +6494,7 @@ START: Service Details CSS
   -webkit-column-gap: 30px;
      -moz-column-gap: 30px;
           column-gap: 30px;
+  row-gap: 30px;
   margin-top: 40px;
   margin-bottom: 40px;
 }
@@ -6487,6 +6512,20 @@ START: Service Details CSS
 .service-details-thumb-wrap .check-style-5 .title {
   font-weight: var(--fa-fw-bold);
   margin-bottom: 20px;
+}
+@media only screen and (min-width: 768px) and (max-width: 991px), only screen and (min-width: 576px) and (max-width: 767px), (max-width: 575px) {
+  .service-details-thumb-wrap {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .service-details-thumb-wrap .thumb-image {
+    max-width: 100%;
+  }
+  .service-details-thumb-wrap .thumb-image img {
+    width: 100%;
+  }
 }
 
 .service-details-document-wrap .title {
@@ -6527,6 +6566,11 @@ START: Service Details CSS
   margin-bottom: 0;
   line-height: 1.7;
 }
+@media (max-width: 575px) {
+  .service-details-document-wrap .document-list {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
 
 .service-details-check-wrap {
   margin-top: 40px;
@@ -6539,9 +6583,9 @@ START: Service Details CSS
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: start;
   -webkit-column-gap: 10px;
      -moz-column-gap: 10px;
           column-gap: 10px;
@@ -6551,12 +6595,26 @@ START: Service Details CSS
 .service-details-check-wrap ul li:last-child {
   margin-bottom: 0;
 }
+.service-details-check-wrap ul li span {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+  position: relative;
+  top: 3px;
+}
 
 .service-details-video-wrap {
   margin-top: 40px;
 }
 .service-details-video-wrap .video-wrap img {
   border-radius: 30px;
+}
+@media (max-width: 575px) {
+  .service-details-video-wrap .video-wrap img {
+    border-radius: 15px;
+  }
 }
 .service-details-video-wrap .desc {
   font-weight: var(--fa-fw-medium);
@@ -6574,6 +6632,11 @@ START: Service Details CSS
   margin-bottom: 30px;
   padding: 40px 35px;
   z-index: 1;
+}
+@media (max-width: 575px) {
+  .fa-service-sidebar-widget {
+    padding: 30px 15px;
+  }
 }
 .fa-service-sidebar-widget .widget-title {
   color: var(--fa-color-heading-primary);
@@ -6689,6 +6752,11 @@ START: Service Details CSS
   font-size: 18px;
   font-weight: var(--fa-fw-sbold);
   padding: 16px 25px;
+  border-radius: 8px;
+}
+.fa-service-sidebar-widget.widget_categories ul li a:hover {
+  color: var(--fa-color-common-white);
+  background-color: var(--fa-color-theme-secondary);
 }
 .fa-service-sidebar-widget.widget_form .form-wrap .form-input {
   margin-bottom: 20px;
