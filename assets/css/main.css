@@ -7201,6 +7201,9 @@ START: Theme Project CSS
   .project-item .project-content .sub-title {
     margin-bottom: 20px;
   }
+  .project-item .project-image {
+    border-radius: 15px 15px 0 0;
+  }
   .project-item .project-image img {
     height: 395px;
     border-radius: 15px 15px 0 0;
