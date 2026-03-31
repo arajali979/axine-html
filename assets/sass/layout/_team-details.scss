@@ -25,6 +25,10 @@ START: Theme Details CSS
 		max-width: 575px;
 		width: 100%;
 		.title {
+			display: block;
+			font-size: 24px;
+			color: var(--fa-color-heading-primary);
+			font-family: var(--fa-ff-heading);
 			font-weight: var(--fa-fw-bold);
 			margin-bottom: 0;
 		}
@@ -104,6 +108,21 @@ START: Theme Details CSS
 	}
 	@media #{$lg, $md, $sm, $xs} {
 		flex-direction: column;
+	}
+	.team-style-2 {
+		.team-title {
+			font-size: 40px;
+			display: block;
+			color: var(--fa-color-common-white);
+			font-family: var(--fa-ff-heading);
+			font-weight: var(--fa-fw-bold);
+		}
+	}
+}
+
+.team-main-wrapper {
+	.hide-title {
+		display: none;
 	}
 }
 

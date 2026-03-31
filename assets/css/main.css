@@ -6474,8 +6474,14 @@ START: Service Details CSS
 }
 
 .service-details-content-wrapper .service-details-text .title {
+  font-size: 50px;
   font-weight: var(--fa-fw-bold);
   margin-bottom: 0;
+}
+@media (max-width: 575px) {
+  .service-details-content-wrapper .service-details-text .title {
+    font-size: 25px;
+  }
 }
 .service-details-content-wrapper .service-details-text .desc {
   font-weight: var(--fa-fw-medium);
@@ -6529,6 +6535,11 @@ START: Service Details CSS
 }
 
 .service-details-document-wrap .title {
+  display: block;
+  font-size: 24px;
+  color: var(--fa-color-heading-primary);
+  font-weight: var(--fa-fw-bold);
+  font-family: var(--fa-ff-heading);
   margin-bottom: 25px;
 }
 .service-details-document-wrap .document-list {
@@ -6576,6 +6587,10 @@ START: Service Details CSS
   margin-top: 40px;
 }
 .service-details-check-wrap .title {
+  display: block;
+  font-size: 24px;
+  color: var(--fa-color-heading-primary);
+  font-family: var(--fa-ff-heading);
   font-weight: var(--fa-fw-bold);
   margin-bottom: 20px;
 }
@@ -6639,6 +6654,9 @@ START: Service Details CSS
   }
 }
 .fa-service-sidebar-widget .widget-title {
+  display: block;
+  font-size: 24px;
+  font-family: var(--fa-ff-heading);
   color: var(--fa-color-heading-primary);
   position: relative;
   font-weight: var(--fa-fw-bold);
@@ -9455,6 +9473,10 @@ START: Theme Details CSS
   width: 100%;
 }
 .team-detail-top-wrap .left-content .title {
+  display: block;
+  font-size: 24px;
+  color: var(--fa-color-heading-primary);
+  font-family: var(--fa-ff-heading);
   font-weight: var(--fa-fw-bold);
   margin-bottom: 0;
 }
@@ -9553,6 +9575,17 @@ START: Theme Details CSS
         -ms-flex-direction: column;
             flex-direction: column;
   }
+}
+.team-detail-top-wrap .team-style-2 .team-title {
+  font-size: 40px;
+  display: block;
+  color: var(--fa-color-common-white);
+  font-family: var(--fa-ff-heading);
+  font-weight: var(--fa-fw-bold);
+}
+
+.team-main-wrapper .hide-title {
+  display: none;
 }
 
 .check-style-5 ul li {

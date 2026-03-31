@@ -29,8 +29,12 @@ START: Service Details CSS
 .service-details-content-wrapper {
 	.service-details-text {
 		.title {
+			font-size: 50px;
 			font-weight: var(--fa-fw-bold);
 			margin-bottom: 0;
+			@media #{$xs} {
+				font-size: 25px;
+			}
 		}
 		.desc {
 			font-weight: var(--fa-fw-medium);
@@ -76,6 +80,11 @@ START: Service Details CSS
 
 .service-details-document-wrap {
 	.title {
+		display: block;
+		font-size: 24px;
+		color: var(--fa-color-heading-primary);
+		font-weight: var(--fa-fw-bold);
+		font-family: var(--fa-ff-heading);
 		margin-bottom: 25px;
 	}
 	.document-list {
@@ -115,6 +124,10 @@ START: Service Details CSS
 .service-details-check-wrap {
 	margin-top: 40px;
 	.title {
+		display: block;
+		font-size: 24px;
+		color: var(--fa-color-heading-primary);
+		font-family: var(--fa-ff-heading);
 		font-weight: var(--fa-fw-bold);
 		margin-bottom: 20px;
 	}
@@ -169,6 +182,9 @@ START: Service Details CSS
 		padding: 30px 15px;
 	}
 	.widget-title {
+		display: block;
+		font-size: 24px;
+		font-family: var(--fa-ff-heading);
 		color: var(--fa-color-heading-primary);
 		position: relative;
 		font-weight: var(--fa-fw-bold);
