@@ -352,6 +352,10 @@ START: Theme Testimonial CSS
 					font-weight: var(--fa-fw-sbold);
 				}
 				.auother-name {
+					display: block;
+					font-size: 18px;
+					font-family: var(--fa-ff-heading);
+					color: var(--fa-color-heading-primary);
 					font-weight: var(--fa-fw-sbold);
 					margin-bottom: 0;
 				}

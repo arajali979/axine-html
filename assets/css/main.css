@@ -8341,6 +8341,10 @@ START: Theme Testimonial CSS
   font-weight: var(--fa-fw-sbold);
 }
 .testimonial-item.style-2 .testimonial-author .author-header .auother-name {
+  display: block;
+  font-size: 18px;
+  font-family: var(--fa-ff-heading);
+  color: var(--fa-color-heading-primary);
   font-weight: var(--fa-fw-sbold);
   margin-bottom: 0;
 }
@@ -11033,6 +11037,7 @@ START: Theme Blog CSS
      -moz-column-gap: 10px;
           column-gap: 10px;
   font-size: 18px;
+  font-family: var(--fa-ff-heading);
   font-weight: var(--fa-fw-sbold);
   color: var(--fa-color-common-white);
   background: var(--fa-color-theme-secondary);
@@ -11187,6 +11192,9 @@ START: Theme Blog CSS
           mask-repeat: no-repeat;
 }
 .blog-item.style-2 .blog-content .blog-author-wrap .author-item .author-name {
+  font-size: 18px;
+  color: var(--fa-color-heading-primary);
+  font-family: var(--fa-ff-heading);
   font-weight: var(--fa-fw-bold);
   margin-bottom: 0;
 }

@@ -119,6 +119,7 @@ START: Theme Blog CSS
 			align-items: center;
 			column-gap: 10px;
 			font-size: 18px;
+			font-family: var(--fa-ff-heading);
 			font-weight: var(--fa-fw-sbold);
 			color: var(--fa-color-common-white);
 			background: var(--fa-color-theme-secondary);
@@ -256,6 +257,9 @@ START: Theme Blog CSS
 						}
 					}
 					.author-name {
+						font-size: 18px;
+						color: var(--fa-color-heading-primary);
+						font-family: var(--fa-ff-heading);
 						font-weight: var(--fa-fw-bold);
 						margin-bottom: 0;
 						a {
